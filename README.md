@@ -47,7 +47,7 @@ Nuestra tienda está orientada a pescadores aficionados y profesionales que busc
 
 2. *Ulises Farías*: (https://redfishoficial.com.ar/)
 
-3. *Yohana Lucero*: (https://www.armeriawolf.com.ar/)
+3. *Yohanna Lucero*: (https://www.armeriawolf.com.ar/)
 
 4. *Santiago Della Sala*: (https://www.flounder.com.ar/)
 
