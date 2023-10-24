@@ -20,7 +20,7 @@ Nuestra tienda está orientada a pescadores aficionados y profesionales que busc
 - - - - - - - - - - - - - - - - - - - - - 
 
 ### Una breve descripción de los *integrantes del equipo*.
-- Yohana Lucero:
+- Yohanna Lucero:
 *Edad*: 30
 *Ciudad*: Buenos Aires
 *Miembro*: D
