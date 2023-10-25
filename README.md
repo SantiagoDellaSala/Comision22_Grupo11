@@ -8,9 +8,10 @@ ____________________
 
 - - - - - - - - - - - - - - - - - - - - -
 
-### Breve descripción de *productos y servicios ofrecidos y público al que se apunta*. ###
+###c*. ###
 
 Nuestra tienda especializada en pesca ofrece una amplia gama de productos y servicios para apasionados de la pesca de todas las edades y niveles de experiencia. Contamos con una extensa selección de cañas de pescar de alta calidad para diferentes tipos de pesca, desde pesca en agua dulce hasta pesca en alta mar. También ofrecemos carretes, anzuelos, señuelos, líneas, cebos y todo tipo de accesorios necesarios para una experiencia de pesca completa.
+todos nuestros productos son de alta calidad y durabilidad y de un buen precio ante el mercado ya que somos fabricantes.
 
 Para la comodidad de la pesca desde la orilla o un bote, ofrecemos una variedad de sillas y sombrillas resistentes al agua. También disponemos de una sección dedicada a ropa y calzado especializado para la pesca, que incluye impermeables, botas resistentes al agua y ropa con protección UV para garantizar la comodidad y seguridad de nuestros clientes durante sus expediciones de pesca.
 
