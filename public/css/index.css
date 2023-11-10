@@ -1,0 +1,29 @@
+.home__main {
+    width: 90%;
+    margin: 20px auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.home__main__section div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__main__section__article {
+    border: 1px solid #000000;
+    margin: 10px 0px;
+}
+
+.home__main__section__article div {
+    padding: 20px 0px;
+}
+
+.home__main__section__article div img {
+    width: 90%;
+}
+
+.home__main__section__article div button {
+    
+}
