@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>SUYDS</title>
 </head>
 <body class="home">
@@ -13,21 +14,21 @@
     <main class="home__main">
         <section class="home__main__section">
             <div>
-                <article class="home__main__section__article shadow-inset-center">
+                <article class="home__main__section__article" data-aos="flip-left">
                     <div>
                         <img src="/images/PESCA.jfif" alt="pesca">
                         <h3>PESCA</h3>
                         <button><a href=""></a>VER MÁS</button>
                     </div>
                 </article>
-                <article class="home__main__section__article shadow-inset-center">
+                <article class="home__main__section__article" data-aos="flip-left">
                     <div>
                         <img src="/images/CAMPING.jfif" alt="camping">
                         <h3>CAMPING</h3>
                         <button><a href=""></a>VER MÁS</button>
                     </div>
                 </article>
-                <article class="home__main__section__article">
+                <article class="home__main__section__article" data-aos="flip-left">
                     <div>
                         <img src="/images/OPTICA.jfif" alt="optica">
                         <h3>ÓPTICA</h3>
@@ -40,6 +41,9 @@
     <footer>
 
     </footer>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
+<script>
+    AOS.init();
+  </script>
 </html>
