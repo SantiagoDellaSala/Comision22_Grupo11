@@ -12,6 +12,7 @@
     padding: 20px 0px;
 }
 
+/* SECTION CATEGORÍAS */
 .home__main__section {
     display: flex;
     flex-direction: column;
@@ -32,9 +33,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.home__main__section__article {
     border-radius: 0.7rem;
     background-color: rgb(62 102 224 / 80%);
 }
@@ -54,3 +52,5 @@
     color: #ffffff;
     padding: 5px;
 }
+
+/* SECTION PRODUCTOS DESTACADOS */
