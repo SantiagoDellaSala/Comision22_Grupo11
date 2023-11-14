@@ -13,91 +13,64 @@
 </head> 
 <body class="home">
     <main class="home__main">
-        <div class="home__main--logo">
-            <img src="/images/LOGO.svg" alt="logo" class="jello-horizontal">
-        </div>
-        <section class="home__main__section">
-            <h5>CATEGORÍAS</h5>
-            <!-- Slider main container -->
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-            <!-- Slides -->
-                <div class="swiper-slide"><img src="/images/PESCA.jfif" alt="pesca"><h4 class="pesca">PESCA</h4></div>
-                <div class="swiper-slide"><img src="/images/CAMPING.jfif" alt="camping"><h4 class="camping">CAMPING</h4></div>
-                <div class="swiper-slide"><img src="/images/OPTICA.jfif" alt="optica"><h4 class="optica">ÓPTICA</h4></div>
-                <div class="swiper-slide"><img src="/images/NAUTICA.jpg" alt="nautica"><h4 class="nautica">NÁUTICA</h4></div>
-                <div class="swiper-slide"><img src="/images/CAZAYTIRODEPORTIVO.jpg" alt="caza y tiro"><h4 class="cazaytiro">CAZA Y TIRO DEPORTIVO</h4></div>
-                <div class="swiper-slide"><img src="/images/INDUMENTARIA.jpg" alt="indumentaria"><h4 class="indumentaria">INDUMENTARIA</h4></div>
-                <div class="swiper-slide"><img src="/images/CUCHILLERIA.jpg" alt="cuchilleria"><h4 class="cuchilleria">CUCHILLERÍA</h4></div>
+                        <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/images/Banner1.jpg" alt="banner1"></div>
+                    <div class="swiper-slide"><img src="/images/Banner2.jpg" alt="banner2"></div>
+                    <div class="swiper-slide"><img src="/images/Banner3.jpg" alt="banner3"></div>
+                    <div class="swiper-slide"><img src="/images/Banner4.jpg" alt="banner4"></div>
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div> -->
+                <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+                </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-        
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
-        </div>
-            <button><a href="#"></a>VER MÁS</button>
-        </section>
-        
-        <section class="home__main__section--destacados">
+            
+            <hr class="lineaSep">
+                
+            <div class="productosDestacados">
                 <h5>PRODUCTOS DESTACADOS</h5>
-                <article class="home__main__section__article--destacados" data-aos="zoom-in">
-                    <img src="/images/reelRotativoPredator307.png" alt="pesca">
-                    <h5 class="focus-in-expand">Reel Rotativo Predator 307</h5>
-                    <p class="focus-in-expand"><del>$90.000</del></p>
-                    <p>$81.999</p>
-                    <button><a href="#"></a>VER PRODUCTO</button>
-                </article>
-                <article class="home__main__section__article--destacados" data-aos="zoom-in">
-                    <img src="/images/borseguiesTropperCuero.png" alt="camping">
-                    <h5 class="focus-in-expand">Borseguíes Tropper Cuero</h5>
-                    <p class="focus-in-expand"><del>$60.000</del></p>
-                    <p>$48.999</p>
-                    <button><a href="#"></a>VER PRODUCTO</button>
-                </article>
-                <article class="home__main__section__article--destacados" data-aos="zoom-in">
-                    <img src="/images/caña168EstimulaBait.png" alt="optica">
-                    <h5 class="focus-in-expand">Caña 1.68m Estimula Bait</h5>
-                    <p class="focus-in-expand"><del>$80.000</del></p>
-                    <p>$68.999</p>
-                    <button><a href="#"></a>VER PRODUCTO</button>   
-                </article>
-        </section>
-        
+            </div>
     </main>
+    
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- SWIPER -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- SWIPER INITIALIZE -->
-    <script>
-        const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-       
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      
-        // And if we need scrollbar
-        scrollbar: {
-          el: '.swiper-scrollbar',
-        },
-      });
-      </script>
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- SWIPER BANNER -->
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+      }
+    });
+  </script>
 </body>
 <script>
     AOS.init();

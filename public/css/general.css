@@ -7,3 +7,18 @@
 body {
     width: 100%;
 }
+
+/* Para buttons */
+.precio {
+    color: #36be36;
+}
+
+.precioAnt {
+    color: rgba(255, 0, 0, 0.881);
+}
+
+/* Para br */
+.lineaSep {
+    color: #c0c0c0;
+    margin: 1rem 0;
+}
