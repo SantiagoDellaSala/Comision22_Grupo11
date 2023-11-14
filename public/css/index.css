@@ -17,31 +17,35 @@
     width: 90%;
     padding: 20px;
     margin: 0 auto;
-    background-color: #e8e8e8;
+    margin-bottom: 1rem;
+    background-color: rgb(232 232 232 / 60%);
     border: 1px solid black;
     border-radius: 0.3rem;
-    margin-bottom: 1rem;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-
-.home__main__section__article {
-    width: 100%;
-    margin: 10px 0px;
-    border: 0.2px solid black;
-    border-radius: 0.7rem;
+    box-shadow: 0px 0px 10px rgb(58, 58, 58);
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-.home__main__section__article img {
-    width: 90%;
-    border-radius: 1rem;
-    margin-top: 10px;
-}
+/* SWIPER */
+.swiper {
+    width: 95%;
+    height: 400px;
+    margin-bottom: 1rem;
+  }
 
-.home__main__section__article button {
+.swiper-slide {
+    position: relative;
+  }
+
+.swiper-slide img {
+    width: 100%;
+    border: 0.5px solid black;
+    border-radius: 0.7rem;
+  }
+
+.home__main__section button {
+    width: 40%;
     font-size: 0.6rem;
     border-radius: 0.7rem 0px 0px 0px;
     background-color: #060606;
@@ -50,8 +54,61 @@
     margin-bottom: 10px;
 }
 
-.home__main__section__article h4 {
-    padding: 10px 0px;
+.pesca {
+    position: absolute;
+    right: 39%;
+    top: 20%;
+    z-index: 1;
+    background-color:rgb(255 255 255 / 50%);
+    padding: 3px;
+}
+.camping {
+    position: absolute;
+    right: 32%;
+    top: 20%;
+    z-index: 1;
+    background-color:rgb(255 255 255 / 50%);
+    padding: 3px;
+}
+.optica {
+    position: absolute;
+    right: 37%;
+    top: 20%;
+    z-index: 1;
+    background-color:rgb(255 255 255 / 50%);
+    padding: 3px;
+}
+.nautica {
+    position: absolute;
+    right: 35%;
+    top: 20%;
+    z-index: 1;
+    background-color:rgb(255 255 255 / 50%);
+    padding: 3px;
+}
+.cazaytiro {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    z-index: 1;
+    background-color:rgb(255 255 255 / 50%);
+    padding: 3px;
+}
+.indumentaria {
+    position: absolute;
+    right: 27%;
+    top: 20%;
+    z-index: 1;
+    background-color:rgb(255 255 255 / 50%);
+    padding: 3px;
+}
+.cuchilleria {
+    position: absolute;
+    right: 30%;
+    top: 20%;
+    z-index: 1;
+    background-color:rgb(255 255 255 / 50%);
+    padding: 3px;
 }
 
 /* SECTION PRODUCTOS DESTACADOS */
@@ -59,10 +116,10 @@
     width: 90%;
     padding: 20px;
     margin: 0 auto;
-    background-color: #e8e8e8;
+    background-color: rgb(232 232 232 / 60%);
     border: 1px solid black;
     border-radius: 0.3rem;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    box-shadow: 0px 0px 10px rgb(58, 58, 58);
     margin-bottom: 1rem;
 }
 
@@ -70,6 +127,7 @@
     width: 100%;
     margin: 10px 0px;
     border: 0.2px solid black;
+    background-color: #ffffff;
     border-radius: 0.7rem;
     display: flex;
     flex-direction: column;

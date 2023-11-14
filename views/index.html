@@ -8,7 +8,7 @@
     <!-- CSS STYLES -->
     <link rel="stylesheet" href="/css/styles.css">
     <!-- SWIPER -->
-    <link hrel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <title>SUYDS</title>
 </head> 
 <body class="home">
@@ -18,21 +18,30 @@
         </div>
         <section class="home__main__section">
             <h5>CATEGORÍAS</h5>
-            <article class="home__main__section__article" data-aos="flip-up">
-                <img src="/images/PESCA.jfif" alt="pesca">
-                <h4 class="focus-in-expand">PESCA</h4>
-                <button><a href="#"></a>VER MÁS</button>
-            </article>
-            <article class="home__main__section__article" data-aos="flip-up">
-                <img src="/images/CAMPING.jfif" alt="camping">
-                <h4 class="focus-in-expand">CAMPING</h4>
-                <button><a href="#"></a>VER MÁS</button>
-            </article>
-            <article class="home__main__section__article" data-aos="flip-up">
-                <img src="/images/OPTICA.jfif" alt="optica">
-                <h4 class="focus-in-expand">ÓPTICA</h4>
-                <button><a href="#"></a>VER MÁS</button>   
-            </article>
+            <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+                <div class="swiper-slide"><img src="/images/PESCA.jfif" alt="pesca"><h4 class="pesca">PESCA</h4></div>
+                <div class="swiper-slide"><img src="/images/CAMPING.jfif" alt="camping"><h4 class="camping">CAMPING</h4></div>
+                <div class="swiper-slide"><img src="/images/OPTICA.jfif" alt="optica"><h4 class="optica">ÓPTICA</h4></div>
+                <div class="swiper-slide"><img src="/images/NAUTICA.jpg" alt="nautica"><h4 class="nautica">NÁUTICA</h4></div>
+                <div class="swiper-slide"><img src="/images/CAZAYTIRODEPORTIVO.jpg" alt="caza y tiro"><h4 class="cazaytiro">CAZA Y TIRO DEPORTIVO</h4></div>
+                <div class="swiper-slide"><img src="/images/INDUMENTARIA.jpg" alt="indumentaria"><h4 class="indumentaria">INDUMENTARIA</h4></div>
+                <div class="swiper-slide"><img src="/images/CUCHILLERIA.jpg" alt="cuchilleria"><h4 class="cuchilleria">CUCHILLERÍA</h4></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+            <button><a href="#"></a>VER MÁS</button>
         </section>
         
         <section class="home__main__section--destacados">
@@ -59,9 +68,36 @@
                     <button><a href="#"></a>VER PRODUCTO</button>   
                 </article>
         </section>
+        
     </main>
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- SWIPER -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- SWIPER INITIALIZE -->
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+       
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+      </script>
 </body>
 <script>
     AOS.init();
