@@ -2,7 +2,8 @@
     width: 100%;
     margin: 0px auto;
     font-family: 'Josefin Sans', sans-serif;
-    background-image: url(/images/FONDO.jpg);
+    /* background-image: url(/images/FONDO.jpg); */
+    background-color: #1c1c1c;
 }
 .home__main--logo {
     width: 100%;
@@ -17,21 +18,12 @@
     width: 90%;
     padding: 20px;
     margin: 0 auto;
-    margin-bottom: 1rem;
-    background-color: rgb(232 232 232 / 60%);
-    border: 1px solid black;
-    border-radius: 0.3rem;
-    box-shadow: 0px 0px 10px rgb(58, 58, 58);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 /* SWIPER */
 .swiper {
-    width: 95%;
+    width: 90%;
     height: 400px;
-    margin-bottom: 1rem;
   }
 
 .swiper-slide {
@@ -40,19 +32,9 @@
 
 .swiper-slide img {
     width: 100%;
-    border: 0.5px solid black;
     border-radius: 0.7rem;
   }
-
-.home__main__section button {
-    width: 40%;
-    font-size: 0.6rem;
-    border-radius: 0.7rem 0px 0px 0px;
-    background-color: #060606;
-    color: #ffffff;
-    padding: 5px;
-    margin-bottom: 10px;
-}
+/* SWIPER */
 
 .pesca {
     position: absolute;
@@ -116,11 +98,6 @@
     width: 90%;
     padding: 20px;
     margin: 0 auto;
-    background-color: rgb(232 232 232 / 60%);
-    border: 1px solid black;
-    border-radius: 0.3rem;
-    box-shadow: 0px 0px 10px rgb(58, 58, 58);
-    margin-bottom: 1rem;
 }
 
 .home__main__section__article--destacados {
