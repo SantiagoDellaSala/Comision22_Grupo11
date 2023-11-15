@@ -10,6 +10,11 @@
 
 body {
     width: 100%;
+    background-color: #e6e6e6;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Para buttons */
@@ -21,8 +26,17 @@ body {
     color: rgba(255, 0, 0, 0.881);
 }
 
+.precioDestacado {
+    color: orange;
+}
+
 /* Para br */
 .lineaSep {
     color: #c0c0c0;
     margin: 1rem 0;
+}
+
+.verTodos {
+    color: rgb(3, 77, 174);
+    margin: 5px 0px;
 }

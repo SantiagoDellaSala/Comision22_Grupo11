@@ -1,8 +1,11 @@
 /* SWIPER BANNER */
 .swiper {
     width: 100%;
-    height: 100%;
     box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
   }
 
 .swiper-slide {
@@ -10,7 +13,7 @@
     font-size: 18px;
     background: #fff;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
   }
 
