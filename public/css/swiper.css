@@ -1,4 +1,3 @@
-/* SWIPER BANNER */
 .swiper {
     width: 100%;
     box-shadow: var(--sombra);
@@ -52,4 +51,3 @@
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
   }
-/* SWIPER BANNER */

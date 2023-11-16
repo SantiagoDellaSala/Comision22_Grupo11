@@ -13,7 +13,9 @@
 </head> 
 <body class="home">
     <main class="home__main">
-        <div class="banner">
+        
+        <!-- BANNER -->
+        <div class="home__main--banner">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="/images/Banner1.jpg" alt="banner1"></div>
@@ -29,10 +31,9 @@
                 </div>
             </div>
         </div> 
-            
-            <hr class="lineaSep">
 
-            <section class="section__destacados">
+        <div class="home__main--mobile">
+            <section class="home_main_--mobile--destacados">
                 <h4 class="enunciado">Productos destacados</h4>
                     <!-- Swiper -->
                 <div class="swiper mySwiper2">
@@ -44,9 +45,13 @@
                     </div>
                     <div class="swiper-slide">
                       <img src="/images/borseguiesTropperCuero.png" alt="destacado2">
+                      <p>Reel Rotativo Predator 307</p>
+                      <p class="precioDestacado">$36.560</p>
                     </div>
                     <div class="swiper-slide">
                       <img src="/images/caña168EstimulaBait.png" alt="destacado3">
+                      <p>Reel Rotativo Predator 307</p>
+                      <p class="precioDestacado">$36.560</p>
                     </div>
                   </div>
                   <div class="swiper-button-next"></div>
@@ -55,15 +60,14 @@
             </section>
 
             <hr class="lineaSep">
-            
-            <aside class="publicidad">
-              <img src="/images/Publicidad.jpg" alt="publicidad" data-aos="fade-left">
-              <img src="/images/Publicidad.jpg" alt="publicidad" data-aos="fade-left">
-            </aside>
-              
-            <hr class="lineaSep">
 
-            <section class="section__ofertas">
+              <div class="publicidad">
+                <img src="/images/Publicidad2.jpg" alt="publicidad">
+              </div>
+
+            <hr class="lineaSep">
+              
+              <section class="home__main__section--ofertas">
                 <h4 class="enunciado">Ofertas imperdibles</h4>
                               <!-- Swiper -->
                 <div class="swiper mySwiper2">
@@ -76,15 +80,75 @@
                     </div>
                     <div class="swiper-slide">
                       <img src="/images/borseguiesTropperCuero.png" alt="destacado2">
+                      <p>Reel Rotativo Predator 307</p>
+                      <p class="precioAnt"><del>$36.560</del></p>
+                      <p class="precio">$25.420</p>
                     </div>
                     <div class="swiper-slide">
                       <img src="/images/caña168EstimulaBait.png" alt="destacado3">
+                      <p>Reel Rotativo Predator 307</p>
+                      <p class="precioAnt"><del>$36.560</del></p>
+                      <p class="precio">$25.420</p>
                     </div>
                   </div>
                   <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div>
                 </div>
-            </section>
+              </section>
+          </div>
+
+          <!-- ******TABLET Y DESKTOP****** -->
+          <div class="home__main--mobileOff">
+            
+            <h4 class="enunciado">Productos destacados</h4>
+            <section class="section__destacados">
+            <div class="swiper mySwiper3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/images/reelRotativoPredator307.png" alt="destacado1"></div>
+                <div class="swiper-slide"><img src="/images/borseguiesTropperCuero.png" alt="destacado2"></div>
+                <div class="swiper-slide"><img src="/images/caña168EstimulaBait.png" alt="destacado3"></div>
+                <div class="swiper-slide"><img src="/images/reelRotativoPredator307.png" alt="destacado1"></div>
+                <div class="swiper-slide"><img src="/images/borseguiesTropperCuero.png" alt="destacado2"></div>
+                <div class="swiper-slide"><img src="/images/caña168EstimulaBait.png" alt="destacado3"></div>
+                <div class="swiper-slide"><img src="/images/reelRotativoPredator307.png" alt="destacado1"></div>
+                <div class="swiper-slide"><img src="/images/borseguiesTropperCuero.png" alt="destacado2"></div>
+                <div class="swiper-slide"><img src="/images/caña168EstimulaBait.png" alt="destacado3"></div>
+              </div>
+              <div class=".swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+            </div>
+          </section>
+
+          <hr class="lineaSep">
+          <div class="publicidad">
+            <img src="/images/Publicidad.jpg" alt="publicidad">
+          </div>
+          <hr class="lineaSep">
+
+          <h4 class="enunciado">Ofertas imperdibles</h4>
+          <section class="section__ofertas">
+          <div class="swiper mySwiper3">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="/images/reelRotativoPredator307.png" alt="destacado1"></div>
+              <div class="swiper-slide"><img src="/images/borseguiesTropperCuero.png" alt="destacado2"></div>
+              <div class="swiper-slide"><img src="/images/caña168EstimulaBait.png" alt="destacado3"></div>
+              <div class="swiper-slide"><img src="/images/reelRotativoPredator307.png" alt="destacado1"></div>
+              <div class="swiper-slide"><img src="/images/borseguiesTropperCuero.png" alt="destacado2"></div>
+              <div class="swiper-slide"><img src="/images/caña168EstimulaBait.png" alt="destacado3"></div>
+              <div class="swiper-slide"><img src="/images/reelRotativoPredator307.png" alt="destacado1"></div>
+              <div class="swiper-slide"><img src="/images/borseguiesTropperCuero.png" alt="destacado2"></div>
+              <div class="swiper-slide"><img src="/images/caña168EstimulaBait.png" alt="destacado3"></div>
+            </div>
+            <div class=".swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </section>
+
+        </div>
+
+
     </main>
     
     <!-- AOS -->
@@ -92,7 +156,7 @@
     <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- SWIPER BANNER -->
+  <!-- Swiper1 -->
   <script>
     const progressCircle = document.querySelector(".autoplay-progress svg");
     const progressContent = document.querySelector(".autoplay-progress span");
@@ -107,10 +171,6 @@
         el: ".swiper-pagination",
         clickable: true
       },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
       on: {
         autoplayTimeLeft(s, time, progress) {
           progressCircle.style.setProperty("--progress", 1 - progress);
@@ -120,17 +180,29 @@
     });
   </script>
 
-<!-- SWIPER2 -->
-<script class="swiper2">
-  var swiper = new Swiper(".mySwiper2", {
+  <!-- Swiper2 -->
+  <script>
+    var swiper = new Swiper(".mySwiper2", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+
+  <!-- Swiper3 -->
+<script>
+  var swiper = new Swiper(".mySwiper3", {
+    slidesPerView: 3,
+    spaceBetween: 30,
     pagination: {
       el: ".swiper-pagination",
-      type: "fraction",
+      clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
   });
 </script>
 
