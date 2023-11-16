@@ -7,19 +7,11 @@
 }
 
 /* BANNER */
-.section__banner {
+.banner {
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.section__div {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -33,41 +25,6 @@
     align-items: center;
 }
 
-.enunciado {
-    display: flex;
-    /* flex-direction: row; */
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-}
-
-.enunciado h4{
-    width: 20%;
-}
-
-.enunciado a {
-    width: 10%;
-}
-
-.section__destacados article{
-    width: 90%;
-    max-width: 200px;
-    margin: 5px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: var(--sombra);
-}
-
-.section__destacados article img {
-    width: 100%;
-}
-
-.section__destacados article p {
-    margin: 5px 0px;
-}
-
 /* OFERTAS */
 .section__ofertas {
     width: 90%;
@@ -78,39 +35,19 @@
     align-items: center;
 }
 
-.section__ofertas article{
-    width: 90%;
-    max-width: 200px;
-    margin: 5px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: var(--sombra);
-}
-
-.section__ofertas article img {
-    width: 100%;
-}
-
-.section__ofertas article p {
-    margin: 5px 0px;
-}
-
 /* PUBLICIDAD */
 .publicidad{
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
 }
 
 .publicidad img{
    width: 100%;
-   margin: 0 auto;
    box-shadow: var(--sombra);
 }
 
-.publicidad img:first-child {
-    margin-bottom: 1rem;
+.swiper3 {
+    display: none;
 }
 
 /* TABLET */
@@ -119,17 +56,11 @@
         display: none;
     }
     
-    .section__div {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-    }
-
     .section__destacados {
         width: 100%;
         margin: 0 auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
     }
@@ -152,29 +83,18 @@
         width: 100%;
         margin: 0 auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
     }
+
+    .enunciado {
+        margin: 1rem 0rem;
+    }
+
 }
 
 /* DESKTOP */
 @media (min-width: 1024px){
-    .section__destacados {
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-    }
     
-    .section__ofertas {
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-    }
 }

@@ -28,6 +28,7 @@ a {
 
 .precioDestacado {
     color: orange;
+    margin: 10px 0px;
 }
 
 /* Para br */
@@ -36,7 +37,6 @@ a {
     margin: 1rem 0;
 }
 
-.verTodos {
-    color: rgb(3, 77, 174);
-    margin: 5px 0px;
+.enunciado {
+    margin-bottom: 5px;
 }

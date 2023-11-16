@@ -13,7 +13,7 @@
 </head> 
 <body class="home">
     <main class="home__main">
-        <section class="section__banner">           <!-- Swiper -->
+        <div class="banner">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="/images/Banner1.jpg" alt="banner1"></div>
@@ -21,9 +21,6 @@
                     <div class="swiper-slide"><img src="/images/Banner3.jpg" alt="banner3"></div>
                     <div class="swiper-slide"><img src="/images/Banner4.jpg" alt="banner4"></div>
                 </div>
-                <!-- <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div> -->
                 <div class="autoplay-progress">
                 <svg viewBox="0 0 48 48">
                     <circle cx="24" cy="24" r="20"></circle>
@@ -31,30 +28,30 @@
                 <span></span>
                 </div>
             </div>
-        </section> 
+        </div> 
             
             <hr class="lineaSep">
-        <div class="section__div">     
-          <div class="enunciado">
-            <h4>Productos destacados</h4>
-            <a class="verTodos" href="/ofertas">Ver todos...</a>
-          </div>
+
             <section class="section__destacados">
-                <article data-aos="flip-left">
-                    <img src="/images/reelRotativoPredator307.png" alt="destacado1">
-                    <h5>Nombre del producto</h5>
-                    <p class="precioDestacado">Precio destacado</p>
-                </article>
-                <article data-aos="flip-left">
-                    <img src="/images/borseguiesTropperCuero.png" alt="destacado2">
-                    <h5>Nombre del producto</h5>
-                    <p class="precioDestacado">Precio destacado</p>
-                </article>
-                <article data-aos="flip-left">
-                    <img src="/images/caña168EstimulaBait.png" alt="destacado3">
-                    <h5>Nombre del producto</h5>
-                    <p class="precioDestacado">Precio destacado</p>
-                </article>
+                <h4 class="enunciado">Productos destacados</h4>
+                    <!-- Swiper -->
+                <div class="swiper mySwiper2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="/images/reelRotativoPredator307.png" alt="destacado1">
+                      <p>Reel Rotativo Predator 307</p>
+                      <p class="precioDestacado">$36.560</p>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/images/borseguiesTropperCuero.png" alt="destacado2">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/images/caña168EstimulaBait.png" alt="destacado3">
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
             </section>
 
             <hr class="lineaSep">
@@ -66,31 +63,28 @@
               
             <hr class="lineaSep">
 
-            <div class="enunciado">
-              <h4>Ofertas imperdibles</h4>
-            <a class="verTodos" href="/ofertas">Ver todos...</a>
-            </div>
             <section class="section__ofertas">
-                <article data-aos="flip-left">
-                    <img src="/images/reelRotativoPredator307.png" alt="destacado1">
-                    <h5>Nombre del producto</h5>
-                    <p class="precioAnt"><del>Precio anterior</del></p>
-                    <p class="precio">Precio actual</p>
-                </article>
-                <article data-aos="flip-left">
-                    <img src="/images/borseguiesTropperCuero.png" alt="destacado2">
-                    <h5>Nombre del producto</h5>
-                    <p class="precioAnt"><del>Precio anterior</del></p>
-                    <p class="precio">Precio actual</p>
-                </article>
-                <article data-aos="flip-left">
-                    <img src="/images/caña168EstimulaBait.png" alt="destacado3">
-                    <h5>Nombre del producto</h5>
-                    <p class="precioAnt"><del>Precio anterior</del></p>
-                    <p class="precio">Precio actual</p>
-                </article>
+                <h4 class="enunciado">Ofertas imperdibles</h4>
+                              <!-- Swiper -->
+                <div class="swiper mySwiper2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="/images/reelRotativoPredator307.png" alt="destacado1">
+                      <p>Reel Rotativo Predator 307</p>
+                      <p class="precioAnt"><del>$36.560</del></p>
+                      <p class="precio">$25.420</p>
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/images/borseguiesTropperCuero.png" alt="destacado2">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/images/caña168EstimulaBait.png" alt="destacado3">
+                    </div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
             </section>
-        </div>   
     </main>
     
     <!-- AOS -->
@@ -125,8 +119,24 @@
       }
     });
   </script>
-</body>
+
+<!-- SWIPER2 -->
+<script class="swiper2">
+  var swiper = new Swiper(".mySwiper2", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+<!-- AOS -->
 <script>
-    AOS.init();
-  </script>
+  AOS.init();
+</script>
+</body>
 </html>
