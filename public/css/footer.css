@@ -1,8 +1,8 @@
 .footer{
     background: rgb(1,175,218);
     background: radial-gradient(circle, rgba(1,175,218,1) 86%, rgba(1,94,117,0.9192051820728291) 100%);
-    width: 98%;
-    /* padding: 5px 0; */
+    width: 100%;
+    padding: 5px; 
     font-weight: 900;
     margin: 0 auto;
 }
