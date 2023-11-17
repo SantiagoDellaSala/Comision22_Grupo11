@@ -1,0 +1,85 @@
+/* CLASES GENERALES */
+.lineaSep{
+    margin: 1rem 0;
+}
+
+.precioAnt {
+    color: #e61e1e;
+}
+
+.precioDestacado {
+    color: #f84e11;
+}
+
+.precioActual {
+    color: #159715;
+}
+
+.titulosSections {
+    margin-bottom: 5px;
+}
+/* *******************MOBILE******************** */
+.home__main--mobileOff {
+    display: none;
+}
+
+.home__main {
+    width: 100%;
+    margin: 0px auto;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #e4e4e4;
+}
+
+/* BANNER */
+.home__main--banner {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__main--mobile {
+    width: 90%;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+/* DESTACADOS */
+.home_main_--mobile--destacados {
+    width: 95%;
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.publicidad {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.publicidad img{
+    width: 100%;
+
+}
+
+/* OFERTAS */
+.home__main__section--ofertas {
+    width: 95%;
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ******************MOBILE OFF******************** */
+    /* DESTACADOS */
+.home__section--mobileOff {
+    width: 90%;
+    padding: 5px;
+    margin: 0 auto;
+}

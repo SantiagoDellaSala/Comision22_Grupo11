@@ -1,1 +1,172 @@
+.productDetail__h4 {
+    margin: 10px
+}
 
+.productDetail__main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EDEDED;
+    justify-content: center;
+    
+}
+
+.productDetail__section {
+    margin-top: 40px;
+    
+}
+
+.img-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+ .img-producto{
+
+    align-items: center;
+    justify-content: center;
+    
+    width: 250px;
+    margin: 15px auto;
+    
+} 
+
+.desc-producto{
+    width: 80vw;
+    margin: 15px;
+    flex-direction: column;
+    
+}
+
+.precio-cant{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 12px;
+    padding: 15px 5px;
+    width: auto;
+    align-items: center;
+    background-color: var(--color-grisSuave);
+    
+    border-radius: 5px;
+    
+}
+
+.b-compras input{
+    font-size: 17px;
+    font-style: var(--font-roboto);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--color-verde);
+    color: #EDEDED;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    opacity: 1.0;
+}
+
+.b-compras :hover{
+    background-color: red;
+}
+
+
+
+
+
+.precio-cant table{
+    width: 50px;
+    
+    
+    
+}
+
+.precio-cant td, button {
+    width: 30px;
+    margin: 0;
+
+}
+.precio-n{
+    font-size: 30px;
+}
+
+.tb-producto{
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    
+}
+
+.tb-producto table {
+    border: 1px solid black;
+    
+}
+.tb-producto td {
+    
+    width: 120px;
+    border: 0.5px solid black;
+    margin: 10px;
+    
+}
+
+
+
+
+
+.productDetail__article{
+    display: flex;
+    
+    
+    
+    
+    
+    
+}
+
+table td, table input{
+    /*width: 10vw;*/
+    
+    width: 40px;
+    
+   
+}
+
+ span{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+
+.img-desc-pre section {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.titulo{
+    
+    width: auto;
+    font-size: 27px;
+    font-weight:bold;
+    margin:10px 15px;
+    
+    
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  appearance: textfield;
+}
