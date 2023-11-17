@@ -1,3 +1,7 @@
+:root {
+    --sombra: 0px 0px 10px rgb(58, 58, 58);
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -6,6 +10,7 @@
 
 body {
     width: 100%;
+    background-color: #e6e6e6;
 }
 
 a {

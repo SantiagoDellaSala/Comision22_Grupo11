@@ -13,6 +13,9 @@ app.get('/login',(req,res) => res.sendFile(path.join(__dirname,'views','login.ht
 app.get('/productDetail',(req,res) => res.sendFile(path.join(__dirname,'views','productDetail.html')));
 app.get('/product-cart',(req,res) => res.sendFile(path.join(__dirname,'views','productCart.html')));
 app.get('/footer',(req,res) => res.sendFile(path.join(__dirname,'views','partials','footer.html')));
+app.get('/ofertas',(req,res) => res.sendFile(path.join(__dirname,'views','ofertas.html')));
+app.get('/destacados',(req,res) => res.sendFile(path.join(__dirname,'views','productosDestacados.html')));
+
 
 
 
