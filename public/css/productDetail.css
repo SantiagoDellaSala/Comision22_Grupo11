@@ -138,7 +138,6 @@ table td, table input{
     display: flex;
     flex-direction: column;
     gap: 3px;
-    
 }
 
 
@@ -171,5 +170,3 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   appearance: textfield;
 }
-
-

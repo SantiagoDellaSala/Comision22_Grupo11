@@ -48,15 +48,3 @@
     width: 15%;
     margin: 1rem 0;
 }
-
-/* TABLET */
-@media (min-width: 368px){
-    .register {
-        background-image: url(/images/FONDO_REGISTER.jpg);
-    }
-}
-
-/* DESKTOP */
-@media (min-width: 1024px){
-    
-}

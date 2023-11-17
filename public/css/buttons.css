@@ -8,6 +8,8 @@
 }
 
 .boton {
+    width: 40%;
+    min-width: 8rem;
     color:#ffffff;
     background-color: rgb(18, 18, 18);
     border-radius: 5px 5px 5px 0px;
