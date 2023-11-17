@@ -1,10 +1,26 @@
+/* CLASES GENERALES */
+.lineaSep{
+    padding: 1rem 0;
+}
+
+.precioAnt {
+    color: #e61e1e;
+}
+
+.precioDestacado {
+    color: #f84e11;
+}
+
+.precioActual {
+    color: #159715;
+}
 /* *******************MOBILE******************** */
 .home__main--mobileOff {
     display: none;
 }
 
 .home__main {
-    width: 90%;
+    width: 100%;
     margin: 0px auto;
     font-family: 'Josefin Sans', sans-serif;
     background-color: #e4e4e4;
@@ -12,7 +28,7 @@
 
 /* BANNER */
 .home__main--banner {
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     margin-bottom: 1rem;
     display: flex;
@@ -62,21 +78,4 @@
     width: 90%;
     padding: 5px;
     margin: 0 auto;
-}
-
-/* TABLET */
-@media (min-width: 760px){
-    
-    .home__main--mobile {
-        display: none;
-    }
-
-    .home__main--mobileOff {
-        display: block;
-    }
-}
-
-/* DESKTOP */
-@media (min-width: 1024px){
-    
 }

@@ -1,42 +1,8 @@
-:root {
-   
-    /*colores*/
-    --color-verde: #0C5C05;
-    --color-grisSuave:#d9d9d5;
-    /* FUENTES */
-    
-    --font-roboto:'Roboto', sans-serif;
-
-    /* Tamaños de fuentes */
-    --paragraph: 12px;
-    --title: 24px;
-    --prices: 18px;
-    
-}
-
-
-
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body{
-    font-family: var(--font-roboto);
-}
-
-
-
-
-
-
-
-h4{
+.productDetail__h4 {
     margin: 10px
 }
 
-main{
+.productDetail__main{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,7 +11,7 @@ main{
     
 }
 
-section{
+.productDetail__section {
     margin-top: 40px;
     
 }
@@ -150,7 +116,7 @@ section{
 
 
 
-article{
+.productDetail__article{
     display: flex;
     
     
@@ -193,100 +159,6 @@ table td, table input{
     
     
 }
-
-
-
-
-
-/*tablet*/
-@media (min-width:768px) {
-    .img-desc,
-    .img-producto {
-        width: 30vw;
-        margin: 30px auto;
-    }
-
-    .precio-cant{
-        width: auto;
-        padding: 20px 5px;
-        
-    }
-    .desc-producto{
-        width: 50VW;
-    }
-    p {
-        width: 80%;
-        font-size: 20px;
-    }
-    .tb-producto table{
-        width: 550px;
-        font-size: 20px;
-        
-    }
-    .img-desc-pre section{
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 0 20px
-    }
-    
-   
-    .precio-n{
-        font-size: 30px;
-    }
-
-    .a-titulo .titulo .precio-cant{
-        display: flex;
-        flex-direction: column;
-    }
-
-    
-   
-}
-
-/*desktop*/
-@media (min-width:992px) {
-    img{
-        width: 480px;
-        height: 400px;
-    }
-    
-    .precio-cant{
-        width: auto;
-        padding: 20px 5px;
-        
-    }
-
-    .desc-producto{
-        width: 50VW;
-    }
-    p {
-        width: 80%;
-    }
-    .tb-producto table{
-        width: 760px;
-    }
-    .img-desc-pre section {
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: 10px;
-        
-    }
-    .precio-n{
-        font-size: 35px;
-    }
-   
-    
-
-    .b-compras input{
-        font-size: 20px;
-        font-style: var(--font-roboto);
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-    }
-}
-
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

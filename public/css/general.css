@@ -1,5 +1,18 @@
 :root {
+    /* Sombreado */
     --sombra: 0px 0px 10px rgb(58, 58, 58);
+    
+    /*colores*/
+    --color-verde: #0C5C05;
+    --color-grisSuave:#d9d9d5;
+    /* FUENTES */
+    
+    --font-roboto:'Roboto', sans-serif;
+
+    /* Tamaños de fuentes */
+    --paragraph: 12px;
+    --title: 24px;
+    --prices: 18px;
 }
 
 * {
