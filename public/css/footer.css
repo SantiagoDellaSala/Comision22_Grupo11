@@ -1,0 +1,75 @@
+.footer{
+    background: rgb(1,175,218);
+    background: radial-gradient(circle, rgba(1,175,218,1) 86%, rgba(1,94,117,0.9192051820728291) 100%);
+    width: 98%;
+    /* padding: 5px 0; */
+    font-weight: 900;
+    margin: 0 auto;
+}
+
+.footer div a i {
+    color: black;
+}
+
+.footer div {
+    padding-left: 15px;
+} 
+
+div h3 {
+    text-align: center;
+}
+
+.footer div ul li{
+    padding: 5px 0 ;
+    list-style: none;
+    margin: 0;
+}
+
+.footer div ul {
+    padding: 0;
+    text-align: center;
+}
+
+.footer div ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.medios_de_pagos {
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+.medios_de_pagos i {
+    font-size: 20px;
+}
+
+.redes_sociales{
+    text-align: center;
+}
+.redes_sociales a {
+    padding: 0 10px;
+    font-size: 28px;
+}
+.atencion_al_cliente a{
+font-size: 18px;
+}
+.contactos a{
+    padding: 10px;
+    font-size: 18px;
+    font-family: none;
+    font-weight: 900;
+}
+
+@media (min-width :768px){
+   .footer {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+   }
+}
+
+@media (min-width: 1440px){
+
+
+}
