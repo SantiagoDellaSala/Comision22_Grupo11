@@ -1,6 +1,6 @@
 /* CLASES GENERALES */
 .lineaSep{
-    padding: 1rem 0;
+    margin: 1rem 0;
 }
 
 .precioAnt {
@@ -13,6 +13,10 @@
 
 .precioActual {
     color: #159715;
+}
+
+.titulosSections {
+    margin-bottom: 5px;
 }
 /* *******************MOBILE******************** */
 .home__main--mobileOff {
@@ -43,8 +47,8 @@
 }
 
 /* DESTACADOS */
-.section__destacados {
-    width: 100%;
+.home_main_--mobile--destacados {
+    width: 95%;
     padding: 5px;
     margin: 0 auto;
     display: flex;
@@ -53,7 +57,7 @@
 }
 
 .publicidad {
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -63,8 +67,8 @@
 }
 
 /* OFERTAS */
-.section__ofertas {
-    width: 100%;
+.home__main__section--ofertas {
+    width: 95%;
     padding: 5px;
     margin: 0 auto;
     display: flex;
