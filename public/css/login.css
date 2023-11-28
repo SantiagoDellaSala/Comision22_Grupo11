@@ -110,7 +110,7 @@
 
 @media (min-width:1024px){
 
-    .body-login {
+    .main-login {
         background-image: url(/images/login/austin-neill-n4FwReqOQz0-unsplash.jpg);
         background-size: cover;
         display: flex;

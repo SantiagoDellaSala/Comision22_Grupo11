@@ -7,7 +7,7 @@
     --color-grisSuave:#d9d9d5;
     /* FUENTES */
     
-    --font-roboto:'Inika', sans-serif;
+    --font-Inika:'Inika', sans-serif;
 
     /* Tamaños de fuentes */
     --paragraph: 12px;
@@ -24,7 +24,7 @@
 body {
     width: 100%;
     background-color: #e6e6e6;
-    font-family: var(--font-roboto);
+    font-family: var(--font-Inika);
 }
 
 a {
