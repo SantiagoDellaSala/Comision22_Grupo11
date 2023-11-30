@@ -7,14 +7,17 @@
 .register__main__div {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .register__main__div form {
-    width: 30%;
+    width: 60%;
 }
 
 .register__main__div img {
-    width: 70%;
+    display: block;
 }
 
 .formulario .icono {
