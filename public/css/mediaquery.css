@@ -102,4 +102,22 @@
          padding: 10px;
          border-radius: 5px;
      }
- }
+
+    /* REGISTER (Santiago) */
+    .register__main__div {
+        width: 100%;
+        display: flex;
+        justify-content: none;
+    }
+    
+    .register__main__div form {
+        width: 30%;
+    }
+    
+    .imagen__registro {
+        display: block;
+        width: 70%;
+    }
+
+}
+ 
