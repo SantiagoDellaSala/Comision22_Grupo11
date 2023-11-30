@@ -7,10 +7,44 @@
     <title>SUYDS</title>
 </head>
 <body class="register">
-    <main class="register__main">
+  <header class="header">
+    <div class="header__div"> 
+            <div class="div__hamburguesa">
+            <img src="/images/hamburguesa.svg" alt="" class="hamburguesa" >
+            </div>
+            <div class="header__logo">
+                <a class="logo" href="/"><img src="/images/logo.svg" alt=""></a>
+                <img src="/images/nombre_logo.svg" alt="" class="nombre_logo">
+            </div>
+
+        <div class="header__buscar">
+            <a href="" >
+                <input type="text" placeholder="Buscar" class="header__input">
+                <button type="submit" class="header__button"><i class="fas fa-search"></i></button>
+            </a>
+        </div>
+        <div class="header__div__login">
+            <a href="/login" ><img src="/images/usuario.svg" alt=""  class="usuario__carrito"></a>
+            <a href="/product-cart"><img src="/images/carrito.svg" alt="" class="usuario__carrito"></a>
+        </div>
+    </div>
+    <nav class="header__nav">
+        <ul class="nav-ul">
+            <li ><a href="#" class="nav__li">Home</a></li>
+            <li><a href="#" class="nav__li">Pesca</a></li>
+            <li><a href="#" class="nav__li">Camping</a></li>
+            <li><a href="#" class="nav__li">Óptica</a></li>
+            <li><a href="#" class="nav__li">Iluminación</a></li>
+            <li><a href="#" class="nav__li">Accesorios</a></li>
+            <li><a href="#" class="nav__li ">Promociones</a></li>
+        </ul>
+    </nav>
+    
+</header>
+  <main class="register__main">
         <div class="register__main__div">
           <form action="#" class="formulario">
-                <i class="fa-solid fa-arrow-left"></i>
+              <h6 class="titular">FORMULARIO DE REGISTRO</h6>
               <input
                 class="input"
                 id="name"
@@ -32,19 +66,25 @@
                 placeholder="Email"
                 name="email">
 
-            <input
+            <div class="pass__container">
+              <input
                 class="input"
                 id="password"
                 type="password"
                 placeholder="Contraseña"
                 name="password">
-            
+              <i class="fa-solid fa-eye ojo1"></i> 
+            </div>      
+
+            <div class="pass__container">
             <input
                 class="input"
                 id="passwordR"
                 type="password"
                 placeholder="Repetir contraseña"
                 name="passwordR">
+              <i class="fa-solid fa-eye ojo2"></i>
+            </div>
 
               <div class="formulario_divs">
                 <input type="checkbox"> <p>He leído y acepto los terminos y condiciones.</p>
@@ -52,14 +92,48 @@
                 <button class="boton" type="button"><a href="/">REGISTRARSE</a></button>
               </div>
     
-              
-
               <div class="formulario_divs">
                 <h5>¿Ya tienes una cuenta?</h5>
                 <a href="/login">Inicia sesión</a>
               </div>
         </form>
+        <img src="/images/FONDO_REGISTER.jpg" alt="">
         </div>
       </main>
+      <footer class="footer">
+        <div class="redes_sociales">
+            <h3>REDES SOCIALES</h3>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="atencion_al_cliente">
+            <h3>ATENCIÓN AL CLIENTE</h3>
+            <ul>
+                <li><a href="#">Quienes Somos?</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Como Comprar?</a></li>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="#">Métodos de envios</a></li>
+                <li><a href="#">Garantía</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>
+        </div>
+        <div class="contactos">
+            <h3>CONTACTÁNOS</h3>
+            <ul>
+                <li><i class="fa-brands fa-whatsapp"><a href="#">+5493981078784</a></i></li>
+                <li><i class="fa-solid fa-phone"><a href="#">+5493981078784</a></i></li>
+                <li><i class="fa-regular fa-envelope"><a href="#">suyds2023@gmail.com</a></i></li>
+            </ul>
+        </div>
+        <div class="medios_de_pagos">
+            <h3>MEDIOS DE PAGOS</h3>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-amex"></i>
+            <i class="fa-brands fa-cc-paypal"></i>
+        </div>
+    </footer>
 </body>
 </html>

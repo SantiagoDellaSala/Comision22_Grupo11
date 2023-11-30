@@ -1,22 +1,20 @@
-.register {
-    background-color: #202020;
-}
-
 .register__main {
-    width: 90%;
+    width: 98%;
     margin: 0 auto;
     padding: 1rem 0;
 }
 
 .register__main__div {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.formulario img {
-    display: none;
+.register__main__div form {
+    width: 30%;
+}
+
+.register__main__div img {
+    width: 70%;
 }
 
 .formulario .icono {
@@ -47,4 +45,22 @@
 .formulario_divs input{
     width: 15%;
     margin: 1rem 0;
+}
+
+.formulario_divs a{
+    color: #ffffff;
+}
+
+.formulario .titular {
+    background-color: rgb(18, 18, 18);
+    border-radius: 5px 5px 5px 0px;
+    border-color: #ffffff;
+    padding: 5px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.pass__container {
+    position: relative;
+    display: flex;
 }
