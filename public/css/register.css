@@ -7,14 +7,16 @@
 .register__main__div {
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .register__main__div form {
-    width: 30%;
+    min-width: 200px;
+    max-width: 400px;
 }
 
 .imagen__registro {
-   width: 70%;
+    display: none;
 }
 
 .formulario .icono {
@@ -58,9 +60,4 @@
     padding: 5px;
     color: #ffffff;
     letter-spacing: 1px;
-}
-
-.pass__container {
-    position: relative;
-    display: flex;
 }

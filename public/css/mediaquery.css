@@ -21,6 +21,21 @@
      display: block;
      }
  
+     /* REGISTER (Santiago) */
+     .register__main__div {
+        width: 100%;
+        display: flex;
+    }
+    
+    .register__main__div form {
+        width: 30%;
+    }
+    
+    .imagen__registro {
+        display: block !important;
+        width: 70%;
+    }
+
      /* PRODUCT DETAIL (Yohanna) */
      .img-desc,
      .img-producto {
