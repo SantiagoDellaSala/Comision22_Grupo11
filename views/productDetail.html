@@ -13,29 +13,29 @@
 
 <body>
     <header class="header">
-        <div class="header__div"> 
-                <div class="div__hamburguesa">
-                <img src="/images/hamburguesa.svg" alt="" class="hamburguesa" >
-                </div>
-                <div class="header__logo">
-                    <a class="logo" href="/"><img src="/images/logo.svg" alt=""></a>
-                    <img src="/images/nombre_logo.svg" alt="" class="nombre_logo">
-                </div>
-    
+        <div class="header__div">
+            <div class="div__hamburguesa">
+                <img src="/images/hamburguesa.svg" alt="" class="hamburguesa">
+            </div>
+            <div class="header__logo">
+                <a class="logo" href="/"><img src="/images/logo.svg" alt=""></a>
+                <img src="/images/nombre_logo.svg" alt="" class="nombre_logo">
+            </div>
+
             <div class="header__buscar">
-                <a href="" >
+                <a href="">
                     <input type="text" placeholder="Buscar" class="header__input">
                     <button type="submit" class="header__button"><i class="fas fa-search"></i></button>
                 </a>
             </div>
             <div class="header__div__login">
-                <a href="/login" ><img src="/images/usuario.svg" alt=""  class="usuario__carrito"></a>
+                <a href="/login"><img src="/images/usuario.svg" alt="" class="usuario__carrito"></a>
                 <a href="/product-cart"><img src="/images/carrito.svg" alt="" class="usuario__carrito"></a>
             </div>
         </div>
         <nav class="header__nav">
             <ul class="nav-ul">
-                <li ><a href="#" class="nav__li">Home</a></li>
+                <li><a href="#" class="nav__li">Home</a></li>
                 <li><a href="#" class="nav__li">Pesca</a></li>
                 <li><a href="#" class="nav__li">Camping</a></li>
                 <li><a href="#" class="nav__li">Óptica</a></li>
@@ -44,83 +44,77 @@
                 <li><a href="#" class="nav__li ">Promociones</a></li>
             </ul>
         </nav>
-        
+
     </header>
     <main class="productDetail__main">
         <div class="img-desc-pre">
             <section class=".productDetail__section">
                 <article class="img-producto">
-                    <img class="productDetail__img" width=100% src="/images/img-botas.png" alt="">
+                    <img class="productDetail__img" width="100%" src="/images/img-botas.png" alt="">
                 </article>
-                <article class="a-titulo">
-                    <p class="titulo">Borceguíes Tropper Cuero Altos</p>
-                </article>
-                
+                <div class="coso">
+                    <article class="a-titulo">
+                        <p class="titulo">Borceguíes Tropper Cuero Altos</p>
+                    </article>
+                    <article class="precio-cant">
+                        <table>
+                            <tr>
+                                <th class="precio-n">$9999</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button>-</button>
+                                    <input type="number" id="cantidad" name="cantidad" min="1">
+                                    <button>+</button>
+                                </td>
+                            </tr>
+                        </table>
+    
+                        <span class="b-compras">
+                            <input type="button" value="comprar">
+                            <input type="button" value="agregar al carrito">
+                        </span>
+                    </article>
+                </div> 
             </section>
+            
             <section class=".productDetail__section">
                 <article class="desc-producto">
                     <h4 class="productDetail__h4">Descripción</h4>
 
                     <p class="productDetail__p">
-                        <span>Construídas en cuero de altísima calidad. El diseño de la suela facilita la tracción y la liberación de agentes externos como barro, agua, nieve elementos contundentes, frío calor.
+                        <span>Construídas en cuero de altísima calidad. El diseño de la suela facilita la tracción y la
+                            liberación de agentes externos como barro, agua, nieve elementos contundentes, frío calor.
                             El talón biselado aumenta la superficie de contacto reduciendo el riesgo de caídas.
-                            Plantilla de gran flexibilidad, brinda sujeción y adaptabilidad durante el esfuerzo físico. </span>
+                            Plantilla de gran flexibilidad, brinda sujeción y adaptabilidad durante el esfuerzo físico.
+                        </span>
                     </p>
                 </article>
-                <article class="precio-cant">
+                <article class="tb-producto">
                     <table>
                         <tr>
-                            <th></th>
-                            <th class="precio-n">$9999</th>
-                            <th></th>
+                            <th>Caracteristicas</th>
                         </tr>
                         <tr>
-                            <td><button>-</button></td>
-                            <td>
-                                <input type="number" id="cantidad" name="cantidad" min="1">
-                            <td><button>+</button></td>
-                            </td>
-            
+                            <td>peso</td>
+                            <td>2.5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>talle</td>
+                            <td>40</td>
+                        </tr>
+                        <tr>
+                            <td>Material</td>
+                            <td>Cuero</td>
+                        </tr>
+                        <tr>
+                            <td>Origen</td>
+                            <td>Ind. Argentina</td>
                         </tr>
                     </table>
-            
-                    <span class="b-compras">
-                        <input type="button" value="comprar">
-                        <input type="button" value="agregar al carrito">
-                    </span>
                 </article>
             </section>
         </div>
-
-
-        <section class=".productDetail__section">
-
-
-            <article class="tb-producto">
-                <table>
-                    <tr>
-                        <th>Caracteristicas</th>
-                    </tr>
-                    <tr>
-                        <td>peso</td>
-                        <td>2.5 kg</td>
-                    </tr>
-                    <tr>
-                        <td>talle</td>
-                        <td>40</td>
-                    </tr>
-                    <tr>
-                        <td>Material</td>
-                        <td>Cuero</td>
-                    </tr>
-                    <tr>
-                        <td>Origen</td>
-                        <td>Ind. Argentina</td>
-                    </tr>
-                </table>
-            </article>
-        </section>
-
     </main>
     <footer class="footer">
         <div class="redes_sociales">

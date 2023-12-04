@@ -1,122 +1,137 @@
-@media (min-width :768px){
+
+
+@media (min-width :768px) {
+
     /* FOOTER (Ulises)*/
-     .footer {
-         display: flex;
-         justify-content: space-around;
-         text-align: center;
-     }
- 
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+
     /* LOGIN (Ulises */
     .login {
-     padding: 20px;
-     height: 100vh;
-     }
- 
+        padding: 20px;
+        height: 100vh;
+    }
+
     /* HOME (Santiago)*/
-    .home__main--mobile {
-     display: none;
-     }
- 
-     .home__main--mobileOff {
-     display: block;
-     }
- 
-     /* REGISTER (Santiago) */
-     .register__main__div {
+    .home__main--mobile {display: none;}
+
+    .home__main--mobileOff {display: block;}
+
+    /* REGISTER (Santiago) */
+    .register__main__div {
         width: 100%;
         display: flex;
     }
-    
-    .register__main__div form {
-        width: 30%;
-    }
-    
+
+    .register__main__div form {width: 30%;}
+
     .imagen__registro {
         display: block !important;
         width: 70%;
     }
 
-     /* PRODUCT DETAIL (Yohanna) */
-     .img-desc,
-     .img-producto {
-         width: 30vw;
-         margin: 30px auto;
-     }
- 
-     .precio-cant{
-         width: auto;
-         padding: 20px 5px;
-         
-     }
-     .desc-producto{
-         width: 50VW;
-     }
-     .productDetail__p {
-         width: 80%;
-         font-size: 20px;
-     }
-     .tb-producto table{
-         width: 550px;
-         font-size: 20px;
-         
-     }
-     .img-desc-pre section{
-         flex-direction: row;
-         justify-content: space-evenly;
-         align-items: center;
-         margin: 0 20px
-     }
-     
-     .precio-n{
-         font-size: 30px;
-     }
- 
-     .a-titulo .titulo .precio-cant{
-         display: flex;
-         flex-direction: column;
-     }
- }
- 
- @media (min-width: 1440px){
-     /* PRODUCT DETAIL (Yohanna) */
-     .productDetail__img{
-         width: 480px;
-         height: 400px;
-     }
-     
-     .precio-cant{
-         width: auto;
-         padding: 20px 5px;
-     }
- 
-     .desc-producto{
-         width: 50VW;
-     }
-     
-     .productDetail__p {
-         width: 80%;
-     }
-     
-     .tb-producto table{
-         width: 760px;
-     }
-     .img-desc-pre section {
-         flex-direction: row;
-         justify-content: space-evenly;
-         gap: 10px;
-         
-     }
-     .precio-n{
-         font-size: 35px;
-     }
+    /* PRODUCT DETAIL (Yohanna) */
+    .productDetail__section {
+        margin: 0 10vw;
+        justify-content: space-evenly;
+        gap: 2vw;
+    }
+
+    .coso {
+        width: 40%;
+    }
+
+    .img-desc,
+    .img-producto {
+
+        width: 40vw;
+        margin-left: 5vw;
+    }
+
+    .productDetail__section .productDetail__img {
+        margin-left: 5vw;
+        width: 30vw;
+    }
+
+    .precio-cant {
+        margin: 2vw;
+        padding: 15px 10px;
+        width: 40vw;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .precio-cant table {
+        width: 18vw;
+        margin: 0;
+        justify-content: space-evenly;
+    }
+
+    .precio-cant table td, button {width: 3vw;}
+    .precio-cant table #cantidad {width: 7vw;}
+
+    .b-compras input {width: 18vw;}
+
+    .desc-producto {width: 50vw;}
+
+    .productDetail__p span {
+        width: 40vw;
+        margin-left: 5vw;
+        font-size: 20px;
+    }
+
+    .productDetail__h4{font-size: 20px;}
+    .tb-producto {
+        width: 40vw;
+        font-size: 20px;
+        margin-right: 5vw;
+    }
+
+    .img-desc-pre section {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 20px
+    }
+
+    .precio-n {font-size: 30px;}
+
+    .a-titulo,
+    .titulo,
+    .precio-cant {
+        width: 40vw;
+        height: auto;
+        font-size: 25px;
+        margin: 5vw 0 5vh;  
+        /* text-align: left; */
+    }
+}
+
+@media (min-width: 1440px) {
+
+    /* PRODUCT DETAIL (Yohanna) */
     
-     .b-compras input{
-         font-size: 20px;
-         font-style: var(--font-roboto);
-         border: none;
-         padding: 10px;
-         border-radius: 5px;
-     }
+
+    .precio-cant {width: 35vw;}
+
+    .desc-producto {width: 50vw;}
+
+    .productDetail__p {width: 80%;}
+
+    
+
+    .img-desc-pre .productDetail__section {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+
+    .precio-n {font-size: 35px;}
+
+    .b-compras input {width: 15vw;}
 
     /* REGISTER (Santiago) */
     .register__main__div {
@@ -124,15 +139,11 @@
         display: flex;
         justify-content: none;
     }
-    
-    .register__main__div form {
-        width: 30%;
-    }
-    
+
+    .register__main__div form {width: 30%;}
+
     .imagen__registro {
         display: block;
         width: 70%;
     }
-
 }
- 
