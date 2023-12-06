@@ -4,7 +4,7 @@ const { login, register } = require('../controllers/usersController');
 
 /* /usurios */
 router
-  .get('/ingreso', login)
-  .get('/registro', register)
+  .get('/login', login)
+  .get('/register', register)
 
 module.exports = router;

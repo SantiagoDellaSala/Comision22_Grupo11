@@ -4,6 +4,6 @@ const { detail } = require('../controllers/productsController');
 
 /* productos */
 router
-  .get('/detalle/:id?', detail)
+  .get('/detail', detail)
 
 module.exports = router
