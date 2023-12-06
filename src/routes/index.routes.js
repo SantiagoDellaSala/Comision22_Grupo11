@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const {index, cart} = require('../controllers/indexController');
 
 /* / */
@@ -7,4 +7,4 @@ router
   .get('/', index)
   .get('/carrito', cart)
 
-module.export = router
+module.exports = router

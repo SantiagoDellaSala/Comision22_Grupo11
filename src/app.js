@@ -24,7 +24,7 @@ app
   .use(express.urlencoded({ extended: false }))
 
   /* Recursos estáticos */
-  .use(express.static(path.join(__dirname, 'public')))
+  .use(express.static(path.join(__dirname, '..', 'public')))
 
   /* Rutas */
   .use('/', indexRouter)
