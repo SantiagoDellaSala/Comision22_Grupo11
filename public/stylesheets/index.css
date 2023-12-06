@@ -24,7 +24,7 @@
 }
 
 .home__main {
-    width: 100%;
+    width: 98%;
     margin: 0px auto;
     font-family: 'Josefin Sans', sans-serif;
     background-color: #e4e4e4;
@@ -46,9 +46,9 @@
     margin: 0 auto;
 }
 
-/* DESTACADOS */
-.home_main_--mobile--destacados {
-    width: 100%;
+/* SECTIONS */
+.home__main__section {
+    width: 95%;
     padding: 5px;
     margin: 0 auto;
     display: flex;
@@ -68,14 +68,15 @@
 
 }
 
-/* OFERTAS */
-.home__main__section--ofertas {
-    width: 95%;
-    padding: 5px;
-    margin: 0 auto;
+.titularesContainer {
+    width: 90%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+}
+
+.titularesContainer a {
+    color: blue;
 }
 
 /* ******************MOBILE OFF******************** */
