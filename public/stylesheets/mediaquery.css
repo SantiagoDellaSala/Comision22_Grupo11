@@ -10,9 +10,17 @@
     }
 
     /* LOGIN (Ulises */
-    .login {
-        padding: 20px;
-        height: 100vh;
+    .main-login {
+       width: 90%;
+       margin: 15px auto;
+    }
+    .login{
+        padding: 30px 102px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     /* HOME (Santiago)*/
@@ -110,7 +118,7 @@
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
 
     /* PRODUCT DETAIL (Yohanna) */
     
@@ -146,4 +154,26 @@
         display: block;
         width: 70%;
     }
+    /* LOGIN ULISES */
+    
+    .main-login {
+        background-image: url(/images/login/austin-neill-n4FwReqOQz0-unsplash.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 90%;
+        margin: 15px auto;
+        
+    }
+
+    .login {
+        padding: 30px 102px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }
