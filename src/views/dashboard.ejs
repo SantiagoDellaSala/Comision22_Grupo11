@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<%- include('./partials/head',{
+	title : 'Dashboard'
+}) %>
+
+
+<body>
+    <%- include('./partials/header') %>
+    <main class="container">
+        <section class="row my-5">
+            <div class="col-12 col-md-10 mx-auto">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h4 class="cart-title">Productos</h4>
+                        <a class="btn btn-primary btn-md " href="/products/agregar">Nuevo</a>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Nombre del producto</th>
+                                <th scope="col">#</th>
+                                <th scope="col">Categoría</th>
+                                <th scope="col">Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <% products.forEach(({id,name,address,category, mainImage,description, phone}) => { %>
+                                    <tr>
+                                        <th><%= name %></th>
+                                        <td><%= id %></td>
+                                        <td><%= address %></td>
+                                        <td><%= category %></td>
+                                        <td>
+                                            <div class="d-flex gap-2">
+                                                <button 
+                                                    class="btn btn-sm btn-outline-primary border-none" 
+                                                    data-bs-toggle="modal" 
+                                                    data-bs-target="#exampleModal<%= id %>">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </button>
+                                                <a class="btn btn-sm btn-outline-success border-none" href="/productos/editar"><i class="fa-solid fa-pencil"></i></a>
+                                                <a class="btn btn-sm btn-outline-danger border-none" href="/"><i class="fa-solid fa-trash"></i></a>
+            
+                                            </div>
+                                        </td>
+                                      </tr>
+                                <% }) %>
+                              
+        
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include('./partials/scripts') %>
+
+</body>
+</html>
