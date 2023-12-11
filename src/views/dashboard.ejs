@@ -27,12 +27,12 @@
                               </tr>
                             </thead>
                             <tbody>
-                                <% products.forEach(({id,name,address,category, mainImage,description, phone}) => { %>
+                                <% products.forEach(({id,name,precio,categoría}) => { %>
                                     <tr>
                                         <th><%= name %></th>
                                         <td><%= id %></td>
-                                        <td><%= address %></td>
-                                        <td><%= category %></td>
+                                        <td><%= precio %></td>
+                                        <td><%= categoría %></td>
                                         <td>
                                             <div class="d-flex gap-2">
                                                 <button 
