@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <%- include('../partials/head.ejs') %>
+    
+    <title>Editar producto</title>
 
     <body>
         <%- include('../partials/header.ejs') %>
@@ -13,24 +16,30 @@
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="/admin" class="text-primary"><i
                                                     class="fa-solid fa-lock"></i></a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Nuevo Producto</li>
+                                        <li class="breadcrumb-item active" aria-current="page">Editar producto</li>
                                     </ol>
                                 </nav>
                             </div>
                             <div class="card-body">
                                 <form action="" class="row">
-                                    <h3>Nuevo Producto</h3>
+                                    <h3>Editar producto</h3>
                                     <hr>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
                                             <input name="name" type="text" class="form-control" id="name">
-                                            <label for="name">Nombre del producto</label>
+                                            <label for="name">Nombre</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
                                             <input name="price" type="text" class="form-control" id="price">
                                             <label for="price">Precio</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating">
+                                            <input name="address" type="text" class="form-control" id="color">
+                                            <label for="color">Color</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
@@ -47,26 +56,25 @@
                                             <label for="category">Categoría</label>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-3 mb-3">
+                                    <div class="col-12 mb-3">
+                                        <div class="form-floating">
+                                            <textarea name="description" class="form-control" id="description"
+                                                style="height: 100px;"></textarea>
+                                            <label for="description">Descripción</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
                                         <input name="mainImage" type="file" class="form-control" id="mainImage" hidden>
                                         <label class="btn btn-primary btn-md w-100" for="mainImage">Imagen
                                             principal</label>
                                     </div>
-                                    <div class="col-12 col-md-3 mb-3">
+                                    <div class="col-12 col-md-6 mb-3 ">
                                         <input name="images" type="file" class="form-control" id="images" hidden
                                             multiple>
-                                        <label class="btn btn-primary btn-md w-100" for="images">Imágenes</label>
-                                    </div>
-                                    <div class="col-12  mb-3">
-                                        <div class="form-floating">
-                                            <textarea name="description" class="form-control" id="description"
-                                                style="height: 150px;"></textarea>
-                                            <label for="description">Descripción</label>
-                                        </div>
+                                        <label class="btn btn-primary btn-md w-100" for="images">Imágenes extra</label>
                                     </div>
                                     <div class="col-12  d-flex justify-content-end ">
-                                        <button class="btn btn-primary btn-md w-100"><a href="/admin">Agregar
-                                                producto</button></a>
+                                        <button class="btn btn-success  btn-md w-100"><a href="/admin">Guardar cambios</button></a>
                                     </div>
                                 </form>
 
@@ -75,6 +83,8 @@
                     </div>
                 </section>
             </main>
+
+
             <%- include('../partials/footer.ejs') %>
 
                 <%- include('../partials/scripts') %>
