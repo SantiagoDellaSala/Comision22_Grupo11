@@ -71,7 +71,7 @@
 
 .usuario__carrito {width: 80%;}
 
-.header__buscar {display: none;}
+
 
 @media (min-width: 768px){
 
@@ -106,15 +106,17 @@
 
     .header__buscar{
         display: flex;
-        position: relative;
+        
         
     }
     .header__button{
-        position: absolute;
+        
         padding: 7px;
-        left: 150px;
         background-color: transparent;
         border: none;
+        position:relative;
+        right:40px;
+        
         
         
     }
@@ -126,6 +128,7 @@
         width: 180px;
     }
 
+    
     .header__nav{
         display: flex;
         
@@ -155,9 +158,9 @@
         margin-bottom: 10px;
         width: 70%;
     }
-    .header__div__login a{
-        width: 10vw;
-    }
+    
+
+    .usuario__carrito {width: 60%; height: 50px;} 
 }
 
 /* @media (min-width: 1024px){
