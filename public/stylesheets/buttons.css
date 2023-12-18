@@ -1,0 +1,22 @@
+.button__vermas {
+    font-size: 0.6rem;
+    border-radius: 0.7rem 0px 0px 0px;
+    background-color: #060606;
+    color: #ffffff;
+    padding: 5px;
+    margin: 10px 0px;
+}
+
+.boton {
+    width: 40%;
+    min-width: 8rem;
+    color:#ffffff;
+    background-color: rgb(18, 18, 18);
+    border-radius: 5px 5px 5px 0px;
+    border-color: #ffffff;
+    padding: 5px;
+}
+
+.boton a {
+    color: #ffffff;
+}

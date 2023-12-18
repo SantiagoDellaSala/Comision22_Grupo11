@@ -1,10 +1,10 @@
-var express = require('express');
+const express = require('express');
+const router = express.Router();
 const { login, register } = require('../controllers/usersController');
-var router = express.Router();
 
-/* /usurios */
+/* /users */
 router
-  .get('/ingreso', login)
-  .get('/registro', register)
+  .get('/login', login)
+  .get('/register', register)
 
 module.exports = router;

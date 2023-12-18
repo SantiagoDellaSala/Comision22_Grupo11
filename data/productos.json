@@ -1,0 +1,352 @@
+[
+  {
+    "id" : 1,
+    "name": "CAÑA AMBERJACK TRANSPORTER 2,10M",
+    "precio": 60000,
+    "descripcion": "Caña ideal para la pesca de tarariras-dorados-pacu-bogas y otras especies",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 2,
+    "name": "OKUMA LONGITUDE TSS 4.35",
+    "precio": 150000,
+    "descripcion": "Blank construido en composición de grafito de alta resistencia y sensibilidad",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 3,
+    "name": "CAÑA SURFCASTING OKUMA CEYMAR SHW 4.35",
+    "precio": 205647,
+    "descripcion": "SHW, es una caña moderna, potente y versátil para cubrir diversas situaciones de pesca.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 4,
+    "name": "CAÑA COLONY LAGO AZUL 2.40M",
+    "precio": 59599,
+    "descripcion": "Ideal para la pesca del pejerrey. ¡Lleváte una caña resistente, liviana y compacta, disfrutá por completo la pesca del pejerrey!",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 5,
+    "name": "CAÑA SHIMANO 1.74M",
+    "precio": 87400,
+    "descripcion": "La serie Sellus está diseñada para el pescador moderno.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 6,
+    "name": "COMBO BAITCASTING OKUMA AMBERJACK",
+    "precio": 100125,
+    "descripcion": "Combo de baitcasting ideal para diferentes tipos de pesca.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 7,
+    "name": "FUNDA PARA CAÑA TECH STICK JACKET 1.80MTS",
+    "precio": 8730,
+    "descripcion": "Funda para proteger nuestras cañas bait y sus pasahilos.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 8,
+    "name": "CAPUCHON PLASTICO PARA CAÑA TELESCOPICA",
+    "precio": 1860,
+    "descripcion": "Capuchon plastico reforzado para proteger Pasahilos de las cañas telescopicas.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 9,
+    "name": "PORTAREEL TUBULAR REGULABLE A ROSCA N°20-22-24-26-28",
+    "precio": 16000,
+    "descripcion": "Se puede poner a la medida que uno le quede comodo el agarre.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 10,
+    "name": "GATILLO PARA REEL FRONTAL TSK",
+    "precio": 9500,
+    "descripcion": "Gatillo TSK tipo cannon par lanzamiento de cañas con reel frontal.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 11,
+    "name": "CARPA IGLU SPINIT CONFORT 4 P",
+    "precio": 582080,
+    "descripcion": "Esta pensada para el uso familiar.",
+    "categoria": "Camping"
+  },
+  {
+    "id" : 12,
+    "name": "MESA CAMPING SPINIT PLEGABLE ALUMINIO",
+    "precio" : 131100,
+    "descripcion": "TRANSPORTABLE - FACIL ARMADO - RESISTENTE - REGULABLE - LIVIANA",
+    "categoria": "Camping"
+  },
+  {
+    "id" : 13,
+    "name": "BOLSA DE DORMIR SPINIT MODELO CLASSIC",
+    "precio": 53300,
+    "descripcion": "Bolsa Rectangular - Se Puede Abrir Completa Para Usar Como Acolchado.",
+    "categoria": "Camping"
+  },
+  {
+    "id" : 14,
+    "name": "ANAFE PORTATIL BUTANO SPINIT VULCAN",
+    "precio": 57900,
+    "descripcion": "Ideal para camping, pesca, pic - nics y cualquier lugar al aire libre.",
+    "categoria": "Camping"
+  },
+  {
+    "id" : 15,
+    "name": "JUEGO DE ASADO . SIMIL CARPINCHO",
+    "precio": 24000,
+    "descripcion": "Cubiertos con mangos de madera. Manija para transportar.",
+    "categoria": "Camping"
+  },
+  {
+    "id" : 16,
+    "name": "TERMO VIAJERO SURFISH ACERO INOXIDABLE",
+    "precio": 78900,
+    "descripcion": "Tapa a rosca doble desmontable (se puede usar una parte como vaso y mantener la tapa).",
+    "categoria": "Camping"
+  },
+  {
+    "id" : 17,
+    "name": "LINTERNA SPINIT MEGA 101-W COMPACTA",
+    "precio": 24600,
+    "descripcion": "LINTERNA SPINIT MEGA 101-W. LA UNICA CON PILAS DE REGALO.",
+    "categoria": "Camping"
+  },
+  {
+    "id" : 18,
+    "name": "CONSERVADORA BOLSO TERMICO COLEMAN",
+    "precio": 90400,
+    "descripcion": "El diseño ultra portátil de Bolso térmico COLEMAN, lo hace ideal para salidas de Campamento.",
+    "categoria": "Camping"
+  },
+  {
+    "id" : 19,
+    "name": "CORDON MOLDEABLE NITE IZE GEAR TIE",
+    "precio": 11600,
+    "descripcion": "Múltiples usos como sujetar cañas, unir, conectar, organizar, enrosca cables, anudable, etc.",
+    "categoria": "Camping"
+  },
+  {
+    "id" : 20,
+    "name": "GAS NTK TUBOS DE 450GRS A ROSCA",
+    "precio": 18700,
+    "descripcion": "Cartucho Gas Butano Propano 450 grs A Rosca NTK MaxxGas.",
+    "categoria": "Camping"
+  },
+  {
+    "id" : 21,
+    "name": "REMERA PAYO SECADO RÁPIDO CAPUCHA",
+    "precio": 32000,
+    "descripcion": "Ver tabla de Talles, tenemos stock en todos los Talles!",
+    "categoria": "Indumentaria"
+  },
+  {
+    "id" : 22,
+    "name": "LENTES DE SOL PAYO ACONCAGUA",
+    "precio": 25000,
+    "descripcion": "Con protección UV.",
+    "categoria": "Indumentaria"
+  },
+  {
+    "id" : 23,
+    "name": "PANTALON PAYO VADEO PESCA TREKKING",
+    "precio": 51600,
+    "descripcion": "La tela es de poliester 78% y elastano 22% (sof technology).",
+    "categoria": "Indumentaria"
+  },
+  {
+    "id" : 24,
+    "name": "DEDAL DE CUERO PARA PESCA DEPORTIVA",
+    "precio": 4300,
+    "descripcion": "Dedal de cuero, Ideal para lance de costa con frontal o rotativo.",
+    "categoria": "Indumentaria"
+  },
+  {
+    "id" : 25,
+    "name": "CUELLO PAYO MULTIUSO BUFF UV 50",
+    "precio": 8080,
+    "descripcion": "Cuello Payo diseño varios modelos.",
+    "categoria": "Indumentaria"
+  },
+  {
+    "id" : 26,
+    "name": "Cuello Payo diseño varios modelos",
+    "precio": 36300,
+    "descripcion": "Remera Nuevo Modelo de Payo Argentina Edicion.",
+    "categoria": "Indumentaria"
+  },
+  {
+    "id" : 27,
+    "name": "GORRO GORRA PAYO TRUCKER GABARDINA",
+    "precio": 21500,
+    "descripcion": "Gorra trucker payo nuevo modelo gabardina en 4 colores visera rigida.",
+    "categoria": "Indumentaria"
+  },
+  {
+    "id" : 28,
+    "name": "SET DE 20 TORNILLOS Y LLAVE PARA ZAPATOS",
+    "precio": 47700,
+    "descripcion": "Nuevos Tornillos de acero Para zapatos de vadeo con suela de goma.",
+    "categoria": "Indumentaria"
+  },
+  {
+    "id" : 29,
+    "name": "GUANTES RAPALA PERFORMANCE",
+    "precio": 59200,
+    "descripcion": "Como su nombre lo dice, estos guantes Rapala son de alto rendimiento.",
+    "categoria": "Indumentaria"
+  },
+  {
+    "id" : 30,
+    "name": "CAMPERA DAGO DE NEOPRENE",
+    "precio": 219900,
+    "descripcion": "Protegen al pescador o el nauta de las condiciones climáticas más adversas (lluvia, frío o viento).",
+    "categoria": "Indumentaria"
+  },
+  {
+    "id" : 31,
+    "name": "CAÑA AMBERJACK TRANSPORTER 2,10M",
+    "precio": 60000,
+    "descripcion": "Caña ideal para la pesca de tarariras-dorados-pacu-bogas y otras especies",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 32,
+    "name": "OKUMA LONGITUDE TSS 4.35",
+    "precio": 150000,
+    "descripcion": "Blank construido en composición de grafito de alta resistencia y sensibilidad",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 33,
+    "name": "CAÑA SURFCASTING OKUMA CEYMAR SHW 4.35",
+    "precio": 205647,
+    "descripcion": "SHW, es una caña moderna, potente y versátil para cubrir diversas situaciones de pesca.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 34,
+    "name": "CAÑA COLONY LAGO AZUL 2.40M",
+    "precio": 59599,
+    "descripcion": "Ideal para la pesca del pejerrey. ¡Lleváte una caña resistente, liviana y compacta, disfrutá por completo la pesca del pejerrey!",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 35,
+    "name": "CAÑA SHIMANO 1.74M",
+    "precio": 87400,
+    "descripcion": "La serie Sellus está diseñada para el pescador moderno.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 36,
+    "name": "COMBO BAITCASTING OKUMA AMBERJACK",
+    "precio": 100125,
+    "descripcion": "Combo de baitcasting ideal para diferentes tipos de pesca.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 37,
+    "name": "FUNDA PARA CAÑA TECH STICK JACKET 1.80MTS",
+    "precio": 8730,
+    "descripcion": "Funda para proteger nuestras cañas bait y sus pasahilos.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 38,
+    "name": "CAPUCHON PLASTICO PARA CAÑA TELESCOPICA",
+    "precio": 1860,
+    "descripcion": "Capuchon plastico reforzado para proteger Pasahilos de las cañas telescopicas.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 39,
+    "name": "PORTAREEL TUBULAR REGULABLE A ROSCA N°20-22-24-26-28",
+    "precio": 16000,
+    "descripcion": "Se puede poner a la medida que uno le quede comodo el agarre.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 40,
+    "name": "GATILLO PARA REEL FRONTAL TSK",
+    "precio": 9500,
+    "descripcion": "Gatillo TSK tipo cannon par lanzamiento de cañas con reel frontal.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 41,
+    "name": "CAÑA AMBERJACK TRANSPORTER 2,10M",
+    "precio": 60000,
+    "descripcion": "Caña ideal para la pesca de tarariras-dorados-pacu-bogas y otras especies",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 42,
+    "name": "OKUMA LONGITUDE TSS 4.35",
+    "precio": 150000,
+    "descripcion": "Blank construido en composición de grafito de alta resistencia y sensibilidad",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 43,
+    "name": "CAÑA SURFCASTING OKUMA CEYMAR SHW 4.35",
+    "precio": 205647,
+    "descripcion": "SHW, es una caña moderna, potente y versátil para cubrir diversas situaciones de pesca.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 44,
+    "name": "CAÑA COLONY LAGO AZUL 2.40M",
+    "precio": 59599,
+    "descripcion": "Ideal para la pesca del pejerrey. ¡Lleváte una caña resistente, liviana y compacta, disfrutá por completo la pesca del pejerrey!",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 45,
+    "name": "CAÑA SHIMANO 1.74M",
+    "precio": 87400,
+    "descripcion": "La serie Sellus está diseñada para el pescador moderno.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 46,
+    "name": "COMBO BAITCASTING OKUMA AMBERJACK",
+    "precio": 100125,
+    "descripcion": "Combo de baitcasting ideal para diferentes tipos de pesca.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 47,
+    "name": "FUNDA PARA CAÑA TECH STICK JACKET 1.80MTS",
+    "precio": 8730,
+    "descripcion": "Funda para proteger nuestras cañas bait y sus pasahilos.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 48,
+    "name": "CAPUCHON PLASTICO PARA CAÑA TELESCOPICA",
+    "precio": 1860,
+    "descripcion": "Capuchon plastico reforzado para proteger Pasahilos de las cañas telescopicas.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 49,
+    "name": "PORTAREEL TUBULAR REGULABLE A ROSCA N°20-22-24-26-28",
+    "precio": 16000,
+    "descripcion": "Se puede poner a la medida que uno le quede comodo el agarre.",
+    "categoria": "Pesca"
+  },
+  {
+    "id" : 50,
+    "name": "GATILLO PARA REEL FRONTAL TSK",
+    "precio": 9500,
+    "descripcion": "Gatillo TSK tipo cannon par lanzamiento de cañas con reel frontal.",
+    "categoria": "Pesca"
+  }
+]

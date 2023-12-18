@@ -1,0 +1,147 @@
+.header{
+    background: rgb(1,175,218);
+    background: radial-gradient(circle, rgba(1,175,218,1) 86%, rgba(1,94,117,0.9192051820728291) 100%);
+    width: 100%;
+    
+    
+}
+.header__div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.hamburguesa{
+    width: 70%;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.header__logo{
+    width: 18%;
+    display: flex;
+    gap: 5px;
+    
+}
+.header__buscar{
+    width: 18%;
+}
+.header__div__login{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo{
+    width: 90%;
+}
+.nombre_logo{
+    width: 90%;
+}
+.usuario__carrito{
+    width: 80%;
+    
+}
+
+
+
+.header__buscar{
+    display: none;
+}
+
+
+.hamburguesa{
+    left: 100px;
+}
+
+.header__nav {
+    display: none;
+    width: 100%;
+    background-color: black;
+}
+.nav-ul{
+    flex-direction: column;
+    color: white;
+}
+.nav__li{
+    color: aliceblue;
+}
+
+
+@media  (min-width: 768px){
+    
+    .hamburguesa{
+        display: none;
+    
+    }
+    .header__buscar{
+        display: flex;
+        position: relative;
+        
+    }
+    .header__button{
+        position: absolute;
+        padding: 7px;
+        left: 150px;
+        background-color: transparent;
+        border: none;
+        
+        
+    }
+    .header__input{
+        padding: 6px;
+        border-radius: 10px;
+        border: 1px black solid;
+        background-color: transparent;
+        width: 180px;
+    }
+
+    .header__nav{
+        display: flex;
+        
+    }
+    .nav-ul {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        padding-left: 20px;
+    }
+    
+    .header__buscar{
+        display: flex;
+        align-items: center;
+    }
+    .header__logo{
+        display: flex;
+        justify-content: flex-end;
+        width: 12%;
+        position: relative;
+    }
+    .logo{
+        position: relative;
+        right: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 70%;
+    }
+    .header__div__login a{
+        width: 20%;
+    }
+}
+
+@media  (min-width: 1024px){
+    .nav-ul {
+        display: flex;
+        gap: 80px;
+        margin: 3px;
+        padding-left: 80px;
+    }
+    
+}
+@media  (min-width: 1440px){
+    .nav-ul {
+        display: flex;
+        gap: 130px;
+        margin: 3px;
+        padding-left: 100px;
+    }
+}
