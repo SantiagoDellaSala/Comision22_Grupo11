@@ -45,6 +45,10 @@ div h3 {
     font-size: 20px;
 }
 
+.medios_de_pagos img {
+    max-width: 30px;
+}
+
 .redes_sociales{
     text-align: center;
 }
@@ -52,6 +56,11 @@ div h3 {
     padding: 0 10px;
     font-size: 28px;
 }
+
+.redes_sociales img {
+    max-width: 30px;
+}
+
 .atencion_al_cliente a{
 font-size: 18px;
 }
