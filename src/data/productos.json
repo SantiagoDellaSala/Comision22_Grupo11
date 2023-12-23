@@ -4,35 +4,45 @@
     "name": "CAÑA AMBERJACK TRANSPORTER 2,10M",
     "precio": 60000,
     "descripcion": "Caña ideal para la pesca de tarariras-dorados-pacu-bogas y otras especies",
-    "categoria": "Pesca"
+    "categoria": "Pesca",
+    "medida" : 2.10,
+    "peso" : 4
   },
   {
     "id" : 2,
     "name": "OKUMA LONGITUDE TSS 4.35",
     "precio": 150000,
     "descripcion": "Blank construido en composición de grafito de alta resistencia y sensibilidad",
-    "categoria": "Pesca"
+    "categoria": "Pesca",
+    "medida" : 4.35,
+    "peso" : 5.4
   },
   {
     "id" : 3,
     "name": "CAÑA SURFCASTING OKUMA CEYMAR SHW 4.35",
     "precio": 205647,
     "descripcion": "SHW, es una caña moderna, potente y versátil para cubrir diversas situaciones de pesca.",
-    "categoria": "Pesca"
+    "categoria": "Pesca",
+    "medida" : 4.35,
+    "peso" : 5.2
   },
   {
     "id" : 4,
     "name": "CAÑA COLONY LAGO AZUL 2.40M",
     "precio": 59599,
     "descripcion": "Ideal para la pesca del pejerrey. ¡Lleváte una caña resistente, liviana y compacta, disfrutá por completo la pesca del pejerrey!",
-    "categoria": "Pesca"
+    "categoria": "Pesca",
+    "medida" : 2.40,
+    "peso" : 3.5
   },
   {
     "id" : 5,
     "name": "CAÑA SHIMANO 1.74M",
     "precio": 87400,
     "descripcion": "La serie Sellus está diseñada para el pescador moderno.",
-    "categoria": "Pesca"
+    "categoria": "Pesca",
+    "medida" : 1.74,
+    "peso" : 3.0
   },
   {
     "id" : 6,
@@ -46,7 +56,9 @@
     "name": "FUNDA PARA CAÑA TECH STICK JACKET 1.80MTS",
     "precio": 8730,
     "descripcion": "Funda para proteger nuestras cañas bait y sus pasahilos.",
-    "categoria": "Pesca"
+    "categoria": "Pesca",
+    "medida" : 1.80,
+    "peso" : 0.7
   },
   {
     "id" : 8,
@@ -60,7 +72,8 @@
     "name": "PORTAREEL TUBULAR REGULABLE A ROSCA N°20-22-24-26-28",
     "precio": 16000,
     "descripcion": "Se puede poner a la medida que uno le quede comodo el agarre.",
-    "categoria": "Pesca"
+    "categoria": "Pesca",
+    "peso" : 3.5
   },
   {
     "id" : 10,
@@ -81,14 +94,18 @@
     "name": "MESA CAMPING SPINIT PLEGABLE ALUMINIO",
     "precio" : 131100,
     "descripcion": "TRANSPORTABLE - FACIL ARMADO - RESISTENTE - REGULABLE - LIVIANA",
-    "categoria": "Camping"
+    "categoria": "Camping",
+    "medida" : 2.25,
+    "peso" : 14.5
   },
   {
     "id" : 13,
     "name": "BOLSA DE DORMIR SPINIT MODELO CLASSIC",
     "precio": 53300,
     "descripcion": "Bolsa Rectangular - Se Puede Abrir Completa Para Usar Como Acolchado.",
-    "categoria": "Camping"
+    "categoria": "Camping",
+    "medida" : 1.90,
+    "peso" : 5.3
   },
   {
     "id" : 14,
@@ -123,14 +140,17 @@
     "name": "CONSERVADORA BOLSO TERMICO COLEMAN",
     "precio": 90400,
     "descripcion": "El diseño ultra portátil de Bolso térmico COLEMAN, lo hace ideal para salidas de Campamento.",
-    "categoria": "Camping"
+    "categoria": "Camping",
+    "peso" : 2.5
   },
   {
     "id" : 19,
     "name": "CORDON MOLDEABLE NITE IZE GEAR TIE",
     "precio": 11600,
     "descripcion": "Múltiples usos como sujetar cañas, unir, conectar, organizar, enrosca cables, anudable, etc.",
-    "categoria": "Camping"
+    "categoria": "Camping",
+    "medida" : 40.0
+    
   },
   {
     "id" : 20,
@@ -144,49 +164,63 @@
     "name": "REMERA PAYO SECADO RÁPIDO CAPUCHA",
     "precio": 32000,
     "descripcion": "Ver tabla de Talles, tenemos stock en todos los Talles!",
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "colores" : "Blanco-Negro-Azul",
+    "talles" : "M-L-XL-XXL"
   },
   {
     "id" : 22,
     "name": "LENTES DE SOL PAYO ACONCAGUA",
     "precio": 25000,
     "descripcion": "Con protección UV.",
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "colores" : "Negro",
+    "talles" : "M-L"
   },
   {
     "id" : 23,
     "name": "PANTALON PAYO VADEO PESCA TREKKING",
     "precio": 51600,
     "descripcion": "La tela es de poliester 78% y elastano 22% (sof technology).",
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "colores" : "Blanco-Negro",
+    "talles" : "L-XL-XXL"
   },
   {
     "id" : 24,
     "name": "DEDAL DE CUERO PARA PESCA DEPORTIVA",
     "precio": 4300,
     "descripcion": "Dedal de cuero, Ideal para lance de costa con frontal o rotativo.",
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "colores" : "Blanco-Negro-Azul",
+    "talles" : "L-XL"
   },
   {
     "id" : 25,
     "name": "CUELLO PAYO MULTIUSO BUFF UV 50",
     "precio": 8080,
     "descripcion": "Cuello Payo diseño varios modelos.",
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "colores" : "Blanco-Negro-Azul",
+    "talles" : "M-L-XL-XXL"
   },
   {
     "id" : 26,
     "name": "Cuello Payo diseño varios modelos",
     "precio": 36300,
     "descripcion": "Remera Nuevo Modelo de Payo Argentina Edicion.",
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "colores" : "Blanco-Negro-Azul",
+    "talles" : "M-L-XL-XXL"
   },
   {
     "id" : 27,
     "name": "GORRO GORRA PAYO TRUCKER GABARDINA",
     "precio": 21500,
     "descripcion": "Gorra trucker payo nuevo modelo gabardina en 4 colores visera rigida.",
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "colores" : "Blanco-Negro-Azul",
+    "talles" : "M-L-XL-XXL"
   },
   {
     "id" : 28,
@@ -200,14 +234,18 @@
     "name": "GUANTES RAPALA PERFORMANCE",
     "precio": 59200,
     "descripcion": "Como su nombre lo dice, estos guantes Rapala son de alto rendimiento.",
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "colores" : "Blanco-Negro-Azul",
+    "talles" : "M-L"
   },
   {
     "id" : 30,
     "name": "CAMPERA DAGO DE NEOPRENE",
     "precio": 219900,
     "descripcion": "Protegen al pescador o el nauta de las condiciones climáticas más adversas (lluvia, frío o viento).",
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "colores" : "Blanco-Negro-Azul",
+    "talles" : "M-L-XL-XXL"
   },
   {
     "id" : 31,
