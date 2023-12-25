@@ -369,66 +369,84 @@
     "medida": 2.1
   },
   {
-    "id" : 42,
-    "name": "OKUMA LONGITUDE TSS 4.35",
-    "precio": 150000,
-    "descripcion": "Blank construido en composición de grafito de alta resistencia y sensibilidad",
-    "categoria": "Pesca"
+    "id": 42,
+    "nombre": "Carrete de pesca",
+    "descripcion": "Carrete de pesca resistente al agua",
+    "categoria": "pesca",
+    "color": "azul",
+    "peso": 0.3,
+    "medida": 0.15
   },
   {
-    "id" : 43,
-    "name": "CAÑA SURFCASTING OKUMA CEYMAR SHW 4.35",
-    "precio": 205647,
-    "descripcion": "SHW, es una caña moderna, potente y versátil para cubrir diversas situaciones de pesca.",
-    "categoria": "Pesca"
+    "id": 43,
+    "nombre": "Caña de pescar",
+    "descripcion": "Caña de pescar de alta calidad",
+    "categoria": "pesca",
+    "color": "negro",
+    "peso": 200,
+    "medida": 180
   },
   {
-    "id" : 44,
-    "name": "CAÑA COLONY LAGO AZUL 2.40M",
-    "precio": 59599,
-    "descripcion": "Ideal para la pesca del pejerrey. ¡Lleváte una caña resistente, liviana y compacta, disfrutá por completo la pesca del pejerrey!",
-    "categoria": "Pesca"
+    "id": 44,
+    "nombre": "Carrete de pesca",
+    "descripcion": "Carrete de pesca resistente al agua",
+    "categoria": "pesca",
+    "color": "plateado",
+    "peso": 150,
+    "medida": 15
   },
   {
-    "id" : 45,
-    "name": "CAÑA SHIMANO 1.74M",
-    "precio": 87400,
-    "descripcion": "La serie Sellus está diseñada para el pescador moderno.",
-    "categoria": "Pesca"
+    "id": 45,
+    "nombre": "Señuelo de pesca",
+    "descripcion": "Señuelo de pesca realista",
+    "categoria": "pesca",
+    "color": "verde",
+    "peso": 10,
+    "medida": 5
   },
   {
-    "id" : 46,
-    "name": "COMBO BAITCASTING OKUMA AMBERJACK",
-    "precio": 100125,
-    "descripcion": "Combo de baitcasting ideal para diferentes tipos de pesca.",
-    "categoria": "Pesca"
+    "id": 46,
+    "nombre": "Anzuelo",
+    "descripcion": "Anzuelo de acero inoxidable",
+    "categoria": "pesca",
+    "color": "plateado",
+    "peso": 5,
+    "medida": 1
   },
   {
-    "id" : 47,
-    "name": "FUNDA PARA CAÑA TECH STICK JACKET 1.80MTS",
-    "precio": 8730,
-    "descripcion": "Funda para proteger nuestras cañas bait y sus pasahilos.",
-    "categoria": "Pesca"
+    "id": 47,
+    "nombre": "Caja de aparejos",
+    "descripcion": "Caja de aparejos con múltiples compartimentos",
+    "categoria": "pesca",
+    "color": "transparente",
+    "peso": 300,
+    "medida": 20
   },
   {
-    "id" : 48,
-    "name": "CAPUCHON PLASTICO PARA CAÑA TELESCOPICA",
-    "precio": 1860,
-    "descripcion": "Capuchon plastico reforzado para proteger Pasahilos de las cañas telescopicas.",
-    "categoria": "Pesca"
+    "id": 48,
+    "nombre": "Red de pesca",
+    "descripcion": "Red de pesca de gran tamaño",
+    "categoria": "pesca",
+    "color": "azul",
+    "peso": 400,
+    "medida": 30
   },
   {
-    "id" : 49,
-    "name": "PORTAREEL TUBULAR REGULABLE A ROSCA N°20-22-24-26-28",
-    "precio": 16000,
-    "descripcion": "Se puede poner a la medida que uno le quede comodo el agarre.",
-    "categoria": "Pesca"
+    "id": 49,
+    "nombre": "Chaleco de pesca",
+    "descripcion": "Chaleco de pesca con múltiples bolsillos",
+    "categoria": "indumentaría",
+    "color": "verde",
+    "peso": 800,
+    "medida": "XL"
   },
   {
-    "id" : 50,
-    "name": "GATILLO PARA REEL FRONTAL TSK",
-    "precio": 9500,
-    "descripcion": "Gatillo TSK tipo cannon par lanzamiento de cañas con reel frontal.",
-    "categoria": "Pesca"
+    "id": 50,
+    "nombre": "Linterna de pesca",
+    "descripcion": "Linterna de pesca impermeable",
+    "categoria": "iluminación",
+    "color": "amarillo",
+    "peso": 150,
+    "medida": 10
   }
 ]
