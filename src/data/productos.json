@@ -1,400 +1,434 @@
 [
   {
-    "id" : 1,
-    "name": "CAÑA AMBERJACK TRANSPORTER 2,10M",
-    "precio": 60000,
-    "descripcion": "Caña ideal para la pesca de tarariras-dorados-pacu-bogas y otras especies",
-    "categoria": "Pesca",
-    "medida" : 2.10,
-    "peso" : 4
+    "id": 1,
+    "nombre": "Caña de pescar",
+    "descripcion": "Caña de pescar de alta calidad",
+    "categoria": "pesca",
+    "color": "verde",
+    "peso": 0.5,
+    "medida": 2.1
   },
   {
-    "id" : 2,
-    "name": "OKUMA LONGITUDE TSS 4.35",
-    "precio": 150000,
-    "descripcion": "Blank construido en composición de grafito de alta resistencia y sensibilidad",
-    "categoria": "Pesca",
-    "medida" : 4.35,
-    "peso" : 5.4
+    "id": 2,
+    "nombre": "Carrete de pesca",
+    "descripcion": "Carrete de pesca resistente al agua",
+    "categoria": "pesca",
+    "color": "negro",
+    "peso": 0.3,
+    "medida": 0.15
   },
   {
-    "id" : 3,
-    "name": "CAÑA SURFCASTING OKUMA CEYMAR SHW 4.35",
-    "precio": 205647,
-    "descripcion": "SHW, es una caña moderna, potente y versátil para cubrir diversas situaciones de pesca.",
-    "categoria": "Pesca",
-    "medida" : 4.35,
-    "peso" : 5.2
+    "id": 3,
+    "nombre": "Señuelo de pesca",
+    "descripcion": "Señuelo de pesca realista",
+    "categoria": "pesca",
+    "color": "amarillo",
+    "peso": 0.1,
+    "medida": 0.05
   },
   {
-    "id" : 4,
-    "name": "CAÑA COLONY LAGO AZUL 2.40M",
-    "precio": 59599,
-    "descripcion": "Ideal para la pesca del pejerrey. ¡Lleváte una caña resistente, liviana y compacta, disfrutá por completo la pesca del pejerrey!",
-    "categoria": "Pesca",
-    "medida" : 2.40,
-    "peso" : 3.5
+    "id": 4,
+    "nombre": "Anzuelo",
+    "descripcion": "Anzuelo de acero inoxidable",
+    "categoria": "pesca",
+    "color": "plateado",
+    "peso": 0.01,
+    "medida": 0.01
   },
   {
-    "id" : 5,
-    "name": "CAÑA SHIMANO 1.74M",
-    "precio": 87400,
-    "descripcion": "La serie Sellus está diseñada para el pescador moderno.",
-    "categoria": "Pesca",
-    "medida" : 1.74,
-    "peso" : 3.0
+    "id": 5,
+    "nombre": "Hilo de pesca",
+    "descripcion": "Hilo de pesca resistente",
+    "categoria": "pesca",
+    "color": "transparente",
+    "peso": 0.02,
+    "medida": 100
   },
   {
-    "id" : 6,
-    "name": "COMBO BAITCASTING OKUMA AMBERJACK",
-    "precio": 100125,
-    "descripcion": "Combo de baitcasting ideal para diferentes tipos de pesca.",
-    "categoria": "Pesca"
+    "id": 6,
+    "nombre": "Caja de pesca",
+    "descripcion": "Caja de pesca con compartimentos",
+    "categoria": "pesca",
+    "color": "naranja",
+    "peso": 0.8,
+    "medida": 20
   },
   {
-    "id" : 7,
-    "name": "FUNDA PARA CAÑA TECH STICK JACKET 1.80MTS",
-    "precio": 8730,
-    "descripcion": "Funda para proteger nuestras cañas bait y sus pasahilos.",
-    "categoria": "Pesca",
-    "medida" : 1.80,
-    "peso" : 0.700
+    "id": 7,
+    "nombre": "Chaleco de pesca",
+    "descripcion": "Chaleco de pesca con múltiples bolsillos",
+    "categoria": "indumentaría",
+    "color": "verde",
+    "peso": 0.6,
+    "medida": "XL"
   },
   {
-    "id" : 8,
-    "name": "CAPUCHON PLASTICO PARA CAÑA TELESCOPICA",
-    "precio": 1860,
-    "descripcion": "Capuchon plastico reforzado para proteger Pasahilos de las cañas telescopicas.",
-    "categoria": "Pesca"
+    "id": 8,
+    "nombre": "Linterna",
+    "descripcion": "Linterna de mano resistente al agua",
+    "categoria": "iluminación",
+    "color": "negro",
+    "peso": 0.2,
+    "medida": 0.1
   },
   {
-    "id" : 9,
-    "name": "PORTAREEL TUBULAR REGULABLE A ROSCA N°20-22-24-26-28",
-    "precio": 16000,
-    "descripcion": "Se puede poner a la medida que uno le quede comodo el agarre.",
-    "categoria": "Pesca",
-    "peso" : 3.550
+    "id": 9,
+    "nombre": "Navaja multiusos",
+    "descripcion": "Navaja con múltiples herramientas",
+    "categoria": "accesorios",
+    "color": "plateado",
+    "peso": 0.15,
+    "medida": 0.05
   },
   {
-    "id" : 10,
-    "name": "GATILLO PARA REEL FRONTAL TSK",
-    "precio": 9500,
-    "descripcion": "Gatillo TSK tipo cannon par lanzamiento de cañas con reel frontal.",
-    "categoria": "Pesca"
+    "id": 10,
+    "nombre": "Sombrero de pesca",
+    "descripcion": "Sombrero con protección UV",
+    "categoria": "indumentaría",
+    "color": "beige",
+    "peso": 0.1,
+    "medida": "M"
   },
   {
-    "id" : 11,
-    "name": "CARPA IGLU SPINIT CONFORT 4 P",
-    "precio": 582080,
-    "descripcion": "Esta pensada para el uso familiar.",
-    "categoria": "Camping"
+    "id": 11,
+    "nombre": "Caña de pescar",
+    "descripcion": "Caña de pescar de alta calidad",
+    "categoria": "pesca",
+    "color": "rojo",
+    "peso": 0.5,
+    "medida": 2.1
   },
   {
-    "id" : 12,
-    "name": "MESA CAMPING SPINIT PLEGABLE ALUMINIO",
-    "precio" : 131100,
-    "descripcion": "TRANSPORTABLE - FACIL ARMADO - RESISTENTE - REGULABLE - LIVIANA",
-    "categoria": "Camping",
-    "medida" : 2.25,
-    "peso" : 14.500
+    "id": 12,
+    "nombre": "Carrete de pesca",
+    "descripcion": "Carrete de pesca resistente al agua",
+    "categoria": "pesca",
+    "color": "azul",
+    "peso": 0.3,
+    "medida": 0.15
   },
   {
-    "id" : 13,
-    "name": "BOLSA DE DORMIR SPINIT MODELO CLASSIC",
-    "precio": 53300,
-    "descripcion": "Bolsa Rectangular - Se Puede Abrir Completa Para Usar Como Acolchado.",
-    "categoria": "Camping",
-    "medida" : 1.90,
-    "peso" : 5.300
+    "id": 13,
+    "nombre": "Señuelo de pesca",
+    "descripcion": "Señuelo de pesca realista",
+    "categoria": "pesca",
+    "color": "verde",
+    "peso": 0.1,
+    "medida": 0.05
   },
   {
-    "id" : 14,
-    "name": "ANAFE PORTATIL BUTANO SPINIT VULCAN",
-    "precio": 57900,
-    "descripcion": "Ideal para camping, pesca, pic - nics y cualquier lugar al aire libre.",
-    "categoria": "Camping"
+    "id": 14,
+    "nombre": "Anzuelo",
+    "descripcion": "Anzuelo de acero inoxidable",
+    "categoria": "pesca",
+    "color": "plateado",
+    "peso": 0.01,
+    "medida": 0.01
   },
   {
-    "id" : 15,
-    "name": "JUEGO DE ASADO . SIMIL CARPINCHO",
-    "precio": 24000,
-    "descripcion": "Cubiertos con mangos de madera. Manija para transportar.",
-    "categoria": "Camping"
+    "id": 15,
+    "nombre": "Hilo de pesca",
+    "descripcion": "Hilo de pesca resistente",
+    "categoria": "pesca",
+    "color": "transparente",
+    "peso": 0.02,
+    "medida": 100
   },
   {
-    "id" : 16,
-    "name": "TERMO VIAJERO SURFISH ACERO INOXIDABLE",
-    "precio": 78900,
-    "descripcion": "Tapa a rosca doble desmontable (se puede usar una parte como vaso y mantener la tapa).",
-    "categoria": "Camping"
+    "id": 16,
+    "nombre": "Caja de pesca",
+    "descripcion": "Caja de pesca con compartimentos",
+    "categoria": "pesca",
+    "color": "negro",
+    "peso": 0.8,
+    "medida": 20
   },
   {
-    "id" : 17,
-    "name": "LINTERNA SPINIT MEGA 101-W COMPACTA",
-    "precio": 24600,
-    "descripcion": "LINTERNA SPINIT MEGA 101-W. LA UNICA CON PILAS DE REGALO.",
-    "categoria": "Camping"
+    "id": 17,
+    "nombre": "Chaleco de pesca",
+    "descripcion": "Chaleco de pesca con múltiples bolsillos",
+    "categoria": "indumentaría",
+    "color": "verde",
+    "peso": 0.6,
+    "medida": "XL"
   },
   {
-    "id" : 18,
-    "name": "CONSERVADORA BOLSO TERMICO COLEMAN",
-    "precio": 90400,
-    "descripcion": "El diseño ultra portátil de Bolso térmico COLEMAN, lo hace ideal para salidas de Campamento.",
-    "categoria": "Camping",
-    "peso" : 2.550
+    "id": 18,
+    "nombre": "Linterna",
+    "descripcion": "Linterna de mano resistente al agua",
+    "categoria": "iluminación",
+    "color": "negro",
+    "peso": 0.2,
+    "medida": 0.1
   },
   {
-    "id" : 19,
-    "name": "CORDON MOLDEABLE NITE IZE GEAR TIE",
-    "precio": 11600,
-    "descripcion": "Múltiples usos como sujetar cañas, unir, conectar, organizar, enrosca cables, anudable, etc.",
-    "categoria": "Camping",
-    "medida" : 40.0
-    
+    "id": 19,
+    "nombre": "Navaja multiusos",
+    "descripcion": "Navaja con múltiples herramientas",
+    "categoria": "accesorios",
+    "color": "plateado",
+    "peso": 0.15,
+    "medida": 0.05
   },
   {
-    "id" : 20,
-    "name": "GAS NTK TUBOS DE 450GRS A ROSCA",
-    "precio": 18700,
-    "descripcion": "Cartucho Gas Butano Propano 450 grs A Rosca NTK MaxxGas.",
-    "categoria": "Camping"
+    "id": 20,
+    "nombre": "Sombrero de pesca",
+    "descripcion": "Sombrero con protección UV",
+    "categoria": "indumentaría",
+    "color": "beige",
+    "peso": 0.1,
+    "medida": "M"
   },
   {
-    "id" : 21,
-    "name": "REMERA PAYO SECADO RÁPIDO CAPUCHA",
-    "precio": 4500,
-    "descripcion": "Ver tabla de Talles, tenemos stock en todos los Talles!",
-    "categoria": "Accesorios",
-    "colores" : "Blanco-Negro-Azul",
-    "talles" : "M-L-XL-XXL"
+    "id": 21,
+    "nombre": "Caña de pescar",
+    "descripcion": "Caña de pescar de alta calidad",
+    "categoria": "pesca",
+    "color": "azul",
+    "peso": 0.5,
+    "medida": 2.1
   },
   {
-    "id" : 22,
-    "name": "LENTES DE SOL PAYO ACONCAGUA",
-    "precio": 3800,
-    "descripcion": "Con protección UV.",
-    "categoria": "Accesorios",
-    "colores" : "Negro",
-    "talles" : "M-L"
+    "id": 22,
+    "nombre": "Carrete de pesca",
+    "descripcion": "Carrete de pesca resistente al agua",
+    "categoria": "pesca",
+    "color": "negro",
+    "peso": 0.3,
+    "medida": 0.15
   },
   {
-    "id" : 23,
-    "name": "PANTALON PAYO VADEO PESCA TREKKING",
-    "precio": 8900,
-    "descripcion": "La tela es de poliester 78% y elastano 22% (sof technology).",
-    "categoria": "Accesorios",
-    "colores" : "Blanco-Negro",
-    "talles" : "L-XL-XXL"
+    "id": 23,
+    "nombre": "Señuelo de pesca",
+    "descripcion": "Señuelo de pesca realista",
+    "categoria": "pesca",
+    "color": "amarillo",
+    "peso": 0.1,
+    "medida": 0.05
   },
   {
-    "id" : 24,
-    "name": "DEDAL DE CUERO PARA PESCA DEPORTIVA",
-    "precio": 1800,
-    "descripcion": "Dedal de cuero, Ideal para lance de costa con frontal o rotativo.",
-    "categoria": "Accesorios",
-    "colores" : "Blanco-Negro-Azul",
-    "talles" : "L-XL"
+    "id": 24,
+    "nombre": "Anzuelo",
+    "descripcion": "Anzuelo de acero inoxidable",
+    "categoria": "pesca",
+    "color": "plateado",
+    "peso": 0.01,
+    "medida": 0.01
   },
   {
-    "id" : 25,
-    "name": "CUELLO PAYO MULTIUSO BUFF UV 50",
-    "precio": 2100,
-    "descripcion": "Cuello Payo diseño varios modelos.",
-    "categoria": "Accesorios",
-    "colores" : "Blanco-Negro-Azul",
-    "talles" : "M-L-XL-XXL"
+    "id": 25,
+    "nombre": "Hilo de pesca",
+    "descripcion": "Hilo de pesca resistente",
+    "categoria": "pesca",
+    "color": "transparente",
+    "peso": 0.02,
+    "medida": 100
   },
   {
-    "id" : 26,
-    "name": "CUELLO PAYO DISEÑO VARIOS MODELOS",
-    "precio": 2200,
-    "descripcion": "Remera Nuevo Modelo de Payo Argentina Edicion.",
-    "categoria": "Accesorios",
-    "colores" : "Blanco-Negro-Azul",
-    "talles" : "M-L-XL-XXL"
+    "id": 26,
+    "nombre": "Caja de pesca",
+    "descripcion": "Caja de pesca con compartimentos",
+    "categoria": "pesca",
+    "color": "naranja",
+    "peso": 0.8,
+    "medida": 20
   },
   {
-    "id" : 27,
-    "name": "GORRO GORRA PAYO TRUCKER GABARDINA",
-    "precio": 2650,
-    "descripcion": "Gorra trucker payo nuevo modelo gabardina en 4 colores visera rigida.",
-    "categoria": "Accesorios",
-    "colores" : "Blanco-Negro-Azul",
-    "talles" : "M-L-XL-XXL"
+    "id": 27,
+    "nombre": "Chaleco de pesca",
+    "descripcion": "Chaleco de pesca con múltiples bolsillos",
+    "categoria": "indumentaría",
+    "color": "verde",
+    "peso": 0.6,
+    "medida": "XL"
   },
   {
-    "id" : 28,
-    "name": "SET DE 20 TORNILLOS Y LLAVE PARA ZAPATOS",
-    "precio": 3440,
-    "descripcion": "Nuevos Tornillos de acero Para zapatos de vadeo con suela de goma.",
-    "categoria": "Accesorios"
+    "id": 28,
+    "nombre": "Linterna",
+    "descripcion": "Linterna de mano resistente al agua",
+    "categoria": "iluminación",
+    "color": "negro",
+    "peso": 0.2,
+    "medida": 0.1
   },
   {
-    "id" : 29,
-    "name": "GUANTES RAPALA PERFORMANCE",
-    "precio": 4850,
-    "descripcion": "Como su nombre lo dice, estos guantes Rapala son de alto rendimiento.",
-    "categoria": "Accesorios",
-    "colores" : "Blanco-Negro-Azul",
-    "talles" : "M-L"
+    "id": 29,
+    "nombre": "Navaja multiusos",
+    "descripcion": "Navaja con múltiples herramientas",
+    "categoria": "accesorios",
+    "color": "plateado",
+    "peso": 0.15,
+    "medida": 0.05
   },
   {
-    "id" : 30,
-    "name": "CAMPERA DAGO DE NEOPRENE",
-    "precio": 19900,
-    "descripcion": "Protegen al pescador o el nauta de las condiciones climáticas más adversas (lluvia, frío o viento).",
-    "categoria": "Accesorios",
-    "colores" : "Blanco-Negro-Azul",
-    "talles" : "M-L-XL-XXL"
+    "id": 30,
+    "nombre": "Sombrero de pesca",
+    "descripcion": "Sombrero con protección UV",
+    "categoria": "indumentaría",
+    "color": "beige",
+    "peso": 0.1,
+    "medida": "M"
   },
   {
-    "id" : 31,
-    "name": "CENCERRO DOBLE BOLITA CON LUZ A PILA PACK X 2",
-    "precio": 2300,
-    "descripcion": "Pack por 2 unidades, cencerro doble con luz a pila",
-    "categoria": "Iluminación",
-    "peso" : 0.750
+    "id": 31,
+    "nombre": "Caña de pescar",
+    "descripcion": "Caña de pescar de alta calidad",
+    "categoria": "pesca",
+    "color": "verde",
+    "peso": 0.5,
+    "medida": 2.1
   },
   {
-    "id" : 32,
-    "name": "LINTERNA MINERA LED X FISH",
-    "precio": 8900,
-    "descripcion": "Fuente de energía: Pilas AAA, potencia de la linterna: 160 lm",
-    "categoria": "Iluminación",
-    "peso" : 0.890
+    "id": 32,
+    "nombre": "Carrete de pesca",
+    "descripcion": "Carrete de pesca resistente al agua",
+    "categoria": "pesca",
+    "color": "negro",
+    "peso": 0.3,
+    "medida": 0.15
   },
   {
-    "id" : 33,
-    "name": "LINTERNA RECARGABLE N°4 X-FISH",
-    "precio": 11500,
-    "descripcion": "Potencia de la linterna: 120 lm, tipo de batería: AAA, litio, incluye bateria Y cargador",
-    "categoria": "Iluminación",
-    "peso" : 1.100
+    "id": 33,
+    "nombre": "Señuelo de pesca",
+    "descripcion": "Señuelo de pesca realista",
+    "categoria": "pesca",
+    "color": "amarillo",
+    "peso": 0.1,
+    "medida": 0.05
   },
   {
-    "id" : 34,
-    "name": "LINTERNA SPINIT METAL PRO 3D",
-    "precio": 48500,
-    "descripcion": "Lampara LED CREE 3 watts made in usa. Cuerpo metálico.",
-    "categoria": "Iluminación",
-    "peso" : 2.300
+    "id": 34,
+    "nombre": "Anzuelo",
+    "descripcion": "Anzuelo de acero inoxidable",
+    "categoria": "pesca",
+    "color": "plateado",
+    "peso": 0.01,
+    "medida": 0.01
   },
   {
-    "id" : 35,
-    "name": "LINTERNA LED MINERO 3W MOD 120 LUM",
-    "precio": 30500,
-    "descripcion": "Fuente de energía: Pilas AAA. Potencia de la linterna: 120 lm",
-    "categoria": "Iluminación",
-    "peso" : 1.150
+    "id": 35,
+    "nombre": "Hilo de pesca",
+    "descripcion": "Hilo de pesca resistente",
+    "categoria": "pesca",
+    "color": "transparente",
+    "peso": 0.02,
+    "medida": 100
   },
   {
-    "id" : 36,
-    "name": "FAROL RECARGABLE X-FISH",
-    "precio": 14900,
-    "descripcion": "Luminosidad: 300 lúmenes. Alcance: 15 m",
-    "categoria": "Iluminación",
-    "peso" : 2.600
+    "id": 36,
+    "nombre": "Caja de pesca",
+    "descripcion": "Caja de pesca con compartimentos",
+    "categoria": "pesca",
+    "color": "naranja",
+    "peso": 0.8,
+    "medida": 20
   },
   {
-    "id" : 37,
-    "name": "REFLECTOR FAROL BUSCAHUELLA",
-    "precio": 49900,
-    "descripcion": "Alcance de 50mts. Batería durare. Resistencia premium.",
-    "categoria": "Iluminación",
-    "peso" : 3.500
+    "id": 37,
+    "nombre": "Chaleco de pesca",
+    "descripcion": "Chaleco de pesca con múltiples bolsillos",
+    "categoria": "indumentaría",
+    "color": "verde",
+    "peso": 0.6,
+    "medida": "XL"
   },
   {
-    "id" : 38,
-    "name": "LINTERNA LAMPARA PORTATIL",
-    "precio": 1860,
-    "descripcion": "Fuente de energía:  Bateria recargable de litio.",
-    "categoria": "Iluminación",
-    "peso" : 1.200
+    "id": 38,
+    "nombre": "Linterna",
+    "descripcion": "Linterna de mano resistente al agua",
+    "categoria": "iluminación",
+    "color": "negro",
+    "peso": 0.2,
+    "medida": 0.1
   },
   {
-    "id" : 39,
-    "name": "BENGALA NAUTICA X 2 U. HOMOLOGADA",
-    "precio": 26800,
-    "descripcion": "Pack x2 unidades. 4 años de duración.",
-    "categoria": "Iluminación",
-    "peso" : 0.900
+    "id": 39,
+    "nombre": "Navaja multiusos",
+    "descripcion": "Navaja con múltiples herramientas",
+    "categoria": "accesorios",
+    "color": "plateado",
+    "peso": 0.15,
+    "medida": 0.05
   },
   {
-    "id" : 40,
-    "name": "REFLECTOR BUSCAHUELLA LED COB 5 W",
-    "precio": 52000,
-    "descripcion": "Bajo consumo, alta luminosidad, durabilidad.",
-    "categoria": "Iluminación",
-    "peso" : 2.100
+    "id": 40,
+    "nombre": "Sombrero de pesca",
+    "descripcion": "Sombrero con protección UV",
+    "categoria": "indumentaría",
+    "color": "beige",
+    "peso": 0.1,
+    "medida": "M"
   },
   {
-    "id" : 41,
-    "name": "CAÑA AMBERJACK TRANSPORTER 2,10M",
-    "precio": 60000,
-    "descripcion": "Caña ideal para la pesca de tarariras-dorados-pacu-bogas y otras especies",
-    "categoria": "Óptica"
+    "id": 41,
+    "nombre": "Caña de pescar",
+    "descripcion": "Caña de pescar de alta calidad",
+    "categoria": "pesca",
+    "color": "rojo",
+    "peso": 0.5,
+    "medida": 2.1
   },
   {
     "id" : 42,
     "name": "OKUMA LONGITUDE TSS 4.35",
     "precio": 150000,
     "descripcion": "Blank construido en composición de grafito de alta resistencia y sensibilidad",
-    "categoria": "Óptica"
+    "categoria": "Pesca"
   },
   {
     "id" : 43,
     "name": "CAÑA SURFCASTING OKUMA CEYMAR SHW 4.35",
     "precio": 205647,
     "descripcion": "SHW, es una caña moderna, potente y versátil para cubrir diversas situaciones de pesca.",
-    "categoria": "Óptica"
+    "categoria": "Pesca"
   },
   {
     "id" : 44,
     "name": "CAÑA COLONY LAGO AZUL 2.40M",
     "precio": 59599,
     "descripcion": "Ideal para la pesca del pejerrey. ¡Lleváte una caña resistente, liviana y compacta, disfrutá por completo la pesca del pejerrey!",
-    "categoria": "Óptica"
+    "categoria": "Pesca"
   },
   {
     "id" : 45,
     "name": "CAÑA SHIMANO 1.74M",
     "precio": 87400,
     "descripcion": "La serie Sellus está diseñada para el pescador moderno.",
-    "categoria": "Óptica"
+    "categoria": "Pesca"
   },
   {
     "id" : 46,
     "name": "COMBO BAITCASTING OKUMA AMBERJACK",
     "precio": 100125,
     "descripcion": "Combo de baitcasting ideal para diferentes tipos de pesca.",
-    "categoria": "Óptica"
+    "categoria": "Pesca"
   },
   {
     "id" : 47,
     "name": "FUNDA PARA CAÑA TECH STICK JACKET 1.80MTS",
     "precio": 8730,
     "descripcion": "Funda para proteger nuestras cañas bait y sus pasahilos.",
-    "categoria": "Óptica"
+    "categoria": "Pesca"
   },
   {
     "id" : 48,
     "name": "CAPUCHON PLASTICO PARA CAÑA TELESCOPICA",
     "precio": 1860,
     "descripcion": "Capuchon plastico reforzado para proteger Pasahilos de las cañas telescopicas.",
-    "categoria": "Óptica"
+    "categoria": "Pesca"
   },
   {
     "id" : 49,
     "name": "PORTAREEL TUBULAR REGULABLE A ROSCA N°20-22-24-26-28",
     "precio": 16000,
     "descripcion": "Se puede poner a la medida que uno le quede comodo el agarre.",
-    "categoria": "Óptica"
+    "categoria": "Pesca"
   },
   {
     "id" : 50,
     "name": "GATILLO PARA REEL FRONTAL TSK",
     "precio": 9500,
     "descripcion": "Gatillo TSK tipo cannon par lanzamiento de cañas con reel frontal.",
-    "categoria": "Óptica"
+    "categoria": "Pesca"
   }
 ]
