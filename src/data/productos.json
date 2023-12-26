@@ -2,451 +2,111 @@
   {
     "id": 1,
     "nombre": "Caña de pescar",
-    "descripcion": "Caña de pescar de alta calidad",
+    "precio": 2500,
     "categoria": "pesca",
-    "color": "verde",
     "peso": 0.5,
-    "medida": 2.1
+    "talle": 2.1,
+    "material": "metal",
+    "origen": "argentina",
+    "descripcion": "Caña de pescar de metal de 2.1m"
   },
   {
     "id": 2,
-    "nombre": "Carrete de pesca",
-    "descripcion": "Carrete de pesca resistente al agua",
+    "nombre": "Anzuelo",
+    "precio": 50,
     "categoria": "pesca",
-    "color": "negro",
-    "peso": 0.3,
-    "medida": 0.15
+    "peso": 0.01,
+    "talle": 8,
+    "material": "metal",
+    "origen": "china",
+    "descripcion": "Anzuelo de metal talle 8"
   },
   {
     "id": 3,
-    "nombre": "Señuelo de pesca",
-    "descripcion": "Señuelo de pesca realista",
+    "nombre": "Reel",
+    "precio": 3500,
     "categoria": "pesca",
-    "color": "amarillo",
-    "peso": 0.1,
-    "medida": 0.05
+    "peso": 0.3,
+    "talle": "",
+    "material": "metal",
+    "origen": "brasil",
+    "descripcion": "Reel de pesca de metal"
   },
   {
     "id": 4,
-    "nombre": "Anzuelo",
-    "descripcion": "Anzuelo de acero inoxidable",
+    "nombre": "Caja de señuelos",
+    "precio": 1200,
     "categoria": "pesca",
-    "color": "plateado",
-    "peso": 0.01,
-    "medida": 0.01
+    "peso": 0.2,
+    "talle": "",
+    "material": "plastico",
+    "origen": "argentina",
+    "descripcion": "Caja de señuelos de plastico"
   },
   {
     "id": 5,
-    "nombre": "Hilo de pesca",
-    "descripcion": "Hilo de pesca resistente",
+    "nombre": "Cuchillo de filetear",
+    "precio": 1800,
     "categoria": "pesca",
-    "color": "transparente",
-    "peso": 0.02,
-    "medida": 100
+    "peso": 0.15,
+    "talle": "",
+    "material": "acero",
+    "origen": "china",
+    "descripcion": "Cuchillo de filetear de acero"
   },
   {
     "id": 6,
-    "nombre": "Caja de pesca",
-    "descripcion": "Caja de pesca con compartimentos",
+    "nombre": "Wader",
+    "precio": 4500,
     "categoria": "pesca",
-    "color": "naranja",
-    "peso": 0.8,
-    "medida": 20
+    "peso": 1.2,
+    "talle": "L",
+    "material": "neopreno",
+    "origen": "brasil",
+    "descripcion": "Wader de neopreno talle L"
   },
   {
     "id": 7,
-    "nombre": "Chaleco de pesca",
-    "descripcion": "Chaleco de pesca con múltiples bolsillos",
-    "categoria": "indumentaría",
-    "color": "verde",
-    "peso": 0.6,
-    "medida": "XL"
+    "nombre": "Señuelo de pesca",
+    "precio": 200,
+    "categoria": "pesca",
+    "peso": 0.05,
+    "talle": "",
+    "material": "plastico",
+    "origen": "argentina",
+    "descripcion": "Señuelo de pesca de plastico"
   },
   {
     "id": 8,
-    "nombre": "Linterna",
-    "descripcion": "Linterna de mano resistente al agua",
-    "categoria": "iluminación",
-    "color": "negro",
-    "peso": 0.2,
-    "medida": 0.1
+    "nombre": "Caja de aparejos",
+    "precio": 900,
+    "categoria": "pesca",
+    "peso": 0.3,
+    "talle": "",
+    "material": "plastico",
+    "origen": "china",
+    "descripcion": "Caja de aparejos de plastico"
   },
   {
     "id": 9,
-    "nombre": "Navaja multiusos",
-    "descripcion": "Navaja con múltiples herramientas",
-    "categoria": "accesorios",
-    "color": "plateado",
-    "peso": 0.15,
-    "medida": 0.05
+    "nombre": "Salvavidas",
+    "precio": 3500,
+    "categoria": "pesca",
+    "peso": 0.6,
+    "talle": "M",
+    "material": "nylon",
+    "origen": "brasil",
+    "descripcion": "Salvavidas de nylon talle M"
   },
   {
     "id": 10,
-    "nombre": "Sombrero de pesca",
-    "descripcion": "Sombrero con protección UV",
-    "categoria": "indumentaría",
-    "color": "beige",
-    "peso": 0.1,
-    "medida": "M"
-  },
-  {
-    "id": 11,
-    "nombre": "Caña de pescar",
-    "descripcion": "Caña de pescar de alta calidad",
-    "categoria": "pesca",
-    "color": "rojo",
-    "peso": 0.5,
-    "medida": 2.1
-  },
-  {
-    "id": 12,
-    "nombre": "Carrete de pesca",
-    "descripcion": "Carrete de pesca resistente al agua",
-    "categoria": "pesca",
-    "color": "azul",
-    "peso": 0.3,
-    "medida": 0.15
-  },
-  {
-    "id": 13,
-    "nombre": "Señuelo de pesca",
-    "descripcion": "Señuelo de pesca realista",
-    "categoria": "pesca",
-    "color": "verde",
-    "peso": 0.1,
-    "medida": 0.05
-  },
-  {
-    "id": 14,
-    "nombre": "Anzuelo",
-    "descripcion": "Anzuelo de acero inoxidable",
-    "categoria": "pesca",
-    "color": "plateado",
-    "peso": 0.01,
-    "medida": 0.01
-  },
-  {
-    "id": 15,
-    "nombre": "Hilo de pesca",
-    "descripcion": "Hilo de pesca resistente",
-    "categoria": "pesca",
-    "color": "transparente",
-    "peso": 0.02,
-    "medida": 100
-  },
-  {
-    "id": 16,
-    "nombre": "Caja de pesca",
-    "descripcion": "Caja de pesca con compartimentos",
-    "categoria": "pesca",
-    "color": "negro",
-    "peso": 0.8,
-    "medida": 20
-  },
-  {
-    "id": 17,
-    "nombre": "Chaleco de pesca",
-    "descripcion": "Chaleco de pesca con múltiples bolsillos",
-    "categoria": "indumentaría",
-    "color": "verde",
-    "peso": 0.6,
-    "medida": "XL"
-  },
-  {
-    "id": 18,
-    "nombre": "Linterna",
-    "descripcion": "Linterna de mano resistente al agua",
-    "categoria": "iluminación",
-    "color": "negro",
-    "peso": 0.2,
-    "medida": 0.1
-  },
-  {
-    "id": 19,
-    "nombre": "Navaja multiusos",
-    "descripcion": "Navaja con múltiples herramientas",
-    "categoria": "accesorios",
-    "color": "plateado",
-    "peso": 0.15,
-    "medida": 0.05
-  },
-  {
-    "id": 20,
-    "nombre": "Sombrero de pesca",
-    "descripcion": "Sombrero con protección UV",
-    "categoria": "indumentaría",
-    "color": "beige",
-    "peso": 0.1,
-    "medida": "M"
-  },
-  {
-    "id": 21,
-    "nombre": "Caña de pescar",
-    "descripcion": "Caña de pescar de alta calidad",
-    "categoria": "pesca",
-    "color": "azul",
-    "peso": 0.5,
-    "medida": 2.1
-  },
-  {
-    "id": 22,
-    "nombre": "Carrete de pesca",
-    "descripcion": "Carrete de pesca resistente al agua",
-    "categoria": "pesca",
-    "color": "negro",
-    "peso": 0.3,
-    "medida": 0.15
-  },
-  {
-    "id": 23,
-    "nombre": "Señuelo de pesca",
-    "descripcion": "Señuelo de pesca realista",
-    "categoria": "pesca",
-    "color": "amarillo",
-    "peso": 0.1,
-    "medida": 0.05
-  },
-  {
-    "id": 24,
-    "nombre": "Anzuelo",
-    "descripcion": "Anzuelo de acero inoxidable",
-    "categoria": "pesca",
-    "color": "plateado",
-    "peso": 0.01,
-    "medida": 0.01
-  },
-  {
-    "id": 25,
-    "nombre": "Hilo de pesca",
-    "descripcion": "Hilo de pesca resistente",
-    "categoria": "pesca",
-    "color": "transparente",
-    "peso": 0.02,
-    "medida": 100
-  },
-  {
-    "id": 26,
-    "nombre": "Caja de pesca",
-    "descripcion": "Caja de pesca con compartimentos",
-    "categoria": "pesca",
-    "color": "naranja",
-    "peso": 0.8,
-    "medida": 20
-  },
-  {
-    "id": 27,
-    "nombre": "Chaleco de pesca",
-    "descripcion": "Chaleco de pesca con múltiples bolsillos",
-    "categoria": "indumentaría",
-    "color": "verde",
-    "peso": 0.6,
-    "medida": "XL"
-  },
-  {
-    "id": 28,
-    "nombre": "Linterna",
-    "descripcion": "Linterna de mano resistente al agua",
-    "categoria": "iluminación",
-    "color": "negro",
-    "peso": 0.2,
-    "medida": 0.1
-  },
-  {
-    "id": 29,
-    "nombre": "Navaja multiusos",
-    "descripcion": "Navaja con múltiples herramientas",
-    "categoria": "accesorios",
-    "color": "plateado",
-    "peso": 0.15,
-    "medida": 0.05
-  },
-  {
-    "id": 30,
-    "nombre": "Sombrero de pesca",
-    "descripcion": "Sombrero con protección UV",
-    "categoria": "indumentaría",
-    "color": "beige",
-    "peso": 0.1,
-    "medida": "M"
-  },
-  {
-    "id": 31,
-    "nombre": "Caña de pescar",
-    "descripcion": "Caña de pescar de alta calidad",
-    "categoria": "pesca",
-    "color": "verde",
-    "peso": 0.5,
-    "medida": 2.1
-  },
-  {
-    "id": 32,
-    "nombre": "Carrete de pesca",
-    "descripcion": "Carrete de pesca resistente al agua",
-    "categoria": "pesca",
-    "color": "negro",
-    "peso": 0.3,
-    "medida": 0.15
-  },
-  {
-    "id": 33,
-    "nombre": "Señuelo de pesca",
-    "descripcion": "Señuelo de pesca realista",
-    "categoria": "pesca",
-    "color": "amarillo",
-    "peso": 0.1,
-    "medida": 0.05
-  },
-  {
-    "id": 34,
-    "nombre": "Anzuelo",
-    "descripcion": "Anzuelo de acero inoxidable",
-    "categoria": "pesca",
-    "color": "plateado",
-    "peso": 0.01,
-    "medida": 0.01
-  },
-  {
-    "id": 35,
-    "nombre": "Hilo de pesca",
-    "descripcion": "Hilo de pesca resistente",
-    "categoria": "pesca",
-    "color": "transparente",
-    "peso": 0.02,
-    "medida": 100
-  },
-  {
-    "id": 36,
-    "nombre": "Caja de pesca",
-    "descripcion": "Caja de pesca con compartimentos",
-    "categoria": "pesca",
-    "color": "naranja",
-    "peso": 0.8,
-    "medida": 20
-  },
-  {
-    "id": 37,
-    "nombre": "Chaleco de pesca",
-    "descripcion": "Chaleco de pesca con múltiples bolsillos",
-    "categoria": "indumentaría",
-    "color": "verde",
-    "peso": 0.6,
-    "medida": "XL"
-  },
-  {
-    "id": 38,
-    "nombre": "Linterna",
-    "descripcion": "Linterna de mano resistente al agua",
-    "categoria": "iluminación",
-    "color": "negro",
-    "peso": 0.2,
-    "medida": 0.1
-  },
-  {
-    "id": 39,
-    "nombre": "Navaja multiusos",
-    "descripcion": "Navaja con múltiples herramientas",
-    "categoria": "accesorios",
-    "color": "plateado",
-    "peso": 0.15,
-    "medida": 0.05
-  },
-  {
-    "id": 40,
-    "nombre": "Sombrero de pesca",
-    "descripcion": "Sombrero con protección UV",
-    "categoria": "indumentaría",
-    "color": "beige",
-    "peso": 0.1,
-    "medida": "M"
-  },
-  {
-    "id": 41,
-    "nombre": "Caña de pescar",
-    "descripcion": "Caña de pescar de alta calidad",
-    "categoria": "pesca",
-    "color": "rojo",
-    "peso": 0.5,
-    "medida": 2.1
-  },
-  {
-    "id": 42,
-    "nombre": "Carrete de pesca",
-    "descripcion": "Carrete de pesca resistente al agua",
-    "categoria": "pesca",
-    "color": "azul",
-    "peso": 0.3,
-    "medida": 0.15
-  },
-  {
-    "id": 43,
-    "nombre": "Caña de pescar",
-    "descripcion": "Caña de pescar de alta calidad",
-    "categoria": "pesca",
-    "color": "negro",
-    "peso": 200,
-    "medida": 180
-  },
-  {
-    "id": 44,
-    "nombre": "Carrete de pesca",
-    "descripcion": "Carrete de pesca resistente al agua",
-    "categoria": "pesca",
-    "color": "plateado",
-    "peso": 150,
-    "medida": 15
-  },
-  {
-    "id": 45,
-    "nombre": "Señuelo de pesca",
-    "descripcion": "Señuelo de pesca realista",
-    "categoria": "pesca",
-    "color": "verde",
-    "peso": 10,
-    "medida": 5
-  },
-  {
-    "id": 46,
-    "nombre": "Anzuelo",
-    "descripcion": "Anzuelo de acero inoxidable",
-    "categoria": "pesca",
-    "color": "plateado",
-    "peso": 5,
-    "medida": 1
-  },
-  {
-    "id": 47,
-    "nombre": "Caja de aparejos",
-    "descripcion": "Caja de aparejos con múltiples compartimentos",
-    "categoria": "pesca",
-    "color": "transparente",
-    "peso": 300,
-    "medida": 20
-  },
-  {
-    "id": 48,
     "nombre": "Red de pesca",
-    "descripcion": "Red de pesca de gran tamaño",
+    "precio": 2800,
     "categoria": "pesca",
-    "color": "azul",
-    "peso": 400,
-    "medida": 30
-  },
-  {
-    "id": 49,
-    "nombre": "Chaleco de pesca",
-    "descripcion": "Chaleco de pesca con múltiples bolsillos",
-    "categoria": "indumentaría",
-    "color": "verde",
-    "peso": 800,
-    "medida": "XL"
-  },
-  {
-    "id": 50,
-    "nombre": "Linterna de pesca",
-    "descripcion": "Linterna de pesca impermeable",
-    "categoria": "iluminación",
-    "color": "amarillo",
-    "peso": 150,
-    "medida": 10
+    "peso": 0.8,
+    "talle": 3,
+    "material": "nylon",
+    "origen": "argentina",
+    "descripcion": "Red de pesca de nylon de 3m"
   }
 ]
