@@ -1,9 +1,42 @@
 .allProduct__main {
     width: 100%;
-    background-color: red;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.allProduct__Container {
+.allProduct__container {
+    width: 100%;
+}
+
+.allProduct__section {
     width: 90%;
-    background-color: black;
+    display: flex;
+    margin: 10px;
+}
+
+.allProduct__section div {
+   width: 40%;
+   display: flex;
+   padding: 5px;
+   border: 1px solid black;
+   border-radius: 3px;
+   margin: 10px 0;
+   background-color: white;
+}
+
+.allProduct__figure {
+    width: 40%;
+}
+
+.allProduct__figure img {
+    width: 100%;
+}
+
+.allProduct__article {
+   width: 60%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
