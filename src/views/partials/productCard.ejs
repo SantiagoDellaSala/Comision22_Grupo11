@@ -1,10 +1,21 @@
-<div class="swiper-slide">
-    <a href="/products/detail"
-      ><img
-        src="/images/reelRotativoPredator307.png"
-        alt="destacado1"
-    /></a>
-    <p>Reel Rotativo Predator 307</p>
-    <p class="precioAnt"><del>$36.560</del></p>
-    <p class="precioActual">$25.420</p>
-  </div>
+<% products.forEach(product => { %>
+    <div class="allProduct__container">
+        <section class="allProduct__section">            
+            <div>
+                <figure class="allProduct__figure">
+                    <a href="/products/detail/<%= product.id %>">
+                        <img src="/images/productos/<%= product.image %>" alt="imagen de producto">
+                    </a>  
+                </figure>
+                <article class="allProduct__article">
+                    <h3><%= product.nombre %></h3>
+                    <p>Precio: $<%= toThousand(product.precio) %></p>
+                    <% if (product.descuento) { %>
+                    <span>%<%= product.descuento %></span>
+                    <% } %>
+                    <p><%= product.descripcion %></p>                
+                </article>                
+            </div>       
+        </section>
+    </div>
+  <% }) %>
