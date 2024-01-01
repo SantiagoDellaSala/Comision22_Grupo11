@@ -5,74 +5,76 @@
         <%- include('../partials/header.ejs') %>
 
     <main class="productDetail__main">
-        <div class="img-desc-pre">
-            <section class=".productDetail__section">
-                <article class="img-producto">
-                    <img class="productDetail__img" width="100%" src="/images/borseguiesTropperCuero.png" alt="">
-                </article>
-                <div class="coso">
-                <article class="a-titulo">
-                    <p class="titulo">Borceguíes Tropper Cuero Altos</p>
-                </article>
-                <article class="precio-cant">
-                    <table>
-                        <tr>
-                            <th class="precio-n">$9999</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button>-</button>
-                                <input type="number" id="cantidad" name="cantidad" min="1">
-                                <button>+</button>
-                            </td>
-                        </tr>
-                    </table>
-    
-                        <span class="b-compras">
-                            <input type="button" value="comprar">
-                            <input type="button" value="agregar al carrito">
-                        </span>
+            <div class="img-desc-pre">
+                <section class=".productDetail__section">
+                    <article class="img-producto">
+                        <img class="productDetail__img" width="100%" src="/images/productos/<%= product.image %>" alt="">
                     </article>
-                </div> 
-            </section>
-            
-            <section class=".productDetail__section">
-                <article class="desc-producto">
-                    <h4 class="productDetail__h4">Descripción</h4>
-
-                    <p class="productDetail__p">
-                        <span>Construídas en cuero de altísima calidad. El diseño de la suela facilita la tracción y la
-                            liberación de agentes externos como barro, agua, nieve elementos contundentes, frío calor.
-                            El talón biselado aumenta la superficie de contacto reduciendo el riesgo de caídas.
-                            Plantilla de gran flexibilidad, brinda sujeción y adaptabilidad durante el esfuerzo físico.
-                        </span>
-                    </p>
-                </article>
-                <article class="tb-producto">
-                    <table>
-                        <tr>
-                            <th>Caracteristicas</th>
-                        </tr>
-                        <tr>
-                            <td>peso</td>
-                            <td>2.5 kg</td>
-                        </tr>
-                        <tr>
-                            <td>talle</td>
-                            <td>40</td>
-                        </tr>
-                        <tr>
-                            <td>Material</td>
-                            <td>Cuero</td>
-                        </tr>
-                        <tr>
-                            <td>Origen</td>
-                            <td>Ind. Argentina</td>
-                        </tr>
-                    </table>
-                </article>
-            </section>
-        </div>
+                    <div class="coso">
+                    <article class="a-titulo">
+                        <p class="titulo"><%= product.name %></p>
+                    </article>
+                    <article class="precio-cant">
+                        <table>
+                            <tr>
+                                <th class="precio-n">$<%= product.precio %></th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button>-</button>
+                                    <input type="number" id="cantidad" name="cantidad" min="1">
+                                    <button>+</button>
+                                </td>
+                            </tr>
+                        </table>
+        
+                            <span class="b-compras">
+                                <input type="button" value="comprar">
+                                <input type="button" value="agregar al carrito">
+                            </span>
+                        </article>
+                    </div> 
+                </section>
+                
+                <section class=".productDetail__section">
+                    <article class="desc-producto">
+                        <h4 class="productDetail__h4">Descripción</h4>
+    
+                        <p class="productDetail__p">
+                            <span><%= product.descripcion %></span>
+                        </p>
+                    </article>
+                    <article class="tb-producto">
+                        <table>
+                            <tr>
+                                <th>Caracteristicas</th>
+                            </tr>
+                            <tr>
+                                <% if (product.peso) { %>
+                                    <td>Peso</td>
+                                <td><%= product.peso %></td>
+                                <% } %>                             
+                            </tr>
+                            <tr>
+                                <% if (product.talle) { %>
+                                    <td>Talle</td>
+                                <td><%= product.talle%></td>
+                                <% } %>                             
+                            </tr>
+                            <tr>
+                                <% if (product.material) { %>
+                                    <td>Material</td>
+                                <td><%= product.material %></td>
+                                <% } %>                             
+                            </tr>
+                            <tr>
+                                <td>Origen</td>
+                                <td>Ind. Argentina</td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>
+            </div>
     </main>
 
     <%- include('../partials/footer.ejs') %>

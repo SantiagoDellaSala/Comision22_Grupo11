@@ -1,0 +1,21 @@
+<% products.forEach(product => { %>
+    <div class="allProduct__container">
+        <section class="allProduct__section">            
+            <div>
+                <figure class="allProduct__figure">
+                    <a href="/products/detail/<%= product.id %>">
+                        <img src="/images/productos/<%= product.image %>" alt="imagen de producto">
+                    </a>  
+                </figure>
+                <article class="allProduct__article">
+                    <h3><%= product.nombre %></h3>
+                    <p>Precio: $<%= toThousand(product.precio) %></p>
+                    <% if (product.descuento) { %>
+                    <span>%<%= product.descuento %></span>
+                    <% } %>
+                    <p><%= product.descripcion %></p>                
+                </article>                
+            </div>       
+        </section>
+    </div>
+  <% }) %>
