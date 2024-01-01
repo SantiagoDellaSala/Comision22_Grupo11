@@ -1,15 +1,12 @@
-const {readFileSync} = require('fs')
+const {readFileSync, writeFileSync} = require('fs')
 
 
 module.exports = {
-    buscarJSON : (filename) => {
-        const filePath = path.join(__dirname, `./data/${filename}.json`)
-        return filePath
+    leerJSON : (filename) => {
+        return JSON.parse(readFileSync(`./src/data/${filename}.json`,'utf-8'))
     },
-    leerJSON : (filePath) => {
-        return JSON.parse(readFileSync(filePath, 'utf-8'));
-    },
-    escribirJSON : (filePath, array) => {
-        return fs.writeFileSync(filePath, JSON.stringify(array), 'utf-8')
-    }
+   escribirJSON: (data, filename)=>{
+    writeFileSync(`./src/data/${filename}.json`, JSON.stringify(data,null,3), 'utf-8')
+    return null
+   } 
 }
