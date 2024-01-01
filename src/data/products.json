@@ -8,7 +8,10 @@
     "talle": 2.1,
     "material": "metal",
     "origen": "argentina",
-    "descripcion": "Caña de pescar de metal de 2.1m"
+    "descripcion": "Caña de pescar de metal de 2.1m",
+    "image" : "CAÑA-AMBERJACK-2.10M.jpeg",
+    "descuento": 10,
+    "calidad" : "destacado"
   },
   {
     "id": 2,
@@ -19,7 +22,10 @@
     "talle": 8,
     "material": "metal",
     "origen": "china",
-    "descripcion": "Anzuelo de metal talle 8"
+    "descripcion": "Anzuelo de metal talle 8",
+    "image": "ANZUELO.jpg",
+    "descuento": 15,
+    "calidad" : "destacado"
   },
   {
     "id": 3,
@@ -30,7 +36,9 @@
     "talle": "",
     "material": "metal",
     "origen": "brasil",
-    "descripcion": "Reel de pesca de metal"
+    "descripcion": "Reel de pesca de metal",
+    "image": "REEL.webp",
+    "calidad" : "destacado"
   },
   {
     "id": 4,
@@ -41,7 +49,9 @@
     "talle": "",
     "material": "plastico",
     "origen": "argentina",
-    "descripcion": "Caja de señuelos de plastico"
+    "descripcion": "Caja de señuelos de plastico",
+    "image": "CAJA.webp",
+    "calidad" : "destacado"
   },
   {
     "id": 5,
@@ -52,7 +62,10 @@
     "talle": "",
     "material": "acero",
     "origen": "china",
-    "descripcion": "Cuchillo de filetear de acero"
+    "descripcion": "Cuchillo de filetear de acero",
+    "image": "CUCHILLO.jpg",
+    "descuento": 10,
+    "calidad" : "destacado"
   },
   {
     "id": 6,
@@ -63,7 +76,9 @@
     "talle": "L",
     "material": "neopreno",
     "origen": "brasil",
-    "descripcion": "Wader de neopreno talle L"
+    "descripcion": "Wader de neopreno talle L",
+    "image": "WADER.jpg",
+    "calidad" : "oferta"
   },
   {
     "id": 7,
@@ -74,7 +89,10 @@
     "talle": "",
     "material": "plastico",
     "origen": "argentina",
-    "descripcion": "Señuelo de pesca de plastico"
+    "descripcion": "Señuelo de pesca de plastico",
+    "image": "SEÑUELO.jpg",
+    "descuento": 15,
+    "calidad" : "oferta"
   },
   {
     "id": 8,
@@ -85,7 +103,9 @@
     "talle": "",
     "material": "plastico",
     "origen": "china",
-    "descripcion": "Caja de aparejos de plastico"
+    "descripcion": "Caja de aparejos de plastico",
+    "image": "CAJA-APAREJOS.jpg",
+    "calidad" : "oferta"
   },
   {
     "id": 9,
@@ -96,7 +116,9 @@
     "talle": "M",
     "material": "nylon",
     "origen": "brasil",
-    "descripcion": "Salvavidas de nylon talle M"
+    "descripcion": "Salvavidas de nylon talle M",
+    "image": "SALVAVIDAS.jpg",
+    "calidad" : "oferta"
   },
   {
     "id": 10,
@@ -107,6 +129,9 @@
     "talle": 3,
     "material": "nylon",
     "origen": "argentina",
-    "descripcion": "Red de pesca de nylon de 3m"
+    "descripcion": "Red de pesca de nylon de 3m",
+    "image": "RED.jpg",
+    "descuento": 15,
+    "calidad" : "oferta"
   }
 ]

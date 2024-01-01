@@ -37,37 +37,15 @@
       <div class="home__main--mobile">
         <section class="home__main__section">
           <div class="titularesContainer">
-            <h4 class="titulosSections">Ofertas</h4>
+            <h4 class="titulosSections">Destacados</h4>
             <a href="#">Ver más</a>
           </div>
           <!-- Swiper -->
           <div class="swiper mySwiper2">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="/products/detail"
-                  ><img
-                    src="/images/reelRotativoPredator307.png"
-                    alt="destacado1"
-                /></a>
-                <p>Reel Rotativo Predator 307</p>
-                <p class="precioDestacado">$36.560</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/products/detail"
-                  ><img
-                    src="/images/borseguiesTropperCuero.png"
-                    alt="destacado2"
-                /></a>
-                <p>Reel Rotativo Predator 307</p>
-                <p class="precioDestacado">$36.560</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/products/detail"
-                  ><img src="/images/caña168EstimulaBait.png" alt="destacado3"
-                /></a>
-                <p>Reel Rotativo Predator 307</p>
-                <p class="precioDestacado">$36.560</p>
-              </div>
+              <% products.filter(product => product.calidad === "destacado").forEach(product => { %>
+                <%- include('./partials/productCardSlider.ejs', {product}) %>
+              <% }) %> 
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -90,34 +68,9 @@
           <!-- Swiper -->
           <div class="swiper mySwiper2">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="/products/detail"
-                  ><img
-                    src="/images/reelRotativoPredator307.png"
-                    alt="destacado1"
-                /></a>
-                <p>Reel Rotativo Predator 307</p>
-                <p class="precioAnt"><del>$36.560</del></p>
-                <p class="precioActual">$25.420</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/products/detail"
-                  ><img
-                    src="/images/borseguiesTropperCuero.png"
-                    alt="destacado2"
-                /></a>
-                <p>Reel Rotativo Predator 307</p>
-                <p class="precioAnt"><del>$36.560</del></p>
-                <p class="precioActual">$25.420</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/products/detail"
-                  ><img src="/images/caña168EstimulaBait.png" alt="destacado3"
-                /></a>
-                <p>Reel Rotativo Predator 307</p>
-                <p class="precioAnt"><del>$36.560</del></p>
-                <p class="precioActual">$25.420</p>
-              </div>
+              <% products.filter(product => product.calidad === "oferta").forEach(product => { %>
+                <%- include('./partials/productCardSlider.ejs', {product}) %>
+              <% }) %> 
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -130,60 +83,12 @@
         <section class="home__main__section">
           <div class="titularesContainer">
             <h4 class="titulosSections">Productos destacados</h4>
-            <a href="#">Ver más</a>
           </div>
           <div class="swiper mySwiper3">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="/products/detail"
-                  ><img
-                    src="/images/reelRotativoPredator307.png"
-                    alt="destacado1"
-                /></a>
-                <h3>Reel Rotativo Predator 307</h3>
-                <p class="precioDestacado">$36.560</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/products/detail"
-                  ><img
-                    src="/images/borseguiesTropperCuero.png"
-                    alt="destacado2"
-                /></a>
-                <h3>Reel Rotativo Predator 307</h3>
-                <p class="precioDestacado">$36.560</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/products/detail"
-                  ><img src="/images/caña168EstimulaBait.png" alt="destacado3"
-                /></a>
-                <h3>Reel Rotativo Predator 307</h3>
-                <p class="precioDestacado">$36.560</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/products/detail"
-                  ><img
-                    src="/images/reelRotativoPredator307.png"
-                    alt="destacado4"
-                /></a>
-                <h3>Reel Rotativo Predator 307</h3>
-                <p class="precioDestacado">$36.560</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/products/detail"
-                  ><img
-                    src="/images/borseguiesTropperCuero.png"
-                    alt="destacado5"
-                /></a>
-                <h3>Reel Rotativo Predator 307</h3>
-                <p class="precioDestacado">$36.560</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/products/detail"
-                  ><img src="/images/caña168EstimulaBait.png" alt="destacado6"
-                /></a>
-                <h3>Reel Rotativo Predator 307</h3>
-                <p class="precioDestacado">$36.560</p>
-              </div>
+              <% products.filter(product => product.calidad === "destacado").forEach(product => { %>
+                <%- include('./partials/productCardSlider.ejs', {product}) %>
+              <% }) %> 
             </div>
             <div class=".swiper-pagination"></div>
             <div class="swiper-button-next"></div>
@@ -200,66 +105,12 @@
         <section class="home__main__section">
           <div class="titularesContainer">
             <h4 class="titulosSections">Ofertas</h4>
-            <a href="#">Ver más</a>
           </div>
           <div class="swiper mySwiper3">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="/productDetail"
-                  ><img
-                    src="/images/reelRotativoPredator307.png"
-                    alt="destacado1"
-                /></a>
-                <h3>Reel Rotativo Predator 307</h3>
-                <p class="precioAnt"><del>$36.560</del></p>
-                <p class="precioActual">$25.420</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/productDetail"
-                  ><img
-                    src="/images/borseguiesTropperCuero.png"
-                    alt="destacado2"
-                /></a>
-                <h3>Reel Rotativo Predator 307</h3>
-                <p class="precioAnt"><del>$36.560</del></p>
-                <p class="precioActual">$25.420</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/productDetail"
-                  ><img src="/images/caña168EstimulaBait.png" alt="destacado3"
-                /></a>
-                <h3>Reel Rotativo Predator 307</h3>
-                <p class="precioAnt"><del>$36.560</del></p>
-                <p class="precioActual">$25.420</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/productDetail"
-                  ><img
-                    src="/images/reelRotativoPredator307.png"
-                    alt="destacado4"
-                /></a>
-                <h3>Reel Rotativo Predator 307</h3>
-                <p class="precioAnt"><del>$36.560</del></p>
-                <p class="precioActual">$25.420</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/productDetail"
-                  ><img
-                    src="/images/borseguiesTropperCuero.png"
-                    alt="destacado5"
-                /></a>
-                <h3>Reel Rotativo Predator 307</h3>
-                <p class="precioAnt"><del>$36.560</del></p>
-                <p class="precioActual">$25.420</p>
-              </div>
-              <div class="swiper-slide">
-                <a href="/productDetail"
-                  ><img src="/images/caña168EstimulaBait.png" alt="destacado6"
-                /></a>
-                <h3>Reel Rotativo Predator 307</h3>
-                <p class="precioAnt"><del>$36.560</del></p>
-                <p class="precioActual">$25.420</p>
-              </div>
+              <% products.filter(product => product.calidad === "oferta").forEach(product => { %>
+                <%- include('./partials/productCardSlider.ejs', {product}) %>
+              <% }) %> 
             </div>
             <div class=".swiper-pagination"></div>
             <div class="swiper-button-next"></div>

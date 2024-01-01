@@ -18,26 +18,25 @@
                                 </nav>
                             </div>
                             <div class="card-body">
-                                <form action="" class="row">
+                                <form action="/products/create" method="POST" class="row">
                                     <h3>Nuevo Producto</h3>
                                     <hr>
                                     <div class="col-12 col-md-6 mb-3 ">
                                         <div class="form-floating ">
-                                            <input name="name" type="text" class="form-control" id="name">
+                                            <input name="nombre" type="text" class="form-control" id="name">
                                             <label for="name">Nombre del producto</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <input name="price" type="number" class="form-control" id="price">
+                                            <input name="precio" type="number" class="form-control" id="price">
                                             <label for="price">Precio</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <select name="category" class="form-select" id="category"
+                                            <select name="categoria" class="form-select" id="category"
                                                 aria-label="Floating label select example">
-                                                <option value="" selected hidden></option>
                                                 <option value="pesca">Pesca</option>
                                                 <option value="camping">Camping</option>
                                                 <option value="optica">Optica</option>
@@ -49,33 +48,25 @@
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <input name="peso" type="number" class="form-control" id="name">
+                                            <input name="peso" type="text" class="form-control" id="name">
                                             <label for="name">Peso del producto</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
-                                        <div class="form-floating">
-                                            <select name="category" class="form-select" id="category"
-                                                aria-label="Floating label select example">
-                                                <option value="" selected hidden></option>
-                                                <option value="">38</option>
-                                                <option value="">39</option>
-                                                <option value="">40</option>
-                                                <option value="">41</option>
-                                                <option value="">42</option>
-                                            </select>
-                                            <label for="category">Talle</label>
+                                        <div class="form-floating ">
+                                            <input name="talle" type="number" class="form-control" id="name">
+                                            <label for="name">Talle del producto</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <input name="name" type="text" class="form-control" id="name">
+                                            <input name="material" type="text" class="form-control" id="name">
                                             <label for="name">Material del producto</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <input name="name" type="text" class="form-control" id="name">
+                                            <input name="origen" type="text" class="form-control" id="name">
                                             <label for="name">Origen del producto</label>
                                         </div>
                                     </div>
@@ -86,20 +77,19 @@
                                             <label for="description">Descripción</label>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-3 mb-3">
+                                    <div class="col-12 col-md-6 mb-3">
                                         <input name="mainImage" type="file" class="form-control" id="mainImage" hidden>
                                         <label class="btn btn-primary btn-md w-100" for="mainImage">Imagen
                                             principal</label>
                                     </div>
-                                    <div class="col-12 col-md-3 mb-3">
+                                    <div class="col-12 col-md-6 mb-3">
                                         <input name="images" type="file" class="form-control" id="images" hidden
                                             multiple>
                                         <label class="btn btn-primary btn-md w-100" for="images">Imágenes extra</label>
                                     </div>
                                     
                                     <div class="col-12  d-flex justify-content-end ">
-                                        <button class="btn btn-success btn-md w-100"><a href="/admin">Agregar
-                                                producto</button></a>
+                                        <button type="submit" class="btn btn-success btn-md w-100">Agregar producto</button>
                                     </div>
                                 </form>
 
