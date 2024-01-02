@@ -7,7 +7,7 @@ module.exports = {
         return res.render('carrito')
     },
     admin : (req,res) => {
-        const products = leerJSON('productos');
+        const products = leerJSON('products');
 
         return res.render('dashboard', {
             products

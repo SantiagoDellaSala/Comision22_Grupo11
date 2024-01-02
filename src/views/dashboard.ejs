@@ -52,8 +52,9 @@
                                                     <i class="fa-solid fa-eye"></i>
                                                 </button>
                                                 <a class="btn btn-sm btn-outline-success border-none" href="/products/editar"><i class="fa-solid fa-pencil"></i></a>
-                                                <a class="btn btn-sm btn-outline-danger border-none" href="/"><i class="fa-solid fa-trash"></i></a>
-            
+                                                <a href="/admin" class="btn btn-sm btn-outline-danger border-none">
+                                                  <form action="/products/delete/<%= id %> ?_method=DELETE" methor="POST"></form><i class="fa-solid fa-trash"></i>
+                                                </a>
                                             </div>
                                         </td>
                                       </tr>
