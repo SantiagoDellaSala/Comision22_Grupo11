@@ -14,7 +14,7 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h4 class="cart-title">Productos</h4>
-                        <a class="btn btn-primary btn-md " href="/products/create">Nuevo</a>
+                        <a class="btn btn-primary btn-md " href="/products/agregar">Nuevo</a>
                     </div>
                     <div class="card-body table-responsive">
                         <table class="table table-striped">
@@ -35,7 +35,7 @@
                                 <% products.forEach(({id,nombre,precio,categoria,peso,talle,material,origen},index) => { %>
                                     <tr>
                                         <th scope="row">
-                                            <%= index + 1 %></th>
+                                        <%= index + 1 %></th>
                                         <th><%= nombre %></th>
                                         <td><%= precio %></td>
                                         <td><%= categoria %></td>
@@ -51,7 +51,7 @@
                                                     data-bs-target="#exampleModal<%= id %>">
                                                     <i class="fa-solid fa-eye"></i>
                                                 </button>
-                                                <a class="btn btn-sm btn-outline-success border-none" href="/products/editar"><i class="fa-solid fa-pencil"></i></a>
+                                                <a class="btn btn-sm btn-outline-success border-none" href="/products/editar/<%= id %>"><i class="fa-solid fa-pencil"></i></a>
                                                 <a class="btn btn-sm btn-outline-danger border-none" href="/"><i class="fa-solid fa-trash"></i></a>
             
                                             </div>

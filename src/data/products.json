@@ -1,17 +1,9 @@
 [
   {
     "id": 1,
-    "nombre": "Caña de pescar",
-    "precio": 2500,
-    "categoria": "pesca",
-    "peso": 0.5,
-    "talle": 2.1,
-    "material": "metal",
-    "origen": "argentina",
-    "descripcion": "Caña de pescar de metal de 2.1m",
-    "image" : "CAÑA-AMBERJACK-2.10M.jpeg",
+    "image": "CAÑA-AMBERJACK-2.10M.jpeg",
     "descuento": 10,
-    "calidad" : "destacado"
+    "calidad": "destacado"
   },
   {
     "id": 2,
@@ -25,7 +17,7 @@
     "descripcion": "Anzuelo de metal talle 8",
     "image": "ANZUELO.jpg",
     "descuento": 15,
-    "calidad" : "destacado"
+    "calidad": "destacado"
   },
   {
     "id": 3,
@@ -38,7 +30,7 @@
     "origen": "brasil",
     "descripcion": "Reel de pesca de metal",
     "image": "REEL.webp",
-    "calidad" : "destacado"
+    "calidad": "destacado"
   },
   {
     "id": 4,
@@ -51,7 +43,7 @@
     "origen": "argentina",
     "descripcion": "Caja de señuelos de plastico",
     "image": "CAJA.webp",
-    "calidad" : "destacado"
+    "calidad": "destacado"
   },
   {
     "id": 5,
@@ -65,7 +57,7 @@
     "descripcion": "Cuchillo de filetear de acero",
     "image": "CUCHILLO.jpg",
     "descuento": 10,
-    "calidad" : "destacado"
+    "calidad": "destacado"
   },
   {
     "id": 6,
@@ -78,7 +70,7 @@
     "origen": "brasil",
     "descripcion": "Wader de neopreno talle L",
     "image": "WADER.jpg",
-    "calidad" : "oferta"
+    "calidad": "oferta"
   },
   {
     "id": 7,
@@ -92,7 +84,7 @@
     "descripcion": "Señuelo de pesca de plastico",
     "image": "SEÑUELO.jpg",
     "descuento": 15,
-    "calidad" : "oferta"
+    "calidad": "oferta"
   },
   {
     "id": 8,
@@ -105,7 +97,7 @@
     "origen": "china",
     "descripcion": "Caja de aparejos de plastico",
     "image": "CAJA-APAREJOS.jpg",
-    "calidad" : "oferta"
+    "calidad": "oferta"
   },
   {
     "id": 9,
@@ -118,7 +110,7 @@
     "origen": "brasil",
     "descripcion": "Salvavidas de nylon talle M",
     "image": "SALVAVIDAS.jpg",
-    "calidad" : "oferta"
+    "calidad": "oferta"
   },
   {
     "id": 10,
@@ -132,6 +124,6 @@
     "descripcion": "Red de pesca de nylon de 3m",
     "image": "RED.jpg",
     "descuento": 15,
-    "calidad" : "oferta"
+    "calidad": "oferta"
   }
 ]
