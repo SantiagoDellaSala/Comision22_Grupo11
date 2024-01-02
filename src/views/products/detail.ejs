@@ -8,16 +8,16 @@
             <div class="img-desc-pre">
                 <section class=".productDetail__section">
                     <article class="img-producto">
-                        <img class="productDetail__img" width="100%" src="/images/productos/<%= product.image %>" alt="">
+                        <img class="productDetail__img" width="100%" src="/images/productos/<%=image %>" alt="">
                     </article>
                     <div class="coso">
                     <article class="a-titulo">
-                        <p class="titulo"><%= product.name %></p>
+                        <p class="titulo"><%= nombre %></p>
                     </article>
                     <article class="precio-cant">
                         <table>
                             <tr>
-                                <th class="precio-n">$<%= product.precio %></th>
+                                <th class="precio-n">$<%= toThousand(precio) %></th>
                             </tr>
                             <tr>
                                 <td>
@@ -41,7 +41,7 @@
                         <h4 class="productDetail__h4">Descripción</h4>
     
                         <p class="productDetail__p">
-                            <span><%= product.descripcion %></span>
+                            <span><%= descripcion %></span>
                         </p>
                     </article>
                     <article class="tb-producto">
@@ -50,26 +50,26 @@
                                 <th>Caracteristicas</th>
                             </tr>
                             <tr>
-                                <% if (product.peso) { %>
+                                <% if (peso) { %>
                                     <td>Peso</td>
-                                <td><%= product.peso %></td>
+                                <td><%= peso %> kg</td>
                                 <% } %>                             
                             </tr>
                             <tr>
-                                <% if (product.talle) { %>
+                                <% if (talle) { %>
                                     <td>Talle</td>
-                                <td><%= product.talle%></td>
+                                <td><%= talle%></td>
                                 <% } %>                             
                             </tr>
                             <tr>
-                                <% if (product.material) { %>
+                                <% if (material) { %>
                                     <td>Material</td>
-                                <td><%= product.material %></td>
+                                <td><%=material %></td>
                                 <% } %>                             
                             </tr>
                             <tr>
                                 <td>Origen</td>
-                                <td>Ind. Argentina</td>
+                                <td><%=origen %></td>
                             </tr>
                         </table>
                     </article>
