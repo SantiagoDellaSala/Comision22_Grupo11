@@ -128,17 +128,5 @@
       "descripcion": "Red de pesca de nylon de 3m",
       "mainImage": "",
       "images": []
-   },
-   {
-      "id": "3803227f-2d34-4649-98ce-5b2d342a84b9",
-      "nombre": "Caja de plomadas",
-      "precio": "600",
-      "categoria": "pesca",
-      "peso": "0.1",
-      "talle": null,
-      "material": "Plástico",
-      "origen": "China",
-      "mainImage": "ANAFE-PROTATIL-BUTANO.jpg",
-      "image": []
    }
 ]
