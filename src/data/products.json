@@ -1,12 +1,20 @@
 [
    {
       "id": 1,
-      "mainImage": "CAÑA-AMBERJACK-2.10M.jpeg",
-      "image": [
-         null
-      ]
-   },
-   {
+      "nombre": "Caña de pescar",
+      "precio": 2500,
+      "categoria": "pesca",
+      "peso": 0.5,
+      "talle": 2.1,
+      "material": "metal",
+      "origen": "argentina",
+      "descripcion": "Caña de pescar de metal de 2.1m",
+      "mainImage" : "CAÑA-AMBERJACK-2.10M.jpeg",
+      "image": [],
+      "descuento": 10,
+      "calidad" : "destacado"
+    },
+    {
       "id": 2,
       "nombre": "Anzuelo",
       "precio": 50,
@@ -19,8 +27,8 @@
       "mainImage": "ANZUELO.jpg",
       "image": [],
       "descuento": 15,
-      "calidad": "destacado"
-   },
+      "calidad" : "destacado"
+    },
    {
       "id": 3,
       "nombre": "Reel",
