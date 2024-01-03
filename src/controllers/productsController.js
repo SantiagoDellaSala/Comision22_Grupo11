@@ -2,7 +2,7 @@ const { leerJSON, escribirJSON } = require("../data")
 const { leerJSON, escribirJSON, cargarArchivo } = require("../data/index");
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-const products = leerJSON('products')
+let products = leerJSON('products')
 
 
 module.exports = {
@@ -32,32 +32,36 @@ module.exports = {
 		})
 	},
     update: (req, res) => {
-        const {nombre,precio,categoria,peso,talle,material,origen,descripcion} = req.body;
+        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad, mainImage, image } = req.body;
+        products.forEach(product => {
+            if (product.id == +req.params.id) {
+                (req.file && existsSync('public/images/' + product.mainImage)) && unlinkSync('public/images/' + product.mainImage)
 
-        products.forEach(p => {
-            if (p.id === +req.params.id) {
-                p.nombre = nombre,
-                p.precio = precio,
-                p.categoria = categoria,
-                p.peso = peso,
-                p.talle = talle,
-                p.material= material,
-                p.origen = origen,
-                p.descripcion =descripcion
+                product.nombre = nombre,
+                product.precio = precio,
+                product.categoria = categoria,
+                product.peso = peso,
+                product.talle = talle,
+                product.material = material,
+                product.origen = origen,
+                product.descripcion = descripcion,
+                product.descuento = descuento,
+                product.calidad = calidad,
+                product.mainImage = req.file ? mainImage : product.mainImage,
+                product.image = [image]
 
-                let uProduct = products.indexOf(p);
-                products.splice(uProduct,1)
+
+
             }
 
-            return p
         });
 
-        escribirJSON(products,'products')
+
+        escribirJSON(products, 'products');
 
         return res.redirect('/admin')
-        
     },
-    create : (req,res)=>{
+    create: (req,res)=>{
         const {nombre,precio,categoria,peso,talle,material,origen,descripcion} = req.body;
         
         const newProduct = new Product(nombre,precio,categoria,peso,talle,material,origen,descripcion);
