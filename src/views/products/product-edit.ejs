@@ -21,24 +21,24 @@
                                 </nav>
                             </div>
                             <div class="card-body">
-                                <form action="/products/update/<%= id %>?_method=PUT" enctype=multipart/form-data method="POST" class="row">
+                                <form action="/products/editar/<%= id %>?_method=PUT" enctype=multipart/form-data method="POST" class="row">
                                     <h3>Editar producto</h3>
                                     <hr>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <input name="name" type="text" class="form-control" id="nombre" value="<%= nombre %>">
-                                            <label for="name">Nombre</label>
+                                            <input name="nombre" type="text" class="form-control" id="nombre" value="<%= nombre %>">
+                                            <label for="nombre">Nombre</label>
                                           </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <input name="price" type="text" class="form-control" id="precio" value="<%= toThousand(precio) %>">
-                                            <label for="price">Precio</label>
+                                            <input name="precio" type="text" class="form-control" id="precio" value="<%= toThousand(precio) %>">
+                                            <label for="precio">Precio</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <select name="category" class="form-select" id="categoria"
+                                            <select name="categoria" class="form-select" id="categoria"
                                                 aria-label="Floating label select example">
                                                 <option value="" selected hidden></option>
                                                 <option <%= categoria === "pesca" && 'selected'%> value="pesca">Pesca</option>
@@ -47,18 +47,18 @@
                                                 <option <%= categoria === "iluminacion" && 'selected'%> value="iluminacion">Iluminacion</option>
                                                 <option <%= categoria === "accesorios" && 'selected'%> value="accesorios">Accesorios</option>
                                             </select>
-                                            <label for="category">Categoría</label>
+                                            <label for="categoria">Categoría</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
                                             <input name="peso" type="number" class="form-control" id="peso" value="<%= peso %>">
-                                            <label for="name">Peso del producto</label>
+                                            <label for="peso">Peso del producto</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <select name="category" class="form-select" id="category"
+                                            <select name="talle" class="form-select" id="talle"
                                                 aria-label="Floating label select example">
                                                 <option value="" selected hidden></option>
                                                 <option value="">38</option>
@@ -67,26 +67,38 @@
                                                 <option value="">41</option>
                                                 <option value="">42</option>
                                             </select>
-                                            <label for="category">Talle</label>
+                                            <label for="talle">Talle</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <input name="name" type="text" class="form-control" id="material" value="<%= material%>">
-                                            <label for="name">Material del producto</label>
+                                            <input name="material" type="text" class="form-control" id="material" value="<%= material%>">
+                                            <label for="material">Material del producto</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <input name="name" type="text" class="form-control" id="origen" value="<%= origen %>">
-                                            <label for="name">Origen del producto</label>
+                                            <input name="origen" type="text" class="form-control" id="origen" value="<%= origen %>">
+                                            <label for="origen">Origen del producto</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating ">
+                                            <input name="descuento" type="number" class="form-control" id="descuento" value="<%= descuento %>">
+                                            <label for="descuento">Descuento</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating ">
+                                            <input name="calidad" type="text" class="form-control" id="origen" value="<%= calidad %>">
+                                            <label for="calidad">Calidad</label>
                                         </div>
                                     </div>
                                     <div class="col-12 mb-3">
                                         <div class="form-floating">
-                                            <textarea name="description" class="form-control" id="descripcion"
+                                            <textarea name="descripcion" class="form-control" id="descripcion"
                                                 style="height: 100px;"><%= descripcion %></textarea>
-                                            <label for="description">Descripción</label>
+                                            <label for="descripcion">Descripción</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
@@ -99,6 +111,7 @@
                                             multiple>
                                         <label class="btn btn-primary btn-md w-100" for="images">Imágenes extra</label>
                                     </div>
+                                    
                                     <div class="col-12  d-flex justify-content-end ">
                                         <button type="submit" class="btn btn-success  btn-md w-100">Guardar cambios</button>
                                     </div>

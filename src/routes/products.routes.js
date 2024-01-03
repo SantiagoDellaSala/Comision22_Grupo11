@@ -8,7 +8,7 @@ router
   .get('/detail/:id', detail)
   .get('/agregar', add)
   .get('/editar/:id', edit)
-  .put('/update/:id', update)
+  .put('/editar/:id', update)
   .post('/create',create)
   .delete('/delete', kill)
 
