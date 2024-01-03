@@ -1,4 +1,4 @@
-const { leerJSON, escribirJSON } = require("../data");
+const { leerJSON, escribirJSON, cargarArchivo } = require("../data/index");
 const Product = require("../data/Product");
 
 module.exports = {
@@ -13,7 +13,6 @@ module.exports = {
     },
     create : (req,res)=>{
         const {nombre,precio,categoria,peso,talle,material,origen,descripcion} = req.body;
-        
         const newProduct = new Product(nombre,precio,categoria,peso,talle,material,origen,descripcion);
         const products = leerJSON('products');
         products.push(newProduct);
@@ -23,15 +22,15 @@ module.exports = {
         return res.redirect('/admin')
     },
     remove : (req, res) => {
-
         const {id} = req.params;
-        const products = leerJSON('products');
 
-    const listaNueva = products.filter(product => product.id != id);
-
-    escribirJSON(listaNueva);
-
-    res.redirect('/admin')
-	}
+        let productos = leerJSON('products');
+       
+        const nuevaLista = productos.filter(products => products.id !== +id);
+        
+        escribirJSON(nuevaLista, 'products')
+       
+         res.redirect('/admin');
+    }
     
 }

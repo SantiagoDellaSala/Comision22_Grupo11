@@ -1,4 +1,5 @@
 const {readFileSync, writeFileSync} = require('fs')
+const path = require('path')
 
 module.exports = {
     leerJSON : (filename) => {
@@ -7,5 +8,5 @@ module.exports = {
    escribirJSON: (data, filename)=>{
     writeFileSync(`./src/data/${filename}.json`, JSON.stringify(data,null,3), 'utf-8')
     return null
-   } 
+   },
 }
