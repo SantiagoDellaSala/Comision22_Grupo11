@@ -1,7 +1,7 @@
 const crypto = require('crypto')
 
 function Product(nombre,precio,categoria,peso,talle,material,origen,descripcion){
-    /* this.id = crypto.randomUUID(); */
+    this.id =crypto.randomUUID();
     this.nombre = nombre;
     this.precio = precio;
     this.categoria = categoria;
@@ -13,5 +13,4 @@ function Product(nombre,precio,categoria,peso,talle,material,origen,descripcion)
     this.mainImage= 'ANAFE-PROTATIL-BUTANO.jpg';
     this.image = [];
 }
-
-module.exports = Product;
+module.exports = Product;;

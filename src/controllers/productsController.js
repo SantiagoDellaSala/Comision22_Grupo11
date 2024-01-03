@@ -1,4 +1,5 @@
 const { leerJSON, escribirJSON } = require("../data")
+const { leerJSON, escribirJSON, cargarArchivo } = require("../data/index");
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const products = leerJSON('products')
@@ -54,30 +55,28 @@ module.exports = {
         escribirJSON(products,'products')
 
         return res.redirect('/admin')
-
-    
-
+        
     },
-    create: (req,res)=>{
+    create : (req,res)=>{
         const {nombre,precio,categoria,peso,talle,material,origen,descripcion} = req.body;
         
         const newProduct = new Product(nombre,precio,categoria,peso,talle,material,origen,descripcion);
+        const products = leerJSON('productos');
         products.push(newProduct);
 
-        escribirJSON(products,'products')
+        escribirJSON(products,'productos')
 
         return res.redirect('/admin')
     },
-    
-    kill : (req, res) => {
-        products.forEach(product=>{
-            if (product.id === +req.params.id) {
-                let killProduct = products.indexOf(product);
-                products.splice(killProduct,1)
-            }
-        }) 
+    remove : (req, res) => {
+        const {id} = req.params;
 
-        escribirJSON(products,'products')
-        return res.redirect('/admin')
+        let productos = leerJSON('products');
+       
+        const nuevaLista = productos.filter(products => products.id !== +id);
+        
+        escribirJSON(nuevaLista, 'products')
+       
+         res.redirect('/admin');
     }
 }

@@ -27,6 +27,7 @@ app
 
   /* Recursos estáticos */
   .use(express.static(path.join(__dirname, '..', 'public')))
+  app.use(methodOverride('_method'))
 
   /* Rutas */
   .use('/', indexRouter)
