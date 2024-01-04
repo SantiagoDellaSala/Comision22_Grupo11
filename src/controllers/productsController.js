@@ -1,11 +1,11 @@
-const { leerJSON, escribirJSON } = require("../data")
-const { leerJSON, escribirJSON, cargarArchivo } = require("../data/index");
+const { leerJSON, escribirJSON,} = require("../data");
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-let products = leerJSON('products')
+ let products = leerJSON('products') 
 
 
 module.exports = {
+                     /* Santiago */
     allProducts : (req,res) => {
         return res.render('products/all-products', {
            products,
@@ -15,6 +15,7 @@ module.exports = {
     add : (req,res) => {
         return res.render('products/product-add')
     },
+    
     detail : (req, res) => {
         const product = products.find(product => product.id === +req.params.id)
         return res.render('products/detail', {
@@ -61,14 +62,17 @@ module.exports = {
 
         return res.redirect('/admin')
     },
+
+                                          /* Ulises */
+
     create: (req,res)=>{
         const {nombre,precio,categoria,peso,talle,material,origen,descripcion} = req.body;
         
         const newProduct = new Product(nombre,precio,categoria,peso,talle,material,origen,descripcion);
-        const products = leerJSON('productos');
+        const products = leerJSON('products');
         products.push(newProduct);
 
-        escribirJSON(products,'productos')
+        escribirJSON(products,'products')
 
         return res.redirect('/admin')
     },

@@ -1,7 +1,8 @@
-const crypto = require('crypto')
-
+const {leerJSON} = require('./index')
+const products = leerJSON('products')
 function Product(nombre,precio,categoria,peso,talle,material,origen,descripcion){
-    this.id =crypto.randomUUID();
+    const lastID = products[products.length - 1].id;
+    this.id = lastID+1;
     this.nombre = nombre;
     this.precio = precio;
     this.categoria = categoria;
@@ -13,4 +14,5 @@ function Product(nombre,precio,categoria,peso,talle,material,origen,descripcion)
     this.mainImage= 'ANAFE-PROTATIL-BUTANO.jpg';
     this.image = [];
 }
-module.exports = Product;;
+
+module.exports = Product;
