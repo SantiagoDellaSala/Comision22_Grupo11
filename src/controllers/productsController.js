@@ -1,8 +1,7 @@
 const { leerJSON, escribirJSON } = require("../data")
-const { leerJSON, escribirJSON, cargarArchivo } = require("../data/index");
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-let products = leerJSON('products')
+const products = leerJSON('products')
 
 
 module.exports = {
@@ -32,7 +31,7 @@ module.exports = {
 		})
 	},
     update: (req, res) => {
-        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad, mainImage, image } = req.body;
+        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad, mainImage } = req.body;
         products.forEach(product => {
             if (product.id == +req.params.id) {
                 (req.file && existsSync('public/images/' + product.mainImage)) && unlinkSync('public/images/' + product.mainImage)
@@ -48,7 +47,7 @@ module.exports = {
                 product.descuento = descuento,
                 product.calidad = calidad,
                 product.mainImage = req.file ? mainImage : product.mainImage,
-                product.image = [image]
+                product.image = []
 
 
 
