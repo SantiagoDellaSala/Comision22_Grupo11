@@ -1,8 +1,8 @@
 const { leerJSON, escribirJSON,} = require("../data");
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
- let products = leerJSON('products') 
-
+let products = leerJSON('products') 
+const categorias = require("../data/categorias.json");
 
 module.exports = {
                      /* Santiago */
@@ -29,27 +29,27 @@ module.exports = {
         
         return res.render('products/product-edit',{
 			...product,
-            toThousand,
+            toThousand, categorias
 		})
 	},
     update: (req, res) => {
-        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad, mainImage, image } = req.body;
+        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad, mainImage } = req.body;
         products.forEach(product => {
             if (product.id == +req.params.id) {
                 (req.file && existsSync('public/images/' + product.mainImage)) && unlinkSync('public/images/' + product.mainImage)
 
-                product.nombre = nombre,
+                product.nombre = nombre.trim(),
                 product.precio = precio,
                 product.categoria = categoria,
                 product.peso = peso,
                 product.talle = talle,
                 product.material = material,
                 product.origen = origen,
-                product.descripcion = descripcion,
+                product.descripcion = descripcion.trim(),
                 product.descuento = descuento,
                 product.calidad = calidad,
                 product.mainImage = req.file ? mainImage : product.mainImage,
-                product.image = [image]
+                product.image = []
 
 
 
