@@ -41,11 +41,12 @@
                                             <select name="categoria" class="form-select" id="categoria"
                                                 aria-label="Floating label select example">
                                                 <option value="" selected hidden></option>
-                                                <option <%= categoria === "pesca" && 'selected'%> value="pesca">Pesca</option>
-                                                <option <%= categoria === "camping" && 'selected'%> value="camping">Camping</option>
-                                                <option <%= categoria === "optica" && 'selected'%> value="optica">Optica</option>
-                                                <option <%= categoria === "iluminacion" && 'selected'%> value="iluminacion">Iluminacion</option>
-                                                <option <%= categoria === "accesorios" && 'selected'%> value="accesorios">Accesorios</option>
+                                                <!-- aah no me sale -->
+                                                <% categorias.forEach(categoria=> { %>
+                                                    <option value="<%= categoria %>" <%=categoria? 'selected' : null %>
+                                                      ><%= categoria %>
+                                                    </option>
+                                                    <% }) %>
                                             </select>
                                             <label for="categoria">Categoría</label>
                                         </div>
