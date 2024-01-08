@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Resultados de tu búsqueda'}) %>
+<%- include('partials/head', {title: 'Resultados de tu búsqueda' }) %>
 
-<body>
-	<!-- Header -->
-	<%- include('partials/header') %>
-	<!-- /Header -->
-	
-	<!--productos-->
-    <div class="container products-wrapper">
-        <div class="row">
-            <h2 class="products-title">Resultados de la búsqueda: <%= keywords %>
-            </h2>
-        </div>
-        <% if (products.length) { %>
-            <%- include('./partials/productCard', {products}) %>
-                <% }else{ %>
-                    <div class="col-12 ">
-                        <h2 class="products-title" style="color: gray;">No hay productos que coincidan con tu
-                            búsqueda</h2>
-                    </div>
-                    <% } %>
-    </div>
-    
-	<!-- /todos los productos -->
+    <body>
+        <!-- Header -->
+        <%- include('partials/header') %>
+            <!-- /Header -->
 
-	<!-- footer -->
-	<%- include('partials/footer') %>
-	<!-- /footer -->
-</body>	
+            <!--productos-->
+            <div class="container products-wrapper">
+                <div class="row">
+                    <h2 class="products-title">Resultados de la búsqueda: <%= keywords %>
+                    </h2>
+                </div>
+                <% if (products.length) { %>
+                    <%- include('./partials/productCard', {products}) %>
+                        <% }else{ %>
+                            <div class="col-12 p-5">
+                                <h2 class="products-title p-5" style="color: gray;">No hay productos que coincidan con tu
+                                    búsqueda</h2>
+                            </div>
+                            <% } %>
+            </div>
+
+            <!-- /todos los productos -->
+
+            <!-- footer -->
+            <%- include('partials/footer') %>
+                <!-- /footer -->
+    </body>
+
 </html>
