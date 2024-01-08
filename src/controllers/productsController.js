@@ -1,4 +1,5 @@
 const { leerJSON, escribirJSON,} = require("../data");
+const { existsSync, unlinkSync } = require('fs');
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 let products = leerJSON('products') 
@@ -33,28 +34,36 @@ module.exports = {
 		})
 	},
     update: (req, res) => {
-        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad, mainImage } = req.body;
+        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad, mainImage ,image} = req.body;
         products.forEach(product => {
             if (product.id == +req.params.id) {
-                (req.file && existsSync('public/images/' + product.mainImage)) && unlinkSync('public/images/' + product.mainImage)
+                (mainImage && existsSync('public/images/' + product.mainImage)) && unlinkSync('public/images/' + product.mainImage)
+            
+            if(image){
+                product.image.forEach(image => {
+                    existsSync('public/images/' + image) && unlinkSync('public/images/' + image)
+                });
+            } else {
+                product.image = [];
+            }
 
-                product.nombre = nombre.trim(),
-                product.precio = precio,
-                product.categoria = categoria,
-                product.peso = peso,
-                product.talle = talle,
-                product.material = material,
-                product.origen = origen,
-                product.descripcion = descripcion.trim(),
-                product.descuento = descuento,
-                product.calidad = calidad,
-                product.mainImage = req.file ? mainImage : product.mainImage,
-                product.image = []
+                product.nombre = nombre? nombre.trim() : product.nombre;
+                product.precio = +precio;
+                product.categoria = categoria;
+                product.peso = +peso;
+                product.talle = talle;
+                product.material = material;
+                product.origen = origen;
+                product.descripcion = descripcion
+                product.descuento = +descuento;
+                product.calidad = calidad;
+                product.mainImage = mainImage ? mainImage[0].filename : product.mainImage;
+               
 
 
 
             }
-
+                
         });
 
 
