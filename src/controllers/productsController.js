@@ -38,11 +38,11 @@ module.exports = {
 
         products.forEach(product => {
             if (product.id == +req.params.id) {
-                (mainImage && existsSync('public/images/productos/' + product.mainImage)) && unlinkSync('public/images/productos/' + product.mainImage)
+                (mainImage && existsSync('/images/productos' + product.mainImage)) && unlinkSync('/images/productos/' + product.mainImage)
 
                 if (image) {
                     product.image.forEach(image => {
-                        existsSync('public/images/productos/' + image) && unlinkSync('public/images/productos/' + image)
+                        existsSync('/images/productos' + image) && unlinkSync('/images/productos' + image)
                     });
                 } else {
                     product.image = [];
