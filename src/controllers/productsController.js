@@ -1,53 +1,54 @@
-const { leerJSON, escribirJSON,} = require("../data");
+const { leerJSON, escribirJSON, } = require("../data");
 const { existsSync, unlinkSync } = require('fs');
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-let products = leerJSON('products') 
+let products = leerJSON('products')
 const categorias = require("../data/categorias.json");
 
 module.exports = {
-                     /* Santiago */
-    allProducts : (req,res) => {
+    /* Santiago */
+    allProducts: (req, res) => {
         return res.render('products/all-products', {
-           products,
-           toThousand
+            products,
+            toThousand
         })
     },
-    add : (req,res) => {
+    add: (req, res) => {
         return res.render('products/product-add')
     },
-    
-    detail : (req, res) => {
+
+    detail: (req, res) => {
         const product = products.find(product => product.id === +req.params.id)
         return res.render('products/detail', {
             ...product,
             toThousand,
-            
+
         })
     },
     edit: (req, res) => {
-		const product= products.find((product)=>product.id=== +req.params.id);
-        
-        return res.render('products/product-edit',{
-			...product,
+        const product = products.find((product) => product.id === +req.params.id);
+
+        return res.render('products/product-edit', {
+            ...product,
             toThousand, categorias
-		})
-	},
+        })
+    },
     update: (req, res) => {
-        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad, mainImage ,image} = req.body;
+        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad, mainImage, image } = req.body;
+
         products.forEach(product => {
             if (product.id == +req.params.id) {
-                (mainImage && existsSync('public/images/' + product.mainImage)) && unlinkSync('public/images/' + product.mainImage)
-            
-            if(image){
-                product.image.forEach(image => {
-                    existsSync('public/images/' + image) && unlinkSync('public/images/' + image)
-                });
-            } else {
-                product.image = [];
-            }
+                (mainImage && existsSync('public/images/productos/' + product.mainImage)) && unlinkSync('public/images/productos/' + product.mainImage)
 
-                product.nombre = nombre? nombre.trim() : product.nombre;
+                if (image) {
+                    product.image.forEach(image => {
+                        existsSync('public/images/productos/' + image) && unlinkSync('public/images/productos/' + image)
+                    });
+                } else {
+                    product.image = [];
+                }
+
+                product.nombre = nombre ? nombre.trim() : product.nombre;
                 product.precio = +precio;
                 product.categoria = categoria;
                 product.peso = +peso;
@@ -57,43 +58,44 @@ module.exports = {
                 product.descripcion = descripcion.trim()
                 product.descuento = +descuento;
                 product.calidad = calidad;
-                product.mainImage = mainImage ? mainImage[0].filename : product.mainImage;
-               
+                product.mainImage = mainImage ? mainImage.filename : product.mainImage;
+
 
 
 
             }
-                
+
         });
 
 
         escribirJSON(products, 'products');
 
+
         return res.redirect('/admin')
     },
 
-                                          /* Ulises */
+    /* Ulises */
 
-    create: (req,res)=>{
-        const {nombre,precio,categoria,peso,talle,material,origen,descripcion} = req.body;
-        
-        const newProduct = new Product(nombre,precio,categoria,peso,talle,material,origen,descripcion);
+    create: (req, res) => {
+        const { nombre, precio, categoria, peso, talle, material, origen, descripcion } = req.body;
+
+        const newProduct = new Product(nombre, precio, categoria, peso, talle, material, origen, descripcion);
         const products = leerJSON('products');
         products.push(newProduct);
 
-        escribirJSON(products,'products')
+        escribirJSON(products, 'products')
 
         return res.redirect('/admin')
     },
-    remove : (req, res) => {
-        const {id} = req.params;
+    remove: (req, res) => {
+        const { id } = req.params;
 
         let productos = leerJSON('products');
-       
+
         const nuevaLista = productos.filter(products => products.id !== +id);
-        
+
         escribirJSON(nuevaLista, 'products')
-       
-         res.redirect('/admin');
+
+        res.redirect('/admin');
     }
 }

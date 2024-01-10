@@ -9,13 +9,9 @@ router
   .get('/detail/:id', detail)
   .get('/agregar', add)
   .get('/editar/:id', edit)
-  .put('/editar/:id', upload.fields([
-    {
-      name: "mainImage",
-    },
-    {
-      name: "image",
-    },
+  .put('/editar/:id', upload('productos').fields([
+    {name: "mainImage"},
+    {name: "image"},
   ]), update)
   .post('/create',create)
   .delete('/delete/:id', remove); 
