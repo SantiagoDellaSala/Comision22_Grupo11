@@ -1,8 +1,8 @@
 [
    {
       "id": 1,
-      "nombre": "Caña de pescar azul",
-      "precio": 4997,
+      "nombre": "Caña de pescar",
+      "precio": 499,
       "categoria": "pesca",
       "peso": 0.5,
       "talle": "",
