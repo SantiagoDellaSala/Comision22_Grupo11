@@ -58,7 +58,7 @@ module.exports = {
                 product.descripcion = descripcion.trim()
                 product.descuento = +descuento;
                 product.calidad = calidad;
-                product.mainImage = mainImage ? mainImage.filename : product.mainImage;
+                product.mainImage = mainImage ? mainImage[0].filename : product.mainImage;
 
 
 
