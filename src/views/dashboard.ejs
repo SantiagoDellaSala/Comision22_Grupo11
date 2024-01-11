@@ -10,7 +10,7 @@
     <%- include('./partials/header') %>
     <main class="container">
         <section class="row my-5">
-            <div class="col-12 col-md-10 mx-auto">
+            <div class="col-12 col-md-12 mx-auto">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h4 class="cart-title">Productos</h4>
@@ -28,11 +28,13 @@
                                 <th scope="col">Talle</th>
                                 <th scope="col">Material</th>
                                 <th scope="col">Origen</th>
+                                <th scope="col">Descuento</th>
+                                <th scope="col">Calidad</th>
                                 <th scope="col">Acciones</th>
                               </tr>
                             </thead>
                             <tbody>
-                                <% products.forEach(({id,nombre,precio,categoria,peso,talle,material,origen},index) => { %>
+                                <% products.forEach(({id,nombre,precio,categoria,peso,talle,material,origen, descuento, calidad},index) => { %>
                                     <tr>
                                         <th scope="row">
                                         <%= index + 1 %></th>
@@ -43,6 +45,8 @@
                                         <td><%= talle %></td>
                                         <td><%= material %></td>
                                         <td><%= origen %></td>
+                                        <td><%= descuento %></td>
+                                        <td><%= calidad %></td>
                                         <td>
                                             <div class="d-flex gap-2">
                                                 <button 
