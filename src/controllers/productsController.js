@@ -70,7 +70,6 @@ module.exports = {
 
         escribirJSON(products, 'products');
 
-
         return res.redirect('/admin')
     },
 
