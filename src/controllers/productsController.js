@@ -26,10 +26,10 @@ module.exports = {
         })
     },
     edit: (req, res) => {
-        const product = products.find((product) => product.id === +req.params.id);
-
-        return res.render('products/product-edit', {
-            ...product,
+		const product = products.find((product)=>product.id === +req.params.id);
+        
+        return res.render('products/product-edit',{
+			...product,
             toThousand, categorias
         })
     },
@@ -37,16 +37,16 @@ module.exports = {
         let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad, mainImage, image } = req.body;
 
         products.forEach(product => {
-            if (product.id == +req.params.id) {
-                (mainImage && existsSync('/images/productos' + product.mainImage)) && unlinkSync('/images/productos/' + product.mainImage)
-
-                if (image) {
-                    product.image.forEach(image => {
-                        existsSync('/images/productos' + image) && unlinkSync('/images/productos' + image)
-                    });
-                } else {
-                    product.image = [];
-                }
+            if (product.id === +req.params.id) {
+                (mainImage && existsSync('public/images/' + product.mainImage)) && unlinkSync('public/images/' + product.mainImage)
+            
+            if(image){
+                product.image.forEach(image => {
+                    existsSync('public/images/' + image) && unlinkSync('public/images/' + image)
+                });
+            } else {
+                product.image = [];
+            }
 
                 product.nombre = nombre ? nombre.trim() : product.nombre;
                 product.precio = +precio;
@@ -76,10 +76,10 @@ module.exports = {
 
     /* Ulises */
 
-    create: (req, res) => {
-        const { nombre, precio, categoria, peso, talle, material, origen, descripcion } = req.body;
-
-        const newProduct = new Product(nombre, precio, categoria, peso, talle, material, origen, descripcion);
+    create: (req,res)=>{
+        const {nombre,precio,categoria,peso,talle,material,origen,descripcion, descuento, calidad} = req.body;
+        
+        const newProduct = new Product(nombre,precio,categoria,peso,talle,material,origen,descripcion, descuento, calidad);
         const products = leerJSON('products');
         products.push(newProduct);
 

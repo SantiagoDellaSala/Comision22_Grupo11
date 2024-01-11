@@ -2,7 +2,7 @@
    {
       "id": 1,
       "nombre": "Caña de pescar",
-      "precio": 4.999,
+      "precio": 2.5,
       "categoria": "pesca",
       "peso": 5.3,
       "talle": "",
@@ -17,7 +17,7 @@
    {
       "id": 2,
       "nombre": "Anzuelo",
-      "precio": 25,
+      "precio": 50,
       "categoria": "pesca",
       "peso": 0.01,
       "talle": "",
@@ -148,5 +148,19 @@
       "image": [],
       "descuento": 15,
       "calidad": "oferta"
+   },
+   {
+      "id": 11,
+      "nombre": "Caña Dorada",
+      "precio": "15000",
+      "categoria": "optica",
+      "peso": "16",
+      "talle": "M",
+      "material": "Metal",
+      "origen": "Taiwan",
+      "descuento": "18",
+      "calidad": "destacado",
+      "mainImage": "ANAFE-PROTATIL-BUTANO.jpg",
+      "image": []
    }
 ]
