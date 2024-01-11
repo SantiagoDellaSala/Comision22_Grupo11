@@ -69,7 +69,7 @@ module.exports = {
 
         escribirJSON(products, 'products');
 
-        return res.redirect('/products/detail/' + req.params.id)
+        return res.redirect('/admin')
     },
 
                                           /* Ulises */
