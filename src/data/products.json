@@ -137,10 +137,10 @@
    {
       "id": 10,
       "nombre": "Red de pesca",
-      "precio": 2800,
+      "precio": 2.8,
       "categoria": "pesca",
       "peso": 0.8,
-      "talle": 3,
+      "talle": "",
       "material": "nylon",
       "origen": "argentina",
       "descripcion": "Red de pesca de nylon de 3m",
