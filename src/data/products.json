@@ -163,5 +163,20 @@
       "calidad": "destacado",
       "mainImage": "ANAFE-PROTATIL-BUTANO.jpg",
       "image": []
+   },
+   {
+      "id": 12,
+      "nombre": "Prueba",
+      "precio": 4600,
+      "categoria": "optica",
+      "peso": 45,
+      "talle": "M",
+      "material": "Criptonita",
+      "origen": "Argenzuela",
+      "descripcion": "Jejejeje",
+      "descuento": 99,
+      "calidad": "destacado",
+      "mainImage": "ANAFE-PROTATIL-BUTANO.jpg",
+      "image": []
    }
 ]

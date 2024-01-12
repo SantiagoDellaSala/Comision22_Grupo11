@@ -77,7 +77,17 @@ module.exports = {
     create: (req,res)=>{
         const {nombre,precio,categoria,peso,talle,material,origen,descripcion, descuento, calidad} = req.body;
         
-        const newProduct = new Product(nombre,precio,categoria,peso,talle,material,origen,descripcion, descuento, calidad);
+        const newProduct = new Product(
+            nombre, 
+            +precio, 
+            categoria,
+            +peso, 
+            talle, 
+            material, 
+            origen, 
+            descripcion, 
+            +descuento, 
+            calidad);
         const products = leerJSON('products');
         products.push(newProduct);
 
