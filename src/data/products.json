@@ -1,8 +1,8 @@
 [
    {
       "id": 1,
-      "nombre": "Caña de pescar",
-      "precio": 4.999,
+      "nombre": "Caña",
+      "precio": 2.5,
       "categoria": "pesca",
       "peso": 5.3,
       "talle": "",
@@ -16,8 +16,8 @@
    },
    {
       "id": 2,
-      "nombre": "Anzuelo",
-      "precio": 25,
+      "nombre": "Anzuelo Azul",
+      "precio": 50,
       "categoria": "pesca",
       "peso": 0.01,
       "talle": "",
@@ -148,5 +148,20 @@
       "image": [],
       "descuento": 15,
       "calidad": "oferta"
+   },
+   {
+      "id": 11,
+      "nombre": "Caña Dorada",
+      "precio": "4000",
+      "categoria": "camping",
+      "peso": "12",
+      "talle": "M",
+      "material": "Metal",
+      "origen": "Taiwan",
+      "descripcion": "Hola que tal",
+      "descuento": "10",
+      "calidad": "destacado",
+      "mainImage": "ANAFE-PROTATIL-BUTANO.jpg",
+      "image": []
    }
 ]
