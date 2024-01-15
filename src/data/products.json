@@ -152,14 +152,14 @@
    {
       "id": 11,
       "nombre": "Caña Dorada",
-      "precio": "4000",
+      "precio": 4,
       "categoria": "camping",
-      "peso": "12",
-      "talle": "M",
+      "peso": 12,
+      "talle": "",
       "material": "Metal",
       "origen": "Taiwan",
       "descripcion": "Hola que tal",
-      "descuento": "10",
+      "descuento": 10,
       "calidad": "destacado",
       "mainImage": "ANAFE-PROTATIL-BUTANO.jpg",
       "image": []
