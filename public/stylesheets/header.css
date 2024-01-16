@@ -8,11 +8,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .div__menu {
-    width: 10vw;
-    margin: 12px
+    width: 100%;
 }
 
 .div__menu i {
