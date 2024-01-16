@@ -115,12 +115,30 @@
         margin: 5vw 0 5vh;  
         /* text-align: left; */
     }
-}
+    .header__nav {
+        display: flex;
+        
+        justify-content:space-around;
+        margin-right: 0;
+        width: 100vw;
+        background-color: black;
+    }
+
+    .nav-ul{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}   
+
+
 
 @media (min-width: 1024px) {
 
     /* PRODUCT DETAIL (Yohanna) */
-    
+    .nav-ul{
+        flex-wrap: wrap;
+        gap: 50px;
+    }
 
     .precio-cant {width: 35vw;}
 

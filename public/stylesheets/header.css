@@ -79,6 +79,7 @@
     
     .div__menu {
         width: 100vw;
+        justify-content: center;
     }
     
     .hamburguesa{
@@ -86,17 +87,7 @@
     
     }
 
-    .header__nav {
-        display: flex;
-        justify-content: space-evenly;
-        margin-right: 0;
-        width: 100vw;
-        background-color: black;
-    }
-
-    .nav-ul{
-        flex-direction: row;
-    }
+    
 
     .elementos {
         width: 100vw;
