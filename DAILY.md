@@ -14,3 +14,9 @@ asignamos a cada una su respectivo puntaje.
 Participantes: Ulises - Santiago
 Se habló de: Corregir el header, se sobre pasa del body y hace que se rompa la vista. 
 Intercambiando opiniones sobre las tareas de cada uno y pudimos avanzar en varios puntos. 
+
+## 16/01/2024 - 21:10 a 21:55
+Participantes: Yohanna - Ulises - Santiago
+Se habló de: Posibles soluciones para un problema que quedó del header. Cada integrante 
+mancionó que tarea esta realizando y que le falta. Planeamos mañana hacer un merge para 
+juntar lo que tenemos y ver que falta.  

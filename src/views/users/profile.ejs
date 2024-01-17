@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <main class="main__profile">
+        <% users.forEach(user => { %>
+            <section class="main__profile__section">
+                <h4>Perfil de usuario</h4>
+                <form class="main__profile__section__form" action="">
+                    <div class="profile__container">
+                        <label for="nombre">Nombre: <%= user.firstName %></label>
+                        <button class="editar">Editar</button>
+                    </div>
+                    <div class="profile__container">
+                        <label for="apellido">Apellido: <%= user.lastName %></label>
+                        <button class="editar">Editar</button>
+                    </div>
+                    <div class="profile__container">
+                        <label for="nombreUsuario">Nombre de usuario:</label>
+                        <button class="editar">Editar</button>
+                    </div>
+                    <div class="profile__container">
+                        <label for="email">Email:</label>
+                    </div>
+                </form>
+            </section>
+        <% }) %>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>
