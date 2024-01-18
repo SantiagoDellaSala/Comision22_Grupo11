@@ -1,10 +1,25 @@
 const express = require('express');
+const multer = require('multer')
+const path = require('path')
 const router = express.Router();
-const { login, register } = require('../controllers/usersController');
+const { login, register, processRegister } = require('../controllers/usersController');
+const userRegisterValidator = require('../validations/user-register-validator')
+
+
+const storage = multer.diskStorage({
+  destination:(req,file,cb)=>{
+      cb(null,(path.join(__dirname,"../","../","/public/images/avatars")))
+  },
+  filename:(req,file,cb)=>{
+
+      cb(null,`${Date.now()}_img_${path.extname(file.originalname)}`);
+  }
+});
+const upload = multer({storage})
 
 /* /users */
 router
   .get('/login', login)
   .get('/register', register)
-
+  .post('/register',upload.single('avatar'),userRegisterValidator, processRegister)
 module.exports = router;
