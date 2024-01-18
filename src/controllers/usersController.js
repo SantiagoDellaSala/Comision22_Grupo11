@@ -1,4 +1,4 @@
-const { leerJSON} = require("../data");
+const { leerJSON, escribirJSON} = require("../data");
 const users = leerJSON('users')
 
 module.exports = {
@@ -13,5 +13,22 @@ module.exports = {
         return res.render('users/profile', {
             ...user,
         })
+    },
+
+    editProfile : (req, res) => {
+        let { firstName, lastName} = req.body;
+        users.forEach(user => {
+            if (user.id === +req.params.id) {
+    
+                user.firstName = firstName ? firstName.trim() : user.firstName;
+                user.lastName = lastName ? lastName.trim() : user.lastName;
+        
+            }
+                
+        });
+
+        escribirJSON(users, 'users');
+
+        return res.redirect('/users/profile')
+    },
     }
-}

@@ -1,65 +1,65 @@
 [
-    {
-        "id":1,
-        "firstName":"Lionel",
-        "lastName":"Messi",
-        "email":"LionelMessi10@gmail.com",
-        "password":"Messi123",
-        "category":"User",
-        "avatar":"/images/avatars/lioMessi.jpg"
-    },
-    {
-        "id":2,
-        "firstName":"Ulises",
-        "lastName":"Farias",
-        "email":"UlisesFarias@gmail.com",
-        "password":"Ulises123",
-        "category":"Admin",
-        "avatar":"/images/avatars/ulises.jpg"
-    },
-    {
-        "id":3,
-        "firstName":"Santiago",
-        "lastName":"DellaSala",
-        "email":"SantiagoDellaSala@gmail.com",
-        "password":"Santi123",
-        "category":"Admin",
-        "avatar":"/images/avatars/santi.jpg"
-    },
-    {
-        "id":4,
-        "firstName":"Yohanna",
-        "lastName":"Lucero",
-        "email":"YohannaLucero@gmail.com",
-        "password":"Yohanna123",
-        "category":"Admin",
-        "avatar":"/images/avatars/yohanna.jpg"
-    },
-    {
-        "id":5,
-        "firstName":"Cristian",
-        "lastName":"Romero",
-        "email":"CristianRomero@gmail.com",
-        "password":"Cristian123",
-        "category":"User",
-        "avatar":"/images/avatars/cristian.jpg"
-    },
-    {
-        "id":6,
-        "firstName":"Juan",
-        "lastName":"Barinaga",
-        "email":"JuanBarigana@gmail.com",
-        "password":"Juan123",
-        "category":"User",
-        "avatar":"/images/avatars/juan.jpg"
-    },
-    {
-        "id":7,
-        "firstName":"Lucas",
-        "lastName":"Castro",
-        "email":"LucasCastro@gmail.com",
-        "password":"Lucas123",
-        "category":"User",
-        "avatar":"/images/avatars/lucas.jpg"
-    }
+   {
+      "id": 1,
+      "firstName": "Lionel",
+      "lastName": "Messi",
+      "email": "LionelMessi10@gmail.com",
+      "password": "Messi123",
+      "category": "User",
+      "avatar": "/images/avatars/lioMessi.jpg"
+   },
+   {
+      "id": 2,
+      "firstName": "Ulises",
+      "lastName": "Farias",
+      "email": "UlisesFarias@gmail.com",
+      "password": "Ulises123",
+      "category": "Admin",
+      "avatar": "/images/avatars/ulises.jpg"
+   },
+   {
+      "id": 3,
+      "firstName": "Santiago",
+      "lastName": "DellaSala",
+      "email": "SantiagoDellaSala@gmail.com",
+      "password": "Santi123",
+      "category": "Admin",
+      "avatar": "/images/avatars/santi.jpg"
+   },
+   {
+      "id": 4,
+      "firstName": "Yohanna",
+      "lastName": "Lucero",
+      "email": "YohannaLucero@gmail.com",
+      "password": "Yohanna123",
+      "category": "Admin",
+      "avatar": "/images/avatars/yohanna.jpg"
+   },
+   {
+      "id": 5,
+      "firstName": "Cristian",
+      "lastName": "Romero",
+      "email": "CristianRomero@gmail.com",
+      "password": "Cristian123",
+      "category": "User",
+      "avatar": "/images/avatars/cristian.jpg"
+   },
+   {
+      "id": 6,
+      "firstName": "Juan",
+      "lastName": "Barinaga",
+      "email": "JuanBarigana@gmail.com",
+      "password": "Juan123",
+      "category": "User",
+      "avatar": "/images/avatars/juan.jpg"
+   },
+   {
+      "id": 7,
+      "firstName": "Lucas",
+      "lastName": "Castro",
+      "email": "LucasCastro@gmail.com",
+      "password": "Lucas123",
+      "category": "User",
+      "avatar": "/images/avatars/lucas.jpg"
+   }
 ]

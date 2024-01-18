@@ -10,15 +10,16 @@
                 <form class="main__profile__section__form" action="">
                     <div class="profile__container">
                         <label for="nombre">Nombre: <%= firstName %></label>
-                        <button class="editar">Editar</button>
                     </div>
                     <div class="profile__container">
                         <label for="apellido">Apellido: <%= lastName %></label>
-                        <button class="editar">Editar</button>
                     </div>
                     <div class="profile__container">
                         <label class="input__email" for="email">Email: <%= email %></label>
                     </div>
+                    <a href="/users/editProfile/<%= id %>?_method=PUT" method="POST">
+                        <button type="button" class="btn btn-sm btn-outline-success border-none"><i class="fa-solid fa-pencil"></i></button>
+                    </a>
                 </form>
             </section>
         
