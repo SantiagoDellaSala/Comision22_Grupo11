@@ -4,28 +4,24 @@
 <body>
     <%- include('../partials/header') %>
     <main class="main__profile">
-        <% users.forEach(user => { %>
+        
             <section class="main__profile__section">
                 <h4>Perfil de usuario</h4>
                 <form class="main__profile__section__form" action="">
                     <div class="profile__container">
-                        <label for="nombre">Nombre: <%= user.firstName %></label>
+                        <label for="nombre">Nombre: <%= firstName %></label>
                         <button class="editar">Editar</button>
                     </div>
                     <div class="profile__container">
-                        <label for="apellido">Apellido: <%= user.lastName %></label>
+                        <label for="apellido">Apellido: <%= lastName %></label>
                         <button class="editar">Editar</button>
                     </div>
                     <div class="profile__container">
-                        <label for="nombreUsuario">Nombre de usuario:</label>
-                        <button class="editar">Editar</button>
-                    </div>
-                    <div class="profile__container">
-                        <label for="email">Email:</label>
+                        <label class="input__email" for="email">Email: <%= email %></label>
                     </div>
                 </form>
             </section>
-        <% }) %>
+        
     </main>
     <%- include('../partials/footer') %>
 </body>

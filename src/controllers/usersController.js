@@ -9,8 +9,9 @@ module.exports = {
         return res.render('users/register')
     },
     profile : (req, res) => {
+        const user = users.find(user => user.id === +req.params.id)
         return res.render('users/profile', {
-            users
+            ...user,
         })
     }
 }

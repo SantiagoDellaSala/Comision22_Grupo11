@@ -25,7 +25,7 @@
 
 .profile__container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap : 1rem;
     width: 90%;
 }

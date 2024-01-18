@@ -6,6 +6,6 @@ const { login, register, profile } = require('../controllers/usersController');
 router
   .get('/login', login)
   .get('/register', register)
-  .get('/profile', profile)
+  .get('/profile/:id', profile)
 
 module.exports = router;
