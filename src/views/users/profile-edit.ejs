@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head.ejs') %>
+    
+    <title>Editar producto</title>
+
+    <body>
+        <%- include('../partials/header.ejs') %>
+            <main class="profile__main">
+                <section class="profile__main__section">
+                    <form class="profile__main__section__form" action="/users/editProfile/<%= id %>?_method=PUT" method="POST">
+                        <h3>EDITAR PERFIL</h3>
+                        <label for="name" class="form-label">Nombre</label>
+                        <input type="text" name="name"
+                        class=" <%= locals.errors && errors.name ? 'is-invalid' : null %>" 
+                        id="name"
+                        value="<%= firstName %>" />
+                        <small class="text-danger ms-2">
+                        <%= locals.errors && errors.name ? errors.name.msg : null %>
+                        </small>
+
+                        <label for="name" class="form-label">Apellido</label>
+                        <input 
+                            type="text" 
+                            name="user"
+                            class=" <%= locals.errors && errors.name ? 'is-invalid' : null %>" 
+                            id="usuario"
+                            value="<%= lastName %>" />
+                        <small class="text-danger ms-2">
+                        <%= locals.errors && errors.user ? errors.user.msg : null %>
+                        </small>
+                        <button type="submit">ACTUALIZAR DATOS</button>
+                    </action=>
+                </section>
+            </main>
+
+
+            <%- include('../partials/footer.ejs') %>
+
+                <%- include('../partials/scripts') %>
+    </body>
+
+</html>

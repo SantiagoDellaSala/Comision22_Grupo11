@@ -2,8 +2,9 @@ const express = require('express');
 const multer = require('multer')
 const path = require('path')
 const router = express.Router();
-const { login, register, processRegister } = require('../controllers/usersController');
+const { login, register, processRegister, profile, profileEdit, profileUpload } = require('../controllers/usersController');
 const userRegisterValidator = require('../validations/user-register-validator')
+const userEditValidator = require('../validations/user-edit-validator')
 
 
 const storage = multer.diskStorage({
@@ -23,4 +24,8 @@ router
   .get('/login', login)
   .get('/register', register)
   .post('/register',upload.single('avatar'),userRegisterValidator, processRegister)
+  .get('/profile/:id', profile)
+  .get('/editProfile/:id', profileEdit)
+  .put('/editProfile/:id',userEditValidator, profileUpload)
+
 module.exports = router;

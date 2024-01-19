@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator")
 const User = require('../data/User')
 const { leerJSON, escribirJSON } = require("../data")
+const users = leerJSON('users');
 
 module.exports = {
     login : (req, res) => {
@@ -32,5 +33,36 @@ module.exports = {
 
         }
 
+    },
+    /* SANTIAGO */
+    profile : (req, res) => {
+        const user = users.find(user => user.id === +req.params.id)
+        return res.render('users/profile', {
+            user
+        })
+    },
+    profileEdit : (req, res) => {
+        const user = users.find((user)=>user.id === +req.params.id);
+        
+        return res.render('users/profile-edit',{
+			...user
+        })
+    },
+    profileUpload : (req, res) => {
+
+        const {firstName, lastName} = req.body;
+
+        const {id} = req.params;
+
+        users.map(user => {
+            if(user.id == id){
+                user.firstName = firstName ? firstName.trim() : user.firstName;
+                user.lastName = lastName ? lastName.trim() : user.lastName;
+            }
+            return user
+        })
+        escribirJSON(users, 'users')
+
+        return res.redirect('/users/profile/' + req.params.id)
     }
 }

@@ -24,7 +24,8 @@
       "email": "SantiagoDellaSala@gmail.com",
       "password": "Santi123",
       "category": "Admin",
-      "avatar": "/images/avatars/santi.jpg"
+      "avatar": "/images/avatars/santi.jpg",
+      "role": "admin"
    },
    {
       "id": 4,

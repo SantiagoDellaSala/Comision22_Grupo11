@@ -60,9 +60,6 @@ module.exports = {
                 product.calidad = calidad;
                 product.mainImage = mainImage ? mainImage[0].filename : product.mainImage;
 
-
-
-
             }
 
         });
