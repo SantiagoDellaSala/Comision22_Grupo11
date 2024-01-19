@@ -167,7 +167,7 @@
    {
       "id": 12,
       "nombre": "Prueba",
-      "precio": 4600,
+      "precio": 4.6,
       "categoria": "optica",
       "peso": 45,
       "talle": "M",
@@ -176,7 +176,7 @@
       "descripcion": "Jejejeje",
       "descuento": 99,
       "calidad": "destacado",
-      "mainImage": "ANAFE-PROTATIL-BUTANO.jpg",
+      "mainImage": "1705638638576_img_.png",
       "image": []
    }
 ]
