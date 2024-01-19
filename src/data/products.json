@@ -1,7 +1,7 @@
 [
    {
       "id": 1,
-      "nombre": "Caña",
+      "nombre": "Caña de pescar",
       "precio": 2.5,
       "categoria": "pesca",
       "peso": 5.3,
@@ -16,7 +16,7 @@
    },
    {
       "id": 2,
-      "nombre": "Anzuelo Azul",
+      "nombre": "Anzuelo",
       "precio": 50,
       "categoria": "pesca",
       "peso": 0.01,

@@ -4,8 +4,6 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride =  require('method-override');
-const session = require('express-session')
-
 
 const indexRouter = require('./routes/index.routes');
 const usersRouter = require('./routes/users.routes');
@@ -30,11 +28,6 @@ app
   /* Recursos estáticos */
   .use(express.static(path.join(__dirname, '..', 'public')))
   app.use(methodOverride('_method'))
-
-   /* session */
-   .use(session({
-    secret : 'suyds'
-   }))
 
   /* Rutas */
   .use('/', indexRouter)

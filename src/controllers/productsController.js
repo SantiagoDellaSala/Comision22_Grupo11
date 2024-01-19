@@ -26,10 +26,10 @@ module.exports = {
         })
     },
     edit: (req, res) => {
-        const product = products.find((product) => product.id === +req.params.id);
-
-        return res.render('products/product-edit', {
-            ...product,
+		const product = products.find((product)=>product.id === +req.params.id);
+        
+        return res.render('products/product-edit',{
+			...product,
             toThousand, categorias
         })
     },
@@ -69,7 +69,6 @@ module.exports = {
 
 
         escribirJSON(products, 'products');
-
 
         return res.redirect('/admin')
     },
