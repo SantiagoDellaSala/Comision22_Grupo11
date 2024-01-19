@@ -15,7 +15,7 @@
                         <input type="text" name="name"
                         class=" <%= locals.errors && errors.name ? 'is-invalid' : null %>" 
                         id="name"
-                        value="<%= firstName %>" />
+                        value="<%= name %>" />
                         <small class="text-danger ms-2">
                         <%= locals.errors && errors.name ? errors.name.msg : null %>
                         </small>
@@ -23,12 +23,12 @@
                         <label for="name" class="form-label">Apellido</label>
                         <input 
                             type="text" 
-                            name="user"
-                            class=" <%= locals.errors && errors.name ? 'is-invalid' : null %>" 
-                            id="usuario"
+                            name="lastName"
+                            class=" <%= locals.errors && errors.lastName ? 'is-invalid' : null %>" 
+                            id="lastName"
                             value="<%= lastName %>" />
                         <small class="text-danger ms-2">
-                        <%= locals.errors && errors.user ? errors.user.msg : null %>
+                        <%= locals.errors && errors.lastName ? errors.lastName.msg : null %>
                         </small>
                         <button>ACTUALIZAR DATOS</button>
                     </action=>

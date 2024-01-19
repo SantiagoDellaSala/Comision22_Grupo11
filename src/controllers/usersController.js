@@ -12,12 +12,12 @@ module.exports = {
     },
     processRegister: (req,res) => {
         const errors = validationResult(req)
-        const {name,user,email,password} = req.body;
+        const {name,lastName,email,password} = req.body;
         const avatar = req.file
         if(errors.isEmpty()){
 
             const users = leerJSON('users')
-            const nuevoUsuario = new User(name,user,email,password,avatar);
+            const nuevoUsuario = new User(name,lastName,email,password,avatar);
 
             users.push(nuevoUsuario);
 
@@ -50,16 +50,15 @@ module.exports = {
     },
     profileUpload : (req, res) => {
 
-        const {firstName, lastName} = req.body;
+        const {name, lastName} = req.body;
 
         const {id} = req.params;
 
-        users.forEach(user => {
-            if(user.id === +req.params.id){
-                user.firstName = firstName ? firstName.trim() : user.firstName;
-                user.lastName = lastName ? lastName.trim() : user.lastName;
+        users.forEach(usuario => {
+            if(usuario.id === +req.params.id){
+                usuario.name = name ? name.trim() : usuario.name;
+                usuario.lastName = lastName ? lastName.trim() : usuario.lastName;
             }
-            return user
         })
         escribirJSON(users, 'users')
 

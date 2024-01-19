@@ -11,14 +11,13 @@
                     <li><a href="#" class="nav-li">Iluminación</a></li>
                     <li><a href="#" class="nav-li">Accesorios</a></li>
                     <li><a href="#" class="nav-li ">Promociones</a></li>
-                    <!-- <li><a href="/admin" class="nav-li ">Admin</a></li> -->
                     <% if (locals.userLogin) { %>
                         <% if (userLogin.role === "admin") { %>
                             <li class="animate__animated animate__fadeInDown"><a href="/admin">Admin</a></li>
                         <% }else{ %>
                             <li class="animate__animated animate__fadeInDown"><a href="/products/allProducts">Productos</a></li>
                         <% } %>
-                        <% } %>
+                    <% } %>
                 </ul>
             </nav>
         </div>
