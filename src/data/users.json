@@ -36,12 +36,21 @@
       "avatar": "/images/avatars/yohanna.jpg"
    },
    {
-      "id": "ada3bd90-92b2-4c76-a8e7-d36b781c947b",
+      "id": "c1768b55-c00d-48a8-b460-5557197a34f6",
       "name": "Ulises Farias",
-      "user": "UliCab10",
-      "email": "Ulises@gmail.com",
-      "password": "$2a$10$DjnFAkrD5q5phK8Nv8j.HOJ0cQQcdHNinoDXCvsu8E9IEN77cOfmy",
-      "avatar": "1705612187045_img_.PNG",
+      "user": "ulises",
+      "email": "UlisesFarias12@gmail.com",
+      "password": "$2a$10$SJAXdSHIwPjvu/zSdAbKi.UA7q8OG/kVEOMUYHN5bnPX7X5WuGQe2",
+      "avatar": null,
+      "role": "user"
+   },
+   {
+      "id": "efc55ec4-aac6-4c7c-973b-af58f470e4d6",
+      "name": "Ulises Farias",
+      "user": "ulises",
+      "email": "UlisesFarias12123123@gmail.com",
+      "password": "$2a$10$xaq6UuIbaOtMkhwQoRw/IOFjmRhBRYEcZZzWB8oVqvmE0NUNSB46K",
+      "avatar": "1705625574697_img_.PNG",
       "role": "user"
    }
 ]
