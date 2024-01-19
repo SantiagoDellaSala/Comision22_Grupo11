@@ -12,7 +12,7 @@
               class="input"
               id="name"
               type="text"
-              placeholder="Nombre y apellido"
+              placeholder="Nombre"
               name="name"
               value="<%= locals.old && old.name ? old.name : null %>"
             />
@@ -24,14 +24,14 @@
           <div>
             <input
               class="input"
-              id="usuario"
+              id="lastName"
               type="text"
-              placeholder="Nombre de usuario"
-              name="user"
-              value="<%= locals.old && old.user ? old.user : null %>"
+              placeholder="Apellido"
+              name="lastName"
+              value="<%= locals.old && old.lastName ? old.lastName : null %>"
             />
             <small class="text-danger d-flex">
-              <%= locals.errors && errors.user ? errors.user.msg : null %>
+              <%= locals.errors && errors.lastName ? errors.lastName.msg : null %>
             </small>
           </div>
 

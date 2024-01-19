@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator")
 const User = require('../data/User')
 const { leerJSON, escribirJSON } = require("../data")
+const users = leerJSON('users');
 
 module.exports = {
     login : (req, res) => {
@@ -47,12 +48,12 @@ module.exports = {
     },
     processRegister: (req,res) => {
         const errors = validationResult(req)
-        const {name,user,email,password} = req.body;
+        const {name,lastName,email,password} = req.body;
         const avatar = req.file
         if(errors.isEmpty()){
 
             const users = leerJSON('users')
-            const nuevoUsuario = new User(name,user,email,password,avatar);
+            const nuevoUsuario = new User(name,lastName,email,password,avatar);
 
             users.push(nuevoUsuario);
 
@@ -69,7 +70,36 @@ module.exports = {
         }
 
     },
-    profile : (req,res) => {
-        return res.render('users/profile')
+
+    /* SANTIAGO */
+    profile : (req, res) => {
+        const user = users.find(user => user.id === +req.params.id)
+        return res.render('users/profile', {
+            user
+        })
+    },
+    profileEdit : (req, res) => {
+        const user = users.find((user)=>user.id === +req.params.id);
+        
+        return res.render('users/profile-edit',{
+			...user
+        })
+    },
+    profileUpload : (req, res) => {
+
+        const {name, lastName} = req.body;
+
+        const {id} = req.params;
+
+        users.forEach(usuario => {
+            if(usuario.id === +req.params.id){
+                usuario.name = name ? name.trim() : usuario.name;
+                usuario.lastName = lastName ? lastName.trim() : usuario.lastName;
+            }
+        })
+        escribirJSON(users, 'users')
+
+        return res.redirect('/users/profile/' + req.params.id)
+
     }
 }

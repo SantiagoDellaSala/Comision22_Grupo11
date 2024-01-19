@@ -6,7 +6,8 @@ const { login, register, processRegister,processLogin,logout,profile } = require
 const userRegisterValidator = require('../validations/user-register-validator')
 const userLoginValidator = require('../validations/user-login-validator');
 const checkAuthUser = require('../middlewares/checkAuthUser');
-const checkUserLogin = require('../middlewares/checkUserLogin');
+const checkUserLogin = require('../middlewares/checkUserLogin');const userEditValidator = require('../validations/user-edit-validator')
+
 
 const storage = multer.diskStorage({
   destination:(req,file,cb)=>{
@@ -26,6 +27,10 @@ router
   .post('/login', userLoginValidator, processLogin )
   .get('/register', register)
   .post('/register',upload.single('avatar'),userRegisterValidator, processRegister)
+  .get('/profile/:id', profile)
+  .get('/editProfile/:id', profileEdit)
+  .put('/editProfile/:id',userEditValidator, profileUpload)
+
   .get('/perfil',checkUserLogin, profile)
   .get('/salir',logout)
   
