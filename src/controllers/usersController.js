@@ -54,8 +54,8 @@ module.exports = {
 
         const {id} = req.params;
 
-        users.map(user => {
-            if(user.id == id){
+        users.forEach(user => {
+            if(user.id === +req.params.id){
                 user.firstName = firstName ? firstName.trim() : user.firstName;
                 user.lastName = lastName ? lastName.trim() : user.lastName;
             }
