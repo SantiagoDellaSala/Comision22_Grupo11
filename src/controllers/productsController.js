@@ -26,27 +26,27 @@ module.exports = {
         })
     },
     edit: (req, res) => {
-		const product = products.find((product)=>product.id === +req.params.id);
-        
-        return res.render('products/product-edit',{
-			...product,
+        const product = products.find((product) => product.id === +req.params.id);
+
+        return res.render('products/product-edit', {
+            ...product,
             toThousand, categorias
         })
     },
     update: (req, res) => {
-        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad, mainImage, image } = req.body;
-
+        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad,image} = req.body;
+        const mainImage = req.file
         products.forEach(product => {
             if (product.id === +req.params.id) {
-                (mainImage && existsSync('public/images/' + product.mainImage)) && unlinkSync('public/images/' + product.mainImage)
-            
-            if(image){
-                product.image.forEach(image => {
-                    existsSync('public/images/' + image) && unlinkSync('public/images/' + image)
-                });
-            } else {
-                product.image = [];
-            }
+                (mainImage && existsSync('public/images/productos/' + product.mainImage)) && unlinkSync('public/images/productos/' + product.mainImage)
+
+                if (image) {
+                    product.image.forEach(image => {
+                        existsSync('public/images/productos/' + image) && unlinkSync('public/images/productos/' + image)
+                    });
+                } else {
+                    product.image = [];
+                }
 
                 product.nombre = nombre ? nombre.trim() : product.nombre;
                 product.precio = +precio;
@@ -58,10 +58,7 @@ module.exports = {
                 product.descripcion = descripcion.trim()
                 product.descuento = +descuento;
                 product.calidad = calidad;
-                product.mainImage = mainImage ? mainImage[0].filename : product.mainImage;
-
-
-
+                product.mainImage = mainImage ? mainImage.filename : product.mainImage;
 
             }
 
@@ -75,19 +72,19 @@ module.exports = {
 
     /* Ulises */
 
-    create: (req,res)=>{
-        const {nombre,precio,categoria,peso,talle,material,origen,descripcion, descuento, calidad} = req.body;
-        
+    create: (req, res) => {
+        const { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad } = req.body;
+
         const newProduct = new Product(
-            nombre, 
-            +precio, 
+            nombre,
+            +precio,
             categoria,
-            +peso, 
-            talle, 
-            material, 
-            origen, 
-            descripcion, 
-            +descuento, 
+            +peso,
+            talle,
+            material,
+            origen,
+            descripcion,
+            +descuento,
             calidad);
         const products = leerJSON('products');
         products.push(newProduct);

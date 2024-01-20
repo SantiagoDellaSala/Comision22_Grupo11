@@ -4,10 +4,13 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride =  require('method-override');
+const session = require('express-session');
 
 const indexRouter = require('./routes/index.routes');
 const usersRouter = require('./routes/users.routes');
 const productsRouter = require('./routes/products.routes');
+const transferLocals = require('./middlewares/transferLocals');
+const cookieCheck = require('./middlewares/cookieCheck')
 
 const app = express();
 
@@ -28,6 +31,16 @@ app
   /* Recursos estáticos */
   .use(express.static(path.join(__dirname, '..', 'public')))
   app.use(methodOverride('_method'))
+
+  /* configuración de session */
+  .use(session({
+    secret : 'SUYDS',
+    resave : true,
+    saveUninitialized : true
+  }))
+
+  .use(cookieCheck)
+  .use(transferLocals)
 
   /* Rutas */
   .use('/', indexRouter)

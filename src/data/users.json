@@ -1,8 +1,8 @@
 [
    {
       "id": 1,
-      "firstName": "Lionel",
-      "lastName": "Messi",
+      "name": "Santiago",
+      "lastName": "Messirve",
       "email": "LionelMessi10@gmail.com",
       "password": "Messi123",
       "category": "User",
@@ -24,7 +24,8 @@
       "email": "SantiagoDellaSala@gmail.com",
       "password": "Santi123",
       "category": "Admin",
-      "avatar": "/images/avatars/santi.jpg"
+      "avatar": "/images/avatars/santi.jpg",
+      "role": "admin"
    },
    {
       "id": 4,
@@ -36,21 +37,21 @@
       "avatar": "/images/avatars/yohanna.jpg"
    },
    {
-      "id": "c1768b55-c00d-48a8-b460-5557197a34f6",
-      "name": "Ulises Farias",
-      "user": "ulises",
-      "email": "UlisesFarias12@gmail.com",
-      "password": "$2a$10$SJAXdSHIwPjvu/zSdAbKi.UA7q8OG/kVEOMUYHN5bnPX7X5WuGQe2",
+      "id": "5315618c-7e13-4b41-bd9a-d58cd4591b68",
+      "name": "Homero",
+      "user": "Simpson",
+      "email": "lossimpson@gmail.com",
+      "password": "$2a$10$tvFCUi.tX1IjMkmdth/LQOp8Xp4pkD3Cre3nr3T.x/wDolQncvqZS",
       "avatar": null,
       "role": "user"
    },
    {
-      "id": "efc55ec4-aac6-4c7c-973b-af58f470e4d6",
-      "name": "Ulises Farias",
-      "user": "ulises",
-      "email": "UlisesFarias12123123@gmail.com",
-      "password": "$2a$10$xaq6UuIbaOtMkhwQoRw/IOFjmRhBRYEcZZzWB8oVqvmE0NUNSB46K",
-      "avatar": "1705625574697_img_.PNG",
+      "id": "505ec67f-97a2-4c01-80ce-224f461a2418",
+      "name": "frito",
+      "lastName": "pendejo",
+      "email": "frito.p@hotmail.com",
+      "password": "$2a$10$snP0V4RSdwAUILyg6tVjCOBBJ0FrwFMBmcm3/p8INkVjS4x2.wvT6",
+      "avatar": "1705705086006_img_.png",
       "role": "user"
    }
 ]

@@ -1,22 +1,61 @@
 const { validationResult } = require("express-validator")
 const User = require('../data/User')
 const { leerJSON, escribirJSON } = require("../data")
+const users = leerJSON('users');
 
 module.exports = {
     login : (req, res) => {
         return res.render('users/login')
     },
+    processLogin: (req, res) => {
+        const errors = validationResult(req);
+        const { email, remember } = req.body;
+
+        if (errors.isEmpty()) {
+
+            const { id, name, role, avatar} = leerJSON('users').find(user => user.email === email)
+           
+
+            req.session.userLogin = {
+                id,
+                name,
+                role,
+                avatar
+            }
+
+            remember && res.cookie('SUYDS', req.session.userLogin, {
+                maxAge: 1000 * 60 * 2
+            })
+
+            return res.redirect('/')
+
+        } else {
+            return res.render('users/login', {
+                errors: errors.mapped()
+            })
+        }
+    },
+    logout : (req,res) => {
+        
+        req.session.destroy();
+        res.cookie('SUYDS_user',null,{
+            maxAge : -1
+        })
+
+        return res.redirect('/')
+    },
+
     register : (req, res) => {
         return res.render('users/register')
     },
     processRegister: (req,res) => {
         const errors = validationResult(req)
-        const {name,user,email,password} = req.body;
+        const {name,lastName,email,password} = req.body;
         const avatar = req.file
         if(errors.isEmpty()){
 
             const users = leerJSON('users')
-            const nuevoUsuario = new User(name,user,email,password,avatar);
+            const nuevoUsuario = new User(name,lastName,email,password,avatar);
 
             users.push(nuevoUsuario);
 
@@ -31,6 +70,39 @@ module.exports = {
             })
 
         }
+
+    },
+
+    /* SANTIAGO */
+    profile : (req, res) => {
+        const users = leerJSON('users');
+        const user = users.find(user => user.id === +req.params.id)
+        return res.render('users/profile', {
+            user
+        })
+    },
+    profileEdit : (req, res) => {
+        const user = users.find((user)=>user.id === +req.params.id);
+        
+        return res.render('users/profile-edit',{
+			...user
+        })
+    },
+    profileUpload : (req, res) => {
+
+        const {name, lastName} = req.body;
+
+        const {id} = req.params;
+
+        users.forEach(usuario => {
+            if(usuario.id === +req.params.id){
+                usuario.name = name ? name.trim() : usuario.name;
+                usuario.lastName = lastName ? lastName.trim() : usuario.lastName;
+            }
+        })
+        escribirJSON(users, 'users')
+
+        return res.redirect('/users/profile/' + req.params.id)
 
     }
 }

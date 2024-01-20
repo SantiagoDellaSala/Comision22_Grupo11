@@ -9,7 +9,7 @@ module.exports = [
     }).withMessage('Minimo 2 caracteres').bail()
     .isAlpha('es-ES',{ignore: " "}).withMessage('Solo caracteres alfabeticos'),
 
-    check('user')
+    check('lastName')
     .notEmpty().withMessage('Este campo es obligatorio').bail()
     .isLength({
         min : 2
