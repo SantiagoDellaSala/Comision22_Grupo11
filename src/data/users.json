@@ -44,5 +44,14 @@
       "password": "$2a$10$tvFCUi.tX1IjMkmdth/LQOp8Xp4pkD3Cre3nr3T.x/wDolQncvqZS",
       "avatar": null,
       "role": "user"
+   },
+   {
+      "id": "505ec67f-97a2-4c01-80ce-224f461a2418",
+      "name": "frito",
+      "lastName": "pendejo",
+      "email": "frito.p@hotmail.com",
+      "password": "$2a$10$snP0V4RSdwAUILyg6tVjCOBBJ0FrwFMBmcm3/p8INkVjS4x2.wvT6",
+      "avatar": "1705705086006_img_.png",
+      "role": "user"
    }
 ]

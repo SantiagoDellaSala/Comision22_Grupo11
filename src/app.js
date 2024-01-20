@@ -34,7 +34,7 @@ app
 
   /* configuración de session */
   .use(session({
-    secret : '*-SUYDS-*',
+    secret : 'SUYDS',
     resave : true,
     saveUninitialized : true
   }))

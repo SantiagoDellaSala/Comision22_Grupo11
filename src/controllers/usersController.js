@@ -7,29 +7,31 @@ module.exports = {
     login : (req, res) => {
         return res.render('users/login')
     },
-    processLogin : (req,res) => {
+    processLogin: (req, res) => {
         const errors = validationResult(req);
-        const {email, remember} = req.body;
+        const { email, remember } = req.body;
 
-        if(errors.isEmpty()){
+        if (errors.isEmpty()) {
 
-        const {id, name, role} = leerJSON('users').find(user => user.email === email)
+            const { id, name, role, avatar} = leerJSON('users').find(user => user.email === email)
+           
 
             req.session.userLogin = {
                 id,
                 name,
-                role
+                role,
+                avatar
             }
 
-            remember && res.cookie('SUYDS_user',req.session.userLogin,{
-                maxAge : 1000 * 60 * 2
+            remember && res.cookie('SUYDS', req.session.userLogin, {
+                maxAge: 1000 * 60 * 2
             })
 
             return res.redirect('/')
 
-        }else {
-            return res.render('users/login',{
-                errors : errors.mapped()
+        } else {
+            return res.render('users/login', {
+                errors: errors.mapped()
             })
         }
     },
@@ -73,6 +75,7 @@ module.exports = {
 
     /* SANTIAGO */
     profile : (req, res) => {
+        const users = leerJSON('users');
         const user = users.find(user => user.id === +req.params.id)
         return res.render('users/profile', {
             user

@@ -1,38 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<<<<<<< HEAD
-<%- include('../partials/head') %>
-<body>
-    <%- include('../partials/header') %>
-    <main class="main__profile">
-        
-            <section class="main__profile__section">
-                <h4>Perfil de usuario</h4>
-                <form class="main__profile__section__form" action="">
-                    <div class="profile__container">
-                        <label for="nombre">Nombre: <%= firstName %></label>
-                    </div>
-                    <div class="profile__container">
-                        <label for="apellido">Apellido: <%= lastName %></label>
-                    </div>
-                    <div class="profile__container">
-                        <label class="input__email" for="email">Email: <%= email %></label>
-                    </div>
-                    <a href="/users/editProfile/<%= id %>?_method=PUT" method="POST">
-                        <button type="button" class="btn btn-sm btn-outline-success border-none"><i class="fa-solid fa-pencil"></i></button>
-                    </a>
-                </form>
-            </section>
-        
-    </main>
-    <%- include('../partials/footer') %>
-</body>
-=======
   <%- include('../partials/head.ejs') %>
   <body>
     <%- include('../partials/header.ejs') %>
     <main class="profile__main">
         <section class="profile__main__section">
+
             <form class="profile__main__section__form" action="/users/editProfile/">
                 <h3>MI PERFIL</h3>
                 <label for="firstName">Nombre: <%= user.name %></label>
@@ -46,5 +19,4 @@
     </main>
     <%- include('../partials/footer.ejs') %>
   </body>
->>>>>>> 1debcdaa37f7de1e5d312b041b16efe2503b10de
 </html>
