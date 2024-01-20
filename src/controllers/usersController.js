@@ -22,10 +22,12 @@ module.exports = {
                 role,
                 avatar
             }
-
-            remember && res.cookie('SUYDS', req.session.userLogin, {
-                maxAge: 1000 * 60 * 2
-            })
+            
+            if (remember) {
+                res.cookie('userEmail',req.session.userLogin,{
+                    maxAge : 1000 * 60 * 2
+                })  
+            }
 
             return res.redirect('/')
 
@@ -38,9 +40,9 @@ module.exports = {
     logout : (req,res) => {
         
         req.session.destroy();
-        res.cookie('SUYDS_user',null,{
+        res.cookie('userEmail',null,{
             maxAge : -1
-        })
+        }) 
 
         return res.redirect('/')
     },
@@ -76,13 +78,13 @@ module.exports = {
     /* SANTIAGO */
     profile : (req, res) => {
         const users = leerJSON('users');
-        const user = users.find(user => user.id === +req.params.id)
+        const user = users.find(user => user.id === req.params.id)
         return res.render('users/profile', {
             user
         })
     },
     profileEdit : (req, res) => {
-        const user = users.find((user)=>user.id === +req.params.id);
+        const user = users.find((user)=>user.id === req.params.id);
         
         return res.render('users/profile-edit',{
 			...user
@@ -95,7 +97,7 @@ module.exports = {
         const {id} = req.params;
 
         users.forEach(usuario => {
-            if(usuario.id === +req.params.id){
+            if(usuario.id === req.params.id){
                 usuario.name = name ? name.trim() : usuario.name;
                 usuario.lastName = lastName ? lastName.trim() : usuario.lastName;
             }

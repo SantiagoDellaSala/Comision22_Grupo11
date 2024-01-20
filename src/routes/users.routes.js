@@ -9,7 +9,6 @@ const checkAuthUser = require('../middlewares/checkAuthUser');
 const checkUserLogin = require('../middlewares/checkUserLogin');
 const userEditValidator = require('../validations/user-edit-validator')
 
-
 const storage = multer.diskStorage({
   destination:(req,file,cb)=>{
       cb(null,(path.join(__dirname,"../","../","/public/images/avatars")))
@@ -20,7 +19,6 @@ const storage = multer.diskStorage({
   }
 });
 const upload = multer({storage})
-
 
 /* /users */
 router
