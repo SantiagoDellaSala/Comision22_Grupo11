@@ -7,7 +7,7 @@ function User(name,lastName,email,password,avatar){
     this.lastName= lastName.trim();
     this.email = email.trim();
     this.password = bcryptjs.hashSync(password.trim(), 10);
-    this.avatar = avatar ? avatar.filename : null;
+    this.avatar = avatar ? avatar.filename : 'default.png';
     this.role = "user"
 }
 

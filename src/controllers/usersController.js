@@ -22,10 +22,12 @@ module.exports = {
                 role,
                 avatar
             }
-
-            remember && res.cookie('SUYDS', req.session.userLogin, {
-                maxAge: 1000 * 60 * 2
-            })
+            
+            if (remember) {
+                res.cookie('userEmail',req.session.userLogin,{
+                    maxAge : 1000 * 60 * 2
+                })  
+            }
 
             return res.redirect('/')
 
@@ -38,9 +40,9 @@ module.exports = {
     logout : (req,res) => {
         
         req.session.destroy();
-        res.cookie('SUYDS_user',null,{
+        res.cookie('userEmail',null,{
             maxAge : -1
-        })
+        }) 
 
         return res.redirect('/')
     },
@@ -76,33 +78,43 @@ module.exports = {
     /* SANTIAGO */
     profile : (req, res) => {
         const users = leerJSON('users');
-        const user = users.find(user => user.id === +req.params.id)
+        const user = users.find(user => user.id === req.params.id)
         return res.render('users/profile', {
             user
         })
     },
     profileEdit : (req, res) => {
-        const user = users.find((user)=>user.id === +req.params.id);
+        const user = users.find((user)=>user.id === req.params.id);
         
         return res.render('users/profile-edit',{
 			...user
         })
     },
     profileUpload : (req, res) => {
-
-        const {name, lastName} = req.body;
-
+        const errors = validationResult(req);
+        const {name, lastName, email} = req.body;
         const {id} = req.params;
+        
+        if (errors.isEmpty()) {
+            users.forEach(usuario => {
+                if(usuario.id === req.params.id){
+                    usuario.name = name ? name.trim() : usuario.name;
+                    usuario.lastName = lastName ? lastName.trim() : usuario.lastName;
+                    usuario.email = email ? email.trim() : usuario.email;
 
-        users.forEach(usuario => {
-            if(usuario.id === +req.params.id){
-                usuario.name = name ? name.trim() : usuario.name;
-                usuario.lastName = lastName ? lastName.trim() : usuario.lastName;
-            }
-        })
-        escribirJSON(users, 'users')
+                }
+            })
+            escribirJSON(users, 'users')
 
-        return res.redirect('/users/profile/' + req.params.id)
+            return res.redirect('/users/profile/' + req.params.id)
+        } else {
+            const user = users.find((user)=>user.id === req.params.id);
+            return res.render('users/profile-edit',{
+                errors: errors.mapped(),
+                ...user
+            })
+        }
+            
 
     }
 }

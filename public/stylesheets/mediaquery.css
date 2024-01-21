@@ -137,6 +137,16 @@
 
 @media (min-width: 1024px) {
 
+    .header__div__login {
+        
+        height:auto
+        
+    }
+    
+    .header__div__login img {width: 4vw;height:4vw;}
+    .usuario__carrito {width: 60%; height: 50px;} 
+
+
     /* PRODUCT DETAIL (Yohanna) */
     .nav-ul{
         flex-wrap: nowrap;

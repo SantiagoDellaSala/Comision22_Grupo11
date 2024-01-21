@@ -10,7 +10,7 @@
    },
    {
       "id": 2,
-      "firstName": "Ulises",
+      "name": "Ulises",
       "lastName": "Farias",
       "email": "UlisesFarias@gmail.com",
       "password": "Ulises123",
@@ -19,7 +19,7 @@
    },
    {
       "id": 3,
-      "firstName": "Santiago",
+      "name": "Santiago",
       "lastName": "DellaSala",
       "email": "SantiagoDellaSala@gmail.com",
       "password": "Santi123",
@@ -29,7 +29,7 @@
    },
    {
       "id": 4,
-      "firstName": "Yohanna",
+      "name": "Yohanna",
       "lastName": "Lucero",
       "email": "YohannaLucero@gmail.com",
       "password": "Yohanna123",
@@ -52,6 +52,51 @@
       "email": "frito.p@hotmail.com",
       "password": "$2a$10$snP0V4RSdwAUILyg6tVjCOBBJ0FrwFMBmcm3/p8INkVjS4x2.wvT6",
       "avatar": "1705705086006_img_.png",
+      "role": "user"
+   },
+   {
+      "id": "d32c39ae-8f61-49af-ab2c-5022c7adb74d",
+      "name": "Chile",
+      "lastName": "NoVaAlMundial",
+      "email": "fifa@gmail.com",
+      "password": "$2a$10$ePa7OykPpadPeg4fosADB.linV8xt/s.jx7MpTbjm9qrippNR4UPS",
+      "avatar": null,
+      "role": "admin"
+   },
+   {
+      "id": "fc468ea0-41ac-4f1a-9b03-2fcb202707ea",
+      "name": "Santiago",
+      "lastName": "Perez",
+      "email": "santiago@gmail.com",
+      "password": "$2a$10$hs19lYXmMR2WWE.m4TONduSqeEgtLjqCF2pyH.awtebQrpOuMGKDG",
+      "avatar": "default.png",
+      "role": "user"
+   },
+   {
+      "id": "6c17efb6-eadc-4116-8a13-21f649575e5e",
+      "name": "pedro",
+      "lastName": "pedrito",
+      "email": "aaa@gmail.com",
+      "password": "$2a$10$l5GYtJESAfv3V7st.fr3SO7MqOSxuxVEm/PWX/YTyOcqxDXq/o5ua",
+      "avatar": "default.png",
+      "role": "user"
+   },
+   {
+      "id": "eee701ca-c64b-4d88-b669-f9cd5377cb2e",
+      "name": "Tito",
+      "lastName": "Della Sala",
+      "email": "santiagods@gmail.com",
+      "password": "$2a$10$TnNuj08PIVYNzWOEVmAjV.mDPLap6o8jSuRiS/3t0Se9OHhbHWFm.",
+      "avatar": "default.png",
+      "role": "user"
+   },
+   {
+      "id": "53a0aa83-8f1e-45c2-9f94-a95faaca0939",
+      "name": "susana",
+      "lastName": "gimenez",
+      "email": "su.gimenez@gmail.com",
+      "password": "$2a$10$LcEEGaordqwX6mlwV3HG4uQPdR1rgF0xsmljFL6Kbm/SfiIWn2X76",
+      "avatar": "default.png",
       "role": "user"
    }
 ]

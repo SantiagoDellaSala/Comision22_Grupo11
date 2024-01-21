@@ -13,12 +13,13 @@
                     <li><a href="#" class="nav-li ">Promociones</a></li>
                     <% if (locals.userLogin) { %>
                         <% if (userLogin.role==="admin" ) { %>
-                            <li class="animate__animated animate__fadeInDown"><a href="/admin">Admin</a></li>
-                            <% }else{ %>
-                                <li class="animate__animated animate__fadeInDown"><a
-                                        href="/products/allProducts">Productos</a></li>
-                                <% } %>
-                                    <% } %>
+                            <li><a class="nav-li" href="/admin">Admin</a></li>
+                        <% }else{ %>
+                            <li><a class="nav-li" href="/products/allProducts">Productos</a></li>
+                        <% } %>
+                        <li><a class="nav-li" href="/users/salir">Salir</a></li>
+                    <% } %>
+                    
                 </ul>
             </nav>
         </div>
@@ -41,12 +42,12 @@
             <div class="header__div__login">
                 <% if (locals.userLogin) { %>
                     <a href="/users/profile/<%= userLogin.id %>">
-                        <img src="/images/avatars/<%= userLogin.avatar %>" alt="" class="usuario__carrito">
+                        <img src="/images/avatars/<%= userLogin.avatar %>" alt="" class="usuario__perfil">
                     </a>
 
                     <% } else { %>
                         <a href="/users/login">
-                            <img src="/images/usuario.svg" alt="" class="usuario__carrito">
+                            <img src="/images/usuario.svg" alt="" class="usuario__perfil">
                         </a>
                         <% } %>
 
