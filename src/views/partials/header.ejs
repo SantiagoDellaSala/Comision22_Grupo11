@@ -42,12 +42,12 @@
             <div class="header__div__login">
                 <% if (locals.userLogin) { %>
                     <a href="/users/profile/<%= userLogin.id %>">
-                        <img src="/images/avatars/<%= userLogin.avatar %>" alt="" class="usuario__carrito">
+                        <img src="/images/avatars/<%= userLogin.avatar %>" alt="" class="usuario__perfil">
                     </a>
 
                     <% } else { %>
                         <a href="/users/login">
-                            <img src="/images/usuario.svg" alt="" class="usuario__carrito">
+                            <img src="/images/usuario.svg" alt="" class="usuario__perfil">
                         </a>
                         <% } %>
 

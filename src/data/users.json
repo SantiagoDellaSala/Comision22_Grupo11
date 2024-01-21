@@ -89,5 +89,14 @@
       "password": "$2a$10$TnNuj08PIVYNzWOEVmAjV.mDPLap6o8jSuRiS/3t0Se9OHhbHWFm.",
       "avatar": "default.png",
       "role": "user"
+   },
+   {
+      "id": "53a0aa83-8f1e-45c2-9f94-a95faaca0939",
+      "name": "susana",
+      "lastName": "gimenez",
+      "email": "su.gimenez@gmail.com",
+      "password": "$2a$10$LcEEGaordqwX6mlwV3HG4uQPdR1rgF0xsmljFL6Kbm/SfiIWn2X76",
+      "avatar": "default.png",
+      "role": "user"
    }
 ]

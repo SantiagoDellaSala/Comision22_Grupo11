@@ -65,9 +65,10 @@
     margin-right: 4vw;
 }
 
-.header__div__login img {width: 4.5vw;}
+.header__div__login img {width: 6vw; height: 5.5vh;}
 
 .usuario__carrito {width: 80%;}
+.usuario__perfil {border-radius: 25px;}
 
 
 
@@ -145,25 +146,15 @@
         margin-bottom: 10px;
         width: 70%;
     }
+    .header__div__login {
+        
+        height:auto
+        
+    }
     
-
+    .header__div__login img {width: 6vw;height:6vw;}
     .usuario__carrito {width: 60%; height: 50px;} 
+     
 }
 
-/* @media (min-width: 1024px){
-    .nav-ul {
-        display: flex;
-        gap: 80px;
-        margin: 3px;
-        padding-left: 80px;
-    }
-    
-} */
-/* @media  (min-width: 1440px){
-    .nav-ul {
-        display: flex;
-        gap: 130px;
-        margin: 3px;
-        padding-left: 100px;
-    }
-} */
+
