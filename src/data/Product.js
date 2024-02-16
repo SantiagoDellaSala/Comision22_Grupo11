@@ -13,7 +13,7 @@ function Product(nombre,precio,categoria,peso,talle,material,origen,descripcion,
     this.descripcion = descripcion;
     this.descuento = descuento;
     this.calidad = calidad;
-    this.mainImage= mainImage?mainImage.filename:null;
+    this.mainImage= mainImage?mainImage.filename:'ANAFE-PORTATIL-BUTANO.jpg';
     this.image = [];
 }
 
