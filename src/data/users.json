@@ -98,5 +98,14 @@
       "password": "$2a$10$LcEEGaordqwX6mlwV3HG4uQPdR1rgF0xsmljFL6Kbm/SfiIWn2X76",
       "avatar": "default.png",
       "role": "user"
+   },
+   {
+      "id": "c89659c5-24af-424c-bb05-85532fea94e1",
+      "name": "ezequiel",
+      "lastName": "mazzucco",
+      "email": "eze@gmail.com",
+      "password": "$2a$10$G4Wf0WPPQxmIPZd1KTNU1elDv//7P9Z8ufho7NFarWF9/X1.3Eace",
+      "avatar": "default.png",
+      "role": "user"
    }
 ]
