@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/header.ejs') %>
+            <main class="container">
+                <section class="row my-5">
+                    <div class="col-12 col-md-10 mx-auto">
+                        <div class="card border-primary">
+                            <div class="card-header d-flex justify-content-between">
+                                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/admin" class="text-primary"><i
+                                                    class="fa-solid fa-lock"></i></a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Nuevo Producto</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <div class="card-body">
+                                <form action="/products/create" method="POST" class="row">
+                                    <h3>Nuevo Producto</h3>
+                                    <hr>
+                                    <div class="col-12 col-md-6 mb-3 ">
+                                        <div class="form-floating ">
+                                            <input name="nombre" type="text" class="form-control" id="name">
+                                            <label for="name">Nombre del producto</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating">
+                                            <input name="precio" type="number" class="form-control" id="price">
+                                            <label for="price">Precio</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating">
+                                            <select name="categoria" class="form-select" id="category"
+                                                aria-label="Floating label select example">
+                                                <option value="pesca">Pesca</option>
+                                                <option value="camping">Camping</option>
+                                                <option value="optica">Optica</option>
+                                                <option value="iluminacion">Iluminacion</option>
+                                                <option value="accesorios">Accesorios</option>
+                                            </select>
+                                            <label for="category">Categoría</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating ">
+                                            <input name="peso" type="text" class="form-control" id="name">
+                                            <label for="name">Peso del producto</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating ">
+                                            <input name="talle" type="text" class="form-control" id="name">
+                                            <label for="name">Talle del producto</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating ">
+                                            <input name="material" type="text" class="form-control" id="name">
+                                            <label for="name">Material del producto</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating ">
+                                            <input name="origen" type="text" class="form-control" id="name">
+                                            <label for="name">Origen del producto</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating ">
+                                            <input name="descuento" type="number" class="form-control" id="descuento">
+                                            <label for="descuento">Descuento</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating">
+                                            <select name="calidad" class="form-select" id="category"
+                                                aria-label="Floating label select example">
+                                                <option value="oferta">Oferta</option>
+                                                <option value="destacado">Destacado</option>
+                                            </select>
+                                            <label for="calidad">Calidad</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12  mb-3">
+                                        <div class="form-floating">
+                                            <textarea name="descripcion" class="form-control" id="descripcion"
+                                                style="height: 150px;"></textarea>
+                                            <label for="descripcion">Descripción</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <input name="mainImage" type="file" class="form-control" id="mainImage" hidden>
+                                        <label class="btn btn-primary btn-md w-100" for="mainImage">Imagen
+                                            principal</label>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <input name="images" type="file" class="form-control" id="images" hidden
+                                            multiple>
+                                        <label class="btn btn-primary btn-md w-100" for="images">Imágenes extra</label>
+                                    </div>
+                                    
+                                    <div class="col-12  d-flex justify-content-end ">
+                                        <button type="submit" class="btn btn-success btn-md w-100">Agregar producto</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <%- include('../partials/footer.ejs') %>
+
+                <%- include('../partials/scripts') %>
+    </body>
+
+</html>

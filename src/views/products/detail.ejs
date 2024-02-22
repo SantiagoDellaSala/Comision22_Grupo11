@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head.ejs') %>
+    <body> 
+        <%- include('../partials/header.ejs') %>
+
+    <main class="productDetail__main">
+            <div class="img-desc-pre">
+                <section class=".productDetail__section">
+                    <article class="img-producto">
+                        <img class="productDetail__img" width="100%" src="/images/productos/<%=mainImage %>" alt="">
+                    </article>
+                    <div class="coso">
+                    <article class="a-titulo">
+                        <p class="titulo"><%= nombre %></p>
+                    </article>
+                    <article class="precio-cant">
+                        <table>
+                            <tr>
+                                <th class="precio-n">$<%= toThousand(precio) %></th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button>-</button>
+                                    <input type="number" id="cantidad" name="cantidad" min="1">
+                                    <button>+</button>
+                                </td>
+                            </tr>
+                        </table>
+        
+                            <span class="b-compras">
+                                <input type="button" value="comprar">
+                                <input type="button" value="agregar al carrito">
+                            </span>
+                        </article>
+                    </div> 
+                </section>
+                
+                <section class=".productDetail__section">
+                    <article class="desc-producto">
+                        <h4 class="productDetail__h4">Descripción</h4>
+    
+                        <p class="productDetail__p">
+                            <span><%= descripcion %></span>
+                        </p>
+                    </article>
+                    <article class="tb-producto">
+                        <table>
+                            <tr>
+                                <th>Caracteristicas</th>
+                            </tr>
+                            <tr>
+                                <% if (peso) { %>
+                                    <td>Peso</td>
+                                <td><%= peso %> kg</td>
+                                <% } %>                             
+                            </tr>
+                            <tr>
+                                <% if (talle) { %>
+                                    <td>Talle</td>
+                                <td><%= talle%></td>
+                                <% } %>                             
+                            </tr>
+                            <tr>
+                                <% if (material) { %>
+                                    <td>Material</td>
+                                <td><%=material %></td>
+                                <% } %>                             
+                            </tr>
+                            <tr>
+                                <td>Origen</td>
+                                <td><%=origen %></td>
+                            </tr>
+                        </table>
+                    </article>
+                </section>
+            </div>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
