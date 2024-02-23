@@ -98,5 +98,14 @@
       "password": "$2a$10$LcEEGaordqwX6mlwV3HG4uQPdR1rgF0xsmljFL6Kbm/SfiIWn2X76",
       "avatar": "default.png",
       "role": "user"
+   },
+   {
+      "id": "e0f32637-4547-479c-ac6e-126724b0ca84",
+      "name": "Ulises",
+      "lastName": "Farias",
+      "email": "Ulises@gmail.com",
+      "password": "$2a$10$2gkysNyAgnRtCltSd0f9LOgKfkp9W5OR6LYSOWzTT68sy4tGZaiHO",
+      "avatar": "default.png",
+      "role": "admin"
    }
 ]
