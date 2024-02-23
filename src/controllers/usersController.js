@@ -3,6 +3,8 @@ const User = require('../data/User')
 const { leerJSON, escribirJSON } = require("../data")
 const users = leerJSON('users');
 
+const db = require('../database/models')
+
 module.exports = {
     login : (req, res) => {
         return res.render('users/login')
