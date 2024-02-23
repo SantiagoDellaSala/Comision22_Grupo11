@@ -1,56 +1,32 @@
-module.exports = (sequelize, dataTypes) => {
-    const Product = sequelize.define('Products', {
-        id : {
-            primaryKey : true,
-            allowNull : false,
-            autoIncrement : true,
-            type : dataTypes.INTEGER,
-        },
-        name : {
-            allowNull : false,
-            type : dataTypes.STRING(45),  
-        },
-        price : {
-            allowNull : false,
-            type : dataTypes.INTEGER,  
-        },
-        description : {
-            allowNull : false,
-            type : dataTypes.TEXT,  
-        },
-        discount : {
-            allowNull : true,
-            defaultValue : 0,
-            type : dataTypes.INTEGER,
-        },
-        mainImage : {
-            allowNull : false,
-            type : dataTypes.STRING(255),
-        },
-        categoryId : {
-            allowNull : false,
-            type : dataTypes.INTEGER,
-        },
-        materialId : {
-            allowNull : false,
-            type : dataTypes.INTEGER,
-        },
-        originId : {
-            allowNull : false,
-            type : dataTypes.INTEGER,
-        },
-        imageId : {
-            allowNull : false,
-            type : dataTypes.INTEGER,
-        },
-        qualityId : {
-            allowNull : false,
-            type : dataTypes.INTEGER,
-        },
-    },
-    {
-        tableName : 'products',
-        timestamps : false,
-    })
-    return Product
-}
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Product extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    }
+  }
+  Product.init({
+    name: DataTypes.STRING,
+    price: DataTypes.INTEGER,
+    description: DataTypes.TEXT,
+    discount: DataTypes.INTEGER,
+    mainImage: DataTypes.STRING,
+    categoryId: DataTypes.INTEGER,
+    materialId: DataTypes.INTEGER,
+    originId: DataTypes.INTEGER,
+    imageId: DataTypes.INTEGER,
+    qualityId: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'Product',
+  });
+  return Product;
+};

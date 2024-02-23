@@ -1,27 +1,25 @@
-module.exports = (sequelize, dataTypes) => {
-    const Troley = sequelize.define('Troley', {
-        id : {
-            primaryKey : true,
-            allowNull : false,
-            autoIncrement : true,
-            type : dataTypes.INTEGER,
-        },
-        total : {
-            allowNull : false,
-            type : dataTypes.INTEGER,
-        },
-        stateId : {
-            allowNull : false,
-            type: dataTypes.INTEGER
-        },
-        itemId : {
-            allowNull : false,
-            type: dataTypes.INTEGER
-        },
-    },
-    {
-        tableName : 'troley',
-        timestamps : false,
-    })
-    return Troley
-}
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Troley extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    }
+  }
+  Troley.init({
+    total: DataTypes.INTEGER,
+    stateId: DataTypes.INTEGER,
+    itemId: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'Troley',
+  });
+  return Troley;
+};
