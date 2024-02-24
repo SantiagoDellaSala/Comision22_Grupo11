@@ -24,8 +24,6 @@
                                 <th scope="col">Nombre del producto</th>
                                 <th scope="col">Precio</th>
                                 <th scope="col">Categoria</th>
-                                <th scope="col">Peso</th>
-                                <th scope="col">Talle</th>
                                 <th scope="col">Material</th>
                                 <th scope="col">Origen</th>
                                 <th scope="col">Descuento</th>
@@ -34,19 +32,17 @@
                               </tr>
                             </thead>
                             <tbody>
-                                <% products.forEach(({id,nombre,precio,categoria,peso,talle,material,origen, descuento, calidad},index) => { %>
+                                <% products.forEach(({id,name,price,category,material,origin, discount, quality},index) => { %>
                                     <tr>
                                         <th scope="row">
                                         <%= index + 1 %></th>
-                                        <th><%= nombre %></th>
-                                        <td><%= precio %></td>
-                                        <td><%= categoria %></td>
-                                        <td><%= peso %></td>
-                                        <td><%= talle %></td>
+                                        <th><%= name %></th>
+                                        <td><%= price %></td>
+                                        <td><%= category %></td>
                                         <td><%= material %></td>
-                                        <td><%= origen %></td>
-                                        <td><%= descuento %></td>
-                                        <td><%= calidad %></td>
+                                        <td><%= origin %></td>
+                                        <td><%= discount %></td>
+                                        <td><%= quality %></td>
                                         <td>
                                             <div class="d-flex gap-2">
                                                 <button 

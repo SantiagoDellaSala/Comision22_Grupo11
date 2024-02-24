@@ -5,6 +5,7 @@ const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 let products = leerJSON('products')
 const categorias = require("../data/categorias.json");
+const db = require("../database/models");
 
 module.exports = {
     /* Santiago */
@@ -74,25 +75,26 @@ module.exports = {
     /* Ulises */
 
     create: (req, res) => {
-        const { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad } = req.body;
 
-        const newProduct = new Product(
-            nombre,
-            +precio,
-            categoria,
-            +peso,
-            talle,
-            material,
-            origen,
-            descripcion,
-            +descuento,
-            calidad);
-        const products = leerJSON('products');
-        products.push(newProduct);
-
-        escribirJSON(products, 'products')
-
+    const { name, price, description,discount,categoryId,materialId,originId,qualityId}=req.body;
+            
+       db.Product.create({
+        name,
+        price,
+        description,
+        discount,
+        categoryId,
+        materialId,
+        originId,
+        qualityId,
+        mainImage,
+       }).then(newProduct =>{
+        console.log(newProduct);
         return res.redirect('/admin')
+    })
+    .catch(error=>console.log(error))
+
+    
     },
     remove: (req, res) => {
         const { id } = req.params;

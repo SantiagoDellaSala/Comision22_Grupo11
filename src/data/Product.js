@@ -1,20 +1,18 @@
 const {leerJSON} = require('./index')
 const products = leerJSON('products')
-function Product(nombre,precio,categoria,peso,talle,material,origen,descripcion,descuento,calidad,mainImage){
+function Product(name,price,category,material,origin,description,discount,quality,mainImage){
     const lastID = products[products.length - 1].id;
     this.id = lastID+1;
-    this.nombre = nombre;
-    this.precio = precio;
-    this.categoria = categoria;
-    this.peso = peso || null;
-    this.talle = talle || null;
+    this.name = name;
+    this.price = price;
+    this.category = category;
     this.material = material;
-    this.origen = origen;
-    this.descripcion = descripcion;
-    this.descuento = descuento;
-    this.calidad = calidad;
-    this.mainImage= mainImage?mainImage.filename:'ANAFE-PORTATIL-BUTANO.jpg';
-    this.image = [];
+    this.origin = origin;
+    this.description = description;
+    this.discount = discount;
+    this.quality = quality;
+    this.mainImage = mainImage ? mainImage[0].filename : null;
+    this.images = images ? images.map(image => image.filename) : [];
 }
 
 module.exports = Product;
