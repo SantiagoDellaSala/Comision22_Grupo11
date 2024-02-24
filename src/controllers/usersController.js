@@ -1,9 +1,6 @@
-const db =require('../database/models/Index')
+const db =require('../database/models')
 const { validationResult } = require("express-validator")
 const User = require('../data/User')
-const { leerJSON, escribirJSON } = require("../data")
-const users = leerJSON('users');
-
 
 
 module.exports = {
