@@ -26,9 +26,9 @@ module.exports = {
           name: 'User',
          surname: 'Suyds',
            email: 'user@gmail.com',
-
         password: bcryptjs.hashSync(process.env.PASSWORD_ADMIN,10),
           roleId: 2, 
+          troleyId: 1,
         createdAt: new Date(),
        updatedAt: new Date()
         } 
