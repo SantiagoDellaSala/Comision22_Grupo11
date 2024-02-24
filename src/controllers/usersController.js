@@ -1,9 +1,10 @@
+const db =require('../database/models/Index')
 const { validationResult } = require("express-validator")
 const User = require('../data/User')
 const { leerJSON, escribirJSON } = require("../data")
 const users = leerJSON('users');
 
-const db = require('../database/models')
+
 
 module.exports = {
     login : (req, res) => {
@@ -77,7 +78,7 @@ module.exports = {
 
     },
 
-    /* SANTIAGO */
+    
     profile : (req, res) => {
         const users = leerJSON('users');
         const user = users.find(user => user.id === req.params.id)

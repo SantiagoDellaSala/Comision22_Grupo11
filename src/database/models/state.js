@@ -11,13 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      
     }
   }
   State.init({
     name: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'State',
+    modelName: 'state',
   });
   return State;
 };

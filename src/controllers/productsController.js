@@ -1,3 +1,4 @@
+const db =require('../database/models')
 const { leerJSON, escribirJSON, } = require("../data");
 const { existsSync, unlinkSync } = require('fs');
 const Product = require("../data/Product");

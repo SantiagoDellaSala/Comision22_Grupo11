@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      
+      
     }
   }
   Troley.init({
@@ -18,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     stateId: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Troleys',
+    modelName: 'troley',
   });
   return Troley;
 };
