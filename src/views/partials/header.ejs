@@ -12,7 +12,7 @@
                     <li><a href="#" class="nav-li">Accesorios</a></li>
                     <li><a href="#" class="nav-li ">Promociones</a></li>
                     <% if (locals.userLogin) { %>
-                        <% if (userLogin.role==="admin" ) { %>
+                        <% if (userLogin.role===1 ) { %>
                             <li><a class="nav-li" href="/admin">Admin</a></li>
                         <% }else{ %>
                             <li><a class="nav-li" href="/products/allProducts">Productos</a></li>
