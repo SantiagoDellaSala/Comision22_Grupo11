@@ -1,6 +1,6 @@
 const db =require('../database/models')
 const { validationResult } = require("express-validator")
-
+const {hashSync} = require('bcryptjs')
 
 
 module.exports = {
@@ -56,18 +56,18 @@ module.exports = {
     },
     processRegister: (req,res) => {
         const errors = validationResult(req)
-        const {name,lastName,email,password} = req.body;
+        const {name,surname:lastName,email,password} = req.body;
         const avatar = req.file
         if(errors.isEmpty()){
-
-            const users = leerJSON('users')
-            const nuevoUsuario = new User(name,lastName,email,password,avatar);
-
-            users.push(nuevoUsuario);
-
-            escribirJSON(users,'users')
-
-            return res.redirect('/users/login')
+            db.User.create({
+                name,
+                lastName,
+                email,
+                password : hashSync(password.trim(),10),
+                roleId : 2,
+                avatar
+            })
+            
             
         }else{
             return res.render('users/register',{
