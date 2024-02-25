@@ -43,9 +43,9 @@
           <!-- Swiper -->
           <div class="swiper mySwiper2">
             <div class="swiper-wrapper">
-              <% products.filter(product => product.calidad === "destacado").forEach(product => { %>
-                <%- include('./partials/productCardSlider.ejs', {product}) %>
-              <% }) %> 
+              <% oferta.forEach(product => { %>
+                <%- include('./partials/productCard', {product}) %>
+              <% }) %>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -68,8 +68,8 @@
           <!-- Swiper -->
           <div class="swiper mySwiper2">
             <div class="swiper-wrapper">
-              <% products.filter(product => product.calidad === "oferta").forEach(product => { %>
-                <%- include('./partials/productCardSlider.ejs', {product}) %>
+              <% oferta.forEach(product => { %>
+                <%- include('./partials/productCard', {product}) %>
               <% }) %> 
             </div>
             <div class="swiper-button-next"></div>
@@ -86,8 +86,8 @@
           </div>
           <div class="swiper mySwiper3">
             <div class="swiper-wrapper">
-              <% products.filter(product => product.calidad === "destacado").forEach(product => { %>
-                <%- include('./partials/productCardSlider.ejs', {product}) %>
+              <% destacado.forEach(product => { %>
+                <%- include('./partials/productCard', {product}) %>
               <% }) %> 
             </div>
             <div class=".swiper-pagination"></div>
@@ -108,8 +108,8 @@
           </div>
           <div class="swiper mySwiper3">
             <div class="swiper-wrapper">
-              <% products.filter(product => product.calidad === "oferta").forEach(product => { %>
-                <%- include('./partials/productCardSlider.ejs', {product}) %>
+              <% oferta.forEach(product => { %>
+                <%- include('./partials/productCard', {product}) %>
               <% }) %> 
             </div>
             <div class=".swiper-pagination"></div>
@@ -135,7 +135,7 @@
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: {
-          delay: 2500,
+          delay: 5000,
           disableOnInteraction: false,
         },
         pagination: {

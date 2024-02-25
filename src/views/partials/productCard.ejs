@@ -1,21 +1,19 @@
-<% products.forEach(product => { %>
-    <div class="allProduct__container">
-        <section class="allProduct__section">            
-            <div>
-                <figure class="allProduct__figure">
-                    <a href="/products/detail/<%= product.id %>">
-                        <img src="/images/productos/<%= product.mainImage %>" alt="imagen de producto">
-                    </a>  
-                </figure>
-                <article class="allProduct__article">
-                    <h3><%= product.nombre %></h3>
-                    <p>Precio: $<%= toThousand(product.precio) %></p>
-                    <% if (product.descuento) { %>
-                    <span>%<%= product.descuento %></span>
-                    <% } %>
-                    <p><%= product.descripcion %></p>                
-                </article>                
-            </div>       
-        </section>
-    </div>
-  <% }) %>
+
+<div class="col-12 col-sm-6 col-lg-3">
+    <section class="product-box">
+        <a href="/products/detail/<%= product.id %>">
+            <figure class="product-box_image">
+                <img src="/images/products/<%= product.image || 'default.png'%>" alt="imagen de producto">
+            </figure>
+            <article class="product-box_data">
+                <h2>$<%=toThousand((product.price - (product.price * product.discount)/100).toFixed(0)) %></h2>
+                <% if (product.discount) { %>
+                    <span><%= product.discount %>% off</span>
+                <% } %>
+                
+                <p><%= product.name %></p>
+                
+            </article>
+        </a>
+    </section>
+</div>

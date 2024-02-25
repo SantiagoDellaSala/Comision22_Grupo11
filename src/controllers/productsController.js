@@ -20,13 +20,17 @@ module.exports = {
     },
 
     detail: (req, res) => {
-        const product = products.find(product => product.id === +req.params.id)
-        return res.render('products/detail', {
-            ...product,
-            toThousand,
+		db.Product.findByPk(req.params.id,{
+            include:['category','material','origin']} )
+			.then(product => {
+				return res.render('products/detail', {
+					...product.dataValues,
+					toThousand,
+				});
+			})
+			.catch(error => console.log(error))
 
-        })
-    },
+	},
     edit: (req, res) => {
         const product = products.find((product) => product.id === +req.params.id);
 

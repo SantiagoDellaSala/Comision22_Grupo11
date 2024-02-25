@@ -1,5 +1,6 @@
 "use strict";
 
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -16,7 +17,7 @@ module.exports = {
           materialId: 3,
           originId: 3,
           imageId: 35,
-          qualityId: 3,
+          qualityId: 1,
           createdAt: new Date(),
         updatedAt : new Date(),
         },
@@ -30,7 +31,7 @@ module.exports = {
           materialId: 1,
           originId: 2,
           imageId: 14,
-          qualityId: 1,
+          qualityId: 2,
           createdAt: new Date(),
         updatedAt : new Date(),
         },
@@ -40,7 +41,7 @@ module.exports = {
           description: 'Especial, capacidad para 6 personas. Espaciosa y resistente.',
           discount: 15,
           mainImage: 'default.png',
-          categoryId: 3,
+          categoryId: 2,
           materialId: 2,
           originId: 1,
           imageId: 6,
@@ -49,6 +50,7 @@ module.exports = {
         updatedAt : new Date(),
         },
       ],
+      
       {}
     );
   },

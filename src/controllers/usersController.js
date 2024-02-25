@@ -1,6 +1,6 @@
 const db =require('../database/models')
 const { validationResult } = require("express-validator")
-const User = require('../data/User')
+
 
 
 module.exports = {
@@ -11,29 +11,33 @@ module.exports = {
         const errors = validationResult(req);
         const { email, remember } = req.body;
 
-        if (errors.isEmpty()) {
-
-            const { id, name, role, avatar} = leerJSON('users').find(user => user.email === email)
-           
-
-            req.session.userLogin = {
-                id,
-                name,
-                role,
-                avatar
-            }
+        if(errors.isEmpty()){
+    
+            db.User.findOne({
+                where : {
+                    email
+                }
+            })
+                .then(({id, name, roleId, avatar}) => {
+    
+                    req.session.userLogin = {
+                        id,
+                        name,
+                        role : +roleId,
+                        avatar
+                    }
+                    remember && res.cookie('userEmail',req.session.userLogin,{
+                        maxAge : 1000 * 60 * 2
+                    })
             
-            if (remember) {
-                res.cookie('userEmail',req.session.userLogin,{
-                    maxAge : 1000 * 60 * 2
-                })  
-            }
-
-            return res.redirect('/')
-
-        } else {
-            return res.render('users/login', {
-                errors: errors.mapped()
+                    return roleId == 1 ? res.redirect('/admin') : res.redirect('/')
+    
+                })
+                .catch(error => console.log(error))
+    
+        }else {
+            return res.render('users/login',{
+                errors : errors.mapped()
             })
         }
     },
