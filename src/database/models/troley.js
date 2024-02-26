@@ -11,13 +11,20 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      
-      
+      /* Troley.belongsTo(models.State, {
+        as: "states",
+        foreignKey: "stateId"
+      });
+      Troley.belongsTo(models.Item, {
+        as: "items",
+        foreignKey: "itemsId"
+      }); */
     }
   }
   Troley.init({
     total: DataTypes.INTEGER,
-    stateId: DataTypes.INTEGER
+    stateId: DataTypes.INTEGER,
+    itemId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'troley',

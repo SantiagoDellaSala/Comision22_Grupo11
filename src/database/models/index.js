@@ -22,8 +22,8 @@ fs
     return (
       file.indexOf('.') !== 0 &&
       file !== basename &&
-      file.slice(-3) === '.js' &&
-      file.indexOf('.test.js') === -1
+      file.slice(-3) === '.js'
+      /* file.indexOf('.test.js') === -1 */
     );
   })
   .forEach(file => {
@@ -31,11 +31,11 @@ fs
     db[model.name] = model;
   });
 
-Object.keys(db).forEach(modelName => {
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
-  }
-});
+  Object.keys(db).forEach(modelName => {
+    if (db[modelName].associate) {
+      db[modelName].associate(db);
+    }
+  });
 
 sequelize.authenticate()
   .then(()=> console.log('Conexión exitosa!'))

@@ -22,6 +22,16 @@ module.exports = {
           }
         }
       },
+      itemId: {
+        type: Sequelize.INTEGER,
+        
+        allowNull: true, 
+        references:{
+          model:{
+            tableName:'Items'
+          }
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -46,6 +46,11 @@ module.exports = {
       },
       qualityId: {
         type: Sequelize.INTEGER,
+        references:{
+          model:{
+            tableName:'Qualities'
+          }
+        }
         
       },
       categoryId: {
@@ -58,7 +63,11 @@ module.exports = {
       },
       imageId:{
         type: Sequelize.INTEGER,
-        
+        references:{
+          model:{
+            tableName:'Images'
+          }
+        }  
       },
       createdAt: {
         allowNull: false,

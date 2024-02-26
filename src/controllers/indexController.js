@@ -7,10 +7,12 @@ const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
     index: (req, res) => {
 		const oferta = db.Product.findAll({
-			where: {categoryId: 1}
+			where: {qualityId: 1},
+           
 		})
 		const destacado = db.Product.findAll({
-			where: {categoryId: 2}
+			where: {qualityId: 2},
+            
 		})
 
 		Promise.all([oferta, destacado])
