@@ -26,24 +26,48 @@ module.exports = {
       },
       mainImage: {
         type: Sequelize.STRING,
+        
       },
       materialId: {
         type: Sequelize.INTEGER,
+        references:{
+          model:{
+            tableName:'Materials'
+          }
+        }
       },
       originId: {
         type: Sequelize.INTEGER,
+        references:{
+          model:{
+            tableName:'Origins'
+          }
+        }
       },
       qualityId: {
         type: Sequelize.INTEGER,
+        references:{
+          model:{
+            tableName:'Qualities'
+          }
+        }
+        
       },
       categoryId: {
         type: Sequelize.INTEGER,
-      },
-      itemId:{
-        type: Sequelize.INTEGER
+        references:{
+          model:{
+            tableName:'Categories'
+          }
+        }
       },
       imageId:{
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references:{
+          model:{
+            tableName:'Images'
+          }
+        }  
       },
       createdAt: {
         allowNull: false,

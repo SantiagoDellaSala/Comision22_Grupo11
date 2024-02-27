@@ -1,10 +1,11 @@
+const db =require('../database/models')
 const { leerJSON, escribirJSON, } = require("../data");
 const { existsSync, unlinkSync } = require('fs');
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 let products = leerJSON('products')
 const categorias = require("../data/categorias.json");
-const db = require("../database/models");
+
 
 module.exports = {
     /* Santiago */
@@ -19,20 +20,36 @@ module.exports = {
     },
 
     detail: (req, res) => {
-        const product = products.find(product => product.id === +req.params.id)
-        return res.render('products/detail', {
-            ...product,
-            toThousand,
+		db.Product.findByPk(req.params.id,{
+            include:['category','material','origin']} )
+			.then(product => {
+				return res.render('products/detail', {
+					...product.dataValues,
+					toThousand,
+				});
+			})
+			.catch(error => console.log(error))
 
-        })
-    },
+	},
     edit: (req, res) => {
-        const product = products.find((product) => product.id === +req.params.id);
 
-        return res.render('products/product-edit', {
-            ...product,
-            toThousand, categorias
+        const { id } = req.params;
+
+        const product = db.Product.findByPk(id, {
+            include: ['category', 'material', 'origin', 'quality', 'image']
         })
+        const categories = db.Category.findAll({
+            order: [['name']]
+        })
+        Promise.all([product, categories])
+            .then(([product, categories]) => {
+                return res.render('products/product-edit', {
+                    ...product.dataValues,
+                    categories,
+                    toThousand
+                })
+            })
+            .catch(error => console.log(error))
     },
     update: (req, res) => {
         let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad,image} = req.body;

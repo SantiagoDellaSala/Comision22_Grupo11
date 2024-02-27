@@ -1,7 +1,7 @@
+const db =require('../database/models')
 const { validationResult } = require("express-validator")
-const User = require('../data/User')
-const { leerJSON, escribirJSON } = require("../data")
-const users = leerJSON('users');
+const {hashSync} = require('bcryptjs')
+
 
 module.exports = {
     login : (req, res) => {
@@ -11,29 +11,33 @@ module.exports = {
         const errors = validationResult(req);
         const { email, remember } = req.body;
 
-        if (errors.isEmpty()) {
-
-            const { id, name, role, avatar} = leerJSON('users').find(user => user.email === email)
-           
-
-            req.session.userLogin = {
-                id,
-                name,
-                role,
-                avatar
-            }
+        if(errors.isEmpty()){
+    
+            db.User.findOne({
+                where : {
+                    email
+                }
+            })
+                .then(({id, name, roleId, avatar}) => {
+    
+                    req.session.userLogin = {
+                        id,
+                        name,
+                        role : +roleId,
+                        avatar
+                    }
+                    remember && res.cookie('userEmail',req.session.userLogin,{
+                        maxAge : 1000 * 60 * 2
+                    })
             
-            if (remember) {
-                res.cookie('userEmail',req.session.userLogin,{
-                    maxAge : 1000 * 60 * 2
-                })  
-            }
-
-            return res.redirect('/')
-
-        } else {
-            return res.render('users/login', {
-                errors: errors.mapped()
+                    return roleId == 1 ? res.redirect('/') : res.redirect('/')
+    
+                })
+                .catch(error => console.log(error))
+    
+        }else {
+            return res.render('users/login',{
+                errors : errors.mapped()
             })
         }
     },
@@ -52,18 +56,18 @@ module.exports = {
     },
     processRegister: (req,res) => {
         const errors = validationResult(req)
-        const {name,lastName,email,password} = req.body;
+        const {name,surname:lastName,email,password} = req.body;
         const avatar = req.file
         if(errors.isEmpty()){
-
-            const users = leerJSON('users')
-            const nuevoUsuario = new User(name,lastName,email,password,avatar);
-
-            users.push(nuevoUsuario);
-
-            escribirJSON(users,'users')
-
-            return res.redirect('/users/login')
+            db.User.create({
+                name,
+                lastName,
+                email,
+                password : hashSync(password.trim(),10),
+                roleId : 2,
+                avatar
+            })
+            
             
         }else{
             return res.render('users/register',{
@@ -75,7 +79,7 @@ module.exports = {
 
     },
 
-    /* SANTIAGO */
+    
     profile : (req, res) => {
         const users = leerJSON('users');
         const user = users.find(user => user.id === req.params.id)
