@@ -73,28 +73,32 @@ module.exports = {
 
     /* Ulises */
 
+
+        
+
     create: (req, res) => {
 
-    const { name, price, description,discount,categoryId,materialId,originId,qualityId}=req.body;
+   
+        const { name, price, description,discount,categoryId,materialId,originId,qualityId}=req.body;
             
-       db.Product.create({
-        name,
-        price,
-        description,
-        discount,
-        categoryId,
-        materialId,
-        originId,
-        qualityId,
-        mainImage,
-       }).then(newProduct =>{
-        console.log(newProduct);
-        return res.redirect('/admin')
-    })
-    .catch(error=>console.log(error))
-
-    
-    },
+        db.Product.create({
+         name,
+         price,
+         description,
+         discount,
+         categoryId,
+         materialId,
+         originId,
+         qualityId,
+         mainImage,
+        }).then(newProduct =>{
+         console.log(newProduct);
+         return res.redirect('/admin')
+     })
+     .catch(error=>console.log(error))
+ 
+     
+     },
     remove: (req, res) => {
         const { id } = req.params;
 

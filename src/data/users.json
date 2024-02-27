@@ -107,5 +107,14 @@
       "password": "$2a$10$2gkysNyAgnRtCltSd0f9LOgKfkp9W5OR6LYSOWzTT68sy4tGZaiHO",
       "avatar": "default.png",
       "role": "admin"
+   },
+   {
+      "id": "1717c869-c536-498a-a6c7-dc416d4cf39d",
+      "name": "Ulises",
+      "lastName": "Farias",
+      "email": "Ulisesfarias1905@hotmail.com",
+      "password": "$2a$10$lOubPreFZU45oDfocLz3rezefLSO5KqDPTb9I/.4W5bZM8e1pAh9e",
+      "avatar": "default.png",
+      "role": "admin"
    }
 ]
