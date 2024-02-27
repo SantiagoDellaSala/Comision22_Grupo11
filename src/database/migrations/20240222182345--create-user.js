@@ -31,20 +31,12 @@ module.exports = {
       },
       roleId: {
         type: Sequelize.INTEGER,
-        references:{
-          model:{
-            tableName:'Roles'
-          }
-        }
+        allowNull: true
       },
       troleyId: {
         type: Sequelize.INTEGER,
         allowNull: true,
-        references:{
-          model:{
-            tableName:'Troleys'
-          }
-        }
+        
       },
       createdAt: {
         allowNull: false,

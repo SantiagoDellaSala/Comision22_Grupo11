@@ -1,6 +1,7 @@
 const db =require('../database/models')
 const { validationResult } = require("express-validator")
 const {hashSync} = require('bcryptjs')
+const fs = require("fs");
 
 
 module.exports = {
@@ -56,23 +57,31 @@ module.exports = {
     },
     processRegister: (req,res) => {
         const errors = validationResult(req)
-        const {name,surname:lastName,email,password} = req.body;
+        const {name,surname,email,password,} = req.body;
         const avatar = req.file
         if(errors.isEmpty()){
             db.User.create({
                 name,
-                lastName,
+                surname,
                 email,
                 password : hashSync(password.trim(),10),
-                roleId : 2,
+                roleId: 2,
+                troleyId: null,
                 avatar
             })
+            .then(newUser => {
+                console.log(newUser)
+                return res.redirect('login')
+            })
+            .catch(error => console.log(error))
+    
             
             
         }else{
             return res.render('users/register',{
                 old : req.body,
                 errors : errors.mapped()
+                
             })
 
         }
@@ -81,41 +90,52 @@ module.exports = {
 
     
     profile : (req, res) => {
-        const users = leerJSON('users');
-        const user = users.find(user => user.id === req.params.id)
-        return res.render('users/profile', {
-            user
-        })
+        db.User.findByPk(req.params.id )
+			.then(user => {
+				return res.render('users/profile', {
+					...user.dataValues
+				});
+			})
+			.catch(error => console.log(error))
     },
     profileEdit : (req, res) => {
-        const user = users.find((user)=>user.id === req.params.id);
-        
-        return res.render('users/profile-edit',{
-			...user
-        })
+        db.User.findByPk(req.params.id )
+			.then(user => {
+				return res.render('users/profile-edit', {
+					...user.dataValues
+				});
+			})
+			.catch(error => console.log(error))
     },
     profileUpload : (req, res) => {
         const errors = validationResult(req);
-        const {name, lastName, email} = req.body;
-        const {id} = req.params;
+        const {name, surname, email} = req.body;
+        
         
         if (errors.isEmpty()) {
-            users.forEach(usuario => {
-                if(usuario.id === req.params.id){
-                    usuario.name = name ? name.trim() : usuario.name;
-                    usuario.lastName = lastName ? lastName.trim() : usuario.lastName;
-                    usuario.email = email ? email.trim() : usuario.email;
 
+            db.User.update(
+                {
+                    name: name.trim(),
+                    surname,
+                    email
+                },
+                {
+                    where:{id:req.params.id}
                 }
-            })
-            escribirJSON(users, 'users')
-
-            return res.redirect('/users/profile/' + req.params.id)
+            )
+            .then(response=>{
+				console.log(response)
+				return res.redirect("/users/profile/" + req.params.id);
+			})
+			.catch(error => console.log(error))
+            
         } else {
-            const user = users.find((user)=>user.id === req.params.id);
+            
             return res.render('users/profile-edit',{
-                errors: errors.mapped(),
-                ...user
+                old : req.body,
+                errors : errors.mapped()
+                
             })
         }
             

@@ -1,4 +1,5 @@
 const {check, body} = require('express-validator');
+const db= require('../database/models')
 
 
 
@@ -11,7 +12,7 @@ module.exports = [
         }).withMessage('El nombre debe tener mínimo 3 letras y máximo 15').bail()
         .isAlpha('es-ES', {ignore: ' '}).withMessage('Solo caracteres alfabéticos'),
 
-    check('lastName')
+    check('surname')
         .notEmpty().withMessage('El apellido es requerido').bail()
         .isLength({
             min: 3,
