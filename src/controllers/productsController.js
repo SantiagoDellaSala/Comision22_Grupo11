@@ -32,12 +32,24 @@ module.exports = {
 
 	},
     edit: (req, res) => {
-        const product = products.find((product) => product.id === +req.params.id);
 
-        return res.render('products/product-edit', {
-            ...product,
-            toThousand, categorias
+        const { id } = req.params;
+
+        const product = db.Product.findByPk(id, {
+            include: ['category', 'material', 'origin', 'quality', 'image']
         })
+        const categories = db.Category.findAll({
+            order: [['name']]
+        })
+        Promise.all([product, categories])
+            .then(([product, categories]) => {
+                return res.render('products/product-edit', {
+                    ...product.dataValues,
+                    categories,
+                    toThousand
+                })
+            })
+            .catch(error => console.log(error))
     },
     update: (req, res) => {
         let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad,image} = req.body;

@@ -13,14 +13,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      /* User.belongsTo(models.Role, {
+     /*  User.belongsTo(models.Role, {
         as: "roles",
         foreignKey: "roleId"
       });
       User.belongsTo(models.Troley, {
         as: "troleys",
         foreignKey: "troleyId"
-      }); */
+      });  */
     }
   }
   User.init({
@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     troleyId: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'users',
+    modelName: 'User',
   });
   return User;
 };
