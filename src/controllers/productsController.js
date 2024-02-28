@@ -4,7 +4,7 @@ const { existsSync, unlinkSync } = require('fs');
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 let products = leerJSON('products')
-const categorias = require("../data/categorias.json");
+
 
 
 module.exports = {
@@ -16,9 +16,17 @@ module.exports = {
         })
     },
     add: (req, res) => {
-        return res.render('products/product-add')
+        db.Category.findAll({
+            order : ['name']
+        })
+            .then(categories => {
+                return res.render('products/product-add',{
+                    categories
+                })
+            })
+            .catch(error => console.log(error))
+      
     },
-
     detail: (req, res) => {
 		db.Product.findByPk(req.params.id,{
             include:['category','material','origin']} )
@@ -90,28 +98,46 @@ module.exports = {
 
     /* Ulises */
 
+
+        
+
     create: (req, res) => {
 
-    const { name, price, description,discount,categoryId,materialId,originId,qualityId}=req.body;
-            
-       db.Product.create({
-        name,
-        price,
-        description,
-        discount,
-        categoryId,
-        materialId,
-        originId,
-        qualityId,
-        mainImage,
-       }).then(newProduct =>{
-        console.log(newProduct);
-        return res.redirect('/admin')
-    })
-    .catch(error=>console.log(error))
-
-    
-    },
+   
+        const { name, price, description,discount,categoryId,materialId,originId,qualityId}=req.body;
+           db.Material.create({
+            name
+           }) .then(material =>{
+            db.Origin.create({
+                name
+            }).then(origin=>{
+                db.Quality.create({
+                    name
+                }).then(quality=>{
+                    db.Product.create({
+                        name,
+                        price,
+                        description,
+                        discount,
+                        categoryId,
+                        materialId : material.id,
+                        originId : origin.id,
+                        qualityId : quality.id,
+                       }).then(newProduct =>{
+                           
+                        console.log(newProduct);
+                        return res.redirect('/admin')
+                    })
+               
+                    .catch(error=>console.log(error))
+                    
+                   })
+                })
+                
+                })
+               
+       
+     },
     remove: (req, res) => {
         const { id } = req.params;
 

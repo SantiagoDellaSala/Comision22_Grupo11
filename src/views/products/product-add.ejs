@@ -35,15 +35,13 @@
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <select name="categoryId" class="form-select" id="category"
+                                            <select name="categoryId" class="form-select" id="categoryId"
                                                 aria-label="Floating label select example">
-                                                <option value="pesca">Pesca</option>
-                                                <option value="camping">Camping</option>
-                                                <option value="optica">Optica</option>
-                                                <option value="iluminacion">Iluminacion</option>
-                                                <option value="accesorios">Accesorios</option>
+                                                <% categories.forEach(category => { %>
+                                                    <option value="<%= category.id %>" <%= category.id == category.id && 'selected'  %>><%= category.name %></option>
+                                                  <% }) %>
                                             </select>
-                                            <label for="category">Categoría</label>
+                                            <label for="categoryId">Categoría</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
@@ -54,21 +52,21 @@
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <input name="originId" type="text" class="form-control" id="origin">
-                                            <label for="name">Origen del producto</label>
+                                            <input name="originId" type="text" class="form-control" id="originId">
+                                            <label for="originId">Origen del producto</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <input name="discount" type="number" class="form-control" id="discount">
-                                            <label for="discount">Descuento</label>
+                                            <input name="discountId" type="number" class="form-control" id="discountId">
+                                            <label for="discountId">Descuento</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
                                             <div class="form-floating ">
-                                                <input name="qualityId" type="text" class="form-control" id="quality">
-                                                <label for="quality">Calidad</label>
+                                                <input name="qualityId" type="text" class="form-control" id="qualityId">
+                                                <label for="qualityId">Calidad</label>
                                             </div>
                                         </div>
                                     </div>
