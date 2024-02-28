@@ -1,9 +1,11 @@
+const db =require('../database/models')
 const { leerJSON, escribirJSON, } = require("../data");
 const { existsSync, unlinkSync } = require('fs');
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 let products = leerJSON('products')
-const categorias = require("../data/categorias.json");
+
+
 
 module.exports = {
     /* Santiago */
@@ -14,24 +16,48 @@ module.exports = {
         })
     },
     add: (req, res) => {
-        return res.render('products/product-add')
+        db.Category.findAll({
+            order : ['name']
+        })
+            .then(categories => {
+                return res.render('products/product-add',{
+                    categories
+                })
+            })
+            .catch(error => console.log(error))
+      
     },
-
     detail: (req, res) => {
-        const product = products.find(product => product.id === +req.params.id)
-        return res.render('products/detail', {
-            ...product,
-            toThousand,
+		db.Product.findByPk(req.params.id,{
+            include:['category','material','origin']} )
+			.then(product => {
+				return res.render('products/detail', {
+					...product.dataValues,
+					toThousand,
+				});
+			})
+			.catch(error => console.log(error))
 
-        })
-    },
+	},
     edit: (req, res) => {
-        const product = products.find((product) => product.id === +req.params.id);
 
-        return res.render('products/product-edit', {
-            ...product,
-            toThousand, categorias
+        const { id } = req.params;
+
+        const product = db.Product.findByPk(id, {
+            include: ['category', 'material', 'origin', 'quality', 'image']
         })
+        const categories = db.Category.findAll({
+            order: [['name']]
+        })
+        Promise.all([product, categories])
+            .then(([product, categories]) => {
+                return res.render('products/product-edit', {
+                    ...product.dataValues,
+                    categories,
+                    toThousand
+                })
+            })
+            .catch(error => console.log(error))
     },
     update: (req, res) => {
         let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad,image} = req.body;
@@ -72,27 +98,46 @@ module.exports = {
 
     /* Ulises */
 
+
+        
+
     create: (req, res) => {
-        const { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad } = req.body;
 
-        const newProduct = new Product(
-            nombre,
-            +precio,
-            categoria,
-            +peso,
-            talle,
-            material,
-            origen,
-            descripcion,
-            +descuento,
-            calidad);
-        const products = leerJSON('products');
-        products.push(newProduct);
-
-        escribirJSON(products, 'products')
-
-        return res.redirect('/admin')
-    },
+   
+        const { name, price, description,discount,categoryId,materialId,originId,qualityId}=req.body;
+           db.Material.create({
+            name
+           }) .then(material =>{
+            db.Origin.create({
+                name
+            }).then(origin=>{
+                db.Quality.create({
+                    name
+                }).then(quality=>{
+                    db.Product.create({
+                        name,
+                        price,
+                        description,
+                        discount,
+                        categoryId,
+                        materialId : material.id,
+                        originId : origin.id,
+                        qualityId : quality.id,
+                       }).then(newProduct =>{
+                           
+                        console.log(newProduct);
+                        return res.redirect('/admin')
+                    })
+               
+                    .catch(error=>console.log(error))
+                    
+                   })
+                })
+                
+                })
+               
+       
+     },
     remove: (req, res) => {
         const { id } = req.params;
 
