@@ -133,9 +133,12 @@ module.exports = {
         } else {
             
             return res.render('users/profile-edit',{
+                id: req.params.id,
+                name: req.body.name,
+                surname: req.body.surname,
+                email: req.body.email,
                 old : req.body,
                 errors : errors.mapped()
-                
             })
         }
             
