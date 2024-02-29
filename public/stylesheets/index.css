@@ -16,7 +16,10 @@
 }
 
 .titulosSections {
+    font-family: var(--font-Inika);
+    color:rgb(69, 66, 66);
     margin-bottom: 5px;
+    font-size: 27px;
 }
 /* *******************MOBILE******************** */
 .home__main--mobileOff {
