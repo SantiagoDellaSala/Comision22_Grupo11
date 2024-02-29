@@ -87,8 +87,6 @@ module.exports = {
         }
 
     },
-
-    
     profile : (req, res) => {
         db.User.findByPk(req.params.id )
 			.then(user => {

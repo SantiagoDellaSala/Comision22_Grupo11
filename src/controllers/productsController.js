@@ -3,6 +3,7 @@ const { leerJSON, escribirJSON, } = require("../data");
 const { existsSync, unlinkSync } = require('fs');
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const { validationResult } = require("express-validator")
 let products = leerJSON('products')
 
 
@@ -59,48 +60,53 @@ module.exports = {
             })
             .catch(error => console.log(error))
     },
+    
     update: (req, res) => {
-        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad,image} = req.body;
-        const mainImage = req.file
-        products.forEach(product => {
-            if (product.id === +req.params.id) {
-                (mainImage && existsSync('public/images/productos/' + product.mainImage)) && unlinkSync('public/images/productos/' + product.mainImage)
-
-                if (image) {
-                    product.image.forEach(image => {
-                        existsSync('public/images/productos/' + image) && unlinkSync('public/images/productos/' + image)
-                    });
-                } else {
-                    product.image = [];
-                }
-
-                product.nombre = nombre ? nombre.trim() : product.nombre;
-                product.precio = +precio;
-                product.categoria = categoria;
-                product.peso = +peso;
-                product.talle = talle;
-                product.material = material;
-                product.origen = origen;
-                product.descripcion = descripcion.trim()
-                product.descuento = +descuento;
-                product.calidad = calidad;
-                product.mainImage = mainImage ? mainImage.filename : product.mainImage;
-
-            }
-
-        });
-
-
-        escribirJSON(products, 'products');
-
-        return res.redirect('/admin')
-    },
-
-    /* Ulises */
-
-
+     
+        const errors = validationResult(req);
+        const { name, price, categoryId, materialId, originId, description, discount, qualityId } = req.body;
         
+        
+        if (errors.isEmpty()) {
 
+            db.Product.update(
+                {
+                    name: name.trim(),
+                    price,
+                    categoryId,
+                    materialId,
+                    originId,
+                    description,
+                    discount,
+                    qualityId
+                },
+                {
+                    where:{id:req.params.id}
+                }
+            )
+            .then(response=>{
+                console.log(response)
+                return res.redirect("/admin");
+            })
+            .catch(error => console.log(error))
+            
+        } else {
+            
+            return res.render('admin',{
+                id: req.params.id,
+                name: req.body.name,
+                categoryId: req.body.categoryId,
+                materialId: req.body.materialId,
+                originId: req.body.originId,
+                description: req.body.description,
+                discount: req.body.discount,
+                qualityId: req.body.qualityId,
+                old : req.body,
+                errors : errors.mapped()
+            })
+        }
+    },
+    /* Ulises */
     create: (req, res) => {
 
    
@@ -138,15 +144,18 @@ module.exports = {
                
        
      },
-    remove: (req, res) => {
+     remove: (req, res) => {
         const { id } = req.params;
-
-        let productos = leerJSON('products');
-
-        const nuevaLista = productos.filter(products => products.id !== +id);
-
-        escribirJSON(nuevaLista, 'products')
-
-        res.redirect('/admin');
+    
+        db.Product.findByPk(id)
+            .then(product => {
+                product.destroy()
+                    .then(() => {
+                        console.log("Product deleted successfully");
+                        return res.redirect("/admin");
+                    })
+            })
+            .catch(error => console.log(error));
     }
+    
 }
