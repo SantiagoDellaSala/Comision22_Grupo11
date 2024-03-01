@@ -27,7 +27,7 @@ module.exports = {
                     db.Quality.findAll({
                         order : ['name']
                     }).then(qualities =>{
-                        db.Origin.findAll({
+                        db.Origins.findAll({
                             order : ['name']
                         }).then(origins =>{
                             return res.render('products/product-add',{
