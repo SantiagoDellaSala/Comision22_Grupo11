@@ -16,14 +16,32 @@ module.exports = {
             toThousand
         })
     },
-    add: (req, res) => {
+  add: (req, res) => {
         db.Category.findAll({
             order : ['name']
         })
             .then(categories => {
-                return res.render('products/product-add',{
-                    categories
+                db.Material.findAll({
+                    order :['name']
+                }).then(materials =>{
+                    db.Quality.findAll({
+                        order : ['name']
+                    }).then(qualities =>{
+                        db.Origin.findAll({
+                            order : ['name']
+                        }).then(origins =>{
+                            return res.render('products/product-add',{
+                            categories,
+                            materials,
+                            qualities,
+                            origins
+                            })
+                        })
+                        
+                    })
+                    
                 })
+                
             })
             .catch(error => console.log(error))
       
@@ -121,7 +139,7 @@ module.exports = {
         }
     },
     /* Ulises */
-    create: (req, res) => {
+   create: (req, res) => {
 
    
         const { name, price, description,discount,categoryId,materialId,originId,qualityId}=req.body;
@@ -140,9 +158,9 @@ module.exports = {
                         description,
                         discount,
                         categoryId,
-                        materialId : material.id,
-                        originId : origin.id,
-                        qualityId : quality.id,
+                        materialId ,
+                        originId ,
+                        qualityId ,
                        }).then(newProduct =>{
                            
                         console.log(newProduct);
