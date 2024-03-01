@@ -58,13 +58,28 @@
                                     
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <input name="material" type="text" class="form-control" id="material" value="<%= material.name%>">
+                                            <select name="material" class="form-select" id="material" aria-label="Floating label select example">
+                                                
+                                                
+                                                <% materials.forEach(material => { %>
+                                                    <option value="<%= material.id %>" <%= materialId == material.id && 'selected'  %>><%= material.name %></option>
+                                                  <% }) %>
+                                                
+                                            </select>
+                        
                                             <label for="material">Material del producto</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <input name="origen" type="text" class="form-control" id="origen" value="<%= origin.name %>">
+                                            <select name="origin" class="form-select" id="origin" aria-label="Floating label select example">
+                                                
+                                                
+                                                <% origins.forEach(origin => { %>
+                                                    <option value="<%= origin.id %>" <%= originId == origin.id && 'selected'  %>><%= origin.name %></option>
+                                                  <% }) %>
+                                                
+                                            </select>
                                             <label for="origen">Origen del producto</label>
                                         </div>
                                     </div>
@@ -76,7 +91,14 @@
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <input name="calidad" type="text" class="form-control" id="calidad" value="<%= quality.name %>">
+                                            <select name="quality" class="form-select" id="quality" aria-label="Floating label select example">
+                                                
+                                                
+                                                <% qualities.forEach(quality => { %>
+                                                    <option value="<%= quality.id %>" <%= qualityId == quality.id && 'selected'  %>><%= quality.name %></option>
+                                                  <% }) %>
+                                                
+                                            </select>
                                             <label for="calidad">Calidad</label>
                                         </div>
                                     </div>
