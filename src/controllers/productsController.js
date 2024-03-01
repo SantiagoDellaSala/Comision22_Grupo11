@@ -4,8 +4,7 @@ const { existsSync, unlinkSync } = require('fs');
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 let products = leerJSON('products')
-
-
+const { validationResult } = require('express-validator');
 
 module.exports = {
     /* Santiago */
@@ -60,7 +59,7 @@ module.exports = {
             .catch(error => console.log(error))
     },
     update: (req, res) => {
-        let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad,image} = req.body;
+        /* let { nombre, precio, categoria, peso, talle, material, origen, descripcion, descuento, calidad,image} = req.body;
         const mainImage = req.file
         products.forEach(product => {
             if (product.id === +req.params.id) {
@@ -93,13 +92,52 @@ module.exports = {
 
         escribirJSON(products, 'products');
 
-        return res.redirect('/admin')
+        return res.redirect('/admin') */
+        const errors = validationResult(req);
+        const { name, price, categoryId, materialId, originId, description, discount, qualityId } = req.body;
+        
+        
+        if (errors.isEmpty()) {
+
+            db.Product.update(
+                {
+                    name: name.trim(),
+                    price,
+                    categoryId,
+                    materialId,
+                    originId,
+                    description,
+                    discount,
+                    qualityId
+                },
+                {
+                    where:{id:req.params.id}
+                }
+            )
+            .then(response=>{
+				console.log(response)
+				return res.redirect("/admin");
+			})
+			.catch(error => console.log(error))
+            
+        } else {
+            
+            return res.render('admin',{
+                id: req.params.id,
+                name: req.body.name,
+                categoryId: req.body.categoryId,
+                materialId: req.body.materialId,
+                originId: req.body.originId,
+                description: req.body.description,
+                discount: req.body.discount,
+                qualityId: req.body.qualityId,
+                old : req.body,
+                errors : errors.mapped()
+            })
+        }
     },
 
     /* Ulises */
-
-
-        
 
     create: (req, res) => {
 
@@ -120,9 +158,9 @@ module.exports = {
                         description,
                         discount,
                         categoryId,
-                        materialId : material.id,
-                        originId : origin.id,
-                        qualityId : quality.id,
+                        materialId,
+                        originId,
+                        qualityId,
                        }).then(newProduct =>{
                            
                         console.log(newProduct);
