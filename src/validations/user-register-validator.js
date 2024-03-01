@@ -11,7 +11,7 @@ module.exports = [
     }).withMessage('Minimo 2 caracteres').bail()
     .isAlpha('es-ES',{ignore: " "}).withMessage('Solo caracteres alfabeticos'),
 
-    check('lastName')
+    check('surname')
     .notEmpty().withMessage('Este campo es obligatorio').bail()
     .isLength({
         min : 2
