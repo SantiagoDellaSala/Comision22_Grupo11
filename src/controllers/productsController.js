@@ -50,11 +50,25 @@ module.exports = {
         const categories = db.Category.findAll({
             order: [['name']]
         })
-        Promise.all([product, categories])
-            .then(([product, categories]) => {
+        const materials = db.Material.findAll({
+            order: [['name']]
+        })
+        const qualities = db.Quality.findAll({
+            order: [['name']]
+        })
+        const origins = db.Origin.findAll({
+            order: [['name']]
+        })
+
+
+        Promise.all([product, categories, materials, qualities, origins])
+            .then(([product, categories,materials, qualities, origins]) => {
                 return res.render('products/product-edit', {
                     ...product.dataValues,
                     categories,
+                    materials, 
+                    qualities,
+                    origins,
                     toThousand
                 })
             })
@@ -71,7 +85,7 @@ module.exports = {
 
             db.Product.update(
                 {
-                    name: name.trim(),
+                    name,
                     price,
                     categoryId,
                     materialId,
