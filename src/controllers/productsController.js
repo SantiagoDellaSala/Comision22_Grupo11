@@ -16,7 +16,7 @@ module.exports = {
             toThousand
         })
     },
-  add: (req, res) => {
+    add: (req, res) => {
         db.Category.findAll({
             order : ['name']
         })
@@ -27,7 +27,7 @@ module.exports = {
                     db.Quality.findAll({
                         order : ['name']
                     }).then(qualities =>{
-                        db.Origins.findAll({
+                        db.Origin.findAll({
                             order : ['name']
                         }).then(origins =>{
                             return res.render('products/product-add',{
@@ -139,7 +139,8 @@ module.exports = {
         }
     },
     /* Ulises */
-   create: (req, res) => {
+  
+    create: (req, res) => {
 
    
         const { name, price, description,discount,categoryId,materialId,originId,qualityId}=req.body;
@@ -158,8 +159,8 @@ module.exports = {
                         description,
                         discount,
                         categoryId,
-                        materialId ,
-                        originId ,
+                        materialId,
+                        originId,
                         qualityId ,
                        }).then(newProduct =>{
                            
