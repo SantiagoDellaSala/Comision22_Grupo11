@@ -24,7 +24,7 @@ router
   .get('/agregar', add)
   .get('/editar/:id', edit)
   .put('/editar/:id',upload.single('mainImage') , update)
-  .post('/create',create)
+  .post('/create',upload.single('mainImage'),create)
   .delete('/delete/:id', remove); 
 
 

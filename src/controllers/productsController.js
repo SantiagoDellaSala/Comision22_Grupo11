@@ -139,18 +139,9 @@ module.exports = {
     },
     /* Ulises */
    create: (req, res) => {
-
-   
+  
         const { name, price, description,discount,categoryId,materialId,originId,qualityId}=req.body;
-           db.Material.create({
-            name
-           }) .then(material =>{
-            db.Origin.create({
-                name
-            }).then(origin=>{
-                db.Quality.create({
-                    name
-                }).then(quality=>{
+       
                     db.Product.create({
                         name,
                         price,
@@ -159,7 +150,8 @@ module.exports = {
                         categoryId,
                         materialId ,
                         originId ,
-                        qualityId ,
+                        qualityId,
+                        mainImage : req.file ? req.file.filename : null,
                        }).then(newProduct =>{
                            
                         console.log(newProduct);
@@ -167,12 +159,8 @@ module.exports = {
                     })
                
                     .catch(error=>console.log(error))
-                    
-                   })
-                })
-                
-                })
-               
+
+            
        
      },
      remove: (req, res) => {
