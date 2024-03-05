@@ -4,13 +4,21 @@
       "name": "Caña de pescar",
       "price": 2.5,
       "category": "pesca",
-      "material": "metal",
+      "material": "madera",
       "origin": "argentina",
       "description": "Caña de pescar de metal de 2.1m",
       "mainImage": "CAÑA-AMBERJACK-2.10M.jpeg",
       "image": [],
       "discount": 10,
-      "quality": "destacado"
+      "quality": "destacado",
+      "nombre": "Caña de pescar",
+      "precio": 20000,
+      "categoria": "2",
+      "peso": null,
+      "origen": "China",
+      "descripcion": "Caña de largo alcance y resistente.",
+      "descuento": 10,
+      "calidad": "oferta"
    },
    {
       "id": 2,
