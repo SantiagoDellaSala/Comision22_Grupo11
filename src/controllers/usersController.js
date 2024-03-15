@@ -58,7 +58,7 @@ module.exports = {
     processRegister: (req,res) => {
         const errors = validationResult(req)
         const {name,surname,email,password,} = req.body;
-        const avatar = req.file
+        
         if(errors.isEmpty()){
             db.User.create({
                 name,
@@ -67,7 +67,7 @@ module.exports = {
                 password : hashSync(password.trim(),10),
                 roleId: 2,
                 troleyId: null,
-                avatar
+                avatar : req.file ? req.file.filename : null
             })
             .then(newUser => {
                 console.log(newUser)
