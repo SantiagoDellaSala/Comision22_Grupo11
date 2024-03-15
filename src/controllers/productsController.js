@@ -1,11 +1,10 @@
-const db =require('../database/models')
+const db =require('../database/models');
 const { leerJSON, escribirJSON, } = require("../data");
 const { existsSync, unlinkSync } = require('fs');
 const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-const { validationResult } = require("express-validator")
-let products = leerJSON('products')
-const { validationResult } = require('express-validator');
+const { validationResult } = require("express-validator");
+let products = leerJSON('products');
 
 module.exports = {
     /* Santiago */
