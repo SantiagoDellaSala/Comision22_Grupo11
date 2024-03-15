@@ -1,6 +1,8 @@
-const db =require('../database/models')
+const db =require('../database/models');
+const { existsSync, unlinkSync } = require('fs');
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-const { validationResult } = require("express-validator")
+const { validationResult } = require("express-validator");
+
 
 
 module.exports = {
