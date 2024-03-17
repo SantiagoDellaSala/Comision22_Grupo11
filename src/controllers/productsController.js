@@ -161,7 +161,7 @@ module.exports = {
             
        
      },
-     remove: (req, res) => {
+    remove: (req, res) => {
         const { id } = req.params;
     
         db.Product.findByPk(id)
@@ -173,6 +173,24 @@ module.exports = {
                     })
             })
             .catch(error => console.log(error));
+    },
+    filterCat:(req,res)=>{
+        const { id } = req.params;
+
+        const category = db.Category.findByPk(id)
+
+        const prodCat = db.Product.findAll({
+            where: {categoryId:id}
+        })
+        Promise.all([category, prodCat])
+			.then(([category,prodCat]) => {
+				return res.render('products/category', {
+                    category,
+					prodCat,
+					toThousand
+				})
+            })
+			.catch(error=>console.log(error))
     }
     
 }
