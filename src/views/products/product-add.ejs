@@ -77,8 +77,8 @@
                                             <div class="form-floating">
                                                 <select name="qualityID" class="form-select" id="qualityID"
                                                     aria-label="Floating label select example">
-                                                    <% qualities.forEach(quiality => { %>
-                                                        <option value="<%= quiality.id %>" <%= quiality.id == quiality.id && 'selected'  %>><%= quiality.name %></option>
+                                                    <% qualities.forEach(quality => { %>
+                                                        <option value="<%= quality.id %>" <%= quality.id == quality.id && 'selected'  %>><%= quality.name %></option>
                                                       <% }) %>
                                                 </select>
                                                 <label for="qualityID">Material</label>
