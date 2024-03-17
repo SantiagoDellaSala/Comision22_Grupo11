@@ -9,5 +9,6 @@ router
   .get('/carrito', cart)
   .get('/admin',checkAdmin, admin)
   .get('/search', search)
+  
 
 module.exports = router
