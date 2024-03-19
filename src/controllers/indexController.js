@@ -29,9 +29,10 @@ module.exports = {
         return res.render('carrito')
     },
     admin: (req, res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+            include : ["category", "material", "origin", "quality"]
+        })
             .then(products => {
-                //return res.send(products)
                 return res.render('dashboard', {
                     products
                 })

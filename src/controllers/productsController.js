@@ -1,10 +1,7 @@
-const db =require('../database/models')
-const { leerJSON, escribirJSON, } = require("../data");
+const db =require('../database/models');
 const { existsSync, unlinkSync } = require('fs');
-const Product = require("../data/Product");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-const { validationResult } = require("express-validator")
-let products = leerJSON('products')
+const { validationResult } = require("express-validator");
 
 
 
@@ -16,7 +13,7 @@ module.exports = {
             toThousand
         })
     },
-  add: (req, res) => {
+    add: (req, res) => {
         db.Category.findAll({
             order : ['name']
         })
@@ -140,18 +137,9 @@ module.exports = {
     },
     /* Ulises */
    create: (req, res) => {
-
-   
+  
         const { name, price, description,discount,categoryId,materialId,originId,qualityId}=req.body;
-           db.Material.create({
-            name
-           }) .then(material =>{
-            db.Origin.create({
-                name
-            }).then(origin=>{
-                db.Quality.create({
-                    name
-                }).then(quality=>{
+       
                     db.Product.create({
                         name,
                         price,
@@ -160,7 +148,8 @@ module.exports = {
                         categoryId,
                         materialId ,
                         originId ,
-                        qualityId ,
+                        qualityId,
+                        mainImage : req.file ? req.file.filename : null,
                        }).then(newProduct =>{
                            
                         console.log(newProduct);
@@ -168,15 +157,11 @@ module.exports = {
                     })
                
                     .catch(error=>console.log(error))
-                    
-                   })
-                })
-                
-                })
-               
+
+            
        
      },
-     remove: (req, res) => {
+    remove: (req, res) => {
         const { id } = req.params;
     
         db.Product.findByPk(id)
@@ -188,6 +173,24 @@ module.exports = {
                     })
             })
             .catch(error => console.log(error));
+    },
+    filterCat:(req,res)=>{
+        const { id } = req.params;
+
+        const category = db.Category.findByPk(id)
+
+        const prodCat = db.Product.findAll({
+            where: {categoryId:id}
+        })
+        Promise.all([category, prodCat])
+			.then(([category,prodCat]) => {
+				return res.render('products/category', {
+                    category,
+					prodCat,
+					toThousand
+				})
+            })
+			.catch(error=>console.log(error))
     }
     
 }

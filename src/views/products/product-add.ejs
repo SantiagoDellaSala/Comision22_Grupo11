@@ -18,7 +18,7 @@
                                 </nav>
                             </div>
                             <div class="card-body">
-                                <form action="/products/create" method="POST" class="row">
+                                <form action="/products/create" method="POST" class="row" enctype="multipart/form-data">
                                     <h3>Nuevo Producto</h3>
                                     <hr>
                                     <div class="col-12 col-md-6 mb-3 ">
@@ -37,8 +37,10 @@
                                         <div class="form-floating">
                                             <select name="categoryId" class="form-select" id="categoryId"
                                                 aria-label="Floating label select example">
+                                                <option value="" selected hidden>Seleccione...</option>
+
                                                 <% categories.forEach(category => { %>
-                                                    <option value="<%= category.id %>" <%= category.id == category.id && 'selected'  %>><%= category.name %></option>
+                                                    <option value="<%= category.id %>"><%= category.name %></option>
                                                   <% }) %>
                                             </select>
                                             <label for="categoryId">Categoría</label>
@@ -48,8 +50,9 @@
                                         <div class="form-floating">
                                             <select name="materialId" class="form-select" id="materialId"
                                                 aria-label="Floating label select example">
+                                                <option value="" selected hidden>Seleccione...</option>
                                                 <% materials.forEach(material => { %>
-                                                    <option value="<%= material.id %>" <%= material.id == material.id && 'selected'  %>><%= material.name %></option>
+                                                    <option value="<%= material.id %>"><%= material.name %></option>
                                                   <% }) %>
                                             </select>
                                             <label for="materialId">Material</label>
@@ -59,8 +62,10 @@
                                         <div class="form-floating">
                                             <select name="originId" class="form-select" id="originId"
                                                 aria-label="Floating label select example">
+                                                <option value="" selected hidden>Seleccione...</option>
+
                                                 <% origins.forEach(origin => { %>
-                                                    <option value="<%= origin.id %>" <%= origin.id == origin.id && 'selected'  %>><%= origin.name %></option>
+                                                    <option value="<%= origin.id %>"><%= origin.name %></option>
                                                   <% }) %>
                                             </select>
                                             <label for="originId">Origen del producto</label>
@@ -68,7 +73,7 @@
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <input name="discountId" type="number" class="form-control" id="discountId">
+                                            <input name="discount" type="number" class="form-control" id="discountId">
                                             <label for="discountId">Descuento</label>
                                         </div>
                                     </div>
@@ -77,11 +82,12 @@
                                             <div class="form-floating">
                                                 <select name="qualityID" class="form-select" id="qualityID"
                                                     aria-label="Floating label select example">
-                                                    <% qualities.forEach(quiality => { %>
-                                                        <option value="<%= quiality.id %>" <%= quiality.id == quiality.id && 'selected'  %>><%= quiality.name %></option>
+                                                    <option value="" selected hidden>Seleccione...</option>
+                                                    <% qualities.forEach(quality => { %>
+                                                        <option value="<%= quality.id %>"><%= quality.name %></option>
                                                       <% }) %>
                                                 </select>
-                                                <label for="qualityID">Material</label>
+                                                <label for="qualityID">Sección</label>
                                             </div>
                                         </div>
                                     </div>
