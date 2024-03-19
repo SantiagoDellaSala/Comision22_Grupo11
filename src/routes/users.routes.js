@@ -28,7 +28,7 @@ router
   .post('/register', upload.single('avatar'),userRegisterValidator, processRegister)
   .get('/profile/:id', checkUserLogin ,profile)
   .get('/editProfile/:id', profileEdit)
-  .put('/editProfile/:id',userEditValidator, profileUpload)
+  .put('/editProfile/:id',upload.single('avatar'),userEditValidator, profileUpload)
   .get('/salir',logout)
   
 module.exports = router;

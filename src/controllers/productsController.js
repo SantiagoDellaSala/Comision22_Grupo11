@@ -146,9 +146,10 @@ module.exports = {
                         description,
                         discount,
                         categoryId,
-                        materialId : material.id,
-                        originId : origin.id,
-                        qualityId : quality.id,
+                        materialId ,
+                        originId ,
+                        qualityId,
+                        mainImage : req.file ? req.file.filename : null,
                        }).then(newProduct =>{
                            
                         console.log(newProduct);
