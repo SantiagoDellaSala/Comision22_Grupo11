@@ -129,7 +129,7 @@ module.exports = {
 			.catch(error => console.log(error))
             
         } else {
-            
+                       
             return res.render('users/profile-edit',{
                 id: req.params.id,
                 name: req.body.name,
@@ -139,7 +139,5 @@ module.exports = {
                 errors : errors.mapped()
             })
         }
-            
-
-    }
+    } 
 }
