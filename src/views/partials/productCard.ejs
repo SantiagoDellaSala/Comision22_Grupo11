@@ -1,20 +1,16 @@
-<div class="col-12 col-sm-6 col-lg-3">
-        <section class="product-box">            
-            <div>
-                <figure class="product-box_image">
-                    <a href="/products/detail/<%= product.id %>">
-                        <img src="/images/productos/<%=product.mainImage|| 'ANAFE-PORTATIL-BUTANO.jpg'%>" alt="imagen de producto">
-                    </a>  
-                </figure>
-                <article class="product-box_data">
-                    <h3><%= product.name %></h3>
-                    <p>$<%= toThousand(product.price) %></p>
-                    <% if (product.discount) { %>
-                    <span>%<%= product.discount %> off</span>
-                    <% } %>
-                                    
-                </article>                
-            </div>       
-        </section>
-    </div>
-  
+
+<article class="productCard_article">
+    <h5><%= product.name %></h5>
+    <a href="/products/detail/<%= product.id %>">
+        <img
+        src="/images/productos/<%=product.mainImage || 'ANAFE-PORTATIL-BUTANO.jpg'%>"
+        alt="imagen de producto"
+        />
+    </a>
+    <div class="productCard_div">
+        <p>$<%= toThousand(product.price) %></p>
+        <% if (product.discount) { %>
+        <span>%<%= product.discount %> OFF</span>
+        <% } %>
+  </div>
+</article>
