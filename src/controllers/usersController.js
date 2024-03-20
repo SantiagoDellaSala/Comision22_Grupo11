@@ -107,7 +107,7 @@ module.exports = {
     },
     profileUpload : (req, res) => {
         const errors = validationResult(req);
-        const {name, surname, email} = req.body;
+        const {name, surname} = req.body;
         
         
         if (errors.isEmpty()) {
@@ -116,7 +116,7 @@ module.exports = {
                 {
                     name: name.trim(),
                     surname,
-                    email
+                    avatar : req.file ? req.file.filename : 'default.png'
                 },
                 {
                     where:{id:req.params.id}
