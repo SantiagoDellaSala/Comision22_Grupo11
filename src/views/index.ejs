@@ -33,91 +33,61 @@
           </div>
         </div>
       </div>
+      <!-- BANNER -->
 
-      <div class="home__main--mobile">
-        <section class="home__main__section">
-          <div class="titularesContainer">
-            <h4 class="titulosSections">Destacados</h4>
-            <a href="#">Ver más</a>
+      <!-- SECCIONES DE PRODUCTOS Y PUBLICIDAD-->
+      <div class="home_container">
+        <aside class="aside_home">
+          <div>
+            <h5>PUBLiCIDAD</h5>
+            <img src="/images/Publicidad.jpg" alt="publicidad1">
+            <img src="/images/Publicidad2.jpg" alt="publicidad2">
           </div>
-          <!-- Swiper -->
-          <div class="swiper mySwiper2">
-            <div class="swiper-wrapper">
-              <% destacado.forEach(product => { %>
-                <%- include('./partials/productCard', {product}) %>
-              <% }) %>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+          <div>
+            <h5>CAPACiTACiÓN</h5>
+            <img src="/images/aside1.jpg" alt="capacitacion1">
           </div>
-        </section>
-
-        <hr class="lineaSep" />
-
-        <div class="publicidad">
-          <img src="/images/Publicidad2.jpg" alt="publicidad" />
+          <div>
+            <h5>UTiLiDADES</h5>
+            <a target="_blank" href="https://www.youtube.com/watch?v=tld5k16U_Tk">Aprender a pescar</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=TNZEWbbWnzc">Calibrar caña de pescar</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=l7apf8ryllM">Lugares de pesca en Argentina</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=x9Jq1Yb9M2M">Carnadas para cada pescado</a>
+          </div> 
+        </aside>
+        <div class="div_sections">
+          <h4>Destacados</h4>
+          <section class="productCard_section">
+                  <% destacado.forEach(product => { %> <%-
+                  include('./partials/productCard', {product}) %> <% }) %>
+          </section>     
+          <h4>Ofertas</h4>
+          <section class="productCard_section">
+            <% oferta.forEach(product => { %> <%-
+            include('./partials/productCard', {product}) %> <% }) %>
+          </section>
         </div>
-
-        <hr class="lineaSep" />
-
-        <section class="home__main__section">
-          <div class="titularesContainer">
-            <h4 class="titulosSections">Ofertas</h4>
-            <a href="#">Ver más</a>
+        <aside class="aside_home2">
+          <div>
+            <h5>PUBLiCIDAD</h5>
+            <img src="/images/Publicidad.jpg" alt="publicidad1">
+            <img src="/images/Publicidad2.jpg" alt="publicidad2">
           </div>
-          <!-- Swiper -->
-          <div class="swiper mySwiper2">
-            <div class="swiper-wrapper">
-              <% oferta.forEach(product => { %>
-                <%- include('./partials/productCard', {product}) %>
-              <% }) %> 
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+          <div>
+            <h5>CAPACiTACiÓN</h5>
+            <img src="/images/aside1.jpg" alt="capacitacion1">
           </div>
-        </section>
+          <div>
+            <h5>UTiLiDADES</h5>
+            <a target="_blank" href="https://www.youtube.com/watch?v=tld5k16U_Tk">Aprender a pescar</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=TNZEWbbWnzc">Calibrar caña de pescar</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=l7apf8ryllM">Lugares de pesca en Argentina</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=x9Jq1Yb9M2M">Carnadas para cada pescado</a>
+          </div> 
+        </aside>
       </div>
+      <!-- SECCIONES DE PRODUCTOS Y PUBLICIDAD-->
 
-      <!-- ******TABLET Y DESKTOP****** -->
-      <div class="home__main--mobileOff">
-        <section class="home__main__section">
-          <div class="titularesContainer">
-            <h4 class="titulosSections">Productos destacados</h4>
-          </div>
-          <div class="swiper mySwiper3">
-            <div class="swiper-wrapper">
-              <% destacado.forEach(product => { %>
-                <%- include('./partials/productCard', {product}) %>
-              <% }) %> 
-            </div>
-            <div class=".swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </section>
-
-        <hr class="lineaSep" />
-        <div class="publicidad">
-          <img src="/images/Publicidad.jpg" alt="publicidad" />
-        </div>
-        <hr class="lineaSep" />
-
-        <section class="home__main__section">
-          <div class="titularesContainer">
-            <h4 class="titulosSections">Ofertas</h4>
-          </div>
-          <div class="swiper mySwiper3">
-            <div class="swiper-wrapper">
-              <% oferta.forEach(product => { %>
-                <%- include('./partials/productCard', {product}) %>
-              <% }) %> 
-            </div>
-            <div class=".swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </section>
-      </div>
     </main>
 
     <%- include('./partials/footer.ejs') %>
