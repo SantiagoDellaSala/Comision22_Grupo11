@@ -59,15 +59,8 @@
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
-                                        <div class="form-floating">
-                                            <select name="originId" class="form-select" id="originId"
-                                                aria-label="Floating label select example">
-                                                <option value="" selected hidden>Seleccione...</option>
-
-                                                <% origins.forEach(origin => { %>
-                                                    <option value="<%= origin.id %>"><%= origin.name %></option>
-                                                  <% }) %>
-                                            </select>
+                                        <div class="form-floating ">
+                                            <input name="originId" type="text" class="form-control" id="originId">
                                             <label for="originId">Origen del producto</label>
                                         </div>
                                     </div>
@@ -79,15 +72,9 @@
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <div class="form-floating">
-                                                <select name="qualityID" class="form-select" id="qualityID"
-                                                    aria-label="Floating label select example">
-                                                    <option value="" selected hidden>Seleccione...</option>
-                                                    <% qualities.forEach(quality => { %>
-                                                        <option value="<%= quality.id %>"><%= quality.name %></option>
-                                                      <% }) %>
-                                                </select>
-                                                <label for="qualityID">Sección</label>
+                                            <div class="form-floating ">
+                                                <input name="qualityId" type="text" class="form-control" id="qualityId">
+                                                <label for="qualityId">Calidad</label>
                                             </div>
                                         </div>
                                     </div>

@@ -12,7 +12,7 @@
                     <div class="card">
                         <h3 class="card-header d-flex justify-content">EDITAR PERFIL</h3>
                         <div class="card-body">
-                            <form class="row" action="/users/editProfile/<%= id %>?_method=PUT" method="POST">
+                            <form class="row" action="/users/editProfile/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                                 <div class="col-12  col-md-6  mb-3">
                                     <div>
                                         <label for="name" class="form-floating mt-4">Nombre</label>
@@ -31,15 +31,11 @@
                                             <%= locals.errors && errors.surname ? errors.surname.msg : null %>
                                         </small>
                                     </div>
-                                    <div>
-                                        <label for="email" class="form-floating mt-4">Email</label>
-                                        <input type="email" name="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-                                            id="email" value="<%= email %>" />
-                                        <small class="text-danger ms-2">
-                                            <%= locals.errors && errors.email ? errors.email.msg : null %>
-                                        </small>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <input name="avatar" type="file" class="form-control" id="avatar" hidden>
+                                        <label class="btn btn-outline-success btn-md w-100" for="avatar">Agregar foto de perfil</label>
                                     </div>
-                                    <button class="btn btn-success  btn-md w-100">Actualizar datos</button>
+                                    <button class="btn btn-outline-success btn-md w-100">Actualizar datos</button>
                                 </div>
                     
                             </form>
