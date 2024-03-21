@@ -22,7 +22,7 @@
     padding: 5px;
   }
   
-  .aside_home {
+.aside_home {
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -82,6 +82,7 @@
   .productCard_article {
     padding: 5px;
     border: 0.5px solid #9e9e9e;
+    border-radius: 7px 0 7px 0;
     background-color: rgb(1, 175, 218);
     display: flex;
     flex-direction: column;
