@@ -27,10 +27,16 @@
                                             <label for="name">Nombre del producto</label>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-6 mb-3">
+                                    <div class="col-12 col-md-3 mb-3">
                                         <div class="form-floating">
                                             <input name="price" type="text" class="form-control" id="price">
                                             <label for="price">Precio</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-3 mb-3">
+                                        <div class="form-floating ">
+                                            <input name="discount" type="number" class="form-control" id="discountId">
+                                            <label for="discountId">Descuento</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
@@ -59,23 +65,28 @@
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
-                                        <div class="form-floating ">
-                                            <input name="originId" type="text" class="form-control" id="originId">
-                                            <label for="originId">Origen del producto</label>
+                                        <div class="form-floating">
+                                            <select name="originId" class="form-select" id="originId"
+                                                aria-label="Floating label select example">
+                                                <option value="" selected hidden>Seleccione...</option>
+                                                <% origins.forEach(origin => { %>
+                                                    <option value="<%= origin.id %>"><%= origin.name %></option>
+                                                  <% }) %>
+                                            </select>
+                                            <label for="originId">Origin</label>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-6 mb-3">
-                                        <div class="form-floating ">
-                                            <input name="discount" type="number" class="form-control" id="discountId">
-                                            <label for="discountId">Descuento</label>
-                                        </div>
-                                    </div>
+                                
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
-                                            <div class="form-floating ">
-                                                <input name="qualityId" type="text" class="form-control" id="qualityId">
-                                                <label for="qualityId">Calidad</label>
-                                            </div>
+                                            <select name="qualityId" class="form-select" id="qualityId"
+                                                aria-label="Floating label select example">
+                                                <option value="" selected hidden>Seleccione...</option>
+                                                <% qualities.forEach(quality => { %>
+                                                    <option value="<%= quality.id %>"><%= quality.name %></option>
+                                                  <% }) %>
+                                            </select>
+                                            <label for="qualityId">Calidad</label>
                                         </div>
                                     </div>
                                     <div class="col-12  mb-3">
