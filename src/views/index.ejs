@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- HEAD -->
+  <%- include('./partials/head.ejs') %>
+
+  <body class="home">
+    <!-- HEADER -->
+    <%- include('./partials/header.ejs') %>
+
+    <main class="home__main">
+      <!-- BANNER -->
+      <div class="home__main--banner">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="/images/Banner1.jpg" alt="banner1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/Banner2.jpg" alt="banner2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/Banner3.jpg" alt="banner3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="/images/Banner4.jpg" alt="banner4" />
+            </div>
+          </div>
+          <div class="autoplay-progress">
+            <svg viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <!-- BANNER -->
+
+      <!-- SECCIONES DE PRODUCTOS Y PUBLICIDAD-->
+      <div class="home_container">
+        <aside class="aside_home">
+          <div>
+            <h5>Publicidad</h5>
+            <img src="/images/Publicidad.jpg" alt="publicidad1">
+            <img src="/images/Publicidad2.jpg" alt="publicidad2">
+          </div>
+          <div>
+            <h5>Capacitación</h5>
+            <img src="/images/aside1.jpg" alt="capacitacion1">
+          </div>
+          <div>
+            <h5>Utilidades</h5>
+            <a target="_blank" href="https://www.youtube.com/watch?v=tld5k16U_Tk">Aprender a pescar</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=TNZEWbbWnzc">Calibrar caña de pescar</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=l7apf8ryllM">Lugares de pesca en Argentina</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=x9Jq1Yb9M2M">Carnadas para cada pescado</a>
+          </div> 
+        </aside>
+        <div class="div_sections">
+          <h4>Destacados</h4>
+          <section class="productCard_section">
+                  <% destacado.forEach(product => { %> <%-
+                  include('./partials/productCard', {product}) %> <% }) %>
+          </section>     
+          <h4>Ofertas</h4>
+          <section class="productCard_section">
+            <% oferta.forEach(product => { %> <%-
+            include('./partials/productCard', {product}) %> <% }) %>
+          </section>
+        </div>
+        <aside class="aside_home2">
+          <div>
+            <h5>PUBLiCIDAD</h5>
+            <img src="/images/Publicidad.jpg" alt="publicidad1">
+            <img src="/images/Publicidad2.jpg" alt="publicidad2">
+          </div>
+          <div>
+            <h5>CAPACiTACiÓN</h5>
+            <img src="/images/aside1.jpg" alt="capacitacion1">
+          </div>
+          <div>
+            <h5>UTiLiDADES</h5>
+            <a target="_blank" href="https://www.youtube.com/watch?v=tld5k16U_Tk">Aprender a pescar</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=TNZEWbbWnzc">Calibrar caña de pescar</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=l7apf8ryllM">Lugares de pesca en Argentina</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=x9Jq1Yb9M2M">Carnadas para cada pescado</a>
+          </div> 
+        </aside>
+      </div>
+      <!-- SECCIONES DE PRODUCTOS Y PUBLICIDAD-->
+
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Swiper1 -->
+    <script>
+      const progressCircle = document.querySelector(".autoplay-progress svg");
+      const progressContent = document.querySelector(".autoplay-progress span");
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            progressCircle.style.setProperty("--progress", 1 - progress);
+            progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+          },
+        },
+      });
+    </script>
+
+    <!-- Swiper2 -->
+    <script>
+      var swiper = new Swiper(".mySwiper2", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+    <!-- Swiper3 -->
+    <script>
+      var swiper = new Swiper(".mySwiper3", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+    <!-- AOS -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

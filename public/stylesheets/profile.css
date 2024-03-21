@@ -1,0 +1,54 @@
+.profile__main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.profile__main__section {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__main__section__form {
+    width: 60%;
+    min-width : 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.profile__main__section__form a {
+    width: 30%;
+}
+
+.profile__main__section__form a button {
+    width: 100%;
+    color: white;
+    background-color: #17a117;
+    border: 0.5 solid black;
+    border-radius: 3px;
+}
+
+.profile__main__section__form input {
+    width: 40%;
+    border: 0.5 solid black;
+    border-radius: 3px;
+}
+
+.profile__main__section__form button {
+    width: 35%;
+    color: white;
+    background-color: #174ca1;
+    border: 0.5 solid black;
+    border-radius: 3px;
+}

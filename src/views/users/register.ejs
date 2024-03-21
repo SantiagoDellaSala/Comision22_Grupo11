@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head.ejs') %>
+  <body class="register">
+    <%- include('../partials/header.ejs') %>
+    <main class="register__main">
+      <div class="register__main__div">
+        <form action="/users/register" class="formulario" method="POST" enctype="multipart/form-data">
+          <h6 class="titular">FORMULARIO DE REGISTRO</h6>
+          <div>
+            <input
+              class="input"
+              id="name"
+              type="text"
+              placeholder="Nombre"
+              name="name"
+              value="<%= locals.old && old.name ? old.name : null %>"
+            />
+            <small class="text-danger d-flex">
+              <%= locals.errors && errors.name ? errors.name.msg : null %>
+            </small>
+          </div>
+
+          <div>
+            <input
+              class="input"
+              id="surname"
+              type="text"
+              placeholder="Apellido"
+              name="surname"
+              value="<%= locals.old && old.surname ? old.surname : null %>"
+            />
+            <small class="text-danger d-flex">
+              <%= locals.errors && errors.surname ? errors.surname.msg : null %>
+            </small>
+          </div>
+
+          <div>
+            <input
+              class="input"
+              id="email"
+              type="text"
+              placeholder="Email"
+              name="email"
+              value="<%= locals.old && old.email ? old.email : null %>"
+            />
+            <small class="text-danger d-flex">
+              <%= locals.errors && errors.email ? errors.email.msg : null %>
+            </small>
+          </div>
+
+          <div class="pass__container">
+            <input
+              class="input"
+              id="password"
+              type="password"
+              placeholder="Contraseña"
+              name="password"
+            />
+            <i class="fa-solid fa-eye ojo1"></i>
+            <small class="text-danger d-flex">
+              <%= locals.errors && errors.password ? errors.password.msg : null
+              %>
+            </small>
+          </div>
+
+          <div class="pass__container">
+            <input
+              class="input"
+              id="passwordR"
+              type="password"
+              placeholder="Repetir contraseña"
+              name="password2"
+            />
+            <i class="fa-solid fa-eye ojo2"></i>
+            <small class="text-danger d-flex">
+              <%= locals.errors && errors.password2 ? errors.password2.msg :
+              null %>
+            </small>
+          </div>
+          
+          <div>
+            <h6 class="d-flex ">Seleccione una imagen :</h6>
+						<input name="avatar" id="avatar" class="form-control" type="file" multiple></input>
+					</div>
+
+          <div class="formulario_divs">
+            <input type="checkbox" />
+            <small>He leído y acepto los terminos y condiciones.</small>
+            <input type="checkbox" />
+            <small>Deseo recibir ofertas y novedades por mail.</small>
+            <button class="boton">REGISTRARSE</button>
+          </div>
+
+          <div class="formulario_divs">
+            <h5>¿Ya tienes una cuenta?</h5>
+            <a href="/users/login">Inicia sesión</a>
+          </div>
+        </form>
+        <img
+          class="imagen__registro"
+          src="/images/FONDO_REGISTER.jpg"
+          alt="fondo"
+        />
+      </div>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>

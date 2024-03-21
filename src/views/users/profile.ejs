@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <%- include('../partials/header.ejs') %>
+    <main class="profile__main">
+        <section class="profile__main__section">
+
+            <form class="profile__main__section__form" action="/users/editProfile/">
+                <h3>MI PERFIL</h3>
+                <label for="name">Nombre: <%= name %></label>
+                <label for="surname">Apellido: <%= surname %></label>
+                <label for="email">Email: <%= email %></label>
+                <a href="/users/editProfile">
+                    <button type="button">EDITAR PERFIL</button>
+                </a>
+            </form>
+        </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>

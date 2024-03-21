@@ -1,0 +1,170 @@
+.header {
+  background: rgb(1, 175, 218);
+  background: radial-gradient(
+    circle,
+    rgba(1, 175, 218, 1) 86%,
+    rgba(1, 94, 117, 0.9192051820728291) 100%
+  );
+  width: 100%;
+}
+
+.header__div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.div__menu {
+  margin: 0 12px;
+}
+
+.div__menu i {
+  border: 1.5px darkslategrey solid;
+  padding: 5px;
+}
+
+.elementos {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav {
+  display: none;
+  text-align: left;
+  /* margin-right: 5vw; */
+  width: 28vw;
+  background-color: black;
+}
+
+.nav-ul {
+  flex-direction: column;
+  color: white;
+}
+
+.nav-li {
+  color: aliceblue;
+  font-size: 18px;
+}
+
+.header__logo {
+  font-family: var(--font-Inika);
+}
+
+.header__logo a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__logo a .logo {
+  width: 10vw;
+  margin: 8px 10px;
+}
+
+.header__logo a .nombre_logo {
+  width: 20vw;
+}
+
+.header__buscar {
+  display: none;
+}
+
+.header__div__login {
+  width: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2vw;
+  margin-right: 4vw;
+}
+
+.header__div__login img {
+  width: 6vw;
+  height: 5.5vh;
+}
+
+.usuario__carrito {
+  width: 80%;
+}
+.usuario__perfil {
+  border-radius: 25px;
+}
+
+@media (min-width: 768px) {
+  .header__div {
+    flex-direction: column-reverse;
+  }
+
+  .div__menu {
+    width: 95vw;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .hamburguesa {
+    display: none;
+  }
+
+  .elementos {
+    width: 75vw;
+    justify-content: space-evenly;
+    margin: 0 0 0 17vw;
+  }
+
+  .header__buscar {
+    display: flex;
+  }
+  .header__button {
+    padding: 7px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    right: 40px;
+  }
+  .header__input {
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px black solid;
+    background-color: white;
+    width: 180px;
+  }
+
+  .nav-ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    /* padding-left: 20px; */
+  }
+
+  .header__buscar {
+    display: flex;
+    align-items: center;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: flex-end;
+    width: 10vw;
+    position: relative;
+  }
+  .logo {
+    position: relative;
+    right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+  }
+  .header__div__login {
+    height: auto;
+  }
+
+  .header__div__login img {
+    width: 6vw;
+    height: 6vw;
+  }
+  .usuario__carrito {
+    width: 60%;
+    height: 50px;
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('../partials/head', {title: '' }) %>
+
+    <body>
+        <!-- Header -->
+        <%- include('../partials/header') %>
+            <!-- /Header -->
+
+            <!--productos-->
+            <div class="container products-wrapper">
+                <div class="row">
+                    <h2 class="products-title">
+                        <%= category.name %>
+                    </h2>
+                </div>
+                
+                <% prodCat.forEach(product=> { %>
+                    <%- include('../partials/productCard', {product, toThousand}) %>
+                <% }) %>
+            
+            </div>
+
+            <!-- /todos los productos -->
+
+            <!-- footer -->
+            <%- include('../partials/footer') %>
+                <!-- /footer -->
+    </body>
+
+</html>

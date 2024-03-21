@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head.ejs') %>
+<body> 
+    <%- include('../partials/header.ejs') %>
+    
+<main class="main-login">
+<div class="login">
+
+    <div class="acceder">
+        <img src="/images/logo-suyds.png" alt="">
+        <p>SUYDS</p>
+    </div>
+    
+    <div class="form-container">
+        
+        <form action="" method="POST">
+            
+            <div class="form">
+                
+                <div class="input-container">
+                    <label for="email" class="form-label"></label>
+                    <input type="email" value="<%= locals.old && old.email ? old.email : null %>" name="email" class="input-style"  id="email" placeholder="Email">
+                    <span class="text-danger ms-2"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
+                    <!-- <span class="error-message">Debes ingresar un email</span> -->
+                </div>
+                <div class="input-container">
+                    <label for="password" class="form-label"></label>
+                    <input type="password" value="<%= locals.old && old.password ? old.password : null %>" name="password" class="input-style"  id="password" placeholder="Contraseña">
+                    <span class="text-danger ms-2"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
+                    <!-- <span class="error-message">Debes ingresar un email</span> -->
+                </div>  
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="1" id="remember"
+                    name="remember">
+                <label class="form-check-label" for="remember">
+                    Recordame
+                </label>
+            </div>
+            <div class="forget">
+                <a href="#"><p>¿Has olvidado la contraseña?</p></a>
+            </div>
+    
+            <div class="button-container">
+                <div class="button">
+                    <button type="submit">Iniciar Sesión</button>
+                </div>
+            </div> 
+        </form>
+
+        
+
+        <div class="login-others">
+            
+            <p>O iniciar Sesión con: </p>
+            
+            <div class="others-container">
+                <div>
+                    <i class="fa-brands fa-google"></i><a href="#"><p> Ingresar con Google</p></a>
+                </div>
+            </div>
+            
+            <div class="others-container">
+                <div>
+                    <i class="fa-brands fa-square-facebook"></i><a href="#"><p> Ingresar con Facebook</p></a>
+                </div>
+            </div>
+            
+            <div class="register-noLogin">
+                <p>¿No tienes una cuenta? <a href="/users/register">Registrate</a></p>
+            </div>
+        
+        </div>
+    
+    </div>
+
+</div>
+</main>
+<%- include('../partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head.ejs') %>
+    
+    <title>Editar producto</title>
+
+    <body>
+        <%- include('../partials/header.ejs') %>
+            <main class="container">
+                <section class="row my-5">
+                    <div class="col-12 col-md-10 mx-auto">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between">
+                                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/admin" class="text-primary"><i
+                                                    class="fa-solid fa-lock"></i></a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Editar <%= name %></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <div class="card-body">
+                                <form action="/products/editar/<%= id %>?_method=PUT" method="POST" class="row" enctype="multipart/form-data">
+                                    <h3>Editar producto</h3>
+                                    <hr>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating ">
+
+                                            <input name="name" type="text" class="form-control" id="name" value="<%= name %>">
+                                            <label for="name">Nombre</label>
+
+                                          </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating">
+
+                                            <input name="price" type="text" class="form-control" id="price" value="<%= toThousand(price) %>">
+                                            <label for="price">Precio</label>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating">
+
+                                            <select name="categoryId" class="form-select" id="categoryId" aria-label="Floating label select example">
+
+                                                
+                                                
+                                                <% categories.forEach(category => { %>
+                                                    <option value="<%= category.id %>" <%= categoryId == category.id && 'selected'  %>><%= category.name %></option>
+                                                  <% }) %>
+                                                
+                                            </select>
+                                            <label for="categoryId">Categoría</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating ">
+                                            <select name="materialId" class="form-select" id="material" aria-label="Floating label select example">
+                                                
+                                                
+                                                <% materials.forEach(material => { %>
+                                                    <option value="<%= material.id %>" <%= materialId == material.id && 'selected'  %>><%= material.name %></option>
+                                                  <% }) %>
+                                                
+                                            </select>
+                        
+                                            <label for="material">Material del producto</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating ">
+                                            <select name="originId" class="form-select" id="origin" aria-label="Floating label select example">
+                                                
+                                                
+                                                <% origins.forEach(origin => { %>
+                                                    <option value="<%= origin.id %>" <%= originId == origin.id && 'selected'  %>><%= origin.name %></option>
+                                                  <% }) %>
+                                                
+                                            </select>
+                                            <label for="origen">Origen del producto</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating ">
+
+                                            <input name="discount" type="number" class="form-control" id="discount" value="<%= discount %>">
+                                            <label for="discount">Descuento</label>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="form-floating ">
+                                            <select name="qualityId" class="form-select" id="quality" aria-label="Floating label select example">
+                                                
+                                                
+                                                <% qualities.forEach(quality => { %>
+                                                    <option value="<%= quality.id %>" <%= qualityId == quality.id && 'selected'  %>><%= quality.name %></option>
+                                                  <% }) %>
+                                                
+                                            </select>
+                                            <label for="calidad">Calidad</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="form-floating">
+
+                                            <textarea name="description" class="form-control" id="description"
+
+                                                style="height: 100px;"><%= description %></textarea>
+                                            <label for="description">Descripción</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <input  name="mainImage" type="file" class="form-control" id="mainImage" hidden>
+                                        <label class="btn btn-primary btn-md w-100" for="mainImage">Imagen
+                                            principal</label>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3 ">
+                                        <input  name="images" type="file" class="form-control" id="images" hidden
+                                            multiple>
+                                        <label class="btn btn-primary btn-md w-100" for="images">Imágenes extra</label>
+                                    </div>
+                                </div>
+                                    
+                                  
+
+                                    
+                                    
+                                  
+                                <div class="col-12 mb-3 justify-content-end p-3">
+                                        <button  class="btn btn-success  btn-md w-100">Guardar cambios</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+
+            <%- include('../partials/footer.ejs') %>
+
+                <%- include('../partials/scripts') %>
+    </body>
+
+</html>

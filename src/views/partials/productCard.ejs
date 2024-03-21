@@ -1,0 +1,16 @@
+
+<article class="productCard_article">
+    <p><%= product.name %></p>
+    <a href="/products/detail/<%= product.id %>">
+        <img
+        src="/images/productos/<%=product.mainImage || 'ANAFE-PORTATIL-BUTANO.jpg'%>"
+        alt="imagen de producto"
+        />
+    </a>
+    <div class="productCard_div">
+        <p>$<%= toThousand(product.price) %></p>
+        <% if (product.discount) { %>
+        <span>%<%= product.discount %> OFF</span>
+        <% } %>
+  </div>
+</article>

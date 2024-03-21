@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<%- include('./partials/head',{
+	title : 'Dashboard'
+}) %>
+
+
+<body>
+    <%- include('./partials/header') %>
+    <main class="container">
+        <section class="row my-5">
+            <div class="col-12 col-md-12 mx-auto">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <h4 class="cart-title">Productos</h4>
+                        <a class="btn btn-primary btn-md " href="/products/agregar">Nuevo</a>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre del producto</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Material</th>
+                                <th scope="col">Origen</th>
+                                <th scope="col">Descuento</th>
+                                <th scope="col">Calidad</th>
+                                <th scope="col">Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <% products.forEach(({id,name,price,category,material,origin,discount, quality},index) => { %>
+                                    <tr>
+                                        <th scope="row">
+                                        <%= index + 1 %></th>
+                                        <th><%= name %></th>
+                                        <td><%= price %></td>
+                                        <td><%= category.name %></td>
+                                        <td><%= material.name %></td>
+                                        <td><%= origin.name %></td>
+                                        <td><%= discount %></td>
+                                        <td><%= quality ? quality.name : "Sin calidad"%></td>
+                                        <td>
+                                            <div class="d-flex gap-2">
+                                                <button 
+                                                    class="btn btn-sm btn-outline-primary border-none" 
+                                                    data-bs-toggle="modal" 
+                                                    data-bs-target="#exampleModal<%= id %>">
+                                                    <i class="fa-solid fa-eye"></i>
+                                                </button>
+                                                <a href="/products/editar/<%= id %>">
+                                                <button type="button" class="btn btn-sm btn-outline-success border-none"><i class="fa-solid fa-pencil"></i></button>
+                                                </a>
+                                                        <button class="btn btn-sm btn-outline-danger border-none"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#warningRemoveModal<%= id %>">
+                                                        <i class="fa-solid fa-trash"></i> </button>
+                                                        <%- include('./partials/modal-warning-delete-product-admin',{ id, name
+                                                        }) %> 
+                                                
+                                                
+                                            </div>
+                                        </td>
+                                      </tr>
+                                <% }) %>
+        
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include('./partials/scripts') %>
+
+</body>
+</html>

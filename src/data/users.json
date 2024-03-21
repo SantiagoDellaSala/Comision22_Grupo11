@@ -1,0 +1,83 @@
+[
+   {
+      "id": "5315618c-7e13-4b41-bd9a-d58cd4591b68",
+      "name": "Homero",
+      "surname": "Simpson",
+      "email": "lossimpson@gmail.com",
+      "password": "$2a$10$tvFCUi.tX1IjMkmdth/LQOp8Xp4pkD3Cre3nr3T.x/wDolQncvqZS",
+      "avatar": null,
+      "role": "user"
+   },
+   {
+      "id": "505ec67f-97a2-4c01-80ce-224f461a2418",
+      "name": "frito",
+      "surname": "pendejo",
+      "email": "frito.p@hotmail.com",
+      "password": "$2a$10$snP0V4RSdwAUILyg6tVjCOBBJ0FrwFMBmcm3/p8INkVjS4x2.wvT6",
+      "avatar": "1705705086006_img_.png",
+      "role": "user"
+   },
+   {
+      "id": "d32c39ae-8f61-49af-ab2c-5022c7adb74d",
+      "name": "Chile",
+      "surname": "NoVaAlMundial",
+      "email": "fifa@gmail.com",
+      "password": "$2a$10$ePa7OykPpadPeg4fosADB.linV8xt/s.jx7MpTbjm9qrippNR4UPS",
+      "avatar": null,
+      "role": "admin"
+   },
+   {
+      "id": "fc468ea0-41ac-4f1a-9b03-2fcb202707ea",
+      "name": "Santiago",
+      "surname": "Perez",
+      "email": "santiago@gmail.com",
+      "password": "$2a$10$hs19lYXmMR2WWE.m4TONduSqeEgtLjqCF2pyH.awtebQrpOuMGKDG",
+      "avatar": "default.png",
+      "role": "user"
+   },
+   {
+      "id": "6c17efb6-eadc-4116-8a13-21f649575e5e",
+      "name": "pedro",
+      "surname": "pedrito",
+      "email": "aaa@gmail.com",
+      "password": "$2a$10$l5GYtJESAfv3V7st.fr3SO7MqOSxuxVEm/PWX/YTyOcqxDXq/o5ua",
+      "avatar": "default.png",
+      "role": "user"
+   },
+   {
+      "id": "eee701ca-c64b-4d88-b669-f9cd5377cb2e",
+      "name": "Tito",
+      "surname": "Della Sala",
+      "email": "santiagods@gmail.com",
+      "password": "$2a$10$TnNuj08PIVYNzWOEVmAjV.mDPLap6o8jSuRiS/3t0Se9OHhbHWFm.",
+      "avatar": "default.png",
+      "role": "user"
+   },
+   {
+      "id": "53a0aa83-8f1e-45c2-9f94-a95faaca0939",
+      "name": "susana",
+      "surname": "gimenez",
+      "email": "su.gimenez@gmail.com",
+      "password": "$2a$10$LcEEGaordqwX6mlwV3HG4uQPdR1rgF0xsmljFL6Kbm/SfiIWn2X76",
+      "avatar": "default.png",
+      "role": "user"
+   },
+   {
+      "id": "e0f32637-4547-479c-ac6e-126724b0ca84",
+      "name": "Ulises",
+      "lastName": "Farias",
+      "email": "Ulises@gmail.com",
+      "password": "$2a$10$2gkysNyAgnRtCltSd0f9LOgKfkp9W5OR6LYSOWzTT68sy4tGZaiHO",
+      "avatar": "default.png",
+      "role": "admin"
+   },
+   {
+      "id": "1717c869-c536-498a-a6c7-dc416d4cf39d",
+      "name": "Ulises",
+      "lastName": "Farias",
+      "email": "Ulisesfarias1905@hotmail.com",
+      "password": "$2a$10$lOubPreFZU45oDfocLz3rezefLSO5KqDPTb9I/.4W5bZM8e1pAh9e",
+      "avatar": "default.png",
+      "role": "admin"
+   }
+]
