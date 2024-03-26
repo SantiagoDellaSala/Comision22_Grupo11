@@ -40,6 +40,13 @@ module.exports = {
   listProduct : async (req, res) => {
     try {
       const products = await db.Product.findAll(modelResponseProduct)
+
+      const productsWithURL = products.map(product => {
+        return {
+          ...product.dataValues,
+        URL : `http://${req.get('host')}/api/movies/${product.id}`
+        }
+      })
       return res.status(200).json({
         ok : true,
         meta : {
@@ -47,7 +54,7 @@ module.exports = {
           total : products.lenght,
           url : `http://${req.get('host')}/api/products`
         },
-        data : products
+        data : productsWithURL
     })
     } catch (error) {
       return res.status(error.status || 500).json({
@@ -67,7 +74,7 @@ module.exports = {
       }
   
       if (!product) {
-        error = new Error('No hay una película con ese ID...')
+        error = new Error('No hay un producto con ese ID...')
         error.status = 404
         throw error
       }

@@ -43,7 +43,7 @@ module.exports = {
       }
   
       if (!user) {
-        error = new Error('No hay una película con ese ID...')
+        error = new Error('No hay un usuario con ese ID...')
         error.status = 404
         throw error
       }
