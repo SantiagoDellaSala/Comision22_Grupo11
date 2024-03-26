@@ -6,6 +6,9 @@ const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = {
     index: (req, res) => {
+        const products = db.Product.findAll({
+            order: ["name"],
+          })
 		const oferta = db.Product.findAll({
 			where: {qualityId: 1},
            
@@ -15,9 +18,10 @@ module.exports = {
             
 		})
 
-		Promise.all([oferta, destacado])
-			.then(([oferta, destacado]) => {
+		Promise.all([products, oferta, destacado])
+			.then(([products, oferta, destacado]) => {
 				return res.render('index', {
+                    products,
 					oferta,
 					destacado,
 					toThousand
