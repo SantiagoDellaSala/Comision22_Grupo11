@@ -3,13 +3,7 @@ const db = require("../database/models");
 const modelRespondeUser = {
   attributes : {
     exclude : ['createdAt', 'updatedAt', 'roleId', 'troleyId', 'password', 'avatar']
-  },  
-  include: [
-    {
-        association : 'role',
-        attributes : ['name']
-    },
-  ]
+  }
 }
 
 module.exports = {
