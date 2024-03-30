@@ -24,6 +24,7 @@ const upload = multer({storage})
 /* /users */
 router
   .get('/api/users', listUsers)
+  .get('/api/users/:id', detailUsers)
  
 
   .get('/login',checkAuthUser,login)

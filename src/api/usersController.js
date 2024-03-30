@@ -2,20 +2,24 @@ const db = require("../database/models");
 
 const modelRespondeUser = {
   attributes : {
-    exclude : ['createdAt', 'updatedAt', 'roleId', 'troleyId', 'password', 'avatar']
-  }
+    exclude : ['createdAt', 'updatedAt', 'roleId', 'troleyId', 'password']
+  },
+  
 }
 
 module.exports = {
   listUsers : async (req, res) => {
     try {
+      const { count, rows} = await db.User.findAndCountAll()
+
       const users = await db.User.findAll(modelRespondeUser)
       return res.status(200).json({
         ok : true,
         meta : {
           status : 200,
           total : users.lenght,
-          url : `http://${req.get('host')}/api/users`
+          url : `http://${req.get('host')}/api/users`,
+          count,
         },
         data : users
     })
@@ -48,7 +52,8 @@ module.exports = {
           total : user.lenght,
           url : `http://${req.get('host')}/api/users/${user.id}`
         },
-        data : user
+        data : user,
+        avatar : `${req.protocol}://${req.get('host')}/images/avatars/${user.avatar}`,
     })
     } catch (error) {
       return res.status(error.status || 500).json({
