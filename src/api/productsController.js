@@ -39,22 +39,19 @@ const modelResponseProduct = {
 module.exports = {
   listProduct : async (req, res) => {
     try {
-      const products = await db.Product.findAll(modelResponseProduct)
+      const { count, rows} = await db.Product.findAndCountAll(modelResponseProduct)
 
-      const productsWithURL = products.map(product => {
+      const products = rows.map(product => {
         return {
           ...product.dataValues,
-        URL : `http://${req.get('host')}/api/movies/${product.id}`
+          detail : `${req.protocol}://${req.get('host')}/products/${product.id}`
         }
       })
+
       return res.status(200).json({
         ok : true,
-        meta : {
-          status : 200,
-          total : products.lenght,
-          url : `http://${req.get('host')}/api/products`
-        },
-        data : productsWithURL
+        count,
+        products
     })
     } catch (error) {
       return res.status(error.status || 500).json({
@@ -65,28 +62,21 @@ module.exports = {
   },
   detailProduct: async (req, res) => {
     try {
-      let error;
       const product = await db.Product.findByPk(req.params.id, modelResponseProduct)
-      if (isNaN(req.params.id)) {
-        error = new Error('ID inválido...')
-        error.status = 400
-        throw error
+
+      const productCustom = {
+        ...product.dataValues,
+        category : product.category.name,
+        material : product.material.name,
+        origin : product.origin.name,
+        quality : product.quality.name,
+        image : `${req.protocol}://${req.get('host')}/images/${product.mainImage}`
       }
-  
-      if (!product) {
-        error = new Error('No hay un producto con ese ID...')
-        error.status = 404
-        throw error
-      }
+
       return res.status(200).json({
         ok : true,
-        meta : {
-          status : 200,
-          total : product.lenght,
-          url : `http://${req.get('host')}/api/products/${product.id}`
-        },
-        data : product
-    })
+        product : productCustom
+      })
     } catch (error) {
       return res.status(error.status || 500).json({
         ok : false,

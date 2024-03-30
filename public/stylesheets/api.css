@@ -1,0 +1,45 @@
+.api__body {
+    width: 100%;
+    font-family: var(--font-Monserrat);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #ffffff;
+}
+
+/* HEADER */
+.api__header {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem;
+    background-color: #6495ed;
+    border: 1px solid black;
+}
+
+.api__header ul {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.api__header h3 {
+    color: #ebebeb;
+}
+
+.a_api {
+    color: #ebebeb;
+}
+
+/* MAIN */
+.api__main {
+    width: 98%;
+}
+
+.api__main table,th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
