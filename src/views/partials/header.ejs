@@ -1,0 +1,62 @@
+<header class="header">
+    <div class="header__div">
+        <div class="div__menu">
+            <a href="#" class="hamburguesa"><i class="fa-solid fa-bars"></i></a>
+            <nav class="header__nav">
+                <ul class="nav-ul">
+                    <li><a href="/" class="nav-li">Home</a></li>
+                    <li><a href="/products/category/<%=1%>" class="nav-li">Pesca</a></li>
+                    <li><a href="/products/category/2"" class="nav-li">Camping</a></li>
+                    <li><a href="/products/category/3" class="nav-li">Óptica</a></li>
+                    <li><a href="/products/category/4" class="nav-li">Iluminación</a></li>
+                    <li><a href="/products/category/5" class="nav-li">Accesorios</a></li>
+                    
+                    
+                    
+                    <% if (locals.userLogin) { %>
+                        <% if (userLogin.role===1 ) { %>
+                            <li><a class="nav-li" href="/admin">Admin</a></li>
+                        <% }else{ %>
+                            <li><a class="nav-li" href="/products/allProducts">Productos</a></li>
+                        <% } %>
+                        <li><a class="nav-li" href="/users/salir">Salir</a></li>
+                    <% } %>
+                    
+                </ul>
+            </nav>
+        </div>
+        <div class="elementos">
+            <div></div>
+            <div class="header__logo">
+                <a href="/">
+                    <img src="/images/logo.svg" alt="" class="logo">
+                    <img src="/images/nombre_logo.svg" alt="" class="nombre_logo">
+                </a>
+            </div>
+
+            <div class="header__buscar">
+                <form action="/search" method="get" class="search-form">
+                    <input type="text" name="keywords" placeholder="Buscar" class="header__input">
+                    <button type="submit" class="header__button"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+
+            <div class="header__div__login">
+                <% if (locals.userLogin) { %>
+                    <a href="/users/profile/<%= userLogin.id %>">
+                        <img src="/images/avatars/<%=userLogin.avatar||'default.png'%>" alt="" class="usuario__perfil">
+                    </a>
+
+                    <% } else { %>
+                        <a href="/users/login">
+                            <img src="/images/usuario.svg" alt="" class="usuario__perfil">
+                        </a>
+                        <% } %>
+
+                            <a href="/carrito">
+                                <img src="/images/carrito.svg" alt="" class="usuario__carrito">
+                            </a>
+            </div>
+        </div>
+    </div>
+</header>
