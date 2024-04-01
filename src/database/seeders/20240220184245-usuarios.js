@@ -8,9 +8,7 @@ const bcryptjs = require('bcryptjs')
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    
 
-    
       await queryInterface.bulkInsert('Users', [
 
         {
@@ -29,6 +27,7 @@ module.exports = {
            email: 'user@gmail.com',
         password: bcryptjs.hashSync(process.env.PASSWORD_ADMIN,10),
           roleId: 2, 
+          avatar: '/images/avatars/1710913544026_img_.png',
           troleyId: 1,
         createdAt: new Date(),
        updatedAt: new Date()

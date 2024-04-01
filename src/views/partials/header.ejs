@@ -1,9 +1,6 @@
 <header class="header">
 
     <div class="header__container">
-        <a href="#" class="header__menuHam">
-            <i class="fa-solid fa-bars"></i>
-        </a>
         <div class="header__logo">
             <a href="/"><img src="/images/logo.svg" alt="logo"></a> 
             <img src="/images/nombre_logo.svg" alt="nombre-logo">
@@ -16,6 +13,18 @@
                 </button>
             </form>
         </div>
+        <!-- MENU HAMBURGUESA -->
+        <div class="categorias">
+            <a id="categoriasBtn"><i class="fa-solid fa-bars"></i></a>
+            <div id="categoriasOptions" class="options">
+                <a href="/products/category/<%=1%>" class="nav-li">Pesca</a>
+                <li><a href="/products/category/2" class="nav-li">Camping</a></li>
+                <li><a href="/products/category/3" class="nav-li">Óptica</a></li>
+                <li><a href="/products/category/4" class="nav-li">Iluminación</a></li>
+                <li><a href="/products/category/5" class="nav-li">Accesorios</a></li>
+            </div>
+        </div>
+        <!-- MENU HAMBURGUESA -->
         <div class="header__user">
             <% if (locals.userLogin) { %>
                 <a href="/users/profile/<%= userLogin.id %>">
@@ -31,7 +40,6 @@
             </a>
         </div>
     </div>
-
     <nav class="header__nav">
         <ul>
             <li><a href="/" class="nav-li">Home</a></li>
@@ -42,12 +50,28 @@
             <li><a href="/products/category/5" class="nav-li">Accesorios</a></li>
             <% if (locals.userLogin) { %>
                 <% if (userLogin.role===1 ) { %>
-                    <li><a class="nav-li" href="/admin">Admin</a></li>
+                    <li id="botonAdmin"><a class="nav-li" href="/admin">Dashboard</a></li>
                 <% }else{ %>
                     <li><a class="nav-li" href="/products/allProducts">Productos</a></li>
                 <% } %>
-                <li><a class="nav-li" href="/users/salir">Salir</a></li>
+                <li id="botonSalir"><a class="nav-li" href="/users/salir">Salir</a></li>
             <% } %>                 
         </ul>
     </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var categoriasBtn = document.getElementById('categoriasBtn');
+    var categoriasOptions = document.getElementById('categoriasOptions');
+
+    categoriasBtn.addEventListener('click', function() {
+        categoriasOptions.style.display = (categoriasOptions.style.display === 'block') ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!categoriasBtn.contains(event.target)) {
+            categoriasOptions.style.display = 'none';
+        }
+    });
+});
+    </script>
 </header>

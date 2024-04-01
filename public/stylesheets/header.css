@@ -74,20 +74,41 @@
 .header__user {
   width: 33%;
   display: flex;
-  justify-content: space-evenly;
+  gap: 1rem;
   align-items: center;
+  justify-content: center;
 }
 
 .header__user a {
-  width: 20%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#botonAdmin {
+  background-color: #92c231;
+}
+
+#botonAdmin a {
+  color: #000000;
+}
+
+#botonSalir {
+  background-color: #a81313;
+}
+
+.usuario__carrito {
+  width: 30%;
 }
 
 .usuario__perfil {
-  width: 100%;
+  width: 50%;
   border-radius: 50%;
 }
 
-.header__menuHam {
+.categorias {
   display: none;
 }
 
@@ -111,12 +132,40 @@
 
 @media (max-width :639px) {
 
-  /* HEADER (Santiago) */
   .header__nav {
       display: none;
   }
 
-  .header__menuHam {
+  .categorias {
       display: block;
-    }
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20%;
+   }
+  .search-form {
+    width: 80%;
+  }
+}
+
+.categorias {
+  position: relative;
+}
+
+.options a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.options a:hover {
+  background-color: #ddd;
+}
+
+#categoriasBtn {
+  background-color: #01afda;
+  border: none;
 }
