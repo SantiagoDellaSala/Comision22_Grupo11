@@ -17,7 +17,7 @@ module.exports = {
         ok : true,
         meta : {
           status : 200,
-          total : users.lenght,
+          total : users.length,  
           url : `http://${req.get('host')}/api/users`,
           count,
         },
@@ -49,7 +49,7 @@ module.exports = {
         ok : true,
         meta : {
           status : 200,
-          total : user.lenght,
+          total : user.length,
           url : `http://${req.get('host')}/api/users/${user.id}`
         },
         data : user,
