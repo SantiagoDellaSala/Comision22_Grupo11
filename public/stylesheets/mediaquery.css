@@ -21,11 +21,6 @@
         align-items: center;
     }
 
-    /* HOME (Santiago)*/
-    .home__main--mobile {display: none;}
-
-    .home__main--mobileOff {display: block;}
-
     /* REGISTER (Santiago) */
     .register__main__div {
         width: 100%;
@@ -38,120 +33,11 @@
         display: block !important;
         width: 70%;
     }
-
-    .coso {
-        width: 40%;
-    }
-
-    .img-desc,
-    .img-producto {
-
-        width: 40vw;
-        margin-left: 5vw;
-    }
-
-    .precio-cant {
-        margin: 2vw;
-        padding: 15px 10px;
-        width: 40vw;
-        flex-direction: row;
-        gap: 8px;
-    }
-
-    .precio-cant table {
-        width: 18vw;
-        margin: 0;
-        justify-content: space-evenly;
-    }
-
-    .precio-cant table td, button {width: 3vw;}
-    .precio-cant table #cantidad {width: 7vw;}
-
-    .b-compras input {width: 18vw;}
-
-    .desc-producto {width: 50vw;}
-
-    .productDetail__p span {
-        width: 40vw;
-        font-size: 20px;
-    }
-
-    .productDetail__h4{font-size: 20px;}
-    .tb-producto {
-        width: 40vw;
-        font-size: 20px;
-        margin-right: 5vw;
-    }
-
-    .img-desc-pre section {
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 0 20px
-    }
-
-    .precio-n {font-size: 30px;}
-
-    .a-titulo,
-    .titulo,
-    .precio-cant {
-        width: 40vw;
-        height: auto;
-        font-size: 25px;
-        margin: 5vw 0 5vh;  
-        /* text-align: left; */
-    }
-    .header__nav {
-        display: flex;
-        
-        justify-content:space-around;
-
-        width: 95vw;
-        background-color: black;
-    }
-
-    .nav-ul{
-        width: 80vw;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        gap: 12%;
-        margin-top: 10px;
-    }
 }   
 
 
 
 @media (min-width: 1024px) {
-
-    .header__div__login {
-        
-        height:auto
-        
-    }
-    
-    .header__div__login img {width: 4vw;height:4vw;}
-    .usuario__carrito {width: 60%; height: 50px;} 
-
-
-    /* PRODUCT DETAIL (Yohanna) */
-    .nav-ul{
-        flex-wrap: nowrap;
-        gap: 2%;
-    }
-
-    .precio-cant {width: 35vw;}
-
-    .desc-producto {width: 50vw;}
-
-    .img-desc-pre .productDetail__section {
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: 10px;
-    }
-
-    .precio-n {font-size: 35px;}
-
-    .b-compras input {width: 15vw;}
 
     /* REGISTER (Santiago) */
     .register__main__div {

@@ -100,29 +100,3 @@
 .register-noLogin p a {
     text-decoration: underline;
 }
-
-@media (min-width: 768px) {
-    
-    
-
-}
-
-/* @media (min-width:1024px){
-
-    .main-login {
-        background-image: url(/images/login/austin-neill-n4FwReqOQz0-unsplash.jpg);
-        background-size: cover;
-        display: flex;
-        justify-content: end;
-        height: 100vh;
-    }
-
-    .login {
-        padding: 30px 102px;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-} */
