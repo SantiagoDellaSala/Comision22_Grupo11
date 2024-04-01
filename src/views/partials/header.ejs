@@ -27,7 +27,7 @@
         <!-- MENU HAMBURGUESA -->
         <div class="header__user">
             <% if (locals.userLogin) { %>
-                <a href="/users/profile/<%= userLogin.id %>">
+                <a href="/users/profile">
                     <img src="/images/avatars/<%=userLogin.avatar||'default.png'%>" alt="" class="usuario__perfil">
                 </a>
             <% } else { %>

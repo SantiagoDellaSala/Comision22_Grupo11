@@ -26,7 +26,7 @@ router
   .post('/login', userLoginValidator, processLogin )
   .get('/register', register)
   .post('/register', upload.single('avatar'),userRegisterValidator, processRegister)
-  .get('/profile/:id', checkUserLogin ,profile)
+  .get('/profile', checkUserLogin ,profile)
   .get('/editProfile', profileEdit)
   .put('/editProfile',upload.single('avatar'),userEditValidator, profileUpload)
   .get('/salir',logout)
