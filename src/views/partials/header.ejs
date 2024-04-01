@@ -43,7 +43,7 @@
 
             <div class="header__div__login">
                 <% if (locals.userLogin) { %>
-                    <a href="/users/profile">
+                    <a href="/users/profile/<%= userLogin.id %>">
                         <img src="/images/avatars/<%=userLogin.avatar||'default.png'%>" alt="" class="usuario__perfil">
                     </a>
 
