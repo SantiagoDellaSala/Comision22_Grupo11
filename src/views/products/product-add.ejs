@@ -23,8 +23,9 @@
                                     <hr>
                                     <div class="col-12 col-md-6 mb-3 ">
                                         <div class="form-floating ">
-                                            <input name="name" type="text" class="form-control" id="name">
+                                            <input name="name" value="<%= locals.old && old.name ? old.name : null %>" type="text" class="form-control" id="name" >
                                             <label for="name">Nombre del producto</label>
+                                            <span class="text-danger ms-2"><%= locals.error && error.name ? error.name.msg : null %></span>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-3 mb-3">
