@@ -1,174 +1,197 @@
-console.log('register validator success!');
-const exRegEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
-const exRegPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,12}$/
+const { Button } = require("bootstrap");
 
-const $ = (id) => document.getElementById(id);
-
-const checkEmail = async (email) => {
-    try {
-
-        const response = await fetch('http://localhost:3000/apis/users/check-email?email=' + email)
-        const result = await response.json();
-
-        return result.isRegisted       
-
-    } catch (error) {
-        console.error
-    }
+function qs(element){
+    return document.querySelector(element);
 }
 
-$('name').addEventListener('focus', function(){
-    this.classList.remove('is-invalid')
-});
+window.addEventListener('load',function(){
+    let $form =qs ('#form'),
+    $inputName = qs('#name'),
+    $nameErrors = qs('#nameErrors'),
+    $inputsurname = qs('#surname'),
+    $surnameErrors = qs('#surnameErrors'),
+    $email = qs('#email'),
+    $emailErrors = qs('#emailErrors'),
+    $pass = qs('#pass'),
+    $passErrors = qs('#passErrors'),
+    $pass2 = qs('#pass2'),
+    $pass2Errors = qs('#pass2Errors'),
+    /* $buttonEye1 = qs('.eye1'),
+    $buttonEye2 = qs('.eye2'), */
+    $file = qs('#avatar'),
+    $fileErrors = qs('#fileErrors'),
+    regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
+    regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
+    regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
 
-$('surname').addEventListener('focus', function(){
-    this.classList.remove('is-invalid')
-});
-
-$('email').addEventListener('focus', function(){
-    this.classList.remove('is-invalid')
-});
-
-$('email').addEventListener('keydown', function(){
-    $('error-email').innerHTML = null
-});
-
-$('password').addEventListener('focus', function(){
-    this.classList.remove('is-invalid')
-});
-
-$('password2').addEventListener('focus', function(){
-    this.classList.remove('is-invalid')
-});
-
-$('name').addEventListener('blur', function(){
-    switch (true) {
-        case !this.value:
-            this.classList.add('is-invalid');
-            $('error-name').innerHTML = "El nombre es obligatorio"
+    //Nombre
+    $inputName.addEventListener('blur', function(){
+        console.log($inputName.value.trim())
+        switch (true) {
+            case !$inputName.value.trim():
+                $nameErrors.innerHTML = 'El campo nombre es obligatorio';
+                $inputName.classList.add('is-invalid');
             break;
-        case this.value.length < 2:
-            this.classList.add('is-invalid');
-            $('error-name').innerHTML = "Mínimo dos caracteres"
-            break;
-        default:
-            this.classList.remove('is-invalid');
-            $('error-name').innerHTML = null
-            break;
-    }
-});
-
-$('surname').addEventListener('blur', function(){
-    switch (true) {
-        case !this.value:
-            this.classList.add('is-invalid');
-            $('error-surname').innerHTML = "El apellido es obligatorio"
-            break;
-        case this.value.length < 2:
-            this.classList.add('is-invalid');
-            $('error-surname').innerHTML = "Mínimo dos caracteres"
-            break;
-        default:
-            this.classList.remove('is-invalid');
-            $('error-surname').innerHTML = null
-            break;
-    }
-});
-
-$('email').addEventListener('blur', async function(){
-    switch (true) {
-        case !this.value:
-            this.classList.add('is-invalid');
-            $('error-email').innerHTML = "El email es obligatorio"
-            break;
-        case !exRegEmail.test(this.value):
-            this.classList.add('is-invalid');
-            $('error-email').innerHTML = "El email tiene un formato inválido"
-            break;
-        case await checkEmail(this.value) :{
-            this.classList.add('is-invalid');
-            $('error-email').innerHTML = "El email ya está registrado"
+            case !regExAlpha.test($inputName.value):
+                $nameErrors.innerHTML = 'Ingresa un nombre valido';
+                $inputName.classList.add('is-invalid');
+                break;
+            case $inputName.value.trim().length <= 2:
+                    $nameErrors.innerHTML = 'El nombre debe tener más de 2 caracteres';
+                    $inputName.classList.add('is-invalid');
+                break;
+            default:
+                $inputName.classList.remove('is-invalid');
+                $inputName.classList.add('is-valid');
+                $nameErrors.innerHTML = ""
             break;
         }
-        default:
-            this.classList.remove('is-invalid');
-            $('error-email').innerHTML = null
+    });
+
+    //Apellido
+    $inputsurname.addEventListener('blur', function(){
+        console.log($inputsurname.value.trim())
+        switch (true) {
+            case !$inputsurname.value.trim():
+                $surnameErrors.innerHTML = 'El campo Apellido es obligatorio';
+                $inputsurname.classList.add('is-invalid');
             break;
-    }
-});
-
-$('password').addEventListener('blur', function(){
-    switch (true) {
-        case !this.value:
-            this.classList.add('is-invalid');
-            $('error-password').innerHTML = "La contraseña es obligatoria"
+            case !regExAlpha.test($inputsurname.value):
+                $surnameErrors.innerHTML = 'Ingresa un Apellido valido';
+                $inputsurname.classList.add('is-invalid');
+                break;
+            case $inputsurname.value.trim().length <= 1:
+                    $surnameErrors.innerHTML = 'El Apellido debe tener más de un caracter';
+                    $inputsurname.classList.add('is-invalid');
+                break;
+            default:
+                $inputsurname.classList.remove('is-invalid');
+                $inputsurname.classList.add('is-valid');
+                $surnameErrors.innerHTML = "";
             break;
-        case !exRegPass.test(this.value):
-            this.classList.add('is-invalid');
-            $('error-password').innerHTML = "Debe tener entre 6 y 12 caracteres, minúsucula, mayúscula y caracter especial"
-            break;
-        default:
-            this.classList.remove('is-invalid');
-            $('error-password').innerHTML = null
-            break;
-    }
-});
-
-$('button-eye').addEventListener('click', function(){
-   this.classList.toggle('fa-eye')
-   this.classList.toggle('fa-eye-slash')
-   $('password').type = $('password').type === "password" ? "text" : "password"
-});
-
-$('password2').addEventListener('blur', function(){
-    switch (true) {
-        case !this.value.trim() :
-            this.classList.add('is-invalid');
-            $('error-password2').innerHTML = "La verificación es obligatoria"
-            break;
-        default:
-            this.classList.remove('is-invalid');
-            $('error-password2').innerHTML = null   
-            break;
-    }
-});
-
-$('password2').addEventListener('keyup', function(){
-    switch (true) {
-        case this.value != $('password').value :
-            this.classList.add('is-invalid');
-            $('error-password2').innerHTML = "Las contraseñas no coinciden"
-            break;
-        default:
-            this.classList.remove('is-invalid');
-            $('error-password2').innerHTML = null   
-            break;
-    }
-});
-
-$('remember').addEventListener('click', () => {
-    $('error-remember').innerHTML = null
-
-})
-
-
-$('form-register').addEventListener('submit', function (e) {
-    e.preventDefault()
-
-    let error = false;
-
-    for (let i = 0; i < this.elements.length - 2; i++) {
-        if(!this.elements[i].value){
-            error = true;
-            this.elements[i].classList.add('is-invalid')
         }
+    });
+
+    //Email
+    $email.addEventListener('blur', function(){
+        switch (true) {
+            case !$email.value.trim():
+                $emailErrors.innerHTML = 'El campo email es obligatorio';
+                $email.classList.add('is-invalid');
+                break;
+            case !regExEmail.test($email.value):
+                $emailErrors.innerHTML = 'Debe ingresar un email válido';
+                $email.classList.add('is-invalid');
+                break;    
+            default:
+                $email.classList.remove("is-invalid");
+                $email.classList.add('is-valid');
+                $emailErrors.innerHTML = "";
+                break;
+        }
+    });
+
+    //password
+    $pass.addEventListener('blur', function(){
+        switch (true) {
+            case !$pass.value.trim():
+                $passErrors.innerHTML = 'El campo contraseña es obligatorio';
+                $pass.classList.add('is-invalid');
+                break;
+            case !regExPass.test($pass.value):
+                $passErrors.innerHTML = 'La contraseña debe tener: entre 6 o 12 caracteres, al menos una mayúscula, una minúscula y un número';
+                $pass.classList.add('is-invalid');
+                break;    
+            default:
+                $pass.classList.remove("is-invalid");
+                $pass.classList.add('is-valid');
+                $passErrors.innerHTML = "";
+                break;
+        }
+    });
+
+    //password 2
+    $pass2.addEventListener('blur', function(){
+        switch (true) {
+            case !$pass2.value.trim():
+                $pass2Errors.innerHTML = 'Reingresa la contraseña';
+                $pass2.classList.add('is-invalid');
+                break;
+            case $pass2.value !== $pass.value:
+                $pass2Errors.innerHTML = 'las contraseñas no coinciden';
+                $pass2.classList.add('is-invalid');
+                break;             
+            default:
+                $pass2.classList.remove('is-invalid');
+                $pass2.classList.add('is-valid');
+                $pass2Errors.innerHTML = "";
+                break;
+        }
+    });
+
+    
+    //Img
+    $file.addEventListener('change', function fileValidation() {
+        let filePath = $file.value, //Capturo el valor del input
+            allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i //Extensiones permitidas
+
+        if (!allowefExtensions.exec(filePath)) { //exec()  busca sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
+            $fileErrors.innerHTML = 'Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)';
+            $file.value = '';
+            $imgPreview.innerHTML = '';
+            return false;
+        } else {
+            // Image preview
+            console.log($file.files);
+            if ($file.files && $file.files[0]) {
+                let reader = new FileReader();
+                reader.onload = function (e) {
+                    $imgPreview.innerHTML = '<img src="' + e.target.result + '"/>';
+                };
+                reader.readAsDataURL($file.files[0]);
+                $fileErrors.innerHTML = '';
+                $file.classList.remove('is-invalid');
+            }
+        }     
+    });
+
+    /* const ojo = (params) => {
+        params.addEventListener('click', function(){
+            this.classList.toggle('fa-eye')
+            this.classList.toggle('fa-eye-slash')
+            $pass.type = $('password').type === "password" ? "text" : "password"
+        });
     }
 
-    if (!$('remember').checked){
-        error = true;
-        $('error-remember').innerHTML = "Debes aceptar los términos y condiciones"
+    ojo($buttonEye1)
+    ojo($buttonEye2) */
 
-    }
 
-    !error ? this.submit() : $('msg-error').hidden = false
-})
+    $form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let error = false;
+        let formElements = this.elements;
+        console.log(formElements)
+
+        for (let index = 0; index < formElements.length - 1; index++) {
+            /* if (
+                formElements[index].value === "" &&
+                formElements[index].name !== "avatar" &&
+                formElements[index].name !== "phone" ||
+                formElements[index].classList.contains('is-invalid')
+            ) */ {
+                formElements[index].classList.add('is-invalid');
+                submitErrors.innerHTML = "Los campos señalados son obligatorios";
+                error = true;
+            }
+        }
+
+        if (!error) {
+            console.log('Todo bien');
+            $form.submit();
+        }
+    });
+});
+
+
+
