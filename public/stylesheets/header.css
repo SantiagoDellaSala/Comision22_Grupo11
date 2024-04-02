@@ -100,12 +100,16 @@
 }
 
 .usuario__carrito {
-  width: 30%;
+  width: 35%;
 }
 
 .usuario__perfil {
   width: 50%;
   border-radius: 50%;
+}
+
+.usuario__perfil2 {
+  width: 35%;
 }
 
 .categorias {

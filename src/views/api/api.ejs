@@ -28,45 +28,110 @@
                 <tr>
                     <td>http://localhost:3030/api/products</td>
                     <td>Cantidad de productos (count), array con lista de productos (productos)</td>
-                    <td>{<br>
-                        "ok": true,<br>
-                        "count": 3,<br>
-                        "products": [<br>
-                          {<br>
-                    "id": 1,<br>
-                    "name": "Caña de pescar",<br>
-                    "price": 25000,<br>
-                    "description": "Caña de largo alcance y resistente.",<br>
-                    "discount": 10,<br>
-                    "mainImage": "CAÑA-AMBERJACK-2.10M.jpeg",<br>
-                    "category": "pesca",<br>
-                    "material": "metal",<br>
-                    "origin": "China",<br>
-                    "quality": "oferta",<br>
-                    "image": null,<br>
-                    "detail": "http://localhost:3030/products/1"<br>
-                    ]</td>
+                    <td>
+                      <p>
+                        {
+                          "ok": true,
+                          "count": 3,
+                          "products": [
+                            {
+                      "id": 1,
+                      "name": "Caña de pescar",
+                      "price": 25000,
+                      "description": "Caña de largo alcance y resistente.",
+                      "discount": 10,
+                      "mainImage": "CAÑA-AMBERJACK-2.10M.jpeg",
+                      "category": "pesca",
+                      "material": "metal",
+                      "origin": "China",
+                      "quality": "oferta",
+                      "image": null,
+                      "detail": "http://localhost:3030/products/1"
+                      ]
+                      }
+                      }
+                      </p>
+                    </td>
                 </tr>
                 <tr>
                     <td>http://localhost:3030/api/products/2</td>
                     <td>Detalle de un producto en específico (product).</td>
                     <td>
-                        {<br>
-                            "ok": true,<br>
-                            "product": {<br>
-                              "id": 2,<br>
-                              "name": "Anteojos Galaxy Black",<br>
-                              "price": 14500,<br>
-                              "description": "Protección y durabilidad, para su seguridad visual.",<br>
-                              "discount": 5,<br>
-                              "mainImage": "LENTES-DE-SOL-PAYO-ACONCAGUA.jpeg",<br>
-                              "category": "camping",<br>
-                              "material": "plastico",<br>
-                              "origin": "Brasil",<br>
-                              "quality": "destacado",<br>
-                              "image": "http://localhost:3030/images/LENTES-DE-SOL-PAYO-ACONCAGUA.jpeg"<br>
-                            }<br>
-                          }</td>
+                      <p>
+                        {
+                          "ok": true,
+                          "product": {
+                            "id": 2,
+                            "name": "Anteojos Galaxy Black",
+                            "price": 14500,
+                            "description": "Protección y durabilidad, para su seguridad visual.",
+                            "discount": 5,
+                            "mainImage": "LENTES-DE-SOL-PAYO-ACONCAGUA.jpeg",
+                            "category": "camping",
+                            "material": "plastico",
+                            "origin": "Brasil",
+                            "quality": "destacado",
+                            "image": "http://localhost:3030/images/LENTES-DE-SOL-PAYO-ACONCAGUA.jpeg"
+                          }
+                        }
+                      </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>http://localhost:3030/api/users</td>
+                    <td>Cantidad de usuarios (count), array con lista de usuarios (usuarios)</td>
+                    <td>
+                      <p>
+                        {
+                          "ok": true,
+                          "meta": {
+                            "status": 200,
+                            "url": "http://localhost:3030/api/users",
+                            "count": 4
+                          },
+                          "data": [
+                            {
+                              "id": 1,
+                              "name": "Admin",
+                              "surname": "Suydss",
+                              "email": "admin@gmail.com",
+                              "avatar": "1711992471330_img_.jpg"
+                            },
+                            {
+                              "id": 2,
+                              "name": "User",
+                              "surname": "Suydss",
+                              "email": "user@gmail.com",
+                              "avatar": "1711993565354_img_.jpg"
+                            }
+                          ]
+                        }
+                      </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>http://localhost:3030/api/users/1</td>
+                    <td>Detalle de un usuario en específico (user), manteniendo ocultos datos importante.
+                        Se incluye también la URL de la imágen de perfíl.
+                    </td>
+                    <td>
+                      <p>{
+                        "ok": true,
+                        "meta": {
+                          "status": 200,
+                          "url": "http://localhost:3030/api/users/1"
+                        },
+                        "data": {
+                          "id": 1,
+                          "name": "Admin",
+                          "surname": "Suydss",
+                          "email": "admin@gmail.com",
+                          "avatar": "1711992471330_img_.jpg"
+                        },
+                        "avatar": "http://localhost:3030/images/avatars/1711992471330_img_.jpg,"
+                      }
+                      </p>
+                    </td>
                 </tr>
             </table>
         </main>
