@@ -19,8 +19,4 @@ module.exports = [
             max: 15
         }).withMessage('El apellido debe tener mínimo 3 letras y máximo 15').bail()
         .isAlpha('es-ES',{ignore: ' '}).withMessage('Solo caracteres alfabéticos'),
-    
-    body('email')
-        .notEmpty().withMessage('El email es obligatorio').bail()
-        .isEmail().withMessage('El email tiene un formato invalido').bail(),    
-]
+    ]

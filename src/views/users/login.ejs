@@ -14,7 +14,7 @@
     
     <div class="form-container">
         
-        <form action="" method="POST">
+        <form action="" method="POST" id="form">
             
             <div class="form">
                 
@@ -22,13 +22,17 @@
                     <label for="email" class="form-label"></label>
                     <input type="email" value="<%= locals.old && old.email ? old.email : null %>" name="email" class="input-style"  id="email" placeholder="Email">
                     <span class="text-danger ms-2"><%= locals.errors && errors.email ? errors.email.msg : null %></span>
-                    <!-- <span class="error-message">Debes ingresar un email</span> -->
+                    <div>
+                        <span id="emailErrors" style="color: red;"></span>
+                    </div>
                 </div>
                 <div class="input-container">
                     <label for="password" class="form-label"></label>
                     <input type="password" value="<%= locals.old && old.password ? old.password : null %>" name="password" class="input-style"  id="password" placeholder="Contraseña">
                     <span class="text-danger ms-2"><%= locals.errors && errors.password ? errors.password.msg : null %></span>
-                    <!-- <span class="error-message">Debes ingresar un email</span> -->
+                    <div>
+                        <span id="passErrors" style="color: red;"></span>
+                    </div>
                 </div>  
             </div>
             <div class="form-check">
@@ -77,6 +81,7 @@
 
 </div>
 </main>
+<script src="../../js/loginValidator.js"></script>
 <%- include('../partials/footer.ejs') %>
 </body>
 </html>
