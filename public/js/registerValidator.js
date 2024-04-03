@@ -1,4 +1,3 @@
-const { Button } = require("bootstrap");
 
 function qs(element){
     return document.querySelector(element);
@@ -16,8 +15,6 @@ window.addEventListener('load',function(){
     $passErrors = qs('#passErrors'),
     $pass2 = qs('#pass2'),
     $pass2Errors = qs('#pass2Errors'),
-    /* $buttonEye1 = qs('.eye1'),
-    $buttonEye2 = qs('.eye2'), */
     $file = qs('#avatar'),
     $fileErrors = qs('#fileErrors'),
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/,
@@ -132,14 +129,14 @@ window.addEventListener('load',function(){
     
     //Img
     $file.addEventListener('change', function fileValidation() {
-        let filePath = $file.value, //Capturo el valor del input
+        let filePath = $file.value, 
             allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i //Extensiones permitidas
 
-        if (!allowefExtensions.exec(filePath)) { //exec()  busca sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
+        if (!allowefExtensions.exec(filePath)) { 
             $fileErrors.innerHTML = 'Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)';
             $file.value = '';
             $imgPreview.innerHTML = '';
-            return false;
+            return true;
         } else {
             // Image preview
             console.log($file.files);
@@ -174,12 +171,10 @@ window.addEventListener('load',function(){
         console.log(formElements)
 
         for (let index = 0; index < formElements.length - 1; index++) {
-            /* if (
-                formElements[index].value === "" &&
-                formElements[index].name !== "avatar" &&
-                formElements[index].name !== "phone" ||
+            if (
+                formElements[index].value === "" ||
                 formElements[index].classList.contains('is-invalid')
-            ) */ {
+            ) {
                 formElements[index].classList.add('is-invalid');
                 submitErrors.innerHTML = "Los campos señalados son obligatorios";
                 error = true;

@@ -39,7 +39,7 @@ window.addEventListener('load', function () {
             case !regExPass.test($password.value):
                 $passErrors.innerHTML = 'Contraseña incorrecta';
                 $password.classList.add('is-invalid');
-                break;
+                break; 
             default:
                 $password.classList.remove("is-invalid");
                 $password.classList.add('is-valid');
