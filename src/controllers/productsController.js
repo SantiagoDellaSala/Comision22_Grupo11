@@ -116,7 +116,7 @@ module.exports = {
         })
         .catch((error) => console.log(error));
     } else {
-      return res.render("admin", {
+      return res.render("/admin", {
         id: req.params.id,
         name: req.body.name,
         categoryId: req.body.categoryId,

@@ -4,6 +4,8 @@ const multer = require('multer')
 const path = require('path')
 const { detail, add, edit, update, create, allProducts, remove, filterCat} = require('../controllers/productsController');
 
+const productAddValidator = require('../validations/product-add-validator')
+const productEditValidator = require('../validations/product-edit-validator')
 
 const storage = multer.diskStorage({
   destination:(req,file,cb)=>{
@@ -23,8 +25,8 @@ router
   .get('/detail/:id', detail)
   .get('/agregar', add)
   .get('/editar/:id', edit)
-  .put('/editar/:id',upload.single('mainImage') , update)
-  .post('/create',upload.single('mainImage'),create)
+  .put('/editar/:id',upload.single('mainImage'),productEditValidator, update)
+  .post('/create',upload.single('mainImage'),productAddValidator,create)
   .delete('/delete/:id', remove)
   .get('/category/:id', filterCat) 
 
