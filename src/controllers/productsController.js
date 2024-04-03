@@ -132,34 +132,68 @@ module.exports = {
   },
   /* Ulises */
   create: (req, res) => {
-    const {
-      name,
-      price,
-      description,
-      discount,
-      categoryId,
-      materialId,
-      originId,
-      qualityId,
-    } = req.body;
 
-    db.Product.create({
-      name,
-      price,
-      description,
-      discount,
-      categoryId,
-      materialId,
-      originId,
-      qualityId,
-      mainImage: req.file ? req.file.filename : null,
-    })
-      .then((newProduct) => {
-        console.log(newProduct);
-        return res.redirect("/admin");
+    const errors = validationResult(req)
+
+    if(errors.isEmpty()){
+      const {
+        name,
+        price,
+        description,
+        discount,
+        categoryId,
+        materialId,
+        originId,
+        qualityId,
+      } = req.body;
+  
+      db.Product.create({
+        name,
+        price,
+        description,
+        discount,
+        categoryId,
+        materialId,
+        originId,
+        qualityId,
+        mainImage: req.file ? req.file.filename : null,
       })
+        .then((newProduct) => {
+          console.log(newProduct);
+          return res.redirect("/admin");
+        })
+  
+        .catch((error) => console.log(error));
+    }else {
+      const categories = db.Category.findAll({
+        order: ["name"],
+      });
+      const materials = db.Material.findAll({
+        order: ["name"],
+      });
+      const qualities = db.Quality.findAll({
+        order: ["name"],
+      });
+      const origins = db.Origin.findAll({
+        order: ["name"],
+      });
+      Promise.all([categories, materials, qualities, origins])
+  
+        .then(([categories, materials, qualities, origins]) => {
+          return res.render("products/product-add", {
+            categories,
+            materials,
+            qualities,
+            origins,
+            errors : errors.mapped(),
+            old : req.body
+          });
+        })
+  
+        .catch((error) => console.log(error));
+    }
 
-      .catch((error) => console.log(error));
+   
   },
   remove: (req, res) => {
     const { id } = req.params;
