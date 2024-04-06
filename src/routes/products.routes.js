@@ -25,7 +25,7 @@ router
   .get('/agregar',productAddValidator,add)
   .get('/editar/:id', edit)
   .put('/editar/:id',upload.single('mainImage') , update)
-  .post('/create',upload.single('mainImage'),create)
+  .post('/create',productAddValidator,upload.single('mainImage'),create)
   .delete('/delete/:id', remove)
   .get('/category/:id', filterCat) 
 
