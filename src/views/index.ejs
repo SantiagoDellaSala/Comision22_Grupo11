@@ -2,6 +2,7 @@
 <html lang="es">
   <!-- HEAD -->
   <%- include('./partials/head.ejs') %>
+  <script src="/js/index.js"></script>
 
   <body class="home">
     <!-- HEADER -->
@@ -33,91 +34,54 @@
           </div>
         </div>
       </div>
+      <!-- BANNER -->
 
-      <div class="home__main--mobile">
-        <section class="home__main__section">
-          <div class="titularesContainer">
-            <h4 class="titulosSections">Destacados</h4>
-            <a href="#">Ver más</a>
-          </div>
-          <!-- Swiper -->
-          <div class="swiper mySwiper2">
-            <div class="swiper-wrapper">
-              <% destacado.forEach(product => { %>
-                <%- include('./partials/productCard', {product}) %>
-              <% }) %>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </section>
-
-        <hr class="lineaSep" />
-
-        <div class="publicidad">
-          <img src="/images/Publicidad2.jpg" alt="publicidad" />
+      <!-- SECCIONES DE PRODUCTOS Y PUBLICIDAD-->
+      <div class="home_container">
+        <div class="div_sections">
+          <h4>Destacados</h4>
+          <section class="productCard_section">
+                  <% destacado.forEach(product => { %> <%-
+                  include('./partials/productCard', {product}) %> <% }) %>
+          </section>     
+          <h4>Ofertas</h4>
+          <section class="productCard_section">
+            <% oferta.forEach(product => { %> <%-
+            include('./partials/productCard', {product}) %> <% }) %>
+          </section>
+          <h4>Todos los productos</h4>
+          <section class="productCard_section">
+            <% products.forEach(product => { %> <%-
+            include('./partials/productCard', {product}) %> <% }) %>
+          </section>
         </div>
-
-        <hr class="lineaSep" />
-
-        <section class="home__main__section">
-          <div class="titularesContainer">
-            <h4 class="titulosSections">Ofertas</h4>
-            <a href="#">Ver más</a>
+        <aside class="aside_home">
+          <div>
+            <h5>Publicidad</h5>
+            <img src="/images/Publicidad.jpg" alt="publicidad1">
+            <img src="/images/Publicidad2.png" alt="publicidad2">
           </div>
-          <!-- Swiper -->
-          <div class="swiper mySwiper2">
-            <div class="swiper-wrapper">
-              <% oferta.forEach(product => { %>
-                <%- include('./partials/productCard', {product}) %>
-              <% }) %> 
+          <div>
+            <h5>Capacitación</h5>
+            <img src="/images/aside1.jpg" alt="capacitacion1">
+          </div>
+          <div>
+            <h5>Utilidades</h5>
+            <div class="home__aside__videos">
+              <p>Calibrar caña de pescar:</p>
+              <iframe class="home__video" src="https://www.youtube.com/embed/TNZEWbbWnzc" frameborder="0" allowfullscreen></iframe>
+              <p>Comenzar a pescar:</p>
+              <iframe class="home__video" src="https://www.youtube.com/embed/tld5k16U_Tk" frameborder="0" allowfullscreen></iframe>
+              <p>Lugares de pesca en Argentina:</p>
+              <iframe class="home__video" src="https://www.youtube.com/embed/l7apf8ryllM" frameborder="0" allowfullscreen></iframe>
+              <p>Carnadas para cada pescado:</p>
+              <iframe class="home__video" src="https://www.youtube.com/embed/x9Jq1Yb9M2M" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </section>
+          </div> 
+        </aside>
       </div>
+      <!-- SECCIONES DE PRODUCTOS Y PUBLICIDAD-->
 
-      <!-- ******TABLET Y DESKTOP****** -->
-      <div class="home__main--mobileOff">
-        <section class="home__main__section">
-          <div class="titularesContainer">
-            <h4 class="titulosSections">Productos destacados</h4>
-          </div>
-          <div class="swiper mySwiper3">
-            <div class="swiper-wrapper">
-              <% destacado.forEach(product => { %>
-                <%- include('./partials/productCard', {product}) %>
-              <% }) %> 
-            </div>
-            <div class=".swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </section>
-
-        <hr class="lineaSep" />
-        <div class="publicidad">
-          <img src="/images/Publicidad.jpg" alt="publicidad" />
-        </div>
-        <hr class="lineaSep" />
-
-        <section class="home__main__section">
-          <div class="titularesContainer">
-            <h4 class="titulosSections">Ofertas</h4>
-          </div>
-          <div class="swiper mySwiper3">
-            <div class="swiper-wrapper">
-              <% oferta.forEach(product => { %>
-                <%- include('./partials/productCard', {product}) %>
-              <% }) %> 
-            </div>
-            <div class=".swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </section>
-      </div>
     </main>
 
     <%- include('./partials/footer.ejs') %>

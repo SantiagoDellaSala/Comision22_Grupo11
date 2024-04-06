@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head.ejs') %>
+    <title>Editar producto</title>
+    <body class="api__body">
+        <header class="api__header">
+            <img src="/images/logo.svg" alt="logo">
+            <h3>API Suyds</h3>
+            <ul>
+                <li>
+                    <b><a class="a_api" href="http://localhost:3030/api/home">Inicio</a></b>
+                </li>
+                <li>
+                    <a class="a_api" href="http://localhost:3030/api/politicas">Políticas</a>
+                </li>
+                <li>
+                    <a class="a_api" href="http://localhost:3030/api/documentacion">Documentación</a>
+                </li>
+            </ul>
+        </header>
+        <main class="api__main">
+            <table>
+                <tr class="api__tr">
+                    <th scope="col">URL</th>
+                    <th scope="col">¿Qué ejecuta?</th>
+                    <th scope="col">Devuelve:</th>
+                </tr>
+                <tr>
+                    <td>http://localhost:3030/api/products</td>
+                    <td>Cantidad de productos (count), array con lista de productos (productos)</td>
+                    <td>{<br>
+                        "ok": true,<br>
+                        "count": 3,<br>
+                        "products": [<br>
+                          {<br>
+                    "id": 1,<br>
+                    "name": "Caña de pescar",<br>
+                    "price": 25000,<br>
+                    "description": "Caña de largo alcance y resistente.",<br>
+                    "discount": 10,<br>
+                    "mainImage": "CAÑA-AMBERJACK-2.10M.jpeg",<br>
+                    "category": "pesca",<br>
+                    "material": "metal",<br>
+                    "origin": "China",<br>
+                    "quality": "oferta",<br>
+                    "image": null,<br>
+                    "detail": "http://localhost:3030/products/1"<br>
+                    ]</td>
+                </tr>
+                <tr>
+                    <td>http://localhost:3030/api/products/2</td>
+                    <td>Detalle de un producto en específico (product).</td>
+                    <td>
+                        {<br>
+                            "ok": true,<br>
+                            "product": {<br>
+                              "id": 2,<br>
+                              "name": "Anteojos Galaxy Black",<br>
+                              "price": 14500,<br>
+                              "description": "Protección y durabilidad, para su seguridad visual.",<br>
+                              "discount": 5,<br>
+                              "mainImage": "LENTES-DE-SOL-PAYO-ACONCAGUA.jpeg",<br>
+                              "category": "camping",<br>
+                              "material": "plastico",<br>
+                              "origin": "Brasil",<br>
+                              "quality": "destacado",<br>
+                              "image": "http://localhost:3030/images/LENTES-DE-SOL-PAYO-ACONCAGUA.jpeg"<br>
+                            }<br>
+                          }</td>
+                </tr>
+            </table>
+        </main>
+        <footer class="api__container">
+
+        </footer>
+        <%- include('../partials/scripts') %>
+    </body>
+</html>

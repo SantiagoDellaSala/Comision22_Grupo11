@@ -3,70 +3,40 @@
     <%- include('../partials/head.ejs') %>
     <body> 
         <%- include('../partials/header.ejs') %>
-
-    <main class="productDetail__main">
-            <div class="img-desc-pre">
-                <section class=".productDetail__section">
-                    <article class="img-producto">
-                        <img class="productDetail__img" width="100%" src="/images/productos/<%=mainImage||'ANAFE-PORTATIL-BUTANO.jpg'%>" alt="">
-                    </article>
-                    <div class="coso">
-                    <article class="a-titulo">
-                        <p class="titulo"><%= name %></p>
-                    </article>
-                    <article class="precio-cant">
-                        <table>
-                            <tr>
-                                <th class="precio-n">$<%= toThousand(price) %></th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <button>-</button>
-                                    <input type="number" id="cantidad" name="cantidad" min="1">
-                                    <button>+</button>
-                                </td>
-                            </tr>
-                        </table>
-        
-                            <span class="b-compras">
-                                <input type="button" value="comprar">
-                                <input type="button" value="agregar al carrito">
-                            </span>
-                        </article>
-                    </div> 
-                </section>
-                
-                <section class=".productDetail__section">
-                    <article class="desc-producto">
-                        <h4 class="productDetail__h4">Descripción</h4>
-    
-                        <p class="productDetail__p">
-                            <span><%= description %></span>
-                        </p>
-                    </article>
-                    <article class="tb-producto">
-                        <table>
-                            <tr>
-                                <th>Caracteristicas</th>
-                            </tr>
-                            <tr><td>Categoria</td>
-                                <td><%= category? category.name : '' %></td>
-                            </tr>
-                            <tr><td>Material</td>
-                                <td><%= material? material.name : '' %></td>
-                            </tr>
-                            <tr><td>Origen</td>
-                                <td><%= origin? origin.name : '' %></td>
-                            </tr>
-                            
-                        </table>
-
-
-                    </article>
-                </section>
-            </div>
+    <main class="productDetail__main">          
+        <section class="productDetail__section">
+            <h3><%= name %></h3>
+            <article class="productDetail__article">
+                <img class="productDetail__img" src="/images/productos/<%=mainImage||'ANAFE-PORTATIL-BUTANO.jpg'%>" alt="">
+                <div class="detail_precio">
+                    <h5 class="precio-n">$<%= toThousand(price) %></h5>
+                    <h6 class="detail_discount"><%= discount %>% OFF</h6>
+                </div>                                   
+                <span class="b-compras">
+                    <input class="b_detail_comprar" type="button" value="Comprar ahora">
+                    <input class="b_detail_agregar" type="button" value="Agregar al carrito">
+                </span>
+                <div class="detail_mediosDePago">
+                    <h5>Medios de pago:</h5>
+                    <div>
+                        <img src="/images/icon_visa.png" alt="visa">
+                        <img src="/images/icon_mastercard.png" alt="mastercard">
+                        <img src="/images/icon_paypal.png" alt="paypal">
+                    </div>
+                </div>
+                <div class="detail_descripcion">
+                    <h5>Descripción:</h5>
+                    <p><%= description %></p>
+                </div>              
+                <div class="detail_catacteristicas">
+                    <h5>Catacterísticas:</h5>
+                    <p>Categoría: <%= category ? category.name : '' %></p>
+                    <p>Material: <%= material ? material.name : '' %></p>
+                    <p>Origen: <%= origin ? origin.name : '' %></p>
+                </div>
+            </article>                   
+        </section>     
     </main>
-
     <%- include('../partials/footer.ejs') %>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
