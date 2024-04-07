@@ -4,7 +4,6 @@ const modelRespondeUser = {
   attributes : {
     exclude : ['createdAt', 'updatedAt', 'roleId', 'troleyId', 'password']
   },
-  
 }
 
 module.exports = {
@@ -39,7 +38,7 @@ module.exports = {
         error.status = 400
         throw error
       }
-  
+
       if (!user) {
         error = new Error('No hay un usuario con ese ID...')
         error.status = 404
@@ -53,7 +52,7 @@ module.exports = {
           url : `http://${req.get('host')}/api/users/${user.id}`
         },
         data : user,
-        avatar : `${req.protocol}://${req.get('host')}/images/avatars/${user.avatar}`,
+        avatar : `${req.protocol}://${req.get('host')}/images/avatars/${user.avatar},`
     })
     } catch (error) {
       return res.status(error.status || 500).json({

@@ -1,70 +1,71 @@
-.footer{
-    background: rgb(1,175,218);
-    background: radial-gradient(circle, rgba(1,175,218,1) 86%, rgba(1,94,117,0.9192051820728291) 100%);
+.footer {
     width: 100%;
-    font-weight: 900;
-    margin: 0 auto;
-}
-
-.footer div a i {
-    color: black;
-}
-
-/* .footer div {
-    padding-left: 15px;
-}  */
-
-div h3 {
-    text-align: center;
-}
-
-.footer div ul li{
-    padding: 5px 0 ;
-    list-style: none;
-    margin: 0;
-}
-
-.footer div ul {
-    padding: 0;
-    text-align: center;
-}
-
-.footer div ul li a {
-    text-decoration: none;
-    color: black;
-}
-
-.medios_de_pagos {
-    padding-bottom: 8px;
-    text-align: center;
-}
-
-.medios_de_pagos i {
-    font-size: 20px;
-}
-
-.medios_de_pagos img {
-    max-width: 30px;
-}
-
-.redes_sociales{
-    text-align: center;
-}
-.redes_sociales a {
-    padding: 0 10px;
-    font-size: 28px;
-}
-
-.redes_sociales img {
-    max-width: 30px;
-}
-
-.atencion_al_cliente a{
-font-size: 18px;
-}
-.contactos a{
+    background-color: #1d1d1d;
     padding: 10px;
-    font-size: 18px;
-    font-family: none;
-    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+}
+
+.div_columnas{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_h5 {
+    color: #e6e6e6;
+}
+
+.div_copyright p {
+    color: #616161;
+}
+
+.div_contactanos {
+    width: 22%;
+}
+
+.div_quienesSomos {
+    width: 22%;
+}
+
+.div_redesSociales {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.div_redesSociales_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.div_redesSociales_container a {
+    max-width: 20%;
+}
+
+.div_redesSociales_container a img {
+    width: 100%;
+}
+
+.div_atajos {
+    width: 22%;
+}
+
+.div_atajos ul a {
+    color: #bbbbbb;
+}
+
+.footer_ul li a {
+    color: #bbbbbb;
+}
+
+.div_copyright div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer_hr {
+    color: #c0c0c0;
 }
