@@ -23,11 +23,8 @@ User.init({
   password: DataTypes.STRING,
   avatar: DataTypes.STRING,
   roleId: DataTypes.INTEGER,
-  troleyId: DataTypes.INTEGER,
- }, 
- {
+  troleyId: DataTypes.INTEGER}, {
   sequelize,
-  modelName: 'User',
-});
+  modelName: 'User',});
 return User;
 };
