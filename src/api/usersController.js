@@ -4,6 +4,7 @@ const modelRespondeUser = {
   attributes : {
     exclude : ['createdAt', 'updatedAt', 'roleId', 'troleyId', 'password']
   },
+
 }
 
 module.exports = {
@@ -16,7 +17,7 @@ module.exports = {
         ok : true,
         meta : {
           status : 200,
-          total : users.length,  
+          total : users.lenght,
           url : `http://${req.get('host')}/api/users`,
           count,
         },
@@ -48,7 +49,7 @@ module.exports = {
         ok : true,
         meta : {
           status : 200,
-          total : user.length,
+          total : user.lenght,
           url : `http://${req.get('host')}/api/users/${user.id}`
         },
         data : user,
