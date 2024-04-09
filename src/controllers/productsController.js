@@ -132,6 +132,8 @@ module.exports = {
   },
   /* Ulises */
   create: (req, res) => {
+    const errors = validationResult(req);
+
     const {
       name,
       price,
@@ -156,7 +158,18 @@ module.exports = {
     })
       .then((newProduct) => {
         console.log(newProduct);
-        return res.redirect("/admin");
+        return res.redirect("/admin",{
+          id: req.params.id,
+          name: req.body.name,
+          categoryId: req.body.categoryId,
+          materialId: req.body.materialId,
+          originId: req.body.originId,
+          description: req.body.description,
+          discount: req.body.discount,
+          qualityId: req.body.qualityId,
+          old: req.body,
+          errors: errors.mapped(),
+        });
       })
 
       .catch((error) => console.log(error));
