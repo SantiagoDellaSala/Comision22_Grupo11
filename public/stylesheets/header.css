@@ -117,14 +117,14 @@
 }
 
 .header__nav ul{
+  background-color: black;
   display: flex;
   width: 100%;
   justify-content: space-evenly;
 }
 
 .header__nav ul li {
-  border: solid 0.5px #ffffff;
-  background-color: #1d1d1d;
+  font-size: 17px;
   width: 12%;
   text-align: center;
 }
