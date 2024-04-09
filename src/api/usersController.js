@@ -2,9 +2,8 @@ const db = require("../database/models");
 
 const modelRespondeUser = {
   attributes : {
-    exclude : ['createdAt', 'updatedAt', 'roleId', 'troleyId', 'password']
-  },
-  
+    exclude : ['createdAt', 'updatedAt', 'roleId', 'troleyId', 'password', 'avatar']
+  }
 }
 
 module.exports = {
@@ -17,9 +16,8 @@ module.exports = {
         ok : true,
         meta : {
           status : 200,
-          total : users.length,  
-          url : `http://${req.get('host')}/api/users`,
-          count,
+          total : users.lenght,
+          url : `http://${req.get('host')}/api/users`
         },
         data : users
     })
@@ -39,7 +37,7 @@ module.exports = {
         error.status = 400
         throw error
       }
-  
+
       if (!user) {
         error = new Error('No hay un usuario con ese ID...')
         error.status = 404
@@ -52,8 +50,7 @@ module.exports = {
           total : user.length,
           url : `http://${req.get('host')}/api/users/${user.id}`
         },
-        data : user,
-        avatar : `${req.protocol}://${req.get('host')}/images/avatars/${user.avatar}`,
+        data : user
     })
     } catch (error) {
       return res.status(error.status || 500).json({
