@@ -1,4 +1,4 @@
-const {check} = require('express-validator');
+const {check,body} = require('express-validator');
 
 module.exports = [
     check('name')
@@ -15,6 +15,13 @@ module.exports = [
         .notEmpty().withMessage('El origen es requerido'),   
         check('qualityId')
         .notEmpty().withMessage('La calidad es requerida'),   
+        body('mainImage')
+        .custom((value, {req}) => {
+            if(!req.files.mainImage){
+                return false
+            }
+            return true
+        }).withMessage('Se require una imagen'),
     check('description')
         .notEmpty().withMessage('La descripción es requerida').bail()
         .isLength({

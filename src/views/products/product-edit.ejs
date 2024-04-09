@@ -21,29 +21,35 @@
                                 </nav>
                             </div>
                             <div class="card-body">
-                                <form action="/products/editar/<%= id %>?_method=PUT" method="POST" class="row" enctype="multipart/form-data">
+                                <form action="/products/editar/<%= id %>?_method=PUT" method="POST" class="row formEdit" enctype="multipart/form-data">
                                     <h3>Editar producto</h3>
                                     <hr>
                                     <div class="col-12 col-md-6 mb-3">
-                                        <div class="form-floating ">
+                                           <div class="form-floating ">
 
-                                            <input name="name" type="text" class="form-control" id="name" value="<%= name %>">
+                                            <input name="name" type="text" class="form-control <%= (locals.errors && errors.name) &&  'is-invalid'%>" id="name" value="<%= name %>">
+                                            <p id="info-name" style="color: green; margin-left: 10px;" ></p>
+                                            <p id="error-name" style="color: red; margin-left: 10px;"></p>
                                             <label for="name">Nombre</label>
 
                                           </div>
+                                          <small class="text-danger ms-2"><%= (locals.errors && errors.name) && errors.name.msg %></small>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
 
-                                            <input name="price" type="text" class="form-control" id="price" value="<%= toThousand(price) %>">
+                                            <input name="price" type="text" class="form-control <%= (locals.errors && errors.price) &&  'is-invalid'%>" id="price" value="<%= toThousand(price) %>">
+                                            <p id="info-price" style="color: green; margin-left: 10px;" ></p>
+                                            <p id="error-price" style="color: red; margin-left: 10px;"></p>
                                             <label for="price">Precio</label>
 
                                         </div>
+                                        <small class="text-danger ms-2"><%= (locals.errors && errors.price) && errors.price.msg %></small>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
 
-                                            <select name="categoryId" class="form-select" id="categoryId" aria-label="Floating label select example">
+                                            <select name="categoryId" class="form-select <%= (locals.errors && errors.categoryId) &&  'is-invalid'%>" id="categoryId" aria-label="Floating label select example">
 
                                                 
                                                 
@@ -52,12 +58,15 @@
                                                   <% }) %>
                                                 
                                             </select>
+                                            <p id="info-category" style="color: green; margin-left: 10px;" ></p>
+                                            <p id="error-category" style="color: red; margin-left: 10px;"></p>
                                             <label for="categoryId">Categoría</label>
                                         </div>
+                                        <small class="text-danger ms-2"><%= (locals.errors && errors.categoryId) && errors.categoryId.msg %></small>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <select name="materialId" class="form-select" id="material" aria-label="Floating label select example">
+                                            <select name="materialId" class="form-select <%= (locals.errors && errors.materialId) &&  'is-invalid'%>" id="material" aria-label="Floating label select example">
                                                 
                                                 
                                                 <% materials.forEach(material => { %>
@@ -65,13 +74,15 @@
                                                   <% }) %>
                                                 
                                             </select>
-                        
+                                            <p id="info-material" style="color: green; margin-left: 10px;" ></p>
+                                            <p id="error-material" style="color: red; margin-left: 10px;"></p>
                                             <label for="material">Material del producto</label>
                                         </div>
+                                        <small class="text-danger ms-2"><%= (locals.errors && errors.materialId) && errors.materialId.msg %></small>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <select name="originId" class="form-select" id="origin" aria-label="Floating label select example">
+                                            <select name="originId" class="form-select <%= (locals.errors && errors.originId) &&  'is-invalid'%>" id="origin" aria-label="Floating label select example">
                                                 
                                                 
                                                 <% origins.forEach(origin => { %>
@@ -79,20 +90,26 @@
                                                   <% }) %>
                                                 
                                             </select>
+                                            <p id="info-origin" style="color: green; margin-left: 10px;" ></p>
+                                            <p id="error-origin" style="color: red; margin-left: 10px;"></p>
                                             <label for="origen">Origen del producto</label>
                                         </div>
+                                        <small class="text-danger ms-2"><%= (locals.errors && errors.originId) && errors.originId.msg %></small>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
 
-                                            <input name="discount" type="number" class="form-control" id="discount" value="<%= discount %>">
+                                            <input name="discount" type="number" class="form-control <%= (locals.errors && errors.discount) &&  'is-invalid'%>" id="discount" value="<%= discount %>">
+                                            <p id="info-discount" style="color: green; margin-left: 10px;" ></p>
+                                            <p id="error-discount" style="color: red; margin-left: 10px;"></p>
                                             <label for="discount">Descuento</label>
 
                                         </div>
+                                        <small class="text-danger ms-2"><%= (locals.errors && errors.discount) && errors.discount.msg %></small>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
-                                            <select name="qualityId" class="form-select" id="quality" aria-label="Floating label select example">
+                                            <select name="qualityId" class="form-select <%= (locals.errors && errors.qualityId) &&  'is-invalid'%>" id="quality" aria-label="Floating label select example">
                                                 
                                                 
                                                 <% qualities.forEach(quality => { %>
@@ -100,23 +117,30 @@
                                                   <% }) %>
                                                 
                                             </select>
+                                            <p id="info-quality" style="color: green; margin-left: 10px;" ></p>
+                                            <p id="error-quality" style="color: red; margin-left: 10px;"></p>
                                             <label for="calidad">Calidad</label>
                                         </div>
+                                        <small class="text-danger ms-2"><%= (locals.errors && errors.qualityId) && errors.qualityId.msg %></small>
                                     </div>
                                     <div class="col-12 mb-3">
                                         <div class="form-floating">
 
-                                            <textarea name="description" class="form-control" id="description"
+                                            <textarea name="description" class="form-control <%= (locals.errors && errors.description) &&  'is-invalid'%>" id="description"
 
                                                 style="height: 100px;"><%= description %></textarea>
+                                                <p id="info-description" style="color: green; margin-left: 10px;" ></p>
+                                                <p id="error-description" style="color: red; margin-left: 10px;"></p>        
                                             <label for="description">Descripción</label>
                                         </div>
+                                        <small class="text-danger ms-2"><%= (locals.errors && errors.description) && errors.description.msg %></small>
                                     </div>
                                     
                                     <div class="col-12 col-md-6 mb-3">
-                                        <input  name="mainImage" type="file" class="form-control" id="mainImage" hidden>
+                                        <input  name="mainImage" type="file" class="form-control <%= (locals.errors && errors.mainImage) &&  'is-invalid'%>" id="mainImage" hidden>
                                         <label class="btn btn-primary btn-md w-100" for="mainImage">Imagen
                                             principal</label>
+                                        <small class="text-danger ms-2"><%= (locals.errors && errors.mainImage) && errors.mainImage.msg %></small>    
                                     </div>
                                     <div class="col-12 col-md-6 mb-3 ">
                                         <input  name="images" type="file" class="form-control" id="images" hidden
@@ -145,6 +169,7 @@
             <%- include('../partials/footer.ejs') %>
 
                 <%- include('../partials/scripts') %>
+                <script src="/js/productEditValidation.js"></script>
     </body>
 
 </html>

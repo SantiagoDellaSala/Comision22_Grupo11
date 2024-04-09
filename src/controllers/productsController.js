@@ -82,7 +82,9 @@ module.exports = {
   },
 
   update: (req, res) => {
+    
     const errors = validationResult(req);
+    if (errors.isEmpty()) {
     const {
       name,
       price,
@@ -94,7 +96,7 @@ module.exports = {
       qualityId,
     } = req.body;
 
-    if (errors.isEmpty()) {
+   
       db.Product.update(
         {
           name,
@@ -116,18 +118,38 @@ module.exports = {
         })
         .catch((error) => console.log(error));
     } else {
-      return res.render("/admin", {
-        id: req.params.id,
-        name: req.body.name,
-        categoryId: req.body.categoryId,
-        materialId: req.body.materialId,
-        originId: req.body.originId,
-        description: req.body.description,
-        discount: req.body.discount,
-        qualityId: req.body.qualityId,
-        old: req.body,
-        errors: errors.mapped(),
+      const { id } = req.params;
+
+      const product = db.Product.findByPk(id, {
+        include: ["category", "material", "origin", "quality", "image"],
       });
+      const categories = db.Category.findAll({
+        order: [["name"]],
+      });
+      const materials = db.Material.findAll({
+        order: [["name"]],
+      });
+      const qualities = db.Quality.findAll({
+        order: [["name"]],
+      });
+      const origins = db.Origin.findAll({
+        order: [["name"]],
+      });
+  
+      Promise.all([product, categories, materials, qualities, origins])
+        .then(([product, categories, materials, qualities, origins]) => {
+          return res.render("products/product-edit", {
+            ...product.dataValues,
+            categories,
+            materials,
+            qualities,
+            origins,
+            toThousand,
+            errors : errors.mapped(),
+            old : req.body
+          });
+        })
+        .catch((error) => console.log(error));
     }
   },
   /* Ulises */
