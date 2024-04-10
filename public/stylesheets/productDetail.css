@@ -1,92 +1,172 @@
-.productDetail__main {
-    width: 100%;
-    margin: 1rem 0;
-    font-family: 'Roboto';
+.productDetail__main{
     display: flex;
+    flex-direction: column;
     align-items: center;
+    background-color: #EDEDED;
     justify-content: center;
+    font-family: var(--font-Roboto); 
 }
+
+.img-desc-pre section {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+.productDetail__h4 {margin: 10px}
 
 .productDetail__section {
-    max-width: 50%;
-    border: 1px solid #757575;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    background-color: #ffffff;
-}
-
-.productDetail__article {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    gap: 2rem 0;
+    margin: 0 10vw;
 }
 
-.productDetail__img {
-    border: 0.7px solid #757575;
-    width: 100%;
-}
-
-.b-compras {
+.productDetail__section div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
-}
-
-.b_detail_comprar {
-    border-radius: 5px;
-    background-color: #237cf0;
-    color: #f8f8f8;
-    padding: 3px 6px;
-}
-
-.b_detail_agregar {
-    border-radius: 5px;
-    background-color: #f8f8f8;
-    color: #237cf0;
-    padding: 3px 6px;
-}
-
-.detail_precio {
-    display: flex;
-    gap: 1rem;
     align-items: center;
 }
 
-.detail_descripcion {
-    width: 100%;
+.img-desc{
     display: flex;
     flex-direction: column;
-    justify-content: start;
-}
-
-.detail_catacteristicas {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-}
-
-.detail_discount {
-    color: #237cf0;;
-}
-
-.detail_mediosDePago {
-    width: 100%;
-    display: flex;
     align-items: center;
 }
 
-.detail_mediosDePago h5 {
-    width: 35%;
+.img-producto{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 80vw;
+    margin: 5vw;
+} 
+
+.desc-producto{
+    width: 80vw;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.detail_mediosDePago img {
-    width: 20%;
-    max-width: 60px;
+.precio-cant{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 10px auto;
+    padding: 15px 5px;
+    width: 40vw;
+    align-items: center;
+    background-color: var(--color-grisSuave); 
+    border-radius: 25px;
 }
+
+
+
+.precio-cant table {
+    margin: 0px 20px 10px;
+    width: 40vw;
+    justify-content: space-evenly;
+}
+
+
+.precio-cant table td, button {
+    width: 9vw;
+    margin: 0;
+}
+
+.precio-cant table #cantidad {width: 15vw;}
+
+
+
+
+
+.b-compras input{
+    font-size: 16px;
+    font-style: var(--font-Roboto);
+    border: none;
+    padding: 7px 5px;
+    border-radius: 5px;
+    background-color: var(--color-verde);
+    color: #EDEDED;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    opacity: 1.0;
+    width: 35vw;
+}
+
+.b-compras :hover{background-color: red;}
+
+.precio-n{font-size: 30px;}
+
+.tb-producto{
+    display: flex;
+    justify-content: center;
+    width: 60vw;
+    margin-top: 20px;
+    margin-bottom: 15px;  
+}
+
+.tb-producto table {border: 1px solid black;}
+
+.tb-producto td {
+    width: 120px;
+    border: 0.5px solid black;
+    margin: 10px; 
+}
+
+.productDetail__article{display: flex;}
+
+table td, table input{width: 40px; }
+
+span{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-weight: 100;
+    align-items: center;
+}
+
+
+
+.titulo{  
+    width: 80vw;
+    font-size: 27px;
+    font-weight:bold;
+    margin: 10px auto;
+    text-align: center;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {appearance: textfield;}
+
+
+
+.precio-cant {
+    margin: 2vw;
+    padding: 15px 10px;
+    width: 80vw;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.precio-cant table {
+    width: 18vw;
+    margin: 0;
+    justify-content: space-evenly;
+}
+
+.precio-cant table td, button {width: 3vw;}
+.precio-cant table #cantidad {width: 7vw;}
+
+.b-compras input {width: 150px;}

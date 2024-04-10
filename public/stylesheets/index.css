@@ -1,124 +1,150 @@
 .home__main {
-    width: 98%;
-    margin: 0px auto;
-    font-family: var(--font-Monserrat);
+  width: 98%;
+  margin: 0px auto;
+  font-family: var(--font-Monserrat);
 }
 
 /* BANNER */
 .home__main--banner {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
 .home_container {
-    display: flex;
-    gap: 25px;
-    width: 100%;
-    border: 0.5px solid #9e9e9e;
-    padding: 5px;
-  }
-  
-.aside_home {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    border-left: 0.5px solid #9e9e9e;
-    padding: 0.5rem;
-  }
-  
-.aside_home div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  border: 0.5px solid #9e9e9e;
+  padding: 5px;
 }
 
-  .aside_home div img {
-    width: 100%;
-  }
-  
-  .div_sections {
-    width: 68%;
-    display: flex;
-    flex-direction: column;
-  }
+.aside_home {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-left: 0.5px solid #9e9e9e;
+  padding: 0.5rem;
+}
 
+.aside_home div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.aside_home div img {
+  width: 100%;
+}
+
+.div_sections {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+}
+
+.productCard_section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 0 3rem 0; 
+  justify-content: center;
+}
+
+.productCard_article {
+  width: 100%;
+  padding: 5px;
+  border: 0.5px solid #9e9e9e;
+  border-radius: 7px 0 7px 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.productCard_article:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.productCard_article h3 {
+  margin: 0;
+  font-size: 1.2em;
+  
+}
+.productCard_article p {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  
+}
+
+.productCard_article img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.productCard_div {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.productCard_div p {
+  
+  color: #0456a3;
+}
+
+.productCard_div span {
+  display: block;
+  color: #0456a3;
+  margin-bottom: 10px;
+}
+.productCard_article button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.productCard_article button:hover {
+  background-color: #3498db;
+}
+.home__video {
+  width: 100%;
+}
+
+@media (max-width :600px) {
   .productCard_section {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin: 0 0 3rem 0; 
-    justify-content: center;
+      grid-template-columns: repeat(2, 1fr);
   }
-  
-  .productCard_article {
-    width: 100%;
-    padding: 5px;
-    border: 0.5px solid #9e9e9e;
-    border-radius: 7px 0 7px 0;
-    background-color: rgb(1, 175, 218);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+}
+
+@media (max-width :400px) {
+  .productCard_section {
+      grid-template-columns: repeat(1, 1fr);
   }
-  
-  .productCard_article p {
-    color: #e5e5dc;
-    
+  .home_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
 
-  .productCard_article img {
-    width: 100%;
+  .aside_home {
+    width: 80%;
+    border-left: none;
   }
-  
-  .productCard_div {
-    display: flex;
-    justify-content: space-around;
-    gap: 15px;
-  }
-  
-  .productCard_div p {
-    color: #e5e5dc;
-  }
-  
-  .productCard_div span {
-    color: #0456a3;
-  }
-
-  .home__video {
-    width: 100%;
-  }
-
-  @media (max-width :600px) {
-    .productCard_section {
-        grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width :400px) {
-    .productCard_section {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .home_container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .aside_home {
-      width: 80%;
-      border-left: none;
-    }
-  }
+}
