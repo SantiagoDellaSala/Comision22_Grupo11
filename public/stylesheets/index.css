@@ -61,6 +61,8 @@
     margin: 0 0 3rem 0; 
     justify-content: center;
   }
+
+  
   
   .productCard_article {
     width: 100%;
@@ -72,6 +74,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .productCard_article:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   
   .productCard_article p {
