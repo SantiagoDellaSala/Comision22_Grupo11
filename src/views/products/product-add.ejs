@@ -28,6 +28,8 @@
                                             <span class="text-danger ms-2"><%= locals.errors && errors.name ? errors.name.msg : null %></span>
                                         </div>
                                         <small class="text-danger ms-2"><%= (locals.errors && errors.name) && errors.name.msg %></small>
+                                        <p id="info-name" style="color: green; margin-left: 10px;" ></p>
+                                        <p id="error-name" style="color: red; margin-left: 10px;"></p>
                                     </div>
                                     <div class="col-12 col-md-3">
                                         <div class="form-floating">
@@ -120,15 +122,29 @@
                                         <small class="text-danger ms-2"><%= (locals.errors && errors.description) && errors.description.msg %></small>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
-                                        <input name="mainImage" type="file" class="form-control  <%= (locals.errors && errors.mainImage) &&  'is-invalid'%>" id="mainImage" hidden>
+                                        <input name="mainImage" type="file" class="form-control  <%= (locals.errors && errors.mainImage) &&  'is-invalid'%>" id="mainImage" hidden
+                                        onchange="onPreviewImage(event)"
+                                        >
                                         <!-- <p id="info-mainImage" style="color: green; margin-left: 10px;" ></p>
                                         <p id="error-mainImage" style="color: red; margin-left: 10px;"></p> -->
                                         <label class="btn btn-primary btn-md w-100" for="mainImage">Imagen principal</label>
                                             <small class="text-danger ms-2"><%= (locals.errors && errors.mainImage) && errors.mainImage.msg %></small>    
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
-                                        <input name="image" type="file" class="form-control" id="image" hidden multiple>
+                                        <input name="image" type="file" class="form-control" id="image" hidden multiple
+                                        onchange="onPreviewImages(event)"
+                                        >
                                         <label class="btn btn-primary btn-md w-100" for="image">Imágenes extra</label>
+                                    </div>
+                                    <div class="col-12 col-md-3">
+                                        <div class="d-flex my-3" id="box-image">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-9">
+                                        <div class="d-flex justify-content-between my-3" id="box-images">
+
+                                        </div>
                                     </div>
 
                                     <div class="col-12  d-flex justify-content-end ">

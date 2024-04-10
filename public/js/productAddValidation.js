@@ -1,5 +1,26 @@
 
 const $ =(id) => document.getElementById(id);
+const boxImage = document.getElementById('box-image')
+const boxImages = document.getElementById('box-images')
+
+
+const onPreviewImage = (e) => {
+    boxImage.innerHTML = null
+    const image = document.createElement('img')
+    image.src = URL.createObjectURL(e.target.files[0])
+    boxImage.appendChild(image)
+    
+}
+
+const onPreviewImages = (e) => {
+    boxImages.innerHTML = null;
+    for (let i = 0; i < e.target.files.length; i++) {
+        const image = document.createElement('img')
+        image.src = URL.createObjectURL(e.target.files[i])
+        boxImages.appendChild(image)
+        
+    }
+}
 
 window.onload = function(){
 
@@ -27,7 +48,12 @@ inputName.addEventListener('focus', () =>{
 
 inputName.addEventListener('blur', (event) =>{
     $('info-name').innerHTML = ""
-    if(!event.target.value) $('error-name').innerHTML = "Debes ingresar un Nombre"
+    if(!event.target.value) {
+        $('error-name').innerHTML = "Debes ingresar un Nombre"
+        event.target.classList.add('is-invalid')
+    }else{
+        event.target.classList.remove('is-invalid')
+    }
 })
 
 inputPrice.addEventListener('focus', () =>{
@@ -157,21 +183,29 @@ inputDescription.addEventListener('blur', (event) =>{
 //     $('error-mainImage').innerHTML= "";
 // });
 
+
+
+
 form.addEventListener('submit', (event) =>{
     event.preventDefault();
     let error = false;
 
     for (let i = 0; i < form.elements.length - 1; i++) {
-        if(!form.elements[i].value){
+        if(!form.elements[i].value || form.elements[i].classList.contains('is-invalid')){
             error = true
-        }
-       if(!error){
+        }   
+    }
+
+    if(!error){
         form.submit()
        }else{
-        alert('Hay campos Vacíos!')
+        Swal.fire({
+            title: "Aún hay campos vacíos",
+            icon: "error",
+            confirmButtonColor: "red",
+
+          });
        }
-        
-    }
 
 })    
 
