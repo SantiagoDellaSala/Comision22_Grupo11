@@ -77,7 +77,7 @@
     }
 
     .precio-cant table td, button {width: 3vw;}
-    .precio-cant table #cantidad {width: 7vw;}
+    .precio-cant table #cantidad {width: 50px;}
 
     .b-compras input {width: 18vw;}
 
