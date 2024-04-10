@@ -14,6 +14,7 @@
                     <h2 class="products-title">Resultados de la búsqueda: <%= keywords %>
                     </h2>
                 </div>
+                <section class="productCard_section">
                 <% if (products.length) { %>
                     <% products.forEach(product=> { %>
                         <%- include('./partials/productCard', {product, toThousand}) %>
@@ -24,6 +25,7 @@
                                             búsqueda</h2>
                                     </div>
                                     <% } %>
+                </section>
             </div>
 
             <!-- /todos los productos -->

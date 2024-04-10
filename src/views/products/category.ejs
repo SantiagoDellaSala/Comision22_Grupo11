@@ -15,11 +15,11 @@
                         <%= category.name %>
                     </h2>
                 </div>
-                
+                <section class="productCard_section">
                 <% prodCat.forEach(product=> { %>
                     <%- include('../partials/productCard', {product, toThousand}) %>
                 <% }) %>
-            
+                </section>
             </div>
 
             <!-- /todos los productos -->
