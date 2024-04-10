@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
-
+    background-color: #ffffff;
 }
 
 .productDetail__article {
@@ -23,11 +23,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem 0;
 }
 
-.productDetail__article img {
+.productDetail__img {
     border: 0.7px solid #757575;
+    width: 100%;
 }
 
 .b-compras {
@@ -62,7 +63,6 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    border-top: 0.7px solid #757575;
 }
 
 .detail_catacteristicas {
@@ -70,9 +70,23 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    border-top: 0.7px solid #757575;
 }
 
 .detail_discount {
     color: #237cf0;;
+}
+
+.detail_mediosDePago {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.detail_mediosDePago h5 {
+    width: 35%;
+}
+
+.detail_mediosDePago img {
+    width: 20%;
+    max-width: 60px;
 }

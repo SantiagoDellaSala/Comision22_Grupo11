@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <link rel="stylesheet" href="/stylesheets/carrito.css">
     <script src="https://kit.fontawesome.com/372b3f82f5.js" crossorigin="anonymous"></script>
     <title>SUYDS Pesca</title>
     <link rel="icon"  href="/images/SUYDS-logo.svg">
@@ -12,85 +12,53 @@
 <%- include('./partials/head.ejs') %>
 <body>
     <%- include('./partials/header.ejs') %>
-    <main class="main">
-        <section class="main__section">
-            <article class="section__article">
-                <img src="/images/carrito1.svg" alt="" class="img">
-
-                <div class="article__h5">
-                    <h5 class="descripcion">CAÑA CENTURY 2,10 MTS 2 TR (PELO)</h5>
-                        <div class="article__button">
-                        
-                        <button type="submit"> - </button>
-                        <input type="text" value="10" >
-                        <button type="submit"> + </button>
-                        </div>
+      <main class="main_class">
+         <div class="carrito">
+            <h2 class="h2_carrito">Carrito de compras</h2>
+             <div class="producto">
+                <img class="img_class" src="/images/productos/ANAFE-PORTATIL-BUTANO.jpg" alt="Product 7">
+                <div class="detalles-producto">
+                    <p class="nombre_producto">Anafe Portatil</p>
+                    <p class="precio">$40.00</p>
                 </div>
-                <div class="article__precio">
+                <a href="#">
                     <img src="/images/eliminar.svg" alt="" id="eliminar">
-                    <p>$20.000</p>
-                    
-                </div>
-            </article>
-            <article  class="section__article">
-                <img src="/images/carrito2.svg" alt="" class="img">
-                <div class="article__h5">
-                    <h5  class="descripcion">CAÑA CENTURY 2,10 MTS 2 TR (PELO)</h5>
-                    <div class="article__button">
-                        
-                        <button type="submit"> - </button>
-                        <input type="text" value="10" >
-                        <button type="submit"> + </button>
-                        </div>
-                </div>
-                <div class="article__precio">
-                    <img src="/images/eliminar.svg" alt="" id="eliminar">
-                    <p>$20.000</p>
-                </div>
-                
-            </article>
-            <article class="section__article">
-                <img src="/images/carrito3.svg" alt="" class="img">
-
-                <div>
-                    <h5  class="descripcion">CAÑA CENTURY 2,10 MTS 2 TR (PELO)</h5>
-                    <div class="article__button">
-                        
-                        <button type="submit"> - </button>
-                        <input type="text" value="10" >
-                        <button type="submit"> + </button>
-                        </div>
-                </div>
-                <div class="article__precio">
-                    <img src="/images/eliminar.svg" alt="" id="eliminar">
-                    <p>$20.000</p >
-                </div>
-            </article>
-        </section>
-        <section class="section__1">
-            <div class="div__subtotal">
-                <p>Subtotal (sin envio) :</p>
-                <p>$ 80.000</p>
+                </a>
                 
             </div>
-            <div class="linea__icono">
-                <hr class="linea_verde"><i class="fa-solid fa-circle-check icono" ></i>
+            <div class="producto">
+                <img class="img_class" src="/images/productos/ANZUELO.jpg" alt="Product 8">
+                <div class="detalles-producto">
+                    <p class="nombre_producto">Anzuelo</p>
+                    <p class="precio">$45.00</p>
+                </div>
+                <a href="#">
+                    <img src="/images/eliminar.svg" alt="" id="eliminar">
+                </a>
             </div>
-            <p id="envio">Tenes envío gratis!</p>
-            <div class="inputs">
-                <input type="text" value="Tu Código Postal" class="input__1">  
-                <input type="text"  value="CALCULAR" class="input__2">
-            </div>
-            <div class="div__total">
-                <p>TOTAL:</p>
-                <P>$80.000</P>
-            </div>
-            <div class="div__finalizar">
+            <div class="producto">
+                <img class="img_class" src="/images/productos/BENGALA-NAUTICA-HOMOLOGADA.jpg" alt="Product 9">
+                <div class="detalles-producto">
+                    <p class="nombre_producto">Bengala nautica</p>
+                    <p class="precio">$50.00</p>
+                </div>
+                <a href="#">
+                    <img src="/images/eliminar.svg" alt="" id="eliminar">
+                </a>
+            </div> 
+           
+            <div class="total">
+                <h3>Total: $135.00</h3>
+                <a href="/">
+                    <button  class="button">Finalizar pedido</button>
+                </a>
                 
-                <input type="text" value="Finalizar Pedido">
             </div>
-        </section>
+        </div> 
+       
+    
     </main>
+   
     <%- include('./partials/footer.ejs') %>
 </body>
 </html>

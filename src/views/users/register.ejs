@@ -5,7 +5,7 @@
     <%- include('../partials/header.ejs') %>
     <main class="register__main">
       <div class="register__main__div">
-        <form action="/users/register" class="formulario" method="POST" enctype="multipart/form-data">
+        <form action="/users/register" id="form" method="POST" enctype="multipart/form-data">
           <h6 class="titular">FORMULARIO DE REGISTRO</h6>
           <div>
             <input
@@ -19,6 +19,9 @@
             <small class="text-danger d-flex">
               <%= locals.errors && errors.name ? errors.name.msg : null %>
             </small>
+            <div>
+              <span id="nameErrors" style="color: red;"></span>
+            </div>
           </div>
 
           <div>
@@ -33,6 +36,9 @@
             <small class="text-danger d-flex">
               <%= locals.errors && errors.surname ? errors.surname.msg : null %>
             </small>
+            <div>
+              <span id="surnameErrors" style="color: red;"></span>
+            </div>
           </div>
 
           <div>
@@ -47,41 +53,53 @@
             <small class="text-danger d-flex">
               <%= locals.errors && errors.email ? errors.email.msg : null %>
             </small>
+            <div>
+              <span id="emailErrors" style="color: red;"></span>
+            </div>
           </div>
 
           <div class="pass__container">
             <input
               class="input"
-              id="password"
+              id="pass"
               type="password"
               placeholder="Contraseña"
               name="password"
             />
-            <i class="fa-solid fa-eye ojo1"></i>
+            <i class="fa-solid fa-eye eye1"></i>
             <small class="text-danger d-flex">
               <%= locals.errors && errors.password ? errors.password.msg : null
               %>
             </small>
+            <div>
+              <span id="passErrors" style="color: red;"></span>
+            </div>
           </div>
 
           <div class="pass__container">
             <input
               class="input"
-              id="passwordR"
+              id="pass2"
               type="password"
               placeholder="Repetir contraseña"
               name="password2"
             />
-            <i class="fa-solid fa-eye ojo2"></i>
+            <i class="fa-solid fa-eye eye2" ></i>
             <small class="text-danger d-flex">
               <%= locals.errors && errors.password2 ? errors.password2.msg :
               null %>
             </small>
+            <div>
+              <span id="pass2Errors" style="color: red;"></span>
+            </div>
           </div>
           
           <div>
             <h6 class="d-flex ">Seleccione una imagen :</h6>
 						<input name="avatar" id="avatar" class="form-control" type="file" multiple></input>
+            <div>
+              <span id="fileErrors" style="color: red;"></span>
+            </div>
 					</div>
 
           <div class="formulario_divs">
@@ -104,7 +122,7 @@
         />
       </div>
     </main>
-
+    <script src="../../js/registerValidator.js"></script>
     <%- include('../partials/footer.ejs') %>
   </body>
 </html>

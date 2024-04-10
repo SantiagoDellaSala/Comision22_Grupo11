@@ -7,7 +7,7 @@
         <section class="productDetail__section">
             <h3><%= name %></h3>
             <article class="productDetail__article">
-                <img class="productDetail__img" width="100%" src="/images/productos/<%=mainImage||'ANAFE-PORTATIL-BUTANO.jpg'%>" alt="">
+                <img class="productDetail__img" src="/images/productos/<%=mainImage||'ANAFE-PORTATIL-BUTANO.jpg'%>" alt="">
                 <div class="detail_precio">
                     <h5 class="precio-n">$<%= toThousand(price) %></h5>
                     <h6 class="detail_discount"><%= discount %>% OFF</h6>
@@ -16,6 +16,14 @@
                     <input class="b_detail_comprar" type="button" value="Comprar ahora">
                     <input class="b_detail_agregar" type="button" value="Agregar al carrito">
                 </span>
+                <div class="detail_mediosDePago">
+                    <h5>Medios de pago:</h5>
+                    <div>
+                        <img src="/images/icon_visa.png" alt="visa">
+                        <img src="/images/icon_mastercard.png" alt="mastercard">
+                        <img src="/images/icon_paypal.png" alt="paypal">
+                    </div>
+                </div>
                 <div class="detail_descripcion">
                     <h5>Descripción:</h5>
                     <p><%= description %></p>

@@ -13,6 +13,13 @@ const productsRouter = require('./routes/products.routes');
 const transferLocals = require('./middlewares/transferLocals');
 const cookieCheck = require('./middlewares/cookieCheck')
 
+/* API's */
+const indexApiRouter = require ('./routes/api/index.routes')
+const documentApiRouter = require ('./routes/api/index.routes')
+const productsApiRouter = require('./routes/api/products.routes');
+const usersApiRouter = require('./routes/api/users.routes');
+
+
 const app = express();
 
 // view engine setup
@@ -47,6 +54,12 @@ app
   .use('/', indexRouter)
   .use('/users', usersRouter)
   .use('/products', productsRouter)
+
+  /* API's */
+  .use(productsApiRouter)
+  .use(usersApiRouter)
+  .use(indexApiRouter)
+  .use(documentApiRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

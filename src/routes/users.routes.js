@@ -17,8 +17,15 @@ const storage = multer.diskStorage({
 
       cb(null,`${Date.now()}_img_${path.extname(file.originalname)}`);
   }
-});
-const upload = multer({storage})
+})
+const fileFilter = function(req, file,callback) {
+  if(!file.originalname.match(/.(jpg|jpeg|png|gif)$/)){
+      req.fileValidationError = "Sólo imágenes (.jpg, .jpeg, .png, .gif)";
+      return callback(null,false,req.fileValidationError);
+  }
+  callback(null,true);
+};
+const upload = multer({storage, fileFilter})
 
 /* /users */
 router

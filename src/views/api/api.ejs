@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head.ejs') %>
+    <title>Editar producto</title>
+    <body class="api__body">
+        <header class="api__header">
+            <img src="/images/logo.svg" alt="logo">
+            <h3>API Suyds</h3>
+            <ul>
+                <li>
+                    <b><a class="a_api" href="http://localhost:3030/api/home">Inicio</a></b>
+                </li>
+                <li>
+                    <a class="a_api" href="http://localhost:3030/admin">Dashboard</a>
+                </li>
+                <li>
+                    <a class="a_api" href="http://localhost:3030/api/home">Documentación</a>
+                </li>
+            </ul>
+        </header>
+        <main class="api__main">
+            <table>
+                <tr class="api__tr">
+                    <th scope="col">URL:</th>
+                    <th scope="col">Utilidad:</th>
+                    <th scope="col">Devuelve:</th>
+                </tr>
+                <tr>
+                    <td>http://localhost:3030/api/products</td>
+                    <td>Cantidad de productos (count), array con lista de productos (productos)</td>
+                    <td>
+                      <p>
+                        {
+                          "ok": true,
+                          "count": 3,
+                          "products": [
+                            {
+                      "id": 1,
+                      "name": "Caña de pescar",
+                      "price": 25000,
+                      "description": "Caña de largo alcance y resistente.",
+                      "discount": 10,
+                      "mainImage": "CAÑA-AMBERJACK-2.10M.jpeg",
+                      "category": "pesca",
+                      "material": "metal",
+                      "origin": "China",
+                      "quality": "oferta",
+                      "image": null,
+                      "detail": "http://localhost:3030/products/1"
+                      ]
+                      }
+                      }
+                      </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>http://localhost:3030/api/products/2</td>
+                    <td>Detalle de un producto en específico (product).</td>
+                    <td>
+                      <p>
+                        {
+                          "ok": true,
+                          "product": {
+                            "id": 2,
+                            "name": "Anteojos Galaxy Black",
+                            "price": 14500,
+                            "description": "Protección y durabilidad, para su seguridad visual.",
+                            "discount": 5,
+                            "mainImage": "LENTES-DE-SOL-PAYO-ACONCAGUA.jpeg",
+                            "category": "camping",
+                            "material": "plastico",
+                            "origin": "Brasil",
+                            "quality": "destacado",
+                            "image": "http://localhost:3030/images/LENTES-DE-SOL-PAYO-ACONCAGUA.jpeg"
+                          }
+                        }
+                      </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>http://localhost:3030/api/users</td>
+                    <td>Cantidad de usuarios (count), array con lista de usuarios (usuarios)</td>
+                    <td>
+                      <p>
+                        {
+                          "ok": true,
+                          "meta": {
+                            "status": 200,
+                            "url": "http://localhost:3030/api/users",
+                            "count": 4
+                          },
+                          "data": [
+                            {
+                              "id": 1,
+                              "name": "Admin",
+                              "surname": "Suydss",
+                              "email": "admin@gmail.com",
+                              "avatar": "1711992471330_img_.jpg"
+                            },
+                            {
+                              "id": 2,
+                              "name": "User",
+                              "surname": "Suydss",
+                              "email": "user@gmail.com",
+                              "avatar": "1711993565354_img_.jpg"
+                            }
+                          ]
+                        }
+                      </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>http://localhost:3030/api/users/1</td>
+                    <td>Detalle de un usuario en específico (user), manteniendo ocultos datos importante.
+                        Se incluye también la URL de la imágen de perfíl.
+                    </td>
+                    <td>
+                      <p>{
+                        "ok": true,
+                        "meta": {
+                          "status": 200,
+                          "url": "http://localhost:3030/api/users/1"
+                        },
+                        "data": {
+                          "id": 1,
+                          "name": "Admin",
+                          "surname": "Suydss",
+                          "email": "admin@gmail.com",
+                          "avatar": "1711992471330_img_.jpg"
+                        },
+                        "avatar": "http://localhost:3030/images/avatars/1711992471330_img_.jpg,"
+                      }
+                      </p>
+                    </td>
+                </tr>
+            </table>
+        </main>
+        <footer class="api__container">
+
+        </footer>
+        <%- include('../partials/scripts') %>
+    </body>
+</html>

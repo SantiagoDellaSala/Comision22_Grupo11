@@ -2,6 +2,7 @@
 <html lang="es">
   <!-- HEAD -->
   <%- include('./partials/head.ejs') %>
+  <script src="/js/index.js"></script>
 
   <body class="home">
     <!-- HEADER -->
@@ -37,24 +38,6 @@
 
       <!-- SECCIONES DE PRODUCTOS Y PUBLICIDAD-->
       <div class="home_container">
-        <aside class="aside_home">
-          <div>
-            <h5>Publicidad</h5>
-            <img src="/images/Publicidad.jpg" alt="publicidad1">
-            <img src="/images/Publicidad2.jpg" alt="publicidad2">
-          </div>
-          <div>
-            <h5>Capacitación</h5>
-            <img src="/images/aside1.jpg" alt="capacitacion1">
-          </div>
-          <div>
-            <h5>Utilidades</h5>
-            <a target="_blank" href="https://www.youtube.com/watch?v=tld5k16U_Tk">Aprender a pescar</a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=TNZEWbbWnzc">Calibrar caña de pescar</a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=l7apf8ryllM">Lugares de pesca en Argentina</a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=x9Jq1Yb9M2M">Carnadas para cada pescado</a>
-          </div> 
-        </aside>
         <div class="div_sections">
           <h4>Destacados</h4>
           <section class="productCard_section">
@@ -66,23 +49,34 @@
             <% oferta.forEach(product => { %> <%-
             include('./partials/productCard', {product}) %> <% }) %>
           </section>
+          <h4>Todos los productos</h4>
+          <section class="productCard_section">
+            <% products.forEach(product => { %> <%-
+            include('./partials/productCard', {product}) %> <% }) %>
+          </section>
         </div>
-        <aside class="aside_home2">
+        <aside class="aside_home">
           <div>
-            <h5>PUBLiCIDAD</h5>
+            <h5>Publicidad</h5>
             <img src="/images/Publicidad.jpg" alt="publicidad1">
-            <img src="/images/Publicidad2.jpg" alt="publicidad2">
+            <img src="/images/Publicidad2.png" alt="publicidad2">
           </div>
           <div>
-            <h5>CAPACiTACiÓN</h5>
+            <h5>Capacitación</h5>
             <img src="/images/aside1.jpg" alt="capacitacion1">
           </div>
           <div>
-            <h5>UTiLiDADES</h5>
-            <a target="_blank" href="https://www.youtube.com/watch?v=tld5k16U_Tk">Aprender a pescar</a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=TNZEWbbWnzc">Calibrar caña de pescar</a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=l7apf8ryllM">Lugares de pesca en Argentina</a>
-            <a target="_blank" href="https://www.youtube.com/watch?v=x9Jq1Yb9M2M">Carnadas para cada pescado</a>
+            <h5>Utilidades</h5>
+            <div class="home__aside__videos">
+              <p>Calibrar caña de pescar:</p>
+              <iframe class="home__video" src="https://www.youtube.com/embed/TNZEWbbWnzc" frameborder="0" allowfullscreen></iframe>
+              <p>Comenzar a pescar:</p>
+              <iframe class="home__video" src="https://www.youtube.com/embed/tld5k16U_Tk" frameborder="0" allowfullscreen></iframe>
+              <p>Lugares de pesca en Argentina:</p>
+              <iframe class="home__video" src="https://www.youtube.com/embed/l7apf8ryllM" frameborder="0" allowfullscreen></iframe>
+              <p>Carnadas para cada pescado:</p>
+              <iframe class="home__video" src="https://www.youtube.com/embed/x9Jq1Yb9M2M" frameborder="0" allowfullscreen></iframe>
+            </div>
           </div> 
         </aside>
       </div>
