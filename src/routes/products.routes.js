@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer')
 const path = require('path')
-const productAddValidator = require('../validations/product-add-validator')
 const { detail, add, edit, update, create, allProducts, remove, filterCat} = require('../controllers/productsController');
 
+const productAddValidator = require('../validations/product-add-validator')
+const productEditValidator = require('../validations/product-edit-validator')
 
 const storage = multer.diskStorage({
   destination:(req,file,cb)=>{
@@ -22,10 +23,10 @@ const upload = multer({storage})
 router
   .get('/allProducts', allProducts)
   .get('/detail/:id', detail)
-  .get('/agregar',productAddValidator,add)
+  .get('/agregar', add)
   .get('/editar/:id', edit)
-  .put('/editar/:id',upload.single('mainImage') , update)
-  .post('/create',productAddValidator,upload.single('mainImage'),create)
+  .put('/editar/:id',upload.single('mainImage'),productEditValidator, update)
+  .post('/create',upload.single('mainImage'),productAddValidator,create)
   .delete('/delete/:id', remove)
   .get('/category/:id', filterCat) 
 
