@@ -106,6 +106,8 @@
 .usuario__perfil {
   width: 50%;
   border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }
 
 .usuario__perfil2 {

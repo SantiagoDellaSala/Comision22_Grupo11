@@ -3,9 +3,19 @@
     <%- include('../partials/head.ejs') %>
     <body> 
         <%- include('../partials/header.ejs') %>
-
+        <br>
+        <br>
+        <div class="row">
+            <h2 class="products-title">Todos los productos
+            </h2>
+        </div>    
+        <br>
     <main class="allProduct__main">
-        <%- include('../partials/productCard') %>
+        <section class="productCard_section">
+            <% products.forEach(product => { %> 
+                <%-include('../partials/productCard', {product}) %>
+                 <% }) %>
+    </section> 
     </main>
     
     <%- include('../partials/footer.ejs') %>
