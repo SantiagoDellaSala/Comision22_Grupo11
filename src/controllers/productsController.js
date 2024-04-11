@@ -5,10 +5,16 @@ const { validationResult } = require("express-validator");
 module.exports = {
   /* Santiago */
   allProducts: (req, res) => {
-    return res.render("products/all-products", {
-      products,
-      toThousand,
-    });
+    const products = db.Product.findAll({
+      order: ["name"],
+    })
+      .then(products => {
+        return res.render("products/all-products", {
+          products,
+          toThousand
+        })
+      })
+      .catch(error => console.log(error))
   },
   add: (req, res) => {
     const categories = db.Category.findAll({
