@@ -51,6 +51,7 @@
 
 .search-form input {
   width: 100%;
+  border-radius: 5px;
 }
 
 .search-form input:focus {
