@@ -15,43 +15,16 @@
       <main class="main_class">
          <div class="carrito">
             <h2 class="h2_carrito">Carrito de compras</h2>
-             <div class="producto">
-                <img class="img_class" src="/images/productos/ANAFE-PORTATIL-BUTANO.jpg" alt="Product 7">
-                <div class="detalles-producto">
-                    <p class="nombre_producto">Anafe Portatil</p>
-                    <p class="precio">$40.00</p>
-                </div>
-                <a href="#">
-                    <img src="/images/eliminar.svg" alt="" id="eliminar">
-                </a>
+            <div id="cart-box">
                 
             </div>
-            <div class="producto">
-                <img class="img_class" src="/images/productos/ANZUELO.jpg" alt="Product 8">
-                <div class="detalles-producto">
-                    <p class="nombre_producto">Anzuelo</p>
-                    <p class="precio">$45.00</p>
-                </div>
-                <a href="#">
-                    <img src="/images/eliminar.svg" alt="" id="eliminar">
-                </a>
-            </div>
-            <div class="producto">
-                <img class="img_class" src="/images/productos/BENGALA-NAUTICA-HOMOLOGADA.jpg" alt="Product 9">
-                <div class="detalles-producto">
-                    <p class="nombre_producto">Bengala nautica</p>
-                    <p class="precio">$50.00</p>
-                </div>
-                <a href="#">
-                    <img src="/images/eliminar.svg" alt="" id="eliminar">
-                </a>
-            </div> 
            
-            <div class="total">
-                <h3>Total: $135.00</h3>
-                <a href="/">
-                    <button  class="button">Finalizar pedido</button>
-                </a>
+            
+            <div class="total" id="total-box" hidden>
+                <h3 class="d-flex justify-content-end">Total: $<span id="cart-total"></span></h3>
+                
+                    <button onclick="emptyCart()"  class="button">Finalizar pedido</button>
+                
                 
             </div>
         </div> 
