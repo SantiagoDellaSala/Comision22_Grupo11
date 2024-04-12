@@ -21,16 +21,16 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <button>-</button>
-                                    <input type="number" id="cantidad" name="cantidad" min="1">
-                                    <button>+</button>
+                                    <button onclick="document.getElementById('cantidad').value > 1 && document.getElementById('cantidad').value--">-</button>
+                                    <input type="number" id="cantidad" name="cantidad" min="1" max="99" value="1"  style="text-align: center;">
+                                    <button onclick="document.getElementById('cantidad').value++">+</button>
                                 </td>
                             </tr>
                         </table>
         
                             <span class="b-compras">
                                 <input type="button" value="comprar">
-                                <input type="button" value="agregar al carrito">
+                                <input type="button" value="agregar al carrito" onclick="addToCart('<%=id%>','<%=name%>','<%=price%>','<%=mainImage%>', document.getElementById('cantidad').value)">
                             </span>
                         </article>
                     </div> 

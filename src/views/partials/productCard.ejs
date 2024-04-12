@@ -14,5 +14,5 @@
         <span>%<%= product.discount %> OFF</span>
         <% } %>
   </div>
-  <button>Agregar al carrito</button>
+  <button onclick="addToCart('<%=product.id%>','<%=product.name%>','<%=product.price%>','<%=product.mainImage%>')">Agregar al carrito</button>
 </article>
