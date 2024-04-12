@@ -19,7 +19,7 @@ module.exports = {
            email: 'admin@gmail.com',
         password: bcryptjs.hashSync(process.env.PASSWORD_ADMIN,10),
           roleId: 1, 
-          avatar: '/images/avatars/1711021086840_img_.jpg',
+          avatar: 'default.png',
         createdAt: new Date(),
        updatedAt: new Date()
         },
