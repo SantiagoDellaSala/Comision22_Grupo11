@@ -35,8 +35,11 @@
                     <img src="/images/usuario.svg" alt="" class="usuario__perfil2">
                 </a>
             <% } %>
-            <a href="/carrito">
+            <a href="/carrito" class="position-relative">
                 <img src="/images/carrito.svg" alt="" class="usuario__carrito">
+                <span id="cart-total-items" class="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-danger">
+                    0
+                  </span>
             </a>
         </div>
     </div>
@@ -74,4 +77,5 @@
     });
 });
     </script>
+    <script src="/js/productCart.js"></script>
 </header>
