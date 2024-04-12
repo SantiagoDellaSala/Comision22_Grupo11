@@ -10,6 +10,9 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
 .footer_h5 {
@@ -21,28 +24,38 @@
 }
 
 .div_contactanos {
-    width: 22%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .div_quienesSomos {
-    width: 22%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .div_redesSociales {
-    width: 22%;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .div_redesSociales_container {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .div_redesSociales_container a {
-    max-width: 20%;
+    max-width: 40px;
 }
 
 .div_redesSociales_container a img {
@@ -61,9 +74,16 @@
     color: #bbbbbb;
 }
 
+.div_copyright {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .div_copyright div {
     display: flex;
-    justify-content: space-around;
 }
 
 .footer_hr {
