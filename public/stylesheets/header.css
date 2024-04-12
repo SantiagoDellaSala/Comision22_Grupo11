@@ -142,7 +142,23 @@
   .header__nav {
       display: none;
   }
+  .search-form button {
+    display: none;
+  }
+  
+  .search-form button i {
+    display: none;
+  }
 
+  .nombre-logo {
+    display: none;
+  }
+
+  .header {
+    gap: 0.2rem;
+  }
+
+  /* MENU HAMB */
   .categorias {
       display: block;
       position: relative;
@@ -157,22 +173,32 @@
   }
 }
 
-.categorias {
-  position: relative;
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff; 
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
 }
 
 .options a {
   display: block;
-  padding: 10px;
+  padding: 8px 10px;
   text-decoration: none;
   color: #333;
 }
 
 .options a:hover {
-  background-color: #ddd;
+  background-color: #f0f0f0;
 }
 
 #categoriasBtn {
   background-color: #01afda;
   border: none;
+  cursor: pointer;
 }

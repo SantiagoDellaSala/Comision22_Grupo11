@@ -10,6 +10,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .footer_h5 {
@@ -21,28 +23,36 @@
 }
 
 .div_contactanos {
-    width: 22%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .div_quienesSomos {
-    width: 22%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .div_redesSociales {
-    width: 22%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
 }
 
 .div_redesSociales_container {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .div_redesSociales_container a {
-    max-width: 20%;
+    max-width: 35px;
 }
 
 .div_redesSociales_container a img {
@@ -50,7 +60,10 @@
 }
 
 .div_atajos {
-    width: 22%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .div_atajos ul a {
@@ -61,11 +74,55 @@
     color: #bbbbbb;
 }
 
-.div_copyright div {
+.div_copyright{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 }
 
 .footer_hr {
     color: #c0c0c0;
+}
+
+@media (min-width:639px) {
+    .div_columnas{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+    .div_contactanos {
+        width: 23%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .div_quienesSomos {
+        width: 23%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .div_redesSociales {
+        width: 23%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .div_atajos {
+        width: 23%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .div_copyright{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
