@@ -143,22 +143,10 @@ inputDescription.addEventListener('blur', (event) =>{
     if(!event.target.value) $('error-description').innerHTML = "Debes ingresar una Descripcion"
 })
 
-// inputMainImage.addEventListener('change', (event) => {
-//     const file = event.target.files[0];
-//     if (!file) {
-//         $('error-mainImage').innerHTML='Debes seleccionar una imagen'
-//         $('info-mainImage').innerHTML = ""
-//     } else {
-//         $('error-mainImage').innerHTML= "";
-//         $('info-mainImage').innerHTML =  `Nombre de la imagen: ${file.name}`;
-//     }
-// });
-
-// inputMainImage.addEventListener('click', () => {
-//     $('info-mainImage').innerHTML ="Selecciona una imagen";
-//     $('error-mainImage').innerHTML= "";
-// });
-
+ inputMainImage.addEventListener('change', (event) => {
+    
+    document.getElementById('image-prev').src = URL.createObjectURL(event.target.files[0])
+ });
 
 
 form.addEventListener('submit', (event) =>{
