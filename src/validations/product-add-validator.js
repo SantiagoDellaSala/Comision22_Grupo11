@@ -21,7 +21,7 @@ check('description')
         }).withMessage('La descripción debe tener entre 20 y 500 caracteres'),
 body('mainImage')
         .custom((value, {req}) => {
-            if(!req.files.mainImage){
+            if(!req.file){
                 return false
             }
             return true

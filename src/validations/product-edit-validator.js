@@ -17,7 +17,7 @@ module.exports = [
         .notEmpty().withMessage('La calidad es requerida'),   
         body('mainImage')
         .custom((value, {req}) => {
-            if(!req.files.mainImage){
+            if(!req.file){
                 return false
             }
             return true
