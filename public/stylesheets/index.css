@@ -2,6 +2,7 @@
   width: 98%;
   margin: 0px auto;
   font-family: var(--font-Monserrat);
+  
 }
 
 /* BANNER */
@@ -28,7 +29,7 @@
 .aside_home  {
   display: none;
  
-  
+  background-color: #fff;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;

@@ -33,7 +33,7 @@
                                     </div>
                                     <div class="col-12 col-md-3">
                                         <div class="form-floating">
-                                            <input name="price" type="text" class="form-control  <%= (locals.errors && errors.price) &&  'is-invalid'%>" id="price">
+                                            <input  value="<%= locals.old && old.name ? old.price : null %>" name="price" type="text" class="form-control  <%= (locals.errors && errors.price) &&  'is-invalid'%>" id="price">
                                             <p id="info-price" style="color: green; margin-left: 10px;" ></p>
                                             <p id="error-price" style="color: red; margin-left: 10px;"></p>
                                             <label for="price">Precio</label>
@@ -121,36 +121,30 @@
                                         </div>
                                         <small class="text-danger ms-2"><%= (locals.errors && errors.description) && errors.description.msg %></small>
                                     </div>
-                                    <div class="col-12 col-md-6 mb-3">
-                                        <input name="mainImage" type="file" class="form-control  <%= (locals.errors && errors.mainImage) &&  'is-invalid'%>" id="mainImage" hidden
-                                        onchange="onPreviewImage(event)"
-                                        >
-                                        <!-- <p id="info-mainImage" style="color: green; margin-left: 10px;" ></p>
-                                        <p id="error-mainImage" style="color: red; margin-left: 10px;"></p> -->
-                                        <label class="btn btn-primary btn-md w-100" for="mainImage">Imagen principal</label>
-                                            <small class="text-danger ms-2"><%= (locals.errors && errors.mainImage) && errors.mainImage.msg %></small>    
+                                    <div class="col-12 mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <input name="mainImage" type="file" class="form-control  <%= (locals.errors && errors.mainImage) &&  'is-invalid'%>" id="mainImage" hidden
+                                            onchange="onPreviewImage(event)"
+                                            >
+                                            <!-- <p id="info-mainImage" style="color: green; margin-left: 10px;" ></p>
+                                            <p id="error-mainImage" style="color: red; margin-left: 10px;"></p> -->
+                                            <label class="btn btn-primary btn-md w-100" for="mainImage">Agregar imagen</label>
+                                                <small class="text-danger ms-2"><%= (locals.errors && errors.mainImage) && errors.mainImage.msg %></small>    
+    
+                                                    <button type="submit" class="btn btn-success btn-md w-100">Agregar
+                                                        producto</button>
+                                        </div>
+                                        
                                     </div>
-                                    <div class="col-12 col-md-6 mb-3">
-                                        <input name="image" type="file" class="form-control" id="image" hidden multiple
-                                        onchange="onPreviewImages(event)"
-                                        >
-                                        <label class="btn btn-primary btn-md w-100" for="image">Imágenes extra</label>
-                                    </div>
-                                    <div class="col-12 col-md-3">
+                                   
+                                    <div class="col-12">
                                         <div class="d-flex my-3" id="box-image">
 
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-9">
-                                        <div class="d-flex justify-content-between my-3" id="box-images">
+                                  
 
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12  d-flex justify-content-end ">
-                                        <button type="submit" class="btn btn-success btn-md w-100">Agregar
-                                            producto</button>
-                                    </div>
+                                   
                                 </form>
 
                             </div>

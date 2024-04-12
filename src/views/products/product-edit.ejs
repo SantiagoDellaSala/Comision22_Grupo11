@@ -35,7 +35,7 @@
                                           </div>
                                           <small class="text-danger ms-2"><%= (locals.errors && errors.name) && errors.name.msg %></small>
                                     </div>
-                                    <div class="col-12 col-md-6 mb-3">
+                                    <div class="col-12 col-md-3 mb-3">
                                         <div class="form-floating">
 
                                             <input name="price" type="text" class="form-control <%= (locals.errors && errors.price) &&  'is-invalid'%>" id="price" value="<%= toThousand(price) %>">
@@ -45,6 +45,17 @@
 
                                         </div>
                                         <small class="text-danger ms-2"><%= (locals.errors && errors.price) && errors.price.msg %></small>
+                                    </div>
+                                    <div class="col-12 col-md-3 mb-3">
+                                        <div class="form-floating ">
+
+                                            <input name="discount" type="number" class="form-control <%= (locals.errors && errors.discount) &&  'is-invalid'%>" id="discount" value="<%= discount %>">
+                                            <p id="info-discount" style="color: green; margin-left: 10px;" ></p>
+                                            <p id="error-discount" style="color: red; margin-left: 10px;"></p>
+                                            <label for="discount">Descuento</label>
+
+                                        </div>
+                                        <small class="text-danger ms-2"><%= (locals.errors && errors.discount) && errors.discount.msg %></small>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating">
@@ -84,7 +95,6 @@
                                         <div class="form-floating ">
                                             <select name="originId" class="form-select <%= (locals.errors && errors.originId) &&  'is-invalid'%>" id="origin" aria-label="Floating label select example">
                                                 
-                                                
                                                 <% origins.forEach(origin => { %>
                                                     <option value="<%= origin.id %>" <%= originId == origin.id && 'selected'  %>><%= origin.name %></option>
                                                   <% }) %>
@@ -96,17 +106,7 @@
                                         </div>
                                         <small class="text-danger ms-2"><%= (locals.errors && errors.originId) && errors.originId.msg %></small>
                                     </div>
-                                    <div class="col-12 col-md-6 mb-3">
-                                        <div class="form-floating ">
-
-                                            <input name="discount" type="number" class="form-control <%= (locals.errors && errors.discount) &&  'is-invalid'%>" id="discount" value="<%= discount %>">
-                                            <p id="info-discount" style="color: green; margin-left: 10px;" ></p>
-                                            <p id="error-discount" style="color: red; margin-left: 10px;"></p>
-                                            <label for="discount">Descuento</label>
-
-                                        </div>
-                                        <small class="text-danger ms-2"><%= (locals.errors && errors.discount) && errors.discount.msg %></small>
-                                    </div>
+                                 
                                     <div class="col-12 col-md-6 mb-3">
                                         <div class="form-floating ">
                                             <select name="qualityId" class="form-select <%= (locals.errors && errors.qualityId) &&  'is-invalid'%>" id="quality" aria-label="Floating label select example">
@@ -135,18 +135,28 @@
                                         </div>
                                         <small class="text-danger ms-2"><%= (locals.errors && errors.description) && errors.description.msg %></small>
                                     </div>
-                                    
-                                    <div class="col-12 col-md-6 mb-3">
-                                        <input  name="mainImage" type="file" class="form-control <%= (locals.errors && errors.mainImage) &&  'is-invalid'%>" id="mainImage" hidden>
-                                        <label class="btn btn-primary btn-md w-100" for="mainImage">Imagen
-                                            principal</label>
-                                        <small class="text-danger ms-2"><%= (locals.errors && errors.mainImage) && errors.mainImage.msg %></small>    
+                                    <div class="col-12 mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <input name="mainImage" type="file" class="form-control  <%= (locals.errors && errors.mainImage) &&  'is-invalid'%>" id="mainImage" hidden
+                                            onchange="onPreviewImage(event)"
+                                            >
+                                            <!-- <p id="info-mainImage" style="color: green; margin-left: 10px;" ></p>
+                                            <p id="error-mainImage" style="color: red; margin-left: 10px;"></p> -->
+                                            <label class="btn btn-primary btn-md w-100" for="mainImage">Cambiar imagen</label>
+                                                <small class="text-danger ms-2"><%= (locals.errors && errors.mainImage) && errors.mainImage.msg %></small>    
+    
+                                                    <button type="submit" class="btn btn-success btn-md w-100">Guardar cambios
+                                                        </button>
+                                        </div>
+                                        
                                     </div>
-                                    <div class="col-12 col-md-6 mb-3 ">
-                                        <input  name="images" type="file" class="form-control" id="images" hidden
-                                            multiple>
-                                        <label class="btn btn-primary btn-md w-100" for="images">Imágenes extra</label>
+                                   
+                                    <div class="col-12">
+                                        <div class="d-flex my-3" id="box-image">
+                                            <img id="image-prev" src="/images/productos/<%= mainImage %>" alt="imagen">
+                                        </div>
                                     </div>
+                                  
                                 </div>
                                     
                                   
@@ -154,9 +164,7 @@
                                     
                                     
                                   
-                                <div class="col-12 mb-3 justify-content-end p-3">
-                                        <button  class="btn btn-success  btn-md w-100">Guardar cambios</button>
-                                    </div>
+                           
                                 </form>
 
                             </div>

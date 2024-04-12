@@ -27,7 +27,7 @@ body {
     width: 100%;
     background-color: #e6e6e6;
     font-family: var(--font-Monserrat);
-    
+    background:url('../images/fondo-fish.png');
 }
 
 a {

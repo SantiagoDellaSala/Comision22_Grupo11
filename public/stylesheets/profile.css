@@ -25,6 +25,7 @@
     border-radius: 3px;
     padding: 1rem 0;
     gap: 1rem;
+    background-color: #fff;
 }
 
 .profile__main__section__form a {
