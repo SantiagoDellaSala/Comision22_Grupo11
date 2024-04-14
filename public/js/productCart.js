@@ -25,17 +25,19 @@ const showProductInCart = (products = []) =>{
     cartBox.innerHTML = null;
 
     if(products.length){
-        products.forEach(({id, name, price, image}) => {
+        products.forEach(({id, name, price, image, quantity}) => {
             cartBox.innerHTML += `
             <div class="producto">
-            <img class="img_class" src="/images/productos/${image}" alt="Product 8">
-            <div class="detalles-producto">
-                <p class="nombre_producto">${name}</p>
-                <p class="precio">$${price}</p>
-            </div>
-            <a href="#" onclick="removeProduct(${id})">
-                <img src="/images/eliminar.svg" alt="" id="eliminar">
-            </a>
+                <img class="img_class" src="/images/productos/${image}" alt="Product 8">
+                <div class="detalles-producto">
+                    <p class="nombre_producto">${name}</p>
+                    
+                    <span class="d-flex flex-row align-items"><p class="cantidad">${quantity} x </p><p class="precio ms-2">$${price}</p></span>
+                    
+                </div>
+                <a href="#" onclick="removeProduct(${id})">
+                    <img src="/images/eliminar.svg" alt="" id="eliminar">
+                </a>
         </div>
             `
         })
