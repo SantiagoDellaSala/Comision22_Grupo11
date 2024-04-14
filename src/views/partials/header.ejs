@@ -3,7 +3,7 @@
     <div class="header__container">
         <div class="header__logo">
             <a href="/"><img src="/images/logo.svg" alt="logo"></a> 
-            <img src="/images/nombre_logo.svg" alt="nombre-logo">
+            <img src="/images/nombre_logo.svg" alt="">
         </div>
         <div class="header__search">
             <form action="/search" method="get" class="search-form">
@@ -35,12 +35,20 @@
                     <img src="/images/usuario.svg" alt="" class="usuario__perfil2">
                 </a>
             <% } %>
-            <a href="/carrito" class="position-relative">
-                <img src="/images/carrito.svg" alt="" class="usuario__carrito">
-                <span id="cart-total-items" class="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-danger">
-                    0
-                  </span>
-            </a>
+            <% if (locals.userLogin) { %>
+                <a href="/carrito" class="position-relative">
+                    <img src="/images/carrito.svg" alt="" class="usuario__carrito">
+                    <span id="cart-total-items" class="position-absolute top-0 end-0 translate-middle badge rounded-pill bg-danger">
+                        0
+                      </span>
+                </a>
+            <% } else { %>
+                <a href="/users/login" class="position-relative">
+                    <img src="/images/carrito.svg" alt="" class="usuario__carrito">
+                    
+                </a>
+            <% } %>
+            
         </div>
     </div>
     <nav class="header__nav">

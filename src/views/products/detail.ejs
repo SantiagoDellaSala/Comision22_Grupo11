@@ -29,7 +29,7 @@
                         </table>
         
                             <span class="b-compras">
-                                <input type="button" value="comprar">
+                                <input type="button" value="comprar" onclick="addToCart('<%=id%>','<%=name%>','<%=price%>','<%=mainImage%>', document.getElementById('cantidad').value)">
                                 <input type="button" value="agregar al carrito" onclick="addToCart('<%=id%>','<%=name%>','<%=price%>','<%=mainImage%>', document.getElementById('cantidad').value)">
                             </span>
                         </article>
