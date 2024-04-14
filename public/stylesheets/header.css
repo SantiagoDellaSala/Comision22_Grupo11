@@ -139,6 +139,11 @@
   width: 100%;
 }
 
+.header__nav li:hover {
+  background-color: #01afda;
+  border-radius: 3%;
+}
+
 @media (max-width :639px) {
 
   .header__nav {
@@ -195,7 +200,7 @@
 }
 
 .options a:hover {
-  background-color: #f0f0f0;
+  background-color: #01afda;
 }
 
 #categoriasBtn {
