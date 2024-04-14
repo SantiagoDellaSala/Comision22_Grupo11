@@ -1,5 +1,14 @@
 @media (min-width :768px) {
 
+    .div_columnas{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
     /* FOOTER (Ulises)*/
     .footer {
         display: flex;
