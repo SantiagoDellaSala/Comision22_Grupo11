@@ -35,6 +35,8 @@
 
     .home__main--mobileOff {display: block;}
 
+    
+
     /* REGISTER (Santiago) */
     .register__main__div {
         width: 100%;
@@ -152,13 +154,26 @@
     
     .header__div__login img {width: 4vw;height:4vw;}
     .usuario__carrito {width: 60%; height: 50px;} 
-
+    .usuario__perfil2 {
+        width: 24%;
+      }
 
     /* PRODUCT DETAIL (Yohanna) */
     .nav-ul{
         flex-wrap: nowrap;
         gap: 2%;
     }
+
+    .header__nav ul li {
+        font-size: 20px;
+        width: 12%;
+        text-align: center;
+      }
+      
+      .header__nav ul li a {
+        color: #ffffff;
+        width: 100%;
+      }
 
     .precio-cant {width: 35vw;}
 
