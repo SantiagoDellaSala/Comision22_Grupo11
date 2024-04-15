@@ -122,19 +122,16 @@
         height: auto;
         font-size: 25px;
         margin: 5vw 0 5vh;  
-        /* text-align: left; */
     }
     .header__nav {
         display: flex;
-        
         justify-content:space-around;
-
-        width: 95vw;
+        width: 100%;
         background-color: black;
     }
 
     .nav-ul{
-        width: 80vw;
+        width: 80%;
         justify-content: space-evenly;
         flex-wrap: wrap;
         gap: 12%;
