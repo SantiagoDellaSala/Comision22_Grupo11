@@ -143,7 +143,9 @@
     gap: 0px;
   }
 
-  .productCard_article button {width: 70%;}
+  .productCard_article button {
+    width: 70%;
+  }
 }
 
 @media (min-width :768px) {
@@ -170,7 +172,6 @@
 
   .productCard_article {
     width: 30vw;
-   
   }
 
   .productCard_article button {width: 80%;}
@@ -183,8 +184,9 @@
 
   .productCard_article {
     width: 20vw;
-   
   }
 
-  .productCard_article button {width: 90%;}
+  .productCard_article button {
+    width: 90%;
+  }
 }
