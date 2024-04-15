@@ -151,6 +151,11 @@
         height:auto
         
     }
+
+    .search-form {
+        position: relative;
+        width: 20vw;
+      }
     
     .header__div__login img {width: 4vw;height:4vw;}
     .usuario__carrito {width: 60%; height: 50px;} 
